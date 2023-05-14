@@ -8,3 +8,8 @@ This repo is mostly a collection of information and some tools.
 [Android](Android/README.md)
 
 [Linux](Linux/README.md)
+
+
+## Specs & Hardware Info
+
+TODO

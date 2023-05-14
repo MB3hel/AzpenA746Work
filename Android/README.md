@@ -10,7 +10,31 @@
 
 - [Device Tree](https://github.com/MB3hel/android_device_azpen_along-6051)
 
-## STock ROM Stuff
+## Boot Modes
+
+### Enter Recovery
+
+- Power fully off (not reboot)
+- Hold Vol+
+- Press and hold power for 5 seconds
+- Release power (keep holding vol+)
+- Wait until recovery is visible
+- Release Vol+
+
+### Enter Fastboot MOde
+
+- No known keycombo. Can access through `adb reboot bootloader` though.
+
+### Enter FEL Mode
+
+- Power off device (fully)
+- Hold Vol+ key
+- Press power button 10 times
+- Wait 30 seconds (or less sometimes)
+- Device will show up to computer
+
+
+## Stock ROM Stuff
 
 ### Root Stock ROM
 
@@ -191,3 +215,23 @@ Existing device tree is located [here](https://github.com/MB3hel/android_device_
     - `recovery/root/etc/recovery.fstab` modified to use `mmcblk0p1` for external sd card
     - Create `recovery/Android.mk` to load all rc files
     - Modify `device.mk` to include ko files and kernel path
+
+
+## Unbricking / fixing bootloops
+
+- If your tablet bootloops for "no reason" try the reset button on the back of the tablet first.
+
+<br />
+
+- Fastboot is a thing through `adb reboot bootloader`
+- There are UART pads on the device (see linux folder for picture) that could give low level uboot access
+- Should be able to boot from SD card?
+
+<br />
+
+- The device (if it fails to boot) will loop on the same option. This can be a challenge if you flash a bad recovery then `adb reboot recovery`. The device will just repeatedly attempt to boot recovery. I speculate letting the battery fully die will end this loop. Then it should boot to normal OS (and you can reflash stock recovery using dd). If your are not rooted perhaps try a `adb reboot bootloader` and use fastboot.
+
+- You may be able to enter FEL mode and use [LiveSuit](https://linux-sunxi.org/LiveSuit) to unbrick
+
+- FEL mode might be acessible with a specially formatted SD card. See [here](https://linux-sunxi.org/FEL). This might work if stuck in a bootloop to a broken recovery.
+
