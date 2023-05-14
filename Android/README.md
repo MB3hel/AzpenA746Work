@@ -189,4 +189,10 @@ Existing device tree is located [here](https://github.com/MB3hel/android_device_
 - Run `python3 -m twrpdtgen recovery-modified.img`
 - Resultant device tree is in `output/a746/along-6051`
 
-- TODO: Any manual modifications???
+- Manual Modifications (a23 repo served as an example motivating most of these changes)
+    - All `.ko` files from extracted recovery ramdisk added to `recovery/root` in device tree
+    - Add `fstab.sun8i` from extracted recovery ramdisk to `recovery/root` in device tree
+    - `recovery.fstab` (generated) moved to `recovery/root/etc`
+    - `recovery/root/etc/recovery.fstab` modified to use `mmcblk0p1` for external sd card
+    - Create `recovery/Android.mk` to load all rc files
+    - Modify `device.mk` to include ko files and kernel path
