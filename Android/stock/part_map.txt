@@ -1,0 +1,31 @@
+**OBTAINED USING READLINK /dev/block/by-name/NAME -> /dev/block/PART**
+
+NAME		PART
+---------------------------------
+UDISK		nandj
+boot		nandc
+bootloader	nanda
+cache		nandg
+env		nandb
+metadata	nandh
+misc		nande
+private		nandi
+recovery	nandf
+system		nandd
+
+
+
+
+PART		NAME
+---------------------------------
+nanda		bootloader	
+nandb		env		
+nandc		boot
+nandd		system
+nande		misc
+nandf		recovery
+nandg		cache
+nandh		metadata
+nandi		private
+nandj		UDISK
+

@@ -1,0 +1,411 @@
+<!DOCTYPE html> <html class=client-js dir=ltr lang=en><!--
+ Page saved with SingleFile 
+ url: https://linux-sunxi.org/Android/partitions 
+ saved date: Sun Jan 15 2023 23:54:37 GMT-0500 (Eastern Standard Time)
+--><meta charset=utf-8>
+<title>Android/partitions - linux-sunxi.org</title>
+<style>@media screen{html,body{height:100%}body{margin:0;padding:0}:focus{outline-color:#3366cc}body{background-color:#f6f6f6;overflow-y:scroll}.mw-body{background-color:#ffffff;color:#202122;direction:ltr;padding:1em}#p-personal{position:absolute;top:6px;right:0.75em;z-index:100}#p-personal ul{padding-left:10em}#p-personal li{float:left}.mw-body{margin-left:10em}.mw-body{margin-top:-1px;border:1px solid #a7d7f9;border-right-width:0}.mw-body .firstHeading{overflow:visible}.mw-indicators{float:right}.mw-body-content{position:relative;z-index:0}.mw-body-content:after{clear:both;content:"";display:block}#mw-page-base{background-color:#fbfbfb;background-image:-webkit-gradient(linear,right top,right bottom,color-stop(50%,#ffffff),color-stop(100%,#f6f6f6));background-image:-webkit-linear-gradient(top,#ffffff 50%,#f6f6f6 100%);background-image:-moz-linear-gradient(top,#ffffff 50%,#f6f6f6 100%);background-image:linear-gradient(to bottom,#ffffff 50%,#f6f6f6 100%);background-position:bottom left;height:5em}#mw-head-base{margin-top:-5em;margin-left:10em;height:5em}#mw-navigation h2{position:absolute;top:-9999px}#mw-head{position:absolute;top:0;right:0;width:100%}#left-navigation{float:left;margin-left:10em;margin-top:2.5em;margin-bottom:-2.5em}#right-navigation{float:right;margin-top:2.5em}#mw-panel{position:absolute;top:0;width:10em;left:0}.mw-footer{margin-left:10em;margin-top:0}html{font-size:100%}html,body{font-family:sans-serif}ul{list-style-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjEzIj4KCTxjaXJjbGUgY3g9IjIuNSIgY3k9IjkiIHI9IjIuNSIgZmlsbD0iIzIwMjEyMiIvPgo8L3N2Zz4K)}.mw-jump-link:not(:focus){display:block;position:absolute!important;clip:rect(1px,1px,1px,1px);width:1px;height:1px;margin:-1px;border:0;padding:0;overflow:hidden}#p-personal li{font-size:0.75em}.mw-body h1{margin-bottom:0.25em;padding:0;font-family:"Linux Libertine","Georgia","Times",serif;line-height:1.3}.mw-body h1:lang(ja),.mw-body-content h1:lang(ja),.mw-body-content h2:lang(ja),.mw-body h1:lang(he),.mw-body-content h1:lang(he),.mw-body-content h2:lang(he),.mw-body h1:lang(ko),.mw-body-content h1:lang(ko),.mw-body-content h2:lang(ko){font-family:sans-serif}.mw-body h1:lang(my),.mw-body-content h1:lang(my),.mw-body-content h2:lang(my){line-height:normal}.mw-body h1{font-size:1.8em}.mw-body-content{font-size:calc(1em*0.875);line-height:1.6}.mw-body-content p{margin:0.5em 0}.mw-body .mw-indicators{font-size:0.875em;line-height:1.6;position:relative}#siteNotice{font-size:0.8em}#p-personal ul{list-style:none none;margin:0}.vector-menu li,#p-personal li{margin-left:0.75em;padding-top:0.5em;line-height:1.16666667}#p-search{float:left;margin-right:0.5em;margin-left:0.5em}#p-search h3{display:block;position:absolute!important;clip:rect(1px,1px,1px,1px);width:1px;height:1px;margin:-1px;border:0;padding:0;overflow:hidden}#p-search form{margin:0.5em 0 0}#simpleSearch{position:relative;min-width:5em;width:20vw;max-width:20em;height:100%}#simpleSearch input{margin:0}#searchInput{background-color:rgba(255,255,255,0.5);color:#000000;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border:1px solid #a2a9b1;border-radius:2px;padding:0.4em 1.84615385em 0.4em 0.4em;-webkit-box-shadow:inset 0 0 0 1px transparent;box-shadow:inset 0 0 0 1px transparent;font-size:0.8125em;direction:ltr;-webkit-transition:border-color 250ms,box-shadow 250ms;-moz-transition:border-color 250ms,box-shadow 250ms;transition:border-color 250ms,box-shadow 250ms;-webkit-appearance:none;-moz-appearance:textfield}#simpleSearch:hover #searchInput{border-color:#72777d}#searchInput:focus,#simpleSearch:hover #searchInput:focus{outline:0;border-color:#3366cc;-webkit-box-shadow:inset 0 0 0 1px #3366cc,inset 0 0 0 2px #ffffff;box-shadow:inset 0 0 0 1px #3366cc,inset 0 0 0 2px #ffffff}#searchInput::-webkit-input-placeholder{color:#72777d;opacity:1}#searchInput::-moz-placeholder{color:#72777d;opacity:1}#searchInput:-moz-placeholder{color:#72777d;opacity:1}#searchInput::placeholder{color:#72777d;opacity:1}#searchInput::-webkit-search-decoration,#searchInput::-webkit-search-cancel-button,#searchInput::-webkit-search-results-button,#searchInput::-webkit-search-results-decoration{display:none}#searchButton,#mw-searchButton{background-color:transparent;position:absolute;top:1px;bottom:1px;right:1px;min-width:24px;width:1.84615385em;border:0;padding:0;cursor:pointer;font-size:0.8125em;direction:ltr;text-indent:-99999px;white-space:nowrap;overflow:hidden;z-index:1}#searchButton{background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMyI+Cgk8ZyBmaWxsPSJub25lIiBzdHJva2U9IiM1NDU5NWQiIHN0cm9rZS13aWR0aD0iMiI+CgkJPHBhdGggZD0iTTExLjI5IDExLjcxbC00LTQiLz4KCQk8Y2lyY2xlIGN4PSI1IiBjeT0iNSIgcj0iNCIvPgoJPC9nPgo8L3N2Zz4K);background-position:center center;background-repeat:no-repeat}.vector-menu-tabs{background-position:left bottom;float:left;height:2.5em;padding-left:1px}.vector-menu-tabs ul{float:left;height:100%;list-style:none none;margin:0;padding:0}.vector-menu-tabs li{background-image:linear-gradient(to top,#77c1f6 0,#e8f2f8 1px,#ffffff 100%);background-position:left bottom;background-repeat:repeat-x;float:left;display:block;height:100%;margin:0;padding:0;line-height:1.125em;white-space:nowrap}.vector-menu-tabs li a{background-position:right bottom;color:#0645ad;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;display:block;float:left;height:3.07692308em;position:relative;padding-top:1.25em;padding-left:8px;padding-right:8px;font-size:0.8125em;cursor:pointer}.vector-menu-tabs .new a,.vector-menu-tabs .new a:visited{color:#a55858}.vector-menu-tabs .selected{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABkAQAAAABvV2fNAAAADElEQVR4AWNoGB4QAInlMgFKeRKBAAAAAElFTkSuQmCC);background:#ffffff}.vector-menu-tabs .selected a,.vector-menu-tabs .selected a:visited{color:#202122;text-decoration:none}@-webkit-keyframes rotate{from{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);transform:rotate(360deg)}}@-moz-keyframes rotate{from{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes rotate{from{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);transform:rotate(360deg)}}.vector-menu-tabs,.vector-menu-tabs a{background-image:linear-gradient(to bottom,rgba(167,215,249,0)0,#a7d7f9 100%);background-repeat:no-repeat;background-size:1px 100%}.portal{margin:0 0.6em 0 0.7em;padding:0.25em 0;direction:ltr}.portal h3{display:block;background-image:linear-gradient(to right,rgba(200,204,209,0)0,#c8ccd1 33%,#c8ccd1 66%,rgba(200,204,209,0) 100%);background-position:center bottom;background-repeat:no-repeat;background-size:100% 1px;color:#54595d;margin:0.5em 0 0 0.66666667em;border:0;padding:0.25em 0;font-size:0.75em;font-weight:normal;cursor:default}.portal .body{margin-left:0.5em;padding-top:0}.portal .body ul{list-style:none none;margin:0;padding-top:0.3em}.portal .body li{margin:0;padding:0.25em 0;font-size:0.75em;line-height:1.125em;word-wrap:break-word}.portal .body li a{color:#0645ad}.portal .body li a:visited,.vector-menu-portal .body li a:visited{color:#0b0080}#mw-panel{font-size:inherit}#mw-panel .portal-first{background-image:none}#mw-panel .portal-first .body{margin-left:0.5em}#p-logo{width:10em;height:160px;margin-bottom:1em}#p-logo a{background-position:center center;background-repeat:no-repeat;display:block;width:10em;height:160px;text-decoration:none}.mw-footer{padding:0.75em;direction:ltr}.mw-footer ul{list-style:none none;margin:0;padding:0}.mw-footer li{color:#202122;margin:0;padding:0.5em 0;font-size:0.75em}#footer-icons{float:right}#footer-icons li{float:left;margin-left:0.5em;line-height:2;text-align:right}#footer-info li{line-height:1.4}#footer-places li{float:left;margin-right:1em;line-height:2}}@media screen and (min-width:982px){.mw-body,#mw-head-base,#left-navigation,.mw-footer{margin-left:11em}.mw-body{padding:1.25em 1.5em 1.5em 1.5em}.mw-footer{padding:1.25em}#mw-panel{padding-left:0.5em}#p-search{margin-right:1em}#p-personal{right:1em}}.mw-wiki-logo{background-image:url(data:image/png;base64,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)}@media screen{body{margin:0}@supports (text-decoration:underline dotted){abbr[title]{border-bottom:0;text-decoration:underline dotted}}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}a{text-decoration:none;color:#0645ad;background:none}a:not([href]){cursor:pointer}a:visited{color:#0b0080}a:active{color:#faa700}a:hover,a:focus{text-decoration:underline}a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}img{border:0;vertical-align:middle}h1,h2,h3{color:#000;margin:0;padding-top:0.5em;padding-bottom:0.17em;overflow:hidden}h1,h2{margin-bottom:0.6em;border-bottom:1px solid #a2a9b1}h3{margin-bottom:0.3em}h1{font-size:188%;font-weight:normal}h2{font-size:150%;font-weight:normal}h3{font-size:128%}p{margin:0.4em 0 0.5em 0}ul{margin:0.3em 0 0 1.6em;padding:0}li{margin-bottom:0.1em}table{font-size:100%}form{border:0;margin:0}.catlinks{border:1px solid #a2a9b1;background-color:#f8f9fa;padding:5px;margin-top:1em;clear:both}#siteNotice{position:relative;text-align:center;margin:0}#contentSub,#contentSub2{font-size:84%;line-height:1.2em;margin:0 0 1.4em 1em;color:#54595d;width:auto}span.subpages{display:block}.mw-content-ltr{direction:ltr}.sitedir-ltr input{direction:ltr}input[type="submit"]{direction:ltr}@supports (text-decoration:underline dotted){abbr[title],.explain[title]{border-bottom:0;text-decoration:underline dotted}}#catlinks{text-align:left}.catlinks ul{display:inline;margin:0;padding:0;list-style:none none}.catlinks li{display:inline-block;line-height:1.25em;border-left:1px solid #a2a9b1;margin:0.125em 0;padding:0 0.5em}.catlinks li:first-child{padding-left:0.25em;border-left:0}.wikitable{background-color:#f8f9fa;color:#202122;margin:1em 0;border:1px solid #a2a9b1;border-collapse:collapse}.wikitable>*>tr>th,.wikitable>*>tr>td{border:1px solid #a2a9b1;padding:0.2em 0.4em}.wikitable>*>tr>th{background-color:#eaecf0;text-align:center}h1:lang(anp),h1:lang(as),h1:lang(bh),h1:lang(bho),h1:lang(bn),h1:lang(gu),h1:lang(hi),h1:lang(kn),h1:lang(ks),h1:lang(ml),h1:lang(mr),h1:lang(my),h1:lang(mai),h1:lang(ne),h1:lang(new),h1:lang(or),h1:lang(pa),h1:lang(pi),h1:lang(sa),h1:lang(ta),h1:lang(te){line-height:1.6em!important}h2:lang(anp),h3:lang(anp),h4:lang(anp),h5:lang(anp),h6:lang(anp),h2:lang(as),h3:lang(as),h4:lang(as),h5:lang(as),h6:lang(as),h2:lang(bho),h3:lang(bho),h4:lang(bho),h5:lang(bho),h6:lang(bho),h2:lang(bh),h3:lang(bh),h4:lang(bh),h5:lang(bh),h6:lang(bh),h2:lang(bn),h3:lang(bn),h4:lang(bn),h5:lang(bn),h6:lang(bn),h2:lang(gu),h3:lang(gu),h4:lang(gu),h5:lang(gu),h6:lang(gu),h2:lang(hi),h3:lang(hi),h4:lang(hi),h5:lang(hi),h6:lang(hi),h2:lang(kn),h3:lang(kn),h4:lang(kn),h5:lang(kn),h6:lang(kn),h2:lang(ks),h3:lang(ks),h4:lang(ks),h5:lang(ks),h6:lang(ks),h2:lang(ml),h3:lang(ml),h4:lang(ml),h5:lang(ml),h6:lang(ml),h2:lang(mr),h3:lang(mr),h4:lang(mr),h5:lang(mr),h6:lang(mr),h2:lang(my),h3:lang(my),h4:lang(my),h5:lang(my),h6:lang(my),h2:lang(mai),h3:lang(mai),h4:lang(mai),h5:lang(mai),h6:lang(mai),h2:lang(ne),h3:lang(ne),h4:lang(ne),h5:lang(ne),h6:lang(ne),h2:lang(new),h3:lang(new),h4:lang(new),h5:lang(new),h6:lang(new),h2:lang(or),h3:lang(or),h4:lang(or),h5:lang(or),h6:lang(or),h2:lang(pa),h3:lang(pa),h4:lang(pa),h5:lang(pa),h6:lang(pa),h2:lang(pi),h3:lang(pi),h4:lang(pi),h5:lang(pi),h6:lang(pi),h2:lang(sa),h3:lang(sa),h4:lang(sa),h5:lang(sa),h6:lang(sa),h2:lang(ta),h3:lang(ta),h4:lang(ta),h5:lang(ta),h6:lang(ta),h2:lang(te),h3:lang(te),h4:lang(te),h5:lang(te),h6:lang(te){line-height:1.2em}}</style>
+<meta name=ResourceLoaderDynamicStyles content>
+<meta name=generator content="MediaWiki 1.35.8">
+<link rel=search type=application/opensearchdescription+xml href=https://linux-sunxi.org/opensearch_desc.php title="linux-sunxi.org (en)">
+<link rel=EditURI type=application/rsd+xml href="https://linux-sunxi.org/api.php?action=rsd">
+<link rel=license href=https://creativecommons.org/licenses/by/3.0/>
+<link rel=alternate type=application/atom+xml title="linux-sunxi.org Atom feed" href="https://linux-sunxi.org/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel=canonical href=https://linux-sunxi.org/Android/partitions>
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+<style>.sf-hidden{display:none!important}</style><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Android_partitions rootpage-Android skin-vector action-view skin-vector-legacy">
+<div id=mw-page-base class=noprint></div>
+<div id=mw-head-base class=noprint></div>
+<div id=content class=mw-body role=main>
+ <a id=top></a>
+ <div id=siteNotice class=mw-body-content></div>
+ <div class="mw-indicators mw-body-content">
+ </div>
+ <h1 id=firstHeading class=firstHeading lang=en>Android/partitions</h1>
+ <div id=bodyContent class=mw-body-content>
+ <div id=siteSub class="noprint sf-hidden">From linux-sunxi.org</div>
+ <div id=contentSub><span class=subpages>&lt; <a href=https://linux-sunxi.org/Android title=Android>Android</a></span></div>
+ <div id=contentSub2></div>
+ 
+ <div id=jump-to-nav></div>
+ <a class=mw-jump-link href=#mw-head>Jump to navigation</a>
+ <a class=mw-jump-link href=#searchInput>Jump to search</a>
+ <div id=mw-content-text dir=ltr class=mw-content-ltr lang=en><div class=mw-parser-output><p>Some quick initial notes on partitions.
+<p>On my android tablet, the nand is devided into 9 partitions. Sizes are how they are on this devices, they should be used as an indication only.
+</p>
+<table class=wikitable>
+<tbody><tr>
+<th>id
+</th>
+<th>dev/block/*
+</th>
+<th>Size
+</th>
+<th>Name
+</th>
+<th>Description
+</tr>
+<tr>
+<td>0
+</td>
+<td>nanda
+</td>
+<td>32MiB
+</td>
+<td>bootloader
+</td>
+<td>Files to assist the bootloader. Think battery status images etc. also u-boot.bin lives here.
+</tr>
+<tr>
+<td>1
+</td>
+<td>nandb
+</td>
+<td>32MiB
+</td>
+<td>env
+</td>
+<td>Enviroment to assist u-boot.
+</tr>
+<tr>
+<td>2
+</td>
+<td>nandc
+</td>
+<td>64MiB
+</td>
+<td>boot
+</td>
+<td>Holds the kernel (and its ramdisk) in raw form
+</tr>
+<tr>
+<td>3
+</td>
+<td>nandd
+</td>
+<td>1GiB
+</td>
+<td>system
+</td>
+<td>Android's /system partition
+</tr>
+<tr>
+<td>4
+</td>
+<td>nande
+</td>
+<td>32MiB
+</td>
+<td>misc
+</td>
+<td>Partition used to pass data amongst various stages of the boot chain (e.g. boot into recovery mode, fastboot etc)
+</tr>
+<tr>
+<td>5
+</td>
+<td>nandf
+</td>
+<td>64MiB
+</td>
+<td>recovery
+</td>
+<td>Android's recovery partition, strangly this is on nandg!
+</tr>
+<tr>
+<td>6
+</td>
+<td>nandg
+</tr>
+<tr>
+<td>7
+</td>
+<td>nandh
+</tr>
+<tr>
+<td>8
+</td>
+<td>nandi
+</table>
+<p>Allwinner changed the layout a little some time after changing to Android ICS 4.0. Previous versions of the Android firmware would use partition with field "user_type" of <b>0</b> or <b>2</b>. However, Allwinner appear to have added type <b>1</b>.
+<p>The following is the partition layout from Mele-v1.3BETA Android firmware:
+</p>
+<table class=wikitable>
+<tbody><tr>
+<th>id
+</th>
+<th>dev/block/*
+</th>
+<th>Size
+</th>
+<th>Name
+</th>
+<th>Type
+</th>
+<th>Description
+</tr>
+<tr>
+<td>0
+</td>
+<td>nanda
+</td>
+<td>16MiB
+</td>
+<td>bootloader
+</td>
+<td>vfat
+</td>
+<td>Files to assist the bootloader. Think battery status images etc. also u-boot.bin, script.bin and .ini lives here
+</tr>
+<tr>
+<td>1
+</td>
+<td>nandb
+</td>
+<td>16MiB
+</td>
+<td>env
+</td>
+<td>raw
+</td>
+<td>Enviroment to assist u-boot.
+</tr>
+<tr>
+<td>2
+</td>
+<td>nandc
+</td>
+<td>32MiB
+</td>
+<td>boot
+</td>
+<td>raw
+</td>
+<td>Holds the kernel (and its ramdisk) in ANDROID mkbootimg form
+</tr>
+<tr>
+<td>3
+</td>
+<td>nandd
+</td>
+<td>512MiB
+</td>
+<td>system
+</td>
+<td>ext4
+</td>
+<td>Android's /system partition
+</tr>
+<tr>
+<td>4
+</td>
+<td>nande
+</td>
+<td>1.5GiB
+</td>
+<td>data
+</td>
+<td>ext4
+</td>
+<td>Android /data partition
+</tr>
+<tr>
+<td>5
+</td>
+<td>nandf
+</td>
+<td>16MiB
+</td>
+<td>misc
+</td>
+<td>raw
+</td>
+<td>Partition used to pass data amongst various stages of the boot chain (e.g. boot into recovery mode, fastboot etc)
+</tr>
+<tr>
+<td>6
+</td>
+<td>nandg
+</td>
+<td>32MiB
+</td>
+<td>recovery
+</td>
+<td>raw
+</td>
+<td>Android's recovery partition
+</tr>
+<tr>
+<td>7
+</td>
+<td>nandh
+</td>
+<td>128MiB
+</td>
+<td>cache
+</td>
+<td>ext4
+</td>
+<td>Mounted as /cache and appear to contain backup information
+</tr>
+<tr>
+<td>8
+</td>
+<td>nandi
+</td>
+<td>16MiB
+</td>
+<td>private
+</td>
+<td>vfat
+</td>
+<td>Mounted as /mnt/private
+</tr>
+<tr>
+<td>9
+</td>
+<td>nandj
+</td>
+<td>512MiB
+</td>
+<td>sysrecovery
+</td>
+<td>raw
+</tr>
+<tr>
+<td>10
+</td>
+<td>nandk
+</td>
+<td>944MiB
+</td>
+<td>UDISK
+</td>
+<td>vfat
+</td>
+<td>Mounted by vold as /mnt/sdcard and /mnt/secure/asec
+</table>
+</div></div><div class="printfooter sf-hidden">Retrieved from ""</div>
+ <div id=catlinks class=catlinks data-mw=interface><div id=mw-normal-catlinks class=mw-normal-catlinks><a href=https://linux-sunxi.org/Special:Categories title=Special:Categories>Category</a>: <ul><li><a href=https://linux-sunxi.org/Category:Android title=Category:Android>Android</a></ul></div></div>
+ </div>
+</div>
+<div id=mw-navigation>
+ <h2>Navigation menu</h2>
+ <div id=mw-head>
+ 
+<nav id=p-personal class=vector-menu aria-labelledby=p-personal-label role=navigation>
+ <h3 id=p-personal-label class=sf-hidden>
+ 
+ </h3>
+ 
+ <div class="body vector-menu-content">
+ 
+ <ul class=vector-menu-content-list><li id=pt-createaccount><a href="https://linux-sunxi.org/index.php?title=Special:CreateAccount&amp;returnto=Android%2Fpartitions" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a><li id=pt-login><a href="https://linux-sunxi.org/index.php?title=Special:UserLogin&amp;returnto=Android%2Fpartitions" title="You are encouraged to log in; however, it is not mandatory [Alt+Shift+o]" accesskey=o>Log in</a></ul>
+ 
+ </div>
+</nav>
+ <div id=left-navigation>
+ 
+<nav id=p-namespaces class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby=p-namespaces-label role=navigation>
+ <h3 id=p-namespaces-label class=sf-hidden>
+ 
+ </h3>
+ 
+ <div class="body vector-menu-content">
+ 
+ <ul class=vector-menu-content-list><li id=ca-nstab-main class=selected><a href=https://linux-sunxi.org/Android/partitions title="View the content page [Alt+Shift+c]" accesskey=c>Page</a><li id=ca-talk class=new><a href="https://linux-sunxi.org/index.php?title=Talk:Android/partitions&amp;action=edit&amp;redlink=1" rel=discussion title="Discussion about the content page (page does not exist) [Alt+Shift+t]" accesskey=t>Discussion</a></ul>
+ 
+ </div>
+</nav>
+ 
+<nav id=p-variants class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu sf-hidden" aria-labelledby=p-variants-label role=navigation>
+ 
+ 
+ 
+ 
+</nav>
+ </div>
+ <div id=right-navigation>
+ 
+<nav id=p-views class="vector-menu vector-menu-tabs vectorTabs" aria-labelledby=p-views-label role=navigation>
+ <h3 id=p-views-label class=sf-hidden>
+ 
+ </h3>
+ 
+ <div class="body vector-menu-content">
+ 
+ <ul class=vector-menu-content-list><li id=ca-view class="collapsible selected"><a href=https://linux-sunxi.org/Android/partitions>Read</a><li id=ca-viewsource class=collapsible><a href="https://linux-sunxi.org/index.php?title=Android/partitions&amp;action=edit" title="This page is protected.
+You can view its source [Alt+Shift+e]" accesskey=e>View source</a><li id=ca-history class=collapsible><a href="https://linux-sunxi.org/index.php?title=Android/partitions&amp;action=history" title="Past revisions of this page [Alt+Shift+h]" accesskey=h>View history</a></ul>
+ 
+ </div>
+</nav>
+ 
+<nav id=p-cactions class="vector-menu-empty emptyPortlet vector-menu vector-menu-dropdown vectorMenu sf-hidden" aria-labelledby=p-cactions-label role=navigation>
+ 
+ 
+ 
+ 
+</nav>
+ <div id=p-search role=search>
+ <h3>
+ <label for=searchInput>Search</label>
+ </h3>
+ <form action=/index.php id=searchform>
+ <div id=simpleSearch>
+ <input type=search name=search placeholder="Search linux-sunxi.org" title="Search linux-sunxi.org [Alt+Shift+f]" accesskey=f id=searchInput value>
+ 
+ <input type=submit name=fulltext value=Search title="Search the pages for this text" id=mw-searchButton class="searchButton mw-fallbackSearchButton">
+ <input type=submit name=go value=Go title="Go to a page with this exact name if it exists" id=searchButton class=searchButton>
+ </div>
+ </form>
+</div>
+ </div>
+ </div>
+ 
+<div id=mw-panel>
+ <div id=p-logo role=banner>
+ <a title="Visit the main page" class=mw-wiki-logo href=https://linux-sunxi.org/Main_Page></a>
+ </div>
+ 
+<nav id=p-navigation class="vector-menu vector-menu-portal portal portal-first" aria-labelledby=p-navigation-label role=navigation>
+ <h3 id=p-navigation-label class=sf-hidden>
+ 
+ </h3>
+ 
+ <div class="body vector-menu-content">
+ 
+ <ul class=vector-menu-content-list><li id=n-mainpage-description><a href=https://linux-sunxi.org/Main_Page title="Visit the main page [Alt+Shift+z]" accesskey=z>Main page</a><li id=n-portal><a href=https://linux-sunxi.org/sunxi:Community_portal title="About the project, what you can do, where to find things">Community portal</a><li id=n-recentchanges><a href=https://linux-sunxi.org/Special:RecentChanges title="A list of recent changes in the wiki [Alt+Shift+r]" accesskey=r>Recent changes</a><li id=n-randompage><a href=https://linux-sunxi.org/Special:Random title="Load a random page [Alt+Shift+x]" accesskey=x>Random page</a><li id=n-help><a href=https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents rel=nofollow title="The place to find out">Help</a></ul>
+ 
+ </div>
+</nav>
+ 
+<nav id=p-tb class="vector-menu vector-menu-portal portal" aria-labelledby=p-tb-label role=navigation>
+ <h3 id=p-tb-label>
+ <span>Tools</span>
+ </h3>
+ 
+ <div class="body vector-menu-content">
+ 
+ <ul class=vector-menu-content-list><li id=t-whatlinkshere><a href=https://linux-sunxi.org/Special:WhatLinksHere/Android/partitions title="A list of all wiki pages that link here [Alt+Shift+j]" accesskey=j>What links here</a><li id=t-recentchangeslinked><a href=https://linux-sunxi.org/Special:RecentChangesLinked/Android/partitions rel=nofollow title="Recent changes in pages linked from this page [Alt+Shift+k]" accesskey=k>Related changes</a><li id=t-specialpages><a href=https://linux-sunxi.org/Special:SpecialPages title="A list of all special pages [Alt+Shift+q]" accesskey=q>Special pages</a><li id=t-print><a rel=alternate title="Printable version of this page [Alt+Shift+p]" accesskey=p>Printable version</a><li id=t-permalink><a href="https://linux-sunxi.org/index.php?title=Android/partitions&amp;oldid=2184" title="Permanent link to this revision of the page">Permanent link</a><li id=t-info><a href="https://linux-sunxi.org/index.php?title=Android/partitions&amp;action=info" title="More information about this page">Page information</a></ul>
+ 
+ </div>
+</nav>
+ 
+</div>
+</div>
+<footer id=footer class=mw-footer role=contentinfo>
+ <ul id=footer-info>
+ <li id=footer-info-lastmod> This page was last edited on 20 January 2013, at 20:47.</li>
+ <li id=footer-info-copyright>Content is available under <a class=external rel=nofollow href=https://creativecommons.org/licenses/by/3.0/>Creative Commons Attribution</a> unless otherwise noted.</li>
+ </ul>
+ <ul id=footer-places>
+ <li id=footer-places-privacy><a href=https://linux-sunxi.org/sunxi:Privacy_policy title="sunxi:Privacy policy">Privacy policy</a></li>
+ <li id=footer-places-about><a href=https://linux-sunxi.org/sunxi:About title=sunxi:About>About linux-sunxi.org</a></li>
+ <li id=footer-places-disclaimer><a href=https://linux-sunxi.org/sunxi:General_disclaimer title="sunxi:General disclaimer">Disclaimers</a></li>
+ </ul>
+ <ul id=footer-icons class=noprint>
+ <li id=footer-copyrightico><a href=https://creativecommons.org/licenses/by/3.0/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAABblBMVEX///////////8AAABAQEAQEBDf39/Q08/BxcDLzsrGysXO0c3Mz8vIzMfR1ND///9gYGDM0MyAgIBQUFAwMDCvta7v7++/v79wcHAoKSjT1tKfn5/Lz8q8wbsNDg23vLYpKSl5fHkbGxvEyMNDREMgICC9wryRk5HJzci5vrjDx8LJzcnM0Mu1urSts6yxt7C4vbeyt7Gssquvr69QUVCTmJO6v7m0ubOwtq+2u7XPz8/S1dEODg7Axb/DyMOus63S1dLLz8u7wLo+Pz7FycSEhoS/w76RlJHP08+/xL6vtK7N0c18f3yyuLG5vrm0urPEx8PO0s7KzcnHy8fEycS+wr3AxL+zuLLQ1NCEhYS+w77R1NGJjIlwcm+8wLxdXl2eoJ2utK19f3yWmZaxtrDIzMjGysaPj4+fo57AxcC7wLvW1dWChYLN0cy9wr01NjW6v7qrsaqwta8yMzGvsq+ws6/Cx8K8wbzN0MzFycXhaneiAAAAA3RSTlMADgqEIABOAAACy0lEQVR4XrWV5Y/jQAzFe+cgQ5GZYZmZmZnhmBn/+/Oku1XTbhtdq32K5HyIfnp5Y3scT+BR5HAAlKP58Bk3JchFXtJ1KbQnC0luKbwVLR93f7vt6ur7+v9CMnKHMkcFIRcSWWUmEJg5Z8XZnFCYzAwRsvu2q68tsgOQ+za5z4vKaSoCqEhqUdkNyQfcJyRvjrinGy3HY4CKxVuD88iVS2w2AVUlllk9t8BltqLDvSMNlgf9AJTPRwH4B1uBw0dJWVcGkEdrhtdraDSiB3Y+5g4mw/lRDKPO8psJcDIqinHCxGAL8Flhv0S4tOFRKwoi2r+jy4WluZ4yWraC/aAhFYB8CP4WYE7gWeS6GLUqjws9syGBy6DlF2uWLOLgfH8PVp0Qbw6eeilmkYt2reTl3VxydS663euergXHoMYBA7HmYCGkJIAeUy3y0JBQZgXud768ac0CKELUADRSKWgOltdPAQy1TkGARVEuHA5hFlawjwABRaqvBbi4kgIag/A6KcqolNdIpiHF7pEshrvX2gPzSgQ0BAIR1W8Wjfxs5Dy0MPmuZ7vb3V4U0jgAWnRBmvGmgy5sj/500MxiRhK4MDYcghsOD8D28EoBAK+qmjlXi/kHAf1VIxjbTbW0W+fgxgHxmQNiH4VnLG1gFKTUR9F8pG0P7+7U7gpxE1H4xsMjZD+AS/O57JZQcWUAaLXabv2UWdQ0tlsxufql0m7trE15PYtZPDwgvw63Ro/J5LWz6P+aI83YjrS9GpfQzUNLKCvmppZw8MgSagsMGzx7jeSaNcSYa5P/AB0IwXApndQueo9BA3xWShvQKRie6SfXdVeT8ud5U0BlPsiLDRjJEntTe5lm2VJzLqiVB6stGC55UcneX//LishjDq0dm3B7MHz/EVpfUcYDgXGFFWd/zgPYOLYH32v+4oqXSiWJv7og2M4dP5IcTx+J+w+Cru2omf6OhAAAAABJRU5ErkJggg==" alt="Creative Commons Attribution" loading=lazy width=88 height=31></a></li>
+ <li id=footer-poweredbyico><a href=https://www.mediawiki.org/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAAAvCAYAAAAin2KKAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAY+0lEQVR42u2beXQUVRb/P1XVnU7S2RdCFgKEJUCABDkCkUUWJREIQUGDMCLIDEwEhZnfERkZGRjwdxTm/BCccQEOzCjxgIwsB0iAkKCCIIuJSgBJBMKWleydrbur3u+PTgoiAZIMOs5Mbk6ddL16Ve/Vvffdd+/33pK4jU6fPu0qSdIrsixPUxTFXVEUDRC0089OQoif5BlCCFlVVVRVLVRVde2gQYM+kiRJa7wuNf44ceJEtNFo3BYcHNzBz8/PJMtyO8P/i8lut5OXl1dZVFR01Wq1xgwbNixPV4gTJ05Em0ym3X369PE3Go3tDPsfourqanH27NmrqqoOGjp0aJF8+vRpV1mWt/Xu3dvfYDAghGhXhlZamv/kw9XVVerVq1cnWZZ3AhhUVV0UGhraodEy/KRmueIKeHZu16JfGLm7u8uenp7hn3322XBZCDHdz8/P9MC0TtOatzJlV5FSlyNl72uXwC/Q0gQFBfkaDIb5BkVRzA/SgZT2bwKTE2LoZDC5OhptdUjpa6C+Hr7ZBv69wTusgRMaUn46FKYjolaCJLc7gP8GcnNzQwgRZWj0Gx6QmiOdz4C6cqTzxxATXkSE9kXKSoWyIjACqEinN6M9thysFuSMNWDJBgOIqovg3r1dOv+myEmSJCfDA51RwVUoLwcDUFmJ9M9V8MRvkDL3g/22fkWXIPcocs5uqCtoUBSQyrMRP6FCtFua+/JHMjQy6UEwS6osvyV4CUBD2r4KnGRwd7/VrtqQU1eCl79DeRrJkv8vz8NisWCz2QAwGo24ubn9xwkmNTUVFxcXhg0bdse7bd26laeeegofH58HPq6qqhhUVW2TEKTUVKSD+8DfF9G9G/TuCzVVP1IIoLwCrOXQo/+t9oobSGoVws3/tgcC9dVQV4p08ySS5RyopeDaAa3ryy2e1wsvvMDOnTv1cz8/P37961+zdOlSHkQk9XNYmQ8++AB/f3+GDh3a1C8vKyMxMZEhQ4bg7e39wMfVNI02bxnC3QO5sARKSpAuZkNaCjhJCEsZ+Hg1dALJqkGVBSwWhNnskH3pTYSLEWETej/sdXDlCHLBSTAIxzaigHAObJUQhBA88cQT7N69G4vFwuHDh5kxYwbOzs689tpr7fvCfXgna7eFia05NG9v7JqEsAn9oKwK6fvvkQoKwIbDWsguUA9Yahzn9TaoswLOjnMbSLXVSDfOIFXcBLtwtNsBFTAG/Euec1xcHFOnTmXfvlvhbn5+Pvv37ycjIwO73WHSKioq+Oabb5rcf+7cOYqKipqs0LNnz+rnN2/eJDU1lYyMjCZKe+zYMaxWK+fOnSM5OVlvv3btGsnJyVy4cOEOfp4/f55du3aRm5t7z1C0sf38+fMcOHCAmzdvIoSgoKCAM2fONOmrqipff/011dXVLZar3FYTKIV1RXV1RxWyLkDhZAbFBXJzodLiaDP7gDCAKjsErMpgkxAu/g0KISAvG6wqwuh7SxkaFEoz92yVojbHyNraWpycnBBCsHbtWvr378+6deuYMWMGw4YNIy8vj+rqaoYMGcLp06cRQlBXV8eIESNYunSp/pzly5ezYsUKhBAkJSURGRnJhx9+yLx58xg/fjxWqxUhBAkJCfzxj39kyJAhzJs3DyEES5YsYdiwYWzfvp34+HgWL16s83Lt2rVER0ezefNmEhISOHny5D15/9ZbbzFr1iwWL15Mv379yMzM5Pr16wwcOJAzZ87o/Xbv3s3EiRNpKaygaVrbLYRQFNQBA7CjoGmSvqJFYBeoBykv39EmDIiOPRDOXo5zTUF07AMmb8d5RQnU1oFzIGC6pRB2QHJDePRotbLabDbKysooLCxk8+bNbN++nWeeeYasrCwWL17Mzp072bdvHxkZGbi5ubFkyRICAwMZNGgQKSkpAKSnp+Pv78+ePXtQVRWA5ORkJk2axI0bN3jxxRfZvn07H374IUePHqW+vp5//OMf+hwOHz5Mbm4uly5dIi0tjQ0bNnDy5Ek2bdrEyZMnSUpKIjMzk8uXL7NkyRI+/vhjdu3axZdffkmXLl3u+X7R0dEcP36c06dP89BDD7F8+XIeeughoqOjee+993QZbdiwgdmzZ2MymVpm9TUNQ2sshO1qHtZvzyGu50FRIUplBVLOZSRPNwx+nsiSBK6eiE7dkcqLdAdTi/kVInIw8lcpiLA+CJ+OKJ++AQikmlowByHcQhuUAKirQLKXIAK6o5z5K8LkBmY/hM8AhFvX2zzW5iktLY2OHTsiSRKdOnXijTfeYM6cObzzzjt069aNRx55BCEEBoOB6dOn8/rrryOEID4+nh07drBkyRJ27drFiy++yAcffMDx48fx8fEhPz+f2NhYfRvYu3cve/fuBaCurq7J1jF37ly8vLwQQnDgwAG8vLxYu3atPkdnZ2cyMzNRFAUvLy9iY2MdJluWCQgIaBbtbTwfMWIEQggkSSI+Pp4VK1YAMH/+fObMmcMbb7xBSUkJR44cYf369a3yIQwtTWZVZ56n5O1/YEDDgIoBO0Y0JMUJLl6BGwrGnmFIHq7g4YfWLwr12eehxoKIGACShBY/99bgU/6IVFMGBdko5w86thOhIhXngL0MzK5Qb0cq+BbJgMPJvL4bLXAMapcZ95zrmDFj2LJlCy4uLjg7O+vtlZWVuDeGv7f5GZWVlbpCLFmyhPz8fPbt28frr79OYWEhu3fvJiAggFGjRuHh4UF9fT1ubm6MHj1af87o0aPp1KmTfm4ymfTfdXV1BAYG3tG/T58+bN269V8KjY1GI5rmKGeIj4/n1Vdf5aOPPiIvL4+4uDiCg4NbrAytshDmqF6UdwnFnnu1ISwwIGHH0DUMuyxDwQ2kCz9g6B+BhILWJwoR1vPuEwjqjgAkF3f47qDDL7mZA7Yy8HBHeIU7/A3pVlgqkNE6xraISc2FZb169WLdunVYLBZdCJmZmfTu3RtJkggLCyMiIoKVK1cSFhZGcHAw8fHxPPfcc4SEhDB16lSEEERERFBaWkp4eDhBQUHNruLbF1pERAQpKSkMGzbsjtA3NDSU/Pz8JspaU1ODr6/vXS3E7c8+deoUvXv3RgiBoij89re/ZdOmTRQXF7N169ZWR2hyo3a1ANfEZ9p47LIBOwp2ZOwo2FBQO3dB7R+JLSgUe/ee2F9aiBr3ZMv2raBwbPGvoXYbgZBcET690HwjEMKAsDZEMHbHfy1kAprJv02OpRCCiRMnEhoaysyZM0lNTeX999/ngw8+4NVXX9X7xMfH89FHH/Hkk475DxgwAJvNxqlTp5gwYQIAAwcOZOzYsSQkJLBv3z727t3LtGnTdP/jxzR9+nQURWHWrFmkpqaybds2xo0bx+XLl4mJicHd3Z25c+eyd+9eFi5cyNdff31PUSxbtozU1FTeeecdtmzZwoIFC/Rrs2bN4sqVKwQFBd2BY7TEqVRmzpz5f4KDg91bcoPB1xPJzY2ab7Ob1NVJAEYDkpsbUreuSPFx0JqEmbsvUm0VUuFFcHK+9dDbrYNXD9S+v242+XU7Xb9+neDg4GaZoSgKCQkJ5OTksHPnTkpKSli5ciVPPPGE3icgIICCggIWLlyIu7s7kiTh5uZGt27diIuL0/tNmjSJ8vJy/vnPf5KRkcHIkSN5+umnURSFnJwchg0bRmhoqG6xpk6dypkzZ/j000+5fPky06ZNY+jQoRiNRmJjYzl27Biff/45MTExTJgwAW9vbwYMGNBk/na7nWvXrpGYmMjbb7/NjRs3WL58OePGjdP7uLi4sG3bNubPn09kZGSrFOLSpUsVUnp6el50dHRgix3Lkgry/t8WLAeP4FRfg9EgcPZyxTnQH4NB4Bw7CsOzU1ofxl76BsO+NWAQSLXFYC1BkuvBpKAF9cI2ZhnCuwftdG9qBOKys7NxcXFp1b0HDhy4YmgMO+9rTqw2Cvccp3T/MRSbFTkoENuNG2hVlVB9E62qGq/5z6E8PalN8K7oGol9bCLGrUuQqq47nEizCeHuB6oB42dvoIU+jBoxDeHs/T8r8Pvx9u2332b27Nk4Ozu3Wg56lHE/qi+p4vu1u7Bezcfh8MsYvDwxermjqFYUzYpslLHeKMZFUdqeHKsoRXiEIDwDHArhbHQkv1QHLiFfPYVUko198AKEZ1h7RrMZ2rVr178GXbfE8bv46VdUXi1tCDblBqfS4ViqihHV6IwdhdoLuWg2e5urdqTsTIfwMYIwNgWpGoAvqboCw+l3Eba6uzqUP1dG8tChQ/renpqaSnl5+U8+7oULF8jIyNDD6B07dnD+/Pm79j9x4gQXL15sVvjNAVMtgq57zR5Dx7EPORRAVwYFuwr1ZTXUFVdiq7FhGj4IydB2C6H2exRqrVBWCuVljpzH7QphA829K7bo18BgavYZq1atYurUqVit1ubxlOpqpkyZwrp16+65Uu53LFq0SI9OkpKSmDRpEn/4wx/ue19aWhoTJkxg165dTdrr6+t58skneemll+64Z+3atcTFxWGxWBg9ejQjR46kpKSEa9eu8dxzz7Fjx45mx8rNzWXMmDHExcW1aOG0eMuQZInuzw7Db0BXru44Rs2FK9Reu4laUIyTsGLEjtnXjKmgFLW8CtmzDUCLpiJdvwxFRcgV18GEo4rKxwcR3AXh5Ik9chJqz9EgK3CXeWdlZbFnzx42btxIYmLiHdffe+89UlJSdDTwQdCIESOYPHkyCQkJ9+3bo0cPDh8+jNlsJj4+Xm8/evQoBw8eRJZlli5dip+fn35t/fr1+Pj4YDabefnllykpKcHLy4uCgoJ7jhUYGMjs2bPp2bNni+sh5NaYdM/wIHovnIixox822Yjs74McFIBT724o3btSk32N8q3JbWKqknEM5VgqwicYNbQfmkcwwtwBgRPCLmEdvxS11+MOZWgBrVq1CovF0qStoqKCNWvWNOtrlJaWkp6ezldffaVnQH9ci5CWlsaZM2f03EYj+fv7s3DhQnr37t1krJMnT5Kenk5hYaHOw5CQEPr27Ut6ejp1dbe2vUY4XNM09u/fr7efPXuW3NxcHdqOj4/nV7/6FZIkNYu5NELoWVlZGI1GZs6cSUxMTIsTg63LdgrBuQ1pVBVW4RQSgFPXYAydAhEeHrpvoZmcW+XE6Ieq3UqZK64I7xA0v64I784gDBj3r0PUVbfopQCKi4tZu3Ztk2tr1qyhsrLyjrHff/99wsPDmThxIo899hgDBgwgKytLv/73v/+d8PBw4uPjiY6OZtSoUbqyCSH47rvvGD58uI4MLlmyhC5dujB69GgmTpxI37592bx5sz632NhYampqOHLkiN6WnJzM8OHDcXV15cCBA3r7/v37AYiJidFzJJMnT75rUm/GjBk8+uijetbzscceY9GiRS3PdjZWTLXkyE0/T0HmtQbhy9hpQC2FTHVBOZUXrlNx4hwlW/ZiL69qmfBUFcOhFJQvP0PO/h7p+nWot99SjsaaieI8jF9uabGyxcXF8c4771BcXAxAUVER7777Ls8880yTfkeOHOGVV15h0KBBJCcns3nzZmpra5k2bRpWq5XMzEwWLFiAt7c3f/vb31i/fj0Wi4W8vLy7ju3i4sK0adNISkpi06ZN+Pv78+qrr5Kfn68rBMDBgwf1be7q1as89dRTjBw5krS0NL0MMCUlhY4dOxIVFdVE4X+8AOx2O7NnzyY5OZlly5aRkJBwT9T2rtnOlkLXthor53Z+A8iAooOIwgYV319DqanG1cOEtdZGadppsGv4PB93/63i1EkMO7Y7/AXFFfn6DURpEaJ7T8TtvogEyvcnUPvHoPl1vm+Y+ac//YmUlBRWrVrFqlWrWL16NUIIFi9erK/kxhSxi4sLH3/8sZ5LkGWZ559/ni+++IKUlBRUVWXjxo06+jlo0CCioqKaFYwQ4o7KrPr6ehITE8nIyGDcuHEMHDgQX19fDhw4wFtvvUVycjKSJBETE4OiKCQnJ3Ps2DEiIiI4deoU06dPR5Kke67sxMREdu7cyZw5c/jd737Xpm1bT261ZNu4efEmODlhs9QhGv+EoOxCHnKNipufD8Yuvo4SCAEV3+SA+SCKpuE+fgSSq0uTrYeDaUiWKqScbEe1lQDRoRMoMlJpHlLOBUREP4SL8db357KCdOkbhG/ofefbs2dPZsyYwaZNm4iLi2Pz5s3MmzePwMDAO8I4u93eBOpu9CGys7PJzs7G2dmZwYMH69fDwsIICQm569jZ2dmsWLGCc+fOYbPZqK2t1f2QRgj98ccfZ+vWreTk5JCcnEy/fv0ICQkhJiYGSZI4cOAAeXl5qKqqW5S70fr16/Vnjx8/vs2gVquynR37BhKz+kkqr5ZRdqkIa1k1VTn51BVXYO4eiJNJRkXDjp3a3DxqLRbU8kqMqNgLinHuEYot7SjOkeEovp6I7bswoMLVy0i1VdCrOwIFzS8Y/AKQasoR7n6oUUMQnp5o/kFonXreynW0gBqtwZQpU3B1dW125bi6umI0Gpu99vDDD/P5559TX19PZWWlnkFVVZWysrLGj1uamGZN05g8eTI2m42XX34ZFxcXsrKy2LBhA7ejwjExMWzdupUPP/yQzMxMFi1ahBCCjh07EhkZyf79+7l+/Tomk4mRI0c2m/lsbCsrK2PcuHGkp6eTmJjI8ePH8fLyajVg1+ISutsH9wj1pvPIcHo8+RB1dXaMHbzRTM46UFVdUEl1YRWah4eOV5Tt/pyyj/ZSX1JBTdoxLKve1/0Qm7sXarkFKfuSA5SyARgQnn5QZ8M6+klsg2NQw/ohjKZWldEFBAQwf/58amtrWbhwIR4eHne818iRI6murtY98pkzZxIdHc3gwYOJiIjQi2k2btyo35eUlER1dXWzvCosLOTKlSvExcWRmJjIzJkzCQsLa7Zmw2g08t5776FpWpMEW2xsLDk5OXrK3NxQnHw3evzxx9myZQt//vOfycvL4/e///1Pv2X8mKyWesqulmO4rXBbaBqWG+U4GU3IgR0c20etFWtBBbKbC5LJDclmQxSVI5ldkTp4IXn7Irl7QWk5SkU1wtN8K9NZVYNy8TxqeP82YwQLFiygrKyMuXPnNrtiXnrpJbZv365XR7m6upKZmUlkZCQHDx5k1qxZbNy4kZUrV7Jnzx5MJhOnTp3Cycmp2fH8/Pzo1KkTH3/8MWazmcrKSpKSku4Y18PDg8GDB3P06FECAwPp379/E+vx5ptvUldXx9ixY+9pHRrT8bIs85vf/Ib09HQ+/fRTPT3fWki/zUW2pZdKsAm5CZRdZ7Fjw4Bzz85oRifsGKgtr3b0k4yO+gnJgBUD1jKLfp+tRzg2swdqaeUdcLV0MbtV8Hfnzp11j1wIgdlsZvXq1XqyR5IkoqKiCAkJcWArnp4cOnSIOXPmUF9fT1FREXFxcbz77rv6/fv372f69OmUl5djsVhYvXo1Tz/9NOHh4XqfqKgo/P39URSFbdu28fDDD/PJJ59w7tw5/vKXvxAVFYWvr28THiYkJBAVFcXzzz/fxGmMiopixIgRREVF3eE/9OjRg759+wKOMryoqCgCAgIaSlYk/vrXvzJkyBCSkpKwWCz079+/WQt1NwshffLJJ3ljx44NbK1C/HD4B75LOtVQTqfi4qpg9nam5nI+JicZYwPIbb+ahygowisqDJOTjAEV9duzOMkarv26Y8COAQ1Fs+Lk5YGi2TBUV9CQRcMe/QjWZ19oz2j+DPTJJ59cMfwYdWspObk703lkT1w9Tfh09sa/T0euf3GBizfKsGNHQgAKdsUJxcsb4eSM3ZG5Qg7oiK30JnYaUUc7yEbsUZGoz07BfjkX5YdspJIihKdPe0bzZyJVVR0OQFsY3GlgMJ0GNi3gdPJ2wyakBqzCEZoaAv0x2DyxCUkPV506+KEE+GITNgSO/gKBYnZDNhhQe3RH7dG9aZjaTj+5pWldTWULyC3Q67bUuIJTgC99/+8slADf2+owZWwGJ/z+lIjcrYveV0VB+Pn+7Az7bz7aVA/RXCKnrcxy8Tdj9HbHjoJXZFf6Lp6EqYMHAROHNHE+zY9EYgzpgO8rL+AcMwK7bMQuGSCi1y+aYf8DW4YwNH739yBIkiS6xvTFM8QT3/Bb32T6D+1N8bHvqcu5htHTjM/E4Q24tYz7lLG4REdR/+VpZB+vdgfw30SapmG32+tkq9VaUl9f/8AeHDamZxNlEEIggG5zY1F8vQiZMx7F09xkpSpB/rg+/cT/hFn+pVJ+fj6apn2ujBo1SpIk6dGgoCCnn3JAxWTEf3gEpg5etNMvz9IcOnSouKSkZJ5cW1u7/ttvv73RmBz5KUk2GdrMrHYH8KejH374wVpcXHxk2bJlWcpnn32mDR48eN/ly5endOrUyaO1tfzt9J9taS5evGhNT0+/UFxcPO6rr76yKwBffPFF+aBBg7ZfvHhxTFVVlbOnp6fzf6NitEcWt/hQUFDAoUOHbmZlZX1ms9li33zzzVpo5rv6pUuXxrm6us4HusuybJBlWftPedEHian8F5Nkd2ANX1VWVq558803m3xI+v8BSkhVgv5PhFAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjAtMTItMjlUMTY6MjM6MjArMDA6MDDYnP5IAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIwLTEyLTI5VDE2OjIzOjIwKzAwOjAwqcFG9AAAAABJRU5ErkJggg==" alt="Powered by MediaWiki" srcset loading=lazy sizes width=88 height=31></a></li>
+ </ul>
+ <div style=clear:both></div>
+</footer>

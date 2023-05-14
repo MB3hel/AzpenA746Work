@@ -1,0 +1,166 @@
+root@along-6051:/ # cat /proc/partitions                                       
+major minor  #blocks  name
+
+ 253        0     393216 zram0
+  93        0      32768 nanda
+  93        8      16384 nandb
+  93       16      16384 nandc
+  93       24    1572864 nandd
+  93       32      16384 nande
+  93       40      32768 nandf
+  93       48     524288 nandg
+  93       56      16384 nandh
+  93       64      16384 nandi
+  93       72    5292032 nandj
+  
+  
+  
+  
+root@along-6051:/ # uname -a
+Linux localhost 3.4.39 #266 SMP PREEMPT Thu Jul 27 08:40:16 CST 2017 armv7l GNU/Linux
+
+
+
+
+root@along-6051:/ # cat /proc/self/mountstats
+device rootfs mounted on / with fstype rootfs
+device tmpfs mounted on /dev with fstype tmpfs
+device devpts mounted on /dev/pts with fstype devpts
+device none mounted on /dev/cpuctl with fstype cgroup
+device proc mounted on /proc with fstype proc
+device sysfs mounted on /sys with fstype sysfs
+device selinuxfs mounted on /sys/fs/selinux with fstype selinuxfs
+device none mounted on /sys/fs/cgroup with fstype tmpfs
+device debugfs mounted on /sys/kernel/debug with fstype debugfs
+device none mounted on /acct with fstype cgroup
+device tmpfs mounted on /mnt/secure with fstype tmpfs
+device tmpfs mounted on /mnt/asec with fstype tmpfs
+device tmpfs mounted on /mnt/obb with fstype tmpfs
+device /dev/block/by-name/system mounted on /system with fstype ext4
+device /dev/block/by-name/cache mounted on /cache with fstype ext4
+device /dev/block/by-name/UDISK mounted on /data with fstype ext4
+device /dev/fuse mounted on /mnt/shell/emulated with fstype fuse
+device tmpfs mounted on /storage/emulated with fstype tmpfs
+device /dev/fuse mounted on /storage/emulated/0 with fstype fuse
+device /dev/fuse mounted on /storage/emulated/0/Android/obb with fstype fuse
+device /dev/fuse mounted on /storage/emulated/legacy with fstype fuse
+device /dev/fuse mounted on /storage/emulated/legacy/Android/obb with fstype fuse
+device /dev/block/vold/179:1 mounted on /mnt/extsd with fstype vfat
+device /dev/fuse mounted on /storage/extsd with fstype fuse
+
+
+
+
+root@along-6051:/ # cat /proc/self/mounts
+rootfs / rootfs rw,relatime 0 0
+tmpfs /dev tmpfs rw,seclabel,nosuid,relatime,mode=755 0 0
+devpts /dev/pts devpts rw,seclabel,relatime,mode=600 0 0
+none /dev/cpuctl cgroup rw,relatime,cpu 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,seclabel,relatime 0 0
+selinuxfs /sys/fs/selinux selinuxfs rw,relatime 0 0
+none /sys/fs/cgroup tmpfs rw,seclabel,relatime,mode=750,gid=1000 0 0
+debugfs /sys/kernel/debug debugfs rw,relatime 0 0
+none /acct cgroup rw,relatime,cpuacct 0 0
+tmpfs /mnt/secure tmpfs rw,seclabel,relatime,mode=700 0 0
+tmpfs /mnt/asec tmpfs rw,seclabel,relatime,mode=755,gid=1000 0 0
+tmpfs /mnt/obb tmpfs rw,seclabel,relatime,mode=755,gid=1000 0 0
+/dev/block/by-name/system /system ext4 ro,seclabel,relatime,data=ordered 0 0
+/dev/block/by-name/cache /cache ext4 rw,seclabel,nosuid,nodev,noatime,nomblk_io_submit,data=ordered 0 0
+/dev/block/by-name/UDISK /data ext4 rw,seclabel,nosuid,nodev,noatime,nomblk_io_submit,noauto_da_alloc,data=ordered 0 0
+/dev/fuse /mnt/shell/emulated fuse rw,nosuid,nodev,relatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+tmpfs /storage/emulated tmpfs rw,seclabel,nosuid,nodev,relatime,mode=050,gid=1028 0 0
+/dev/fuse /storage/emulated/0 fuse rw,nosuid,nodev,relatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+/dev/fuse /storage/emulated/0/Android/obb fuse rw,nosuid,nodev,relatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+/dev/fuse /storage/emulated/legacy fuse rw,nosuid,nodev,relatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+/dev/fuse /storage/emulated/legacy/Android/obb fuse rw,nosuid,nodev,relatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+/dev/block/vold/179:1 /mnt/extsd vfat rw,dirsync,nosuid,nodev,noexec,relatime,uid=1023,gid=1023,fmask=0007,dmask=0007,allow_utime=0020,codepage=cp437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro 0 0
+/dev/fuse /storage/extsd fuse rw,nosuid,nodev,relatime,user_id=1023,group_id=1023,default_permissions,allow_other 0 0
+
+
+
+
+root@along-6051:/ # cat /proc/self/mountinfo
+305 305 0:1 / / rw,relatime master:1 - rootfs rootfs rw
+306 305 0:12 / /dev rw,nosuid,relatime master:2 - tmpfs tmpfs rw,seclabel,mode=755
+307 306 0:10 / /dev/pts rw,relatime master:3 - devpts devpts rw,seclabel,mode=600
+308 306 0:19 / /dev/cpuctl rw,relatime master:4 - cgroup none rw,cpu
+309 305 0:3 / /proc rw,relatime master:5 - proc proc rw
+310 305 0:13 / /sys rw,relatime master:6 - sysfs sysfs rw,seclabel
+311 310 0:11 / /sys/fs/selinux rw,relatime master:7 - selinuxfs selinuxfs rw
+312 310 0:15 / /sys/fs/cgroup rw,relatime master:8 - tmpfs none rw,seclabel,mode=750,gid=1000
+313 310 0:6 / /sys/kernel/debug rw,relatime master:9 - debugfs debugfs rw
+314 305 0:14 / /acct rw,relatime master:10 - cgroup none rw,cpuacct
+315 305 0:16 / /mnt/secure rw,relatime - tmpfs tmpfs rw,seclabel,mode=700
+316 305 0:17 / /mnt/asec rw,relatime master:12 - tmpfs tmpfs rw,seclabel,mode=755,gid=1000
+317 305 0:18 / /mnt/obb rw,relatime master:13 - tmpfs tmpfs rw,seclabel,mode=755,gid=1000
+318 305 93:24 / /system ro,relatime master:14 - ext4 /dev/block/by-name/system ro,seclabel,data=ordered
+319 305 93:48 / /cache rw,nosuid,nodev,noatime master:15 - ext4 /dev/block/by-name/cache rw,seclabel,nomblk_io_submit,data=ordered
+320 305 93:72 / /data rw,nosuid,nodev,noatime master:16 - ext4 /dev/block/by-name/UDISK rw,seclabel,nomblk_io_submit,noauto_da_alloc,data=ordered
+321 305 0:20 / /mnt/shell/emulated rw,nosuid,nodev,relatime master:11 - fuse /dev/fuse rw,user_id=1023,group_id=1023,default_permissions,allow_other
+322 305 0:21 / /storage/emulated rw,nosuid,nodev,relatime - tmpfs tmpfs rw,seclabel,mode=050,gid=1028
+323 322 0:20 /0 /storage/emulated/0 rw,nosuid,nodev,relatime master:11 - fuse /dev/fuse rw,user_id=1023,group_id=1023,default_permissions,allow_other
+324 323 0:20 /obb /storage/emulated/0/Android/obb rw,nosuid,nodev,relatime master:11 - fuse /dev/fuse rw,user_id=1023,group_id=1023,default_permissions,allow_other
+647 322 0:20 /0 /storage/emulated/legacy rw,nosuid,nodev,relatime master:11 - fuse /dev/fuse rw,user_id=1023,group_id=1023,default_permissions,allow_other
+648 647 0:20 /obb /storage/emulated/legacy/Android/obb rw,nosuid,nodev,relatime master:11 - fuse /dev/fuse rw,user_id=1023,group_id=1023,default_permissions,allow_other
+721 305 179:1 / /mnt/extsd rw,nosuid,nodev,noexec,relatime master:17 - vfat /dev/block/vold/179:1 rw,dirsync,uid=1023,gid=1023,fmask=0007,dmask=0007,allow_utime=0020,codepage=cp437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro
+755 305 0:23 / /storage/extsd rw,nosuid,nodev,relatime master:18 - fuse /dev/fuse rw,user_id=1023,group_id=1023,default_permissions,allow_other
+
+
+
+
+root@along-6051:/ # lsmod
+gslX680 437277 0 - Live 0x00000000 (F)
+mc32x0 14693 0 - Live 0x00000000
+sunxi_schw 12559 0 - Live 0x00000000 (O)
+cdc_ether 5099 0 - Live 0x00000000
+rtl8150 9023 0 - Live 0x00000000
+mcs7830 6292 0 - Live 0x00000000
+qf9700 7805 0 - Live 0x00000000
+asix 17150 0 - Live 0x00000000
+usbnet 17700 4 cdc_ether,mcs7830,qf9700,asix, Live 0x00000000
+sunxi_keyboard 3021 0 - Live 0x00000000
+sw_device 14205 0 - Live 0x00000000
+vfe_v4l2 445380 0 - Live 0x00000000
+sid130b 12082 0 - Live 0x00000000
+siv121d 10662 0 - Live 0x00000000
+gc2155 12864 0 - Live 0x00000000
+gc2145 11175 0 - Live 0x00000000
+gc0312 10952 0 - Live 0x00000000
+gc2035 12696 0 - Live 0x00000000
+gc0329 9384 0 - Live 0x00000000
+gc0328 10559 0 - Live 0x00000000
+gc0309 10446 0 - Live 0x00000000
+gc0308 10535 0 - Live 0x00000000
+sp0838 10454 0 - Live 0x00000000
+sp0a19 9704 0 - Live 0x00000000
+vfe_subdev 4523 13 vfe_v4l2,sid130b,siv121d,gc2155,gc2145,gc0312,gc2035,gc0329,gc0328,gc0309,gc0308,sp0838,sp0a19, Live 0x00000000
+vfe_os 4099 2 vfe_v4l2,vfe_subdev, Live 0x00000000
+cci 21594 13 sid130b,siv121d,gc2155,gc2145,gc0312,gc2035,gc0329,gc0328,gc0309,gc0308,sp0838,sp0a19, Live 0x00000000
+videobuf_dma_contig 5535 1 vfe_v4l2, Live 0x00000000
+videobuf_core 16520 2 vfe_v4l2,videobuf_dma_contig, Live 0x00000000
+mali 211114 30 - Live 0x00000000 (O)
+lcd 42899 0 - Live 0x00000000
+disp 993096 8 mali,lcd, Live 0x00000000
+nand 294759 7 - Live 0x00000000 (O)
+
+
+
+
+root@along-6051:/ # for i in /dev/block/by-name/*; do                          
+>   echo "$i  -->  $(realpath $i)"                                             
+> done
+/dev/block/by-name/UDISK  -->  /dev/block/nandj
+/dev/block/by-name/boot  -->  /dev/block/nandc
+/dev/block/by-name/bootloader  -->  /dev/block/nanda
+/dev/block/by-name/cache  -->  /dev/block/nandg
+/dev/block/by-name/env  -->  /dev/block/nandb
+/dev/block/by-name/metadata  -->  /dev/block/nandh
+/dev/block/by-name/misc  -->  /dev/block/nande
+/dev/block/by-name/private  -->  /dev/block/nandi
+/dev/block/by-name/recovery  -->  /dev/block/nandf
+/dev/block/by-name/system  -->  /dev/block/nandd
+
+
+
+

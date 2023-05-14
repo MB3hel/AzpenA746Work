@@ -1,0 +1,837 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> <html style><!--
+ Page saved with SingleFile 
+ url: https://wiki.debian.org/InstallingDebianOn/Allwinner 
+ saved date: Sun Jan 15 2023 22:33:58 GMT-0500 (Eastern Standard Time)
+--><meta charset=utf-8>
+<meta http-equiv=X-UA-Compatible content="IE=Edge">
+<meta name=viewport content="width=device-width, initial-scale=1">
+<meta name=robots content=index,nofollow>
+<title>InstallingDebianOn/Allwinner - Debian Wiki</title>
+<style>:root{--sf-img-5: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAA9CAYAAAGYbgryAAAAAXNSR0IArs4c6QAAAAlwSFlzAAB+9QAAfvUBJMll2gAAAAd0SU1FB9sBHgwOFLTIT8cAAAAGYktHRAAAAAAAAPlDu38AAAdWSURBVGje7Vp7kE9VHL92WXbtkkwqr1hNjUfyyGbzTA+10YOhyaMpJglbGc+UYUbU0IuUJjLTH1HeUUMlJq8oz5CKMuUViWhYj7W/Pp/6XE63c397f08xzsxn7rnf8z33e773nHvO93zucZwg6Usn51sjX8ZPqSxQzlbQw3yCWTDFiSaFwhWeMZTWA8sD+VfVyIfMgvZ+Nd7VtY0Tl9TTJuwI9JEvp/waMpFNBuYA7yn/RjhfQ0Z+OHB3xI1FpVT19weBLEVjYZCTyFQIdNar3aar29yTwEpvhW4A31QFVRwoeS6QB7QCbo5f+9SRhcAY4ITv20RBuq0QskxrJQhbeO5HAW19+wzCH4z8omI7GcIfjfwRT9kTtgrTPe3ewCaFnSFQuDnSV7ovmn74LtoOzEjY6F1anII7W4zVda5FJ1XlIXNOXa3rQkMxz6jQzpx/y+vKb6EKcKeUmOrqW7kWaBn0jZUBVmjom/gVyOOME8v3tMB44B0+OpUMndej+WB3RqD/ApdFYEjQCt8An1jktxbXsEi8+Am4yiJfGcD7tKBGtgIPWuQ1gUnuEmPIs4GDkfbHZWrVFT7lHFEdgeqxztS3xLTWRWjsMNAuWcauTppn8UgpgG2KnwqMiTU2aWBECe70egz4DZgGcF18WuUMdtMVSbh6lB/S/VpgtBF9WEPb08BehSqFKpsNDFX5H546BcBRRcD8dpYB99tC5iXA98BrKiinK6fwmpr7B+l+nx4WUnjDhzcHjkjO9eKBIHF58hM6+WHLWkK8BHSO9eGpeliRrge4KwBe5DKg2K0o1ijYNTCdH6OPzpSoDWm6p5G7Auh+IUPHIjGQKwMlI/Q6I6hyeVUY41O+FujArRzXEUO+FNgSyJD2OkW2FQ6yTWHq9Wa9oJ5U4aixyLn6ZVrkDQ0joaBGagCnLfI23EmEqcetYp1IjJyy7bOBxsZ9GmMuT8dnBjVSEThjkTcHjtoIC8VbdSP+CC2yEkBTYBvwFNAEGCwPKkT7pX8Yprw7PYt1zqqdlPWcUwTwcqKNpOi1lUi0oZb6+hNuqGakk2Usr24yV8JkLsdlnUsJiVzHfR4ZY609XuIhavIB6XPLvjs9XkHaWiMWbgo8rjjYJF+36loZmAmMB+Yb9VinBsDV8bhkZyfOqgqamVYB9Y2WT/DQEPnALoCk53BPQxmmZhm6A4B5buErityZ1omqCBnBdjejYjXlGTMPU8wbkteHgQxDtx9wdibvAWxXnqF+bUsfuPd8HV/Lw6FqiJsOeYz0NY1kqqCJtg23652SWeBevpHKuUHaD3BHTGZtpLYM3YHdypc3jPQ3jTBdKfYzB6gnWVttF1ixo4xWVFkTbRsy1OGO+o5LcmvdcwD1StSUQ0apMfAZsB/4BXgeeATooyW7hTjH1P/b9uUGYCODHGPrUuSzpfHiOMM8YCFw2/loPEO7t3waRyKrRzH1KwMDFbG5jrvOz0gou2o0or/HMK+Low0EFDVOtPTkPYlo/I1G5OgaWuW3j4zSxnUWZ56NpxMldF2nh+/lji+C+rVEAwwDemk7WjHMJs91YkQ8X5RrYJIezt85LQPW4Qy1xua0ojjOcCmWsvGytVT3JePlRLb4Dc5KTwbQLwXMAhpFaa+30SvXx7M3qgM7RNQ0DKDfDJgflOX2/gvXEAy7y4vWkWv4x03zfckA+vWBQ8V9RyLQK1vkm4GfNcVnxdORauqR00E2C6Lg3uf34TNMW/nUq6ThO4+9FPftlj7MNTIyJID+5cC9QAPgT2Cs3wvQ99QT+F29kOUkMskYx+1X4Rgiy0JXB3hHs95sYL16l5TjamCoCInkxV0w9rExmyyO4TlZzvlMGmJzDWfaX9B7YtHYdGQXZ7QL3Znq+lNHh4Zd8IyFFr9CTc0jLwaHOO+PJk0NfAR0uii4JW1l+2uTNFB0eJpzKV1Kf6dSomNKB9RNN3k5y3DLFVOZm2xHtoioKu4EZiVDt18YR25KliNsUJ5YtzxRfmxcM0OngfjHx8TmMfEj/lS6XcXskYzrJH7SEcNHHpN/itxjfhki4TrIJuvwJ5xLYpQRmZcnCrKebD8EZNscYAWXyp1myLeJs8wRA8jyJWpUBcNRnhNboPwGYBbwjPMPFUyZe3x1qu5H6J6n2CYDbnQwyDl33CJFNl1qegdAAoQ7xpOSjfM64h6uXeSRr5EjrLxOOjyhS/K2lhrIxnYB5qj8baN+tvPvE6UTlH/O0ElTz5FjzRf3yiMdjIbJ5y5XnS5GnXzJ/rODHKeC+R75JjnCIbFbOqS9H/WgldEj+UZ9Dity6AW6Hy+dIRrGB4ATzrlzJo7suI5w6C1THfPQUl8/R0j8n1KheQqtQDKO25HKz7AMTRpdqPI+hryrZAN0/6bRIx3Um1sN/Rzn3IkdPpPh/krJ2gfpEabWwEFjKGwEVig/WDr8kbBHsgLl+RvlVUN3t4YDqX3+6XBPbJfW0KXOTMkWGPYIMjQ7lc9Sr223vKBRkp09U/sXKl3FkyLcuogAAAAASUVORK5CYII=");--sf-img-0: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1QQaBywH5hnejwAAADV0RVh0Q29tbWVudAAoYykgMjAwNCBKYWt1YiBTdGVpbmVyCgpDcmVhdGVkIHdpdGggVGhlIEdJTVCQ2YtvAAAC7ElEQVQ4y62TXWhbZRyHn/ec95xjkzRpm+ajjW3W0KIsuHWyyMSrKagwFG+UKd1FZTgQb4ShoLdSEMX7XYgVR0HE6Y1MhjezMLWzlo12K67rXD+znCwfTXKSc5Kc1wvZxO3W5/r/ey7+/H6CBzj+3uwp4C1dyv0KLOX7DaVY0HTt7NzM1BcP3ov7wfe/nDR17ceJsWTiyIE0Y6koAcuiXG+ytmmzuLLJjY3CZSHEybmZqav/Ebz27ue5YLjnt1eOHhQHJ+KU603snQ1kKA49/eDYpBJRFla2OT+/chchnr0nkQDRaOin55/JiicyA5SKeQZHs0QGh3BabfKb60jfQ+s2eS6Xoeur6IVL188ATwNob3741UfJeH/4aG4cQ/PpyBBoAkNKTEMSsCSJaC9D8RixviC57KOkhweOvPHB2WkALRwJnDycHaVSLnLHDRAf3odS4CtAaAjfY7fU4PuLy1yYXyRiKfaPDwO8CiBrTjuWTvazcKNAZiKOr/79bL1S4qnJLEIIlFJs796h1WwyFIsAHAbQWl5HsywTLRSnUm9h1zwct0vN8fDqNkL8oxNCkIhFubp6E8uQAAMAUtc1v9poacHWDiFpUWgMUjRMOl2fVqnDZLuN63r0hoI4jsO+VIxC0wMoAUhD0/K3torDh8aTZEaGuL25zfzaHh4mTS/Ip99ewRJd3n75ALVajaVrN6E3DfA7gKa63XNLq1t4vgQgPZLi2KEYu4USd6sNqq7gdtnHtm2q1SqP9KdYXc8DfAOgL/187vx47qXTQtfNSNCgx9T5ZXGZ5byi1nDZa7jsOS65EZ3CnsdW2efa2s6vczNT79wvUqVQPHHxsv+d78OTjyX44UqVsmfidbq4XgfLEGxUFH8V2lz6Y60shDj10BaOTX/8+mhmZDYc6TMfzyRJDoaxLAOn1WbXrvDnrTxbO8XrQpfHH9rCPfoGxswXTpye1a3Ai+iyD4RQyu+oTntdCe2zrz+ZPsP/zd9wbDf3MdodlQAAAABJRU5ErkJggg==");--sf-img-3: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAYAAAD0In+KAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9gIHhUCGf6/9FYAAAAndEVYdENvbW1lbnQAQXJjaGl0ZWN0dXJlIFJlc2VhcmNoIFVuaXQgMjAwN7g+1R0AAAASSURBVAjXY5g7f9n/y9fuMwAAGbUFarws5PUAAAAASUVORK5CYII=")}html{color:black}a{color:#0044B3}a:visited{color:#FF7BB3}a.nonexistent:visited,a.nonexistent{color:gray}a.http:before{content:var(--sf-img-0);margin:0 0.2em}a.https:before{content:var(--sf-img-0);margin:0 0.2em}a.interwiki:before{content:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH1gsKFTcyUuMUyAAAAB10RVh0Q29tbWVudABDcmVhdGVkIHdpdGggVGhlIEdJTVDvZCVuAAACDklEQVQ4y62STUhUQQDHf7Pr+Hi+Pt6DCDOisvbLg4veIoJk3UNQLiKIH+WlY3gKFsNDdBDcZdvOXcQUKrpsCiG0qxDWpTxEkNeubWx+bLr29rk7HVJZX2KH+sMcZpj/b34zDPxjhHthPDkWBe7vTB+MxEezhwG8rvJwwB8c7uvtFx1XI6JQKHS0tYcbctmF9381GE+O3Qj4g/diXd2UyzZCeJBS8mRq4kT+W/4CoIBbI/HRZwcadEYjE329/cLZdqhWKnjr6pibe3VW07RzO0aeQqHQ09YePprLLrze7XlqYB8BnHKZ4kaRxbdvTlYqlaZYVzdSShzHIdbVTcAfvDueHLv9B0AI8SU3n8U0LbR6jaWlD82dkSibpU0cxwEBWz+36IxEAR7vA6TSibCu6z2GYTAzm0Gr12hsPPWj1mhl9Tu2be/2Ft0GNwcHhvAH/BhHGnj+4in5/NdSrdG242AeN8nNZxFCfHYDLlumhdfjJRRsobU1fEzX9cZao9NNZ5iZzWAYBrqu30mlE1fcj4ht25TLNsvLy01uo4ePkugNOj6fj8GBIYA4QN1Od3O9uGY0n78IQOZlxrJMi1Jpg1CwhVCwBVAo9XuzZVoA1/cAUspPU9OTl9y/zLZthAClQKFQSrFHOSypdGJ9dW1FVavVA8fq2opKpRPrtVfYFynlu6npyWuHHSKlnOV/5Bed9dd4IhREYwAAAABJRU5ErkJggg==);margin:0 0.2em}li p{margin:.25em 0}pre{word-wrap:break-word;white-space:-moz-pre-wrap;white-space:-o-pre-wrap}td p{margin:0;padding:0}div.table-of-contents{color:black;text-align:left}#pageinfo{margin-top:2em}#pagebottom{clear:both}html,body,div,span,h1,h2,h3,p,pre,a,img,strong,tt,ol,ul,li,form,label,table,tbody,tr,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline}body{background:white}ol,ul{list-style:none}table{border-collapse:separate;border-spacing:0}html{background-color:transparent}:focus{outline:0}td{text-align:left;font-weight:normal}body{margin:0;font:normal 100%sans-serif;line-height:1.5;color:#222;background-color:white;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABDCAIAAADS5/i5AAAAAXNSR0IArs4c6QAAAAlwSFlzAAAN/wAADf8B9IqyiQAAAAd0SU1FB9cIHhQeLyfm5HAAAAAWdEVYdENvbW1lbnQAS2FsbGUgU29kZXJtYW4Dov5qAAAABmJLR0QA/wD/AP+gvaeTAAAAVUlEQVQY012OwRHAMAjDJO+/X6/fLkIfcEnTF1iHbbjuJ4aIQQKzx1hEm4vRCiTKZswuAfue9unOdRjHJOhks1h7Tj9z09469Ope2X5+/DGIGU19u15WfQeCuEqAAgAAAABJRU5ErkJggg==);background-position:0 0;background-repeat:repeat-x}#header{padding:0 10px 0 52px}#header a:link,#header a:visited,#second-nav a:link,#second-nav a:visited{text-decoration:none}#header a:hover,#second-nav a:hover{text-decoration:underline}#breadcrumbs{margin:0;font-size:0.75em;line-height:2;background-color:#f5f6f7;border-bottom:1px solid #d2d3d7;min-height:20px}#breadcrumbs:before{content:"/";margin-left:0.5em;margin-right:0.5em}p.section{margin:0;padding:0 5px 0 5px;font-family:monospace;line-height:16px;color:white;text-transform:uppercase;letter-spacing:0.08em;position:absolute;top:0px;background-color:#c70036}p.section a{color:white;text-decoration:none}p.section a:hover{color:white;text-decoration:underline}#navbar a:link,#navbar a:visited{padding:1.75em 0.5em 0.25em 0.5em;border-left:1px solid transparent;border-right:1px solid transparent;display:block;text-decoration:none}#navbar a:visited{color:#54638c}#navbar a:hover,#navbar a:visited:hover{background-color:#f5f6f7;border-left:1px solid #d2d3d7;border-right:1px solid #d2d3d7;text-decoration:underline}#logo{position:absolute;top:0;left:0;padding:0;background-color:transparent;border:1px solid transparent;border-top:0;width:50px;height:5.07em;min-height:65px}#logo a{display:block;position:relative;padding:0;height:100%;min-height:65px}#logo img{margin-top:5px;position:absolute;bottom:0.3em;overflow:auto}#logo:hover{border:1px solid #d2d3d7;border-top:0;background-color:#f5f6f7}a:link{color:#0035c7;text-decoration:underline}a:visited{color:#54638c}a:link:hover{text-decoration:none;color:#00207a}a:visited:hover{text-decoration:none}a:active{color:#c2c3c7}a img{border:0}p{margin:1.5em 0 1.5em 0}strong{font-weight:bold}h1,h2,h3{font-weight:600;color:black}h1{font-weight:normal;font-size:1.8em;line-height:0.83333;margin:0.83333em 0 0.83333em 0}h2{font-size:1.4em;font-weight:normal;line-height:1.0714286;margin:1.0714286em 0 1.0714286em 0}h3{font-size:1.125em;line-height:1.333em;margin:1.333em 0 0 0}ol,ul{padding-left:1.5em;margin-left:0;margin:1.5em 0 1.5em 0}li>ul{margin:0}ol{list-style-type:decimal}ul{list-style-type:disc}pre{overflow:auto;white-space:pre;color:black}tt{font-family:monospace;white-space:pre;color:black}#footer{font-size:0.75em;border:1px solid #dfdfe0;padding:1em;background-color:#f5f6f7;margin:0 10px 0 52px;line-height:1.5em;border-left:0;border-right:0}input:focus{background-color:#FFFFCB}table td{padding-right:1.5em}body{font-size:100%}#breadcrumbs{text-transform:none}#wikisection p.section{left:0}#wikisection{position:absolute;top:0}div#username{font-size:0.75em;margin-left:5em;color:#d2d3d7}#searchform{float:left;font-size:0.75em;line-height:2}ul#pagelocation{display:inline;padding:0 1em 0 0}#navibar,.editbar{list-style:none;margin:0}.editbar{padding:0 0 0 0;font-size:0.75em;line-height:2;position:absolute;right:10px}#content{margin-top:1.5em}.info{position:relative;float:none}pre{padding:1em;margin:2em 1.5em 2em 1.5em;background-color:#f5f6f7;border:1px solid #d2d3d7;font-family:monospace;font-size:100%;line-height:2em}div.table-of-contents{font-size:0.75em;line-height:2em;list-style:none;background-image:var(--sf-img-3);background-position:bottom left;background-repeat:repeat-x;background-color:transparent;padding:0;margin:0;border:0;max-width:50em;display:block}p.table-of-contents-heading{font-weight:bold;padding:0;margin:1.5em 0 0 0;font-size:125%;letter-spacing:normal}div.table-of-contents ol{list-style-position:inside;padding:0;margin:0}div.table-of-contents ol ol{list-style-position:inside;padding-left:2em;margin:0}div.table-of-contents li{background-image:var(--sf-img-3);background-position:top left;background-repeat:repeat-x;padding:0;margin:0}div.table-of-contents a:hover{background-color:#f0f0f4}div.table-of-contents a{text-decoration:none}h1#locationline a{color:black}p#pageinfo{color:gray;font-size:1em;margin:1em 0 0 0}#footer{margin-top:2em;margin-left:52px;margin-right:10px;clear:both}ul#credits{margin:1em 0 0 0;padding:0;font-size:1em;line-height:2}ul#credits li{list-style:none;display:inline;margin:0 1em 0 0}table{margin:0.75em 0 0.75em 0}td{padding:0 1em 0 0.5em}p img{display:inline}div#header ul li{display:inline;margin-right:1em}ul#navibar li.wikilink{margin:0}#searchform{position:absolute;right:10px;top:0}div#content{margin:0 10px 0 52px}div#header{margin:0}#navbar{background-color:transparent;list-style:none;display:block;border-bottom:1px solid #c70036;text-indent:0;padding:0;margin-top:0;margin-bottom:0}#navbar ul{margin:0;padding:0;clear:both;overflow:hidden;min-height:45px}#navbar li{list-style:none;float:left;padding:0}#navbar a:link,#navbar a:visited{padding:1.75em 1em 0.25em 1em;border-left:1px solid transparent;border-right:1px solid transparent;display:block;text-decoration:none}#navbar a:visited{color:#54638c}#navbar a:hover,#navbar a:visited:hover{background-color:#efefef;border-left:1px solid #d2d3d7;border-right:1px solid #d2d3d7;text-decoration:underline}form.actionsmenu{float:right;vertical-align:text-top}span.sep{margin-right:0.25em;margin-left:0.25em}.closed-bug{text-decoration:line-through!important}</style>
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/htdocs/debwiki/css/msie.css">
+<![endif]-->
+<link rel=alternate title="Debian Wiki: InstallingDebianOn/Allwinner" href="https://wiki.debian.org/InstallingDebianOn/Allwinner?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=InstallingDebianOn%2FAllwinner&amp;ddiffs=1" type=application/rss+xml>
+<link rel=Start href=https://wiki.debian.org/FrontPage>
+<link rel=Alternate title="Wiki Markup" href="https://wiki.debian.org/InstallingDebianOn/Allwinner?action=raw">
+<link rel=Alternate media=print title="Print View" href="https://wiki.debian.org/InstallingDebianOn/Allwinner?action=print">
+<link rel=Up href=https://wiki.debian.org/InstallingDebianOn>
+<link rel=Search href=https://wiki.debian.org/FindPage>
+<link rel=Index href=https://wiki.debian.org/TitleIndex>
+<link rel=Glossary href=https://wiki.debian.org/WordIndex>
+<link rel=Help href=https://wiki.debian.org/HelpOnFormatting>
+<link rel="shortcut icon" href="data:image/vnd.microsoft.icon;base64,AAABAAQAICAAAAEAIACoEAAARgAAACAgAgABAAEAMAEAAO4QAAAQEAAAAQAgAGgEAAAeEgAAEBACAAEAAQCwAAAAhhYAACgAAAAgAAAAQAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEAwX8lALffVQDWvwAAwX8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABVANa/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABVANa/QADA/yUAt98AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQADA/0AAwP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAwP8lALffAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAMD/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQADA/0AAwP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFUA1r9AAMD/VQDWvwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQADA/0AAwP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUAt99AAMD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQADA/0AAwP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAwP9AAMD/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWAKxfVQDWvzMAzZ9WAKxfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMwDNn0AAwP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANa/JQC33yUAt99AAMD/QADA/0AAwP9AAMD/MwDNnwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAMD/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMF/JQC33yUAt98lALffAADBfwAAAAAAAAAAAAAAAFYArF9AAMD/QADA/1YArF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBf0AAwP9AAMD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYArF8lALffMwDNnwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWAKxfQADA/1UA1r8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMF/QADA/1UA1r8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJQC330AAwP8AAAAAAAAAAAAAAAAAAMF/AADWvwAAAAAAAAAAAAAAAAAAAABWAKxfQADA/1YArF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwX9AAMD/AADBfwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwX9AAMD/VgCsXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1r8AAAAAAAAAAAAAAAAlALffQADA/1YArF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVQDWv0AAwP9VANa/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBf0AAwP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBfwAAAAAAAAAAAAAAAAAAAABAAMD/VgCsXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMF/QADA/yUAt98AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMF/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAwP8lALffAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwX9AAMD/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAMD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACBAMF/AAAAAAAAAAAAAAAAQADA/0AAwP9WAKxfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMwDNn0AAwP9AAMD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYArF8zAM2fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAMD/QADA/1YArF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWAKxfQADA/0AAwP8AAMF/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUAt99WAKxfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMF/AAAAAAAAAAAAAAAAAAAAAEAAwP8lALffAADBfwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYArF8AANa/QADA/yUAt98AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBf0AAwP8AAMF/AAAAAAAAAAAAAAAAAAAAAFYArF8AAAAAAAAAAAAAAABWAKxfQADA/yUAt99WAKxfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVgCsX0AAwP9AAMD/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVgCsXyUAt99AAMD/QADA/0AAwP8AAMF/AAAAAAAAAAAAAAAAAAAAADMAzZ9AAMD/AADWv1YArF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAwP9AAMD/JQC33wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQADA/0AAwP8AAMF/AADBfwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMF/AAAAAEAAwP9AAMD/JQC33wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwX9AAMD/QADA/0AAwP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMwDNn0AAwP9AAMD/QADA/1YArF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQADA/0AAwP9AAMD/JQC33wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQADA/0AAwP9AAMD/QADA/wAAwX8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAwP9AAMD/QADA/0AAwP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQADA/0AAwP9AAMD/QADA/0AAwP9VANa/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUAt99AAMD/QADA/0AAwP9AAMD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJQC330AAwP9AAMD/QADA/0AAwP9AAMD/QADA/0AAwP9AAMD/QADA/0AAwP9AAMD/QADA/0AAwP9AAMD/QADA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAwP9AAMD/QADA/0AAwP9AAMD/QADA/0AAwP9AAMD/QADA/0AAwP9AAMD/JQC331YArF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlALffQADA/0AAwP8lALffAADWv1UA1r8zAM2fAADBfwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//5////5////4////8////+f////P////n////x////8////+f////n////x/8//8/4B//P8fP/z/P8/8/nvv/f7+5/j+//f8/v/z/P7/8/j/f/P8/3/z/H+/8/x/w+P+P//n/x//4/8P/8P/h/+H/8D+D//gAB//+AB///4D/8oAAAAIAAAAEAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAAAAD//j////n////j////z////5////8////+f////H////z////4////+P////n/z//z/gH/8/x8f/P5/z/z+++f4/P7n+Pz/d/j9//P4/P9z+P5/8fz/f3H8f77x/n/D4/4//+P/H//D/w//x/+H/4f/wP4P/+AAH//4AH///gP///+P///+f///+P////P////n////z////5////8f////P////j////4////+f/P//P+Af/z/Hx/8/n/P/P775/j8/uf4/P93+P3/8/j8/3P4/n/x/P9/cfx/vvH+f8Pj/j//4/8f/8P/D//H/4f/h//A/g//4AAf//gAf//+A//KAAAABAAAAAgAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYArF8lALffAADBf1YArF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFUA1r8lALffVgCsXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADMAzZ8lALffVgCsXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADMAzZ8lALffVgCsXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFYArF9AAMD/AADBfwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKu/QADA/wAAAAAAAAAAAAAAAAAAAAAAAMF/AADBf1YArF8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWAKxfQADA/1YArF8AAAAAAAAAAAAAwX9VANa/JQC330AAwP9AAMD/VQDWv1YArF8AAAAAAAAAAAAAAAAAAAAAAADBf0AAwP8AAAAAAAAAAAAAAABVANa/AADBfwAAAAAAAAAAAAAAACUAt98lALffVgCsXwAAAAAAAAAAAAAAADMAzZ9AAMD/AAAAAAAAAAAAAMF/AACrvwAAAABWAKxfAADBfwAAAAAAAAAAVQDWv1UA1r8AAAAAAAAAAAAAAAAzAM2fJQC33wAAAAAAAAAAAADBfwAAq78AAAAAAAAAAAAAAAAAAMF/AAAAADMAzZ8lALffVgCsXwAAAAAAAAAAAADBf0AAwP8AAAAAAAAAAAAAAAAzAM2fAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMF/QADA/1YArF8AAAAAAAAAAFYArF9AAMD/MwDNnwAAAAAAAAAAAAAAADMAzZ9VANa/MwDNnwAAAAAAAAAAVQDWvyUAt99WAKxfAAAAAAAAAAAAAAAAVQDWvyUAt99WAKxfAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVgCsX0AAwP9VANa/AAAAAAAAAAAAAAAAAAAAAFYArF8lALffQADA/wAAwX8AAAAAAAAAAAAAAAAAAAAAVgCsX1UA1r9AAMD/VgCsXwAAAAAAAAAAAAAAAAAAAAAAAAAAVgCsXyUAt99AAMD/AACrv1UA1r9VANa/AACrvyUAt99AAMD/VgCsXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWAKxfAADBfwAAq79AAMD/QADA/wAAq78AAMF/VgCsXwAAAAAAAAAAAAAAAAAAAAD+/wAA+f8AAPP/AADn/wAA7/8AAM//AADeDwAA3ecAAJ3zAACd8wAA3fsAAM4zAADP8wAA5+cAAPAPAAD8PwAAKAAAABAAAAAgAAAAAQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAA/n8AAPn/AADz/wAA5/8AAM//AADeHwAAnMcAAJnzAACbMwAAm9kAAJ3ZAADOOQAAx/MAAOPjAADwBwAA+B8AAP5/AAD5/wAA8/8AAOf/AADP/wAA3h8AAJzHAACZ8wAAmzMAAJvZAACd2QAAzjkAAMfzAADj4wAA8AcAAPgfAAA="><style>.sf-hidden{display:none!important}</style><link rel=canonical href=https://wiki.debian.org/InstallingDebianOn/Allwinner><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
+<body dir=ltr lang=en>
+<div id=logo><a href=https://www.debian.org/ title="Debian Homepage"><img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="61"><rect fill-opacity="0"/></svg>' alt=Debian style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-5)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important" width=50 height=61></a></div>
+<div id=header>
+<div id=wikisection>
+<p class=section><a href=https://wiki.debian.org/FrontPage title="Debian Wiki Homepage">Wiki</a></p>
+<div id=username><a href="https://wiki.debian.org/InstallingDebianOn/Allwinner?action=login" id=login rel=nofollow>Login</a></div>
+</div>
+<div id=navbar>
+<ul id=navibar>
+<li class=wikilink><a href=https://wiki.debian.org/FrontPage>FrontPage</a><li class=wikilink><a href=https://wiki.debian.org/RecentChanges>RecentChanges</a><li class=wikilink><a href=https://wiki.debian.org/FindPage>FindPage</a><li class=wikilink><a href=https://wiki.debian.org/HelpContents>HelpContents</a><li class="current sf-hidden"></li>
+</ul>
+</div>
+<form id=searchform action=/InstallingDebianOn/Allwinner>
+<div>
+<label for=searchinput style=display:none>Search:</label>
+<input id=searchinput type=text name=value value=Search size=20 alt=Search class=disabled>
+<input id=titlesearch name=titlesearch type=submit value=Titles alt="Search Titles" disabled>
+<input id=fullsearch name=fullsearch type=submit value=Text alt="Search Full Text" disabled>
+</div>
+</form>
+<div id=logo><a href=https://www.debian.org/ title="Debian Homepage"><img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="61"><rect fill-opacity="0"/></svg>' alt=Debian style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-5)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important" width=50 height=61></a></div>
+<div id=breadcrumbs><a href=https://wiki.debian.org/FrontPage title="Debian Wiki Homepage">Wiki</a><span class=sep>/</span>
+</div>
+<ul class=editbar><li><a href="https://wiki.debian.org/InstallingDebianOn/Allwinner?action=login" id=login-1 rel=nofollow>Login</a><li class=toggleCommentsButton style=display:none><li><a class=nbinfo href="https://wiki.debian.org/InstallingDebianOn/Allwinner?action=info" rel=nofollow>Info</a><li><a class=nbattachments href="https://wiki.debian.org/InstallingDebianOn/Allwinner?action=AttachFile" rel=nofollow>Attachments</a><li>
+<form class=actionsmenu method=GET action=/InstallingDebianOn/Allwinner>
+<div>
+ 
+ <select name=action>
+ <option value=show selected>More Actions:<option value=raw>Raw Text</option>
+<option value=print>Print View</option>
+<option value=RenderAsDocbook>Render as Docbook</option>
+<option value=refresh>Delete Cache</option>
+<option value=show disabled class=disabled>------------------------</option>
+<option value=SpellCheck>Check Spelling</option>
+<option value=LikePages>Like Pages</option>
+<option value=LocalSiteMap>Local Site Map</option>
+<option value=show disabled class=disabled>------------------------</option>
+<option value=RenamePage disabled class=disabled>Rename Page</option>
+<option value=DeletePage disabled class=disabled>Delete Page</option>
+<option value=show disabled class=disabled>------------------------</option>
+<option value=show disabled class=disabled>Subscribe User</option>
+<option value=show disabled class=disabled>------------------------</option>
+<option value=show disabled class=disabled>Remove Spam</option>
+<option value=show disabled class=disabled>Revert to this revision</option>
+<option value=PackagePages>Package Pages</option>
+<option value=show disabled class=disabled>------------------------</option>
+<option value=Load>Load</option>
+<option value=Save>Save</option>
+<option value=SlideShow>SlideShow</option>
+ </select>
+ 
+ 
+</div>
+</form>
+</ul>
+<h1 id=locationline>
+<ul id=pagelocation>
+<li><a href=https://wiki.debian.org/InstallingDebianOn>InstallingDebianOn</a><li><a href=https://wiki.debian.org/InstallingDebianOn/Allwinner>Allwinner</a></li>
+</ul>
+</h1>
+</div>
+<div id=page dir=ltr lang=en>
+<div dir=ltr id=content lang=en><span class=anchor id=top></span>
+<span class=anchor id=line-1></span><p class=line862>. <div class=table-of-contents><p class=table-of-contents-heading>Contents<ol><li>
+<a href=#Introduction>Introduction</a><li>
+<a href=#Install_Using_Debian-Installer>Install Using Debian-Installer</a><ol><li>
+<a href=#Supported_Platforms>Supported Platforms</a><li>
+<a href=#Unsupported_Platforms>Unsupported Platforms</a><li>
+<a href=#Storage_options>Storage options</a><li>
+<a href=#Pre-installation_preparations>Pre-installation preparations</a><li>
+<a href=#Installing_over_the_network_by_TFTP>Installing over the network by TFTP</a><li>
+<a href=#Installing_from_a_USB_stick>Installing from a USB stick</a><li>
+<a href=#Installing_from_an_SD_card_image>Installing from an SD card image</a><li>
+<a href=#Booting_the_installed_system>Booting the installed system</a><li>
+<a href=#Installing_on_systems_that_are_not_supported_out_of_the_box>Installing on systems that are not supported out of the box</a></ol><li>
+<a href=#Mainline_kernel_and_linux-sunxi.org_3.4_kernel>Mainline kernel and linux-sunxi.org 3.4 kernel</a><li>
+<a href=#U-boot_versions_for_sunxi-based_systems>U-boot versions for sunxi-based systems</a><ol><li>
+<a href=#Overview>Overview</a><li>
+<a href=#Creating_a_bootable_SD_Card_with_u-boot>Creating a bootable SD Card with u-boot</a><li>
+<a href=#SMP.2FPSCI_support>SMP/PSCI support</a><li>
+<a href=#AHCI_support>AHCI support</a><li>
+<a href=#EHCI_support>EHCI support</a></ol><li>
+<a href=#Board_Specific_Information>Board Specific Information</a><ol><li>
+<a href=#Cubietech_Cubietruck>Cubietech Cubietruck</a><li>
+<a href=#Olimex_A20-OLinuXino-MICRO.2FA20-OLinuXino-LIME2_.2B-_7.22_or_10.22LCD>Olimex A20-OLinuXino-MICRO/A20-OLinuXino-LIME2 + 7" or 10"LCD</a><li>
+<a href=#Olimex_A20-OLinuXino-LIME2__rev._F_and_newer_and_Debian11.2F_bullseye_kernel>Olimex A20-OLinuXino-LIME2 rev. F and newer and Debian11/ bullseye kernel</a><li>
+<a href=#Banana_PI_M2_Berry>Banana PI M2 Berry</a></ol><li>
+<a href=#Resources>Resources</a></ol></div> <span class=anchor id=line-2></span><span class=anchor id=line-3></span><p class=line867>
+<h1 id=Introduction>Introduction</h1>
+<span class=anchor id=line-4></span><span class=anchor id=line-5></span><p class=line874>Support for boards using the Allwinner "sunxi" <span class=anchor id=line-6></span>(sun4i, sun5i, sun6i, sun7i, sun8i, sun50i) family of processors, <span class=anchor id=line-7></span>e.g. A10, A13, A31/A31s, A20, A23/A33, A64, etc. <span class=anchor id=line-8></span><span class=anchor id=line-9></span><p class=line867>
+<h1 id=Install_Using_Debian-Installer>Install Using Debian-Installer</h1>
+<span class=anchor id=line-10></span><span class=anchor id=line-11></span><p class=line867>
+<h2 id=Supported_Platforms>Supported Platforms</h2>
+<span class=anchor id=line-12></span><span class=anchor id=line-13></span><p class=line874>Debian-installer should work out of the box on all the following sunxi-based systems, <span class=anchor id=line-14></span>but as the developers do not have access to all of them, <span class=anchor id=line-15></span>the installer has only been tested on particular systems. <span class=anchor id=line-16></span>If you have used the installer on one of the untested systems, <span class=anchor id=line-17></span>please submit an installation-report to the Debian project <span class=anchor id=line-18></span>(cf. the <a class=http href=http://d-i.debian.org/manual/en.armhf/ch05s04.html#submit-bug>Submitting Installation Reports</a> <span class=anchor id=line-19></span>chapter in the Debian installation-guide). <span class=anchor id=line-20></span><span class=anchor id=line-21></span><p class=line867>
+<h3 id=Stable>Stable</h3>
+<span class=anchor id=line-22></span><span class=anchor id=line-23></span><p class=line874>Hardware systems tested and confirmed working in Bullseye or older. <span class=anchor id=line-24></span><span class=anchor id=line-25></span><div><table><tbody><tr> <td><p class=line891><strong>System</strong></p></td>
+ <td><p class=line891><strong>Device Tree Blob</strong></p></td>
+ <td><p class=line891><strong>Notes</strong></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-26></span><p class=line862>Cubietech Cubieboard</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-cubieboard.dtb</tt></p></td>
+ <td><p class=line862>Installation Reports: <a class="interwiki closed-bug" href=https://bugs.debian.org/770904 title="Closed: #770904: installation-reports: Sucessful install on Cubieboard">[1</a>], <a class="interwiki closed-bug" href=https://bugs.debian.org/775748 title="Closed: #775748: installation-report: alternative installation method on cubieboard">[2</a>], <a href=#Cubietech_Cubietruck>Wiki notes</a></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-27></span><p class=line862>Cubietech Cubieboard2</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-cubieboard2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-28></span><p class=line862>Cubietech Cubietruck (Cubieboard3)</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-cubietruck.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-29></span><p class=line891>LeMaker Banana Pi </p></td>
+ <td><p class=line862> <tt class=backtick>sun7i-a20-bananapi.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-30></span><p class=line891>LeMaker Banana Pro </p></td>
+ <td><p class=line862> <tt class=backtick>sun7i-a20-bananapro.dtb</tt></p></td>
+ <td><p class=line862> <a class="interwiki closed-bug" href=https://bugs.debian.org/780493 title="Closed: #780493: [armhf] [jessie daily 2015-03-14] installation-report: LeMaker Banana Pro">Installation Report</a> </p></td>
+</tr>
+<tr> <td><span class=anchor id=line-31></span><p class=line862>Olimex A10-OLinuXino-LIME</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-olinuxino-lime.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-32></span><p class=line862>Olimex A10s-Olinuxino Micro</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a10s-olinuxino-micro.dtb</tt></p></td>
+ <td><p class=line891><a class="interwiki closed-bug" href=https://bugs.debian.org/806240 title="Closed: #806240: installation-report: Jessie on Olimex A10s-Olinuxino Micro successfully installed">Installation Report</a></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-33></span><p class=line862>Olimex A20-OLinuXino-LIME</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-olinuxino-lime.dtb</tt></p></td>
+ <td><p class=line862> <a class="interwiki closed-bug" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=777334" title="Closed: #777334: [jessie daily 2015-02-07] [armhf] installation-report: A20-OLinuXino-LIME">Installation Report</a></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-34></span><p class=line862>Olimex A20-OLinuXino-LIME2</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-olinuxino-lime2.dtb</tt></p></td>
+ <td><p class=line862> <a class="interwiki closed-bug" href=https://bugs.debian.org/780164 title="Closed: #780164: [jessie daily 2015-03-09] [armhf] installation-report: Olimex A20-OLinuXino-LIME2">Installation Report</a>, <a href=#Olimex_A20-OLinuXino-LIME2_rev._K>Wiki notes</a></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-35></span><p class=line862>Olimex A20-Olinuxino Micro</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-olinuxino-micro.dtb</tt></p></td>
+ <td><p class=line891><a class="interwiki closed-bug" href=https://bugs.debian.org/774176 title="Closed: #774176: installation-reports: A20-Olinuxino Micro successful installation from USB stick to SD Card">Installation Report</a></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-36></span><p class=line862>Olimex A20-SOM-EVB</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-olimex-som-evb.dtb</tt></p></td>
+ <td><p class=line891><a class="interwiki closed-bug" href=https://bugs.debian.org/815831 title="Closed: #815831: [d-i daily 2016-02-24] [armhf] Installation report: Olimex A20-SOM-EVB">Installation Report</a> (gigabit ethernet issues)</p></td>
+</tr>
+<tr> <td><span class=anchor id=line-37></span><p class=line862>Olimex A64 Teres-I</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-teres-i.dtb</tt></p></td>
+ <td><p class=line862> <a href=https://wiki.debian.org/InstallingDebianOn/Olimex/Teres-I>Wiki page</a></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-38></span><p class=line862>Pine64</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-pine64.dtb</tt></p></td>
+ <td><p class=line862> <a href=https://wiki.debian.org/InstallingDebianOn/PINE64/PINEA64>Wiki page</a></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-39></span><p class=line862>Pine64+</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-pine64-plus.dtb</tt></p></td>
+ <td><p class=line862> <a href=https://wiki.debian.org/InstallingDebianOn/PINE64/PINEA64>Wiki page</a></p></td>
+</tr>
+</table></div><span class=anchor id=line-40></span><span class=anchor id=line-41></span><p class=line867>
+<h3 id=Stable_untested>Stable untested</h3>
+<span class=anchor id=line-42></span><span class=anchor id=line-43></span><p class=line874>Hardware systems for which the installer has support code in Bullseye or older, <span class=anchor id=line-44></span>but on which installation has not been tested yet. <span class=anchor id=line-45></span><span class=anchor id=line-46></span><p class=line874>If you succeed in installing Debian on one of these boards, <span class=anchor id=line-47></span>then please file an installation report. <span class=anchor id=line-48></span><span class=anchor id=line-49></span><div><table><tbody><tr> <td><p class=line891><strong>System</strong></p></td>
+ <td><p class=line891><strong>Device Tree Blob</strong></p></td>
+ <td><p class=line891><strong>Notes</strong></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-50></span><p class=line862>Banana Pi BPI-M2-Ultra</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-r40-bananapi-m2-ultra.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-51></span><p class=line862>Cubietech Cubieboard4</p></td>
+ <td><p class=line891><tt class=backtick>sun9i-a80-cubieboard4.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-52></span><p class=line862>Cubietech Cubietruck Plus (Cubieboard5)</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a83t-cubietruck-plus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-53></span><p class=line862>!FriendlyARM NanoPi NEO 2</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h5-nanopi-neo2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-54></span><p class=line862>!FriendlyARM NanoPi NEO Plus2</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h5-nanopi-neo-plus2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-55></span><p class=line862>Lamobo R1</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-lamobo-r1.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-56></span><p class=line891>LinkSprite pcDuino</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-pcduino.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-57></span><p class=line891>LinkSprite pcDuino3</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-pcduino3.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-58></span><p class=line862>Nano Pi Neo</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-nanopi-neo.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-59></span><p class=line862>Nano Pi Neo Air</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-nanopi-neo-air.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-60></span><p class=line891><a class=nonexistent href=https://wiki.debian.org/NextThing>?</a>NextThing C.H.I.P.</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-r8-chip.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-61></span><p class=line862>Olimex A20-OLinuXino-LIME2-eMMC</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-olinuxino-lime2-emmc.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-62></span><p class=line862>Olimex A64-OLinuxino</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-olinuxino.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-63></span><p class=line862>Olimex A64-OLinuxino-eMMC</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-olinuxino-emmc.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-64></span><p class=line862>Orange Pi Plus</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-orangepi-plus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-65></span><p class=line891><a class=nonexistent href=https://wiki.debian.org/OrangePi>?</a>OrangePi One Plus</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h6-orangepi-one-plus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-66></span><p class=line891>OrangePi Zero Plus2</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h5-orangepi-zero-plus2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-67></span><p class=line862>Pine64 LTS</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-pine64-lts.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-68></span><p class=line862>Pine64 <a href=https://wiki.debian.org/PinePhone>PinePhone</a> Braveheart (1.1)</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-pinephone-1.1.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-69></span><p class=line862>Pine64 <a href=https://wiki.debian.org/PinePhone>PinePhone</a> (1.2)</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-pinephone-1.2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-70></span><p class=line891><a class=nonexistent href=https://wiki.debian.org/PineRiver>?</a>PineRiver Mini X-Plus</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-mini-xplus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-71></span><p class=line862>Pinebook</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-pinebook.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-72></span><p class=line891><a class=nonexistent href=https://wiki.debian.org/PineTab>?</a>PineTab</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-pinetab.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-73></span><p class=line862>Sinovoip Banana Pi M3</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a83t-bananapi-m3.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-74></span><p class=line862>Sinovoip Banana Pi M2 Berry</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-v40-bananapi-m2-berry.dtb</tt></p></td>
+ <td><p class=line891><a href=#Banana_PI_M2_Berry>Wiki notes</a></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-75></span><p class=line862>Xunlong Orange Pi Zero</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h2-plus-orangepi-zero.dtb</tt></p></td>
+</tr>
+</table></div><span class=anchor id=line-76></span><span class=anchor id=line-77></span><p class=line867>
+<h3 id=Unstable>Unstable</h3>
+<span class=anchor id=line-78></span><span class=anchor id=line-79></span><p class=line867><span class=anchor id=line-80></span><p class=line867><span class=anchor id=line-81></span><p class=line867><span class=anchor id=line-82></span><span class=anchor id=line-83></span><p class=line867>
+<h3 id=Unstable_untested>Unstable untested</h3>
+<span class=anchor id=line-84></span><span class=anchor id=line-85></span><p class=line874>Hardware systems for which the Sid installer has support code, <span class=anchor id=line-86></span>but on which installation has not been tested yet. <span class=anchor id=line-87></span><span class=anchor id=line-88></span><p class=line874>If you succeed in installing Debian on one of these boards, <span class=anchor id=line-89></span>then please file an installation report. <span class=anchor id=line-90></span><span class=anchor id=line-91></span><div><table><tbody><tr> <td><p class=line891><strong>System</strong></p></td>
+ <td><p class=line891><strong>Device Tree Blob</strong></p></td>
+ <td><p class=line891><strong>Notes</strong></p></td>
+</tr>
+</table></div><span class=anchor id=line-92></span><span class=anchor id=line-93></span><p class=line874>The installer can also be used on other sunxi-based systems <span class=anchor id=line-94></span>as long as device-tree support for them is available, <span class=anchor id=line-95></span>but on those systems manual intervention during the installation is required <span class=anchor id=line-96></span>(see <a href=#Installing_on_systems_that_are_not_supported_out_of_the_box>below</a>). <span class=anchor id=line-97></span><span class=anchor id=line-98></span><p class=line867>
+<h2 id=Unsupported_Platforms>Unsupported Platforms</h2>
+<span class=anchor id=line-99></span><span class=anchor id=line-100></span><p class=line867>
+<h3 id=Unsupported_installer>Unsupported installer</h3>
+<span class=anchor id=line-101></span><span class=anchor id=line-102></span><p class=line874>Hardware systems that should work using purely Debian <span class=anchor id=line-103></span>with all essential parts available in same release of Debian, <span class=anchor id=line-104></span>but involving custom setup of debian-installer. <span class=anchor id=line-105></span><span class=anchor id=line-106></span><p class=line874>If you succeed in installing Debian on one of these boards <span class=anchor id=line-107></span>(e.g. by manually adding the official Debian u-boot <span class=anchor id=line-108></span>to a "bare" debian-installer SD-card image), <span class=anchor id=line-109></span>then please a) file an installation report, <span class=anchor id=line-110></span>and b) consider offering your help to the installer team <span class=anchor id=line-111></span>to get it supported officially in Debian. <span class=anchor id=line-112></span><span class=anchor id=line-113></span><div><table><tbody><tr> <td><p class=line891><strong>System</strong></p></td>
+ <td><p class=line891><strong>Device Tree Blob</strong></p></td>
+ <td><p class=line891><strong>Notes</strong></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-114></span><p class=line862>Cubietech Cubieboard4</p></td>
+ <td><p class=line891><tt class=backtick>sun9i-a80-cubieboard4.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-115></span><p class=line891>NextThing C.H.I.P.</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-r8-chip.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-116></span><p class=line862>Orange Pi Zero</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h2-plus-orangepi-zero.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-117></span><p class=line891>PineRiver Mini X-Plus</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-mini-xplus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-118></span><p class=line891>SoPine with baseboard</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-sopine-baseboard.dtb</tt></p></td>
+ <td><p class=line862>kernel in Bullseye but u-boot only since Bookworm</p></td>
+</tr>
+</table></div><span class=anchor id=line-119></span><span class=anchor id=line-120></span><p class=line867>
+<h3 id=Unsupported_bootstrapping>Unsupported bootstrapping</h3>
+<span class=anchor id=line-121></span><span class=anchor id=line-122></span><p class=line874>Hardware systems which should work with linux kernel packages officially part of Debian, <span class=anchor id=line-123></span>but lacks boot support in official Debian u-boot or some related package. <span class=anchor id=line-124></span><span class=anchor id=line-125></span><p class=line874>If you succeed in installing Debian on one of these boards <span class=anchor id=line-126></span>(e.g. using a fork of the official Debian u-boot package <span class=anchor id=line-127></span>combined with a "bare" debian-installer SD-card image), <span class=anchor id=line-128></span>then please a) file an installation report, <span class=anchor id=line-129></span>and b) consider offering your help to the u-boot maintainers <span class=anchor id=line-130></span>to get the board supported officially in Debian. <span class=anchor id=line-131></span><span class=anchor id=line-132></span><div><table><tbody><tr> <td><p class=line891><strong>System</strong></p></td>
+ <td><p class=line891><strong>Device Tree Blob</strong></p></td>
+ <td><p class=line891><strong>Notes</strong></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-133></span><p class=line862>A10s-Wobo i5</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a10s-wobo-i5.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-134></span><p class=line862>Allwinner A23 Evaluation Board</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a23-evb.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-135></span><p class=line862>Allwinner A31 APP4 EVB1 Evaluation Board</p></td>
+ <td><p class=line891><tt class=backtick>sun6i-a31-app4-evb1.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-136></span><p class=line862>Allwinner A83T H8Homlet Proto Dev Board v2.0</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a83t-allwinner-h8homlet-v2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-137></span><p class=line862>Allwinner GA10H Quad Core Tablet (v1.1)</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a33-ga10h-v1.1.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-138></span><p class=line862>Allwinner GT90H Dual Core Tablet (v4)</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a23-gt90h-v4.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-139></span><p class=line862>Allwinner R16 EVB (Parrot)</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-r16-parrot.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-140></span><p class=line862>Amarula A64-Relic</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-amarula-relic.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-141></span><p class=line862>Auxtek t003 A10s hdmi tv-stick</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a10s-auxtek-t003.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-142></span><p class=line862>Auxtek t004 A10s hdmi tv-stick</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a10s-auxtek-t004.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-143></span><p class=line862>BA10 tvbox</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-ba10-tvbox.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-144></span><p class=line862>Banana Pi BPI-M1-Plus</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-bananapi-m1-plus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-145></span><p class=line862>Banana Pi BPI-M2-Plus</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-bananapi-m2-plus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-146></span><p class=line862>Banana Pi BPI-M2-Plus H5</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h5-bananapi-m2-plus-v1.2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-147></span><p class=line862>Banana Pi BPI-M2-Plus v1.2 H3</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-bananapi-m2-plus-v1.2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-148></span><p class=line862>Banana Pi BPI-M2-Plus v1.2 H5</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h5-bananapi-m2-plus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-149></span><p class=line862>Banana Pi BPI-M2-Ultra</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-r40-bananapi-m2-ultra.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-150></span><p class=line862>Banana Pi BPI-M2-Zero</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h2-plus-bananapi-m2-zero.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-151></span><p class=line891>BananaPi M2 Magic</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-r16-bananapi-m2m.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-152></span><p class=line891>BananaPi-M64</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-bananapi-m64.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-153></span><p class=line862>Beelink GS1</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h6-beelink-gs1.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-154></span><p class=line862>Beelink X2</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-beelink-x2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-155></span><p class=line862>Chuwi V7 CW0825 - CSQ CS908 top set box</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-chuwi-v7-cw0825.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-156></span><p class=line862>Colorfly E708 Q1 tablet</p></td>
+ <td><p class=line891><tt class=backtick>sun6i-a31s-colorfly-e708-q1.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-157></span><p class=line862>CSQ CS908 top set box</p></td>
+ <td><p class=line891><tt class=backtick>sun6i-a31s-cs908.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-158></span><p class=line862>Difrnce DIT4350</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a13-difrnce-dit4350.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-159></span><p class=line862>Dserve DSRV9703C</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-dserve-dsrv9703c.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-160></span><p class=line862>Emlid Neutis N5 Developer board</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h5-emlid-neutis-n5-devboard.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-161></span><p class=line862>Emlid Neutis N5H3 Developer board</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-emlid-neutis-n5h3-devboard.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-162></span><p class=line862>Empire Electronix D709 tablet</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a13-empire-electronix-d709.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-163></span><p class=line862>Empire Electronix M712 tablet</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a13-empire-electronix-m712.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-164></span><p class=line862>ET Q8 Quad Core Tablet (v1.6)</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a33-et-q8-v1.6.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-165></span><p class=line862>FriendlyARM NanoPi A64</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-nanopi-a64.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-166></span><p class=line862>FriendlyARM NanoPi Duo2</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-nanopi-duo2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-167></span><p class=line891>FriendlyArm NanoPi M1 Plus</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-nanopi-m1-plus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-168></span><p class=line891>FriendlyArm NanoPi M1</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-nanopi-m1.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-169></span><p class=line862>Gemei G9 Tablet</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-gemei-g9.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-170></span><p class=line862>HAOYU Electronics Marsboard A10</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-marsboard.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-171></span><p class=line862>HSG H702</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a13-hsg-h702.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-172></span><p class=line862>Hyundai A7HD</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-hyundai-a7hd.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-173></span><p class=line862>I12 / Q5 / QT840A A20 tvbox</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-i12-tvbox.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-174></span><p class=line862>ICnova-A20 SWAC</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-icnova-swac.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-175></span><p class=line862>iNet-1</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-inet1.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-176></span><p class=line862>INet-86DZ Rev 01</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a23-inet86dz.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-177></span><p class=line862>INet-97F Rev 02</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-inet97fv2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-178></span><p class=line862>INet-98V Rev 02</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a13-inet-98v-rev2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-179></span><p class=line862>iNet-9F Rev 03</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-inet9f-rev03.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-180></span><p class=line862>INet-D978 Rev 02</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a33-inet-d978-rev2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-181></span><p class=line862>iNet Q972 tablet</p></td>
+ <td><p class=line891><tt class=backtick>sun6i-a31s-inet-q972.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-182></span><p class=line862>Ippo Q8H Dual Core Tablet (v1.2)</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a23-ippo-q8h-v1.2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-183></span><p class=line862>Ippo Q8H Dual Core Tablet (v5)</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a23-ippo-q8h-v5.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-184></span><p class=line862>Itead Ibox A20</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-itead-ibox.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-185></span><p class=line862>Iteaduino Plus A10</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-itead-iteaduino-plus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-186></span><p class=line862>Jesurun Q5</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-jesurun-q5.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-187></span><p class=line862>Lamobo R1 [Linutronix Testbox v2]</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-linutronix-testbox-v2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-188></span><p class=line862>Libre Computer Board ALL-H3-CC H2+</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h2-plus-libretech-all-h3-cc.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-189></span><p class=line862>Libre Computer Board ALL-H3-CC H3</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-libretech-all-h3-cc.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-190></span><p class=line862>Libre Computer Board ALL-H3-CC H5</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h5-libretech-all-h3-cc.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-191></span><p class=line862>Libre Computer Board ALL-H3-IT H5</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h5-libretech-all-h3-it.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-192></span><p class=line862>Libre Computer Board ALL-H5-CC H5</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h5-libretech-all-h5-cc.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-193></span><p class=line862>Lichee Pi One</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a13-licheepi-one.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-194></span><p class=line862>Lichee Pi Zero</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-v3s-licheepi-zero.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-195></span><p class=line862>Lichee Pi Zero with Dock</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-v3s-licheepi-zero-dock.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-196></span><p class=line891>LinkSprite pcDuino2</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-pcduino2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-197></span><p class=line891>LinkSprite pcDuino3 Nano</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-pcduino3-nano.dtb</tt></p></td>
+ <td><p class=line862> requires (at least) non-Debian U-boot; on-board Ethernet card needs a non-free firmware, on-board 4GB Flash doesn't work out-of-the-box</p></td>
+</tr>
+<tr> <td><span class=anchor id=line-198></span><p class=line891>MapleBoard MP130</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-mapleboard-mp130.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-199></span><p class=line862>Mele A1000G Quad top set box</p></td>
+ <td><p class=line891><tt class=backtick>sun6i-a31-mele-a1000g-quad.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-200></span><p class=line862>Mele A1000</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-a1000.dtb</tt></p></td>
+ <td><p class=line891><a class="interwiki closed-bug" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=879385" title="Closed: #879385: installation-reports: Mele A1000 successful installation with customized netinst sd image">Installation Report</a> requires custom build of mainline U-boot; on-board wifi card needs a non-free firmware, installation done via eth</p></td>
+</tr>
+<tr> <td><span class=anchor id=line-201></span><p class=line862>Mele I7 Quad top set box</p></td>
+ <td><p class=line891><tt class=backtick>sun6i-a31-i7.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-202></span><p class=line862>Mele M3</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-m3.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-203></span><p class=line862>Mele M9 top set box</p></td>
+ <td><p class=line891><tt class=backtick>sun6i-a31-m9.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-204></span><p class=line862>Merrii A20 Hummingbird</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-hummingbird.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-205></span><p class=line862>Merrii A31 Hummingbird</p></td>
+ <td><p class=line891><tt class=backtick>sun6i-a31-hummingbird.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-206></span><p class=line862>Merrii A80 Optimus Board</p></td>
+ <td><p class=line891><tt class=backtick>sun9i-a80-optimus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-207></span><p class=line862>Miniand Hackberry</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-hackberry.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-208></span><p class=line862>MK802-A10s</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a10s-mk802.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-209></span><p class=line862>MK802ii</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-mk802ii.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-210></span><p class=line862>MK802</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-mk802.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-211></span><p class=line862>MK808c</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-mk808c.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-212></span><p class=line862>MSI Primo81 tablet</p></td>
+ <td><p class=line891><tt class=backtick>sun6i-a31s-primo81.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-213></span><p class=line891>NextThing C.H.I.P. Pro</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-gr8-chip-pro.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-214></span><p class=line891>NextThing GR8-EVB</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-gr8-evb.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-215></span><p class=line862>Nintendo NES Classic Edition</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-r16-nintendo-nes-classic.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-216></span><p class=line862>Nintendo SuperNES Classic Edition</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-r16-nintendo-super-nes-classic.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-217></span><p class=line862>Oceanic 5205 5inMFD</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-oceanic-5205-5inmfd.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-218></span><p class=line862>Olimex A13-Olinuxino Micro</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a13-olinuxino-micro.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-219></span><p class=line862>Olimex A13-OLinuXino</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a13-olinuxino.dtb</tt></p></td>
+ <td><p class=line891><a class="interwiki closed-bug" href=https://bugs.debian.org/789727 title="Closed: #789727: Installation report - A13 Olinuxino">Installation Report</a> requires custom build of mainline U-boot; some EHCI timeouts in u-boot</p></td>
+</tr>
+<tr> <td><span class=anchor id=line-220></span><p class=line862>Olimex A20-Olimex-SOM-EVB-eMMC</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-olimex-som-evb-emmc.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-221></span><p class=line862>Olimex A20-OLinuXino-MICRO-eMMC</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-olinuxino-micro-emmc.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-222></span><p class=line862>Olimex A20-SOM204-EVB-eMMC</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-olimex-som204-evb-emmc.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-223></span><p class=line862>Olimex A20-SOM204-EVB</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-olimex-som204-evb.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-224></span><p class=line862>Olimex A33-OLinuXino</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a33-olinuxino.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-225></span><p class=line862>Orange Pi Mini</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-orangepi-mini.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-226></span><p class=line862>Orange Pi</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-orangepi.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-227></span><p class=line891>OrangePi 3</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h6-orangepi-3.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-228></span><p class=line891>OrangePi Lite2</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h6-orangepi-lite2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-229></span><p class=line891>OrangePi One Plus</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h6-orangepi-one-plus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-230></span><p class=line891>OrangePi Win/Win Plus</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-orangepi-win.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-231></span><p class=line891>OrangePi Zero Plus2 H3</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-orangepi-zero-plus2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-232></span><p class=line862>Pine64 PinePhone Braveheart (1.1)</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-pinephone-1.1.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-233></span><p class=line862>Pine64 PinePhone Developer Batch (1.0)</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-pinephone-1.0.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-234></span><p class=line862>Pine H64 model A</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h6-pine-h64.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-235></span><p class=line862>Pine H64 model B</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h6-pine-h64-model-b.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-236></span><p class=line891>PineTab</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-a64-pinetab.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-237></span><p class=line891>PocketBook Touch Lux 3</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a13-pocketbook-touch-lux-3.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-238></span><p class=line862>Point of View Protab2-IPS9</p></td>
+ <td><p class=line891><tt class=backtick>sun4i-a10-pov-protab2-ips9.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-239></span><p class=line862>Polaroid MID2407PXE03 tablet</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a23-polaroid-mid2407pxe03.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-240></span><p class=line862>Polaroid MID2809PXE04 tablet</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a23-polaroid-mid2809pxe04.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-241></span><p class=line862>Q8 A13 Tablet</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a13-q8-tablet.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-242></span><p class=line862>Q8 A23 Tablet</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a23-q8-tablet.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-243></span><p class=line862>Q8 A33 Tablet</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a33-ippo-q8h-v1.2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-244></span><p class=line862>Q8 A33 Tablet</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a33-q8-tablet.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-245></span><p class=line862>R7 A10s hdmi tv-stick</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a10s-r7-tv-dongle.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-246></span><p class=line891>RerVision H3-DVK</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-rervision-dvk.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-247></span><p class=line862>Sinlinx SinA31s Development Board</p></td>
+ <td><p class=line891><tt class=backtick>sun6i-a31s-sina31s.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-248></span><p class=line862>Sinlinx SinA33</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a33-sinlinx-sina33.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-249></span><p class=line862>Sinovoip BPI-M2</p></td>
+ <td><p class=line891><tt class=backtick>sun6i-a31s-sinovoip-bpi-m2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-250></span><p class=line862>Sipeed Lichee Zero Plus</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-s3-lichee-zero-plus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-251></span><p class=line862>t3-cqa3t-bv3</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-t3-cqa3t-bv3.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-252></span><p class=line862>Tanix TX6</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h6-tanix-tx6.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-253></span><p class=line862>TBS A711 Tablet</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-a83t-tbs-a711.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-254></span><p class=line862>Utoo P66</p></td>
+ <td><p class=line891><tt class=backtick>sun5i-a13-utoo-p66.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-255></span><p class=line862>Wexler TAB7200</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-wexler-tab7200.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-256></span><p class=line862>WITS A31 Colombus Evaluation Board</p></td>
+ <td><p class=line891><tt class=backtick>sun6i-a31-colombus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-257></span><p class=line862>Wits Pro A20 DKT</p></td>
+ <td><p class=line891><tt class=backtick>sun7i-a20-wits-pro-a20-dkt.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-258></span><p class=line862>Xunlong Orange Pi 2</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-orangepi-2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-259></span><p class=line862>Xunlong Orange Pi Lite</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-orangepi-lite.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-260></span><p class=line862>Xunlong Orange Pi One</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-orangepi-one.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-261></span><p class=line862>Xunlong Orange Pi PC 2</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h5-orangepi-pc2.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-262></span><p class=line862>Xunlong Orange Pi PC Plus</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-orangepi-pc-plus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-263></span><p class=line862>Xunlong Orange Pi PC</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-orangepi-pc.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-264></span><p class=line862>Xunlong Orange Pi Plus 2E</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h3-orangepi-plus2e.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-265></span><p class=line862>Xunlong Orange Pi Prime</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h5-orangepi-prime.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-266></span><p class=line862>Xunlong Orange Pi R1</p></td>
+ <td><p class=line891><tt class=backtick>sun8i-h2-plus-orangepi-r1.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-267></span><p class=line862>Xunlong Orange Pi Zero Plus</p></td>
+ <td><p class=line891><tt class=backtick>sun50i-h5-orangepi-zero-plus.dtb</tt></p></td>
+</tr>
+<tr> <td><span class=anchor id=line-268></span><p class=line862>Yones TopTech BS1078 v2 Tablet</p></td>
+ <td><p class=line891><tt class=backtick>sun6i-a31s-yones-toptech-bs1078-v2.dtb</tt></p></td>
+</tr>
+</table></div><span class=anchor id=line-269></span><span class=anchor id=line-270></span><p class=line867>
+<h2 id=Storage_options>Storage options</h2>
+<span class=anchor id=line-271></span><span class=anchor id=line-272></span><p class=line874>Debian-Installer allows installing to either a SATA disk or to an MMC/SD card. <span class=anchor id=line-273></span>Installation to the on-board NAND flash <span class=anchor id=line-274></span>available on some sunxi-based systems <span class=anchor id=line-275></span>is <strong>not</strong> supported. <span class=anchor id=line-276></span><span class=anchor id=line-277></span><p class=line874>Booting the installed system directly from a SATA disk <span class=anchor id=line-278></span>requires a u-boot with AHCI support <span class=anchor id=line-279></span>(see the corresponding <a href=#u-boot-ahci-support>uboot information</a> below). <span class=anchor id=line-280></span><span class=anchor id=line-281></span><p class=line867>
+<h2 id=Pre-installation_preparations>Pre-installation preparations</h2>
+<span class=anchor id=line-282></span><span class=anchor id=line-283></span><p class=line874>On sunxi-based systems, <span class=anchor id=line-284></span><a href=#U-boot_versions_for_sunxi-based_systems>u-boot</a> is the system firmware <span class=anchor id=line-285></span>that initializes the hardware and then allows to boot an operating system. <span class=anchor id=line-286></span>It is the sunxi-equivalent of the BIOS on a PC. <span class=anchor id=line-287></span>In contrast to PCs, <span class=anchor id=line-288></span>where the BIOS is stored in an on-board flash memory chip, <span class=anchor id=line-289></span>on sunxi-based devices u-boot is usually stored on an SD card. <span class=anchor id=line-290></span>Some sunxi-based devices have on-board flash memory <span class=anchor id=line-291></span>and even contain a stripped-down u-boot version in it, <span class=anchor id=line-292></span>but this version is usually unsuitable for Debian. <span class=anchor id=line-293></span>Therefore you usually have to setup an SD card <span class=anchor id=line-294></span>with the appropriate u-boot version for your particular device <span class=anchor id=line-295></span>(see <a href=#Creating_a_bootable_SD_Card_with_u-boot>below</a>) <span class=anchor id=line-296></span>as a prerequisite for installing Debian. <span class=anchor id=line-297></span>If you use the <a href=#Installing_from_an_SD_card_image>pre-made SD card images with the installer</a>, <span class=anchor id=line-298></span>this step is not necessary, <span class=anchor id=line-299></span>as these images already contain u-boot. <span class=anchor id=line-300></span><span class=anchor id=line-301></span><p class=line867>
+<h2 id=Installing_over_the_network_by_TFTP>Installing over the network by TFTP</h2>
+<span class=anchor id=line-302></span><span class=anchor id=line-303></span><p class=line874>Debian provides a ready-made netboot tarball <span class=anchor id=line-304></span><a class=http href=http://ftp.nl.debian.org/debian/dists/bullseye/main/installer-armhf/current/images/netboot/netboot.tar.gz>Bullseye version</a>, <span class=anchor id=line-305></span><a class=http href=http://ftp.nl.debian.org/debian/dists/bookworm/main/installer-armhf/current/images/netboot/netboot.tar.gz>Bookworm version</a>, <span class=anchor id=line-306></span><a class=http href=http://d-i.debian.org/daily-images/armhf/daily/netboot/netboot.tar.gz>daily sid build</a>) <span class=anchor id=line-307></span>that can simply be unpacked in the root directory of a TFTP server. <span class=anchor id=line-308></span>It contains the installer as well as a network boot script <span class=anchor id=line-309></span>which can automatically be executed by <a href=#Mainline_u-boot>mainline u-boot</a> <span class=anchor id=line-310></span>as part of the default boot order <span class=anchor id=line-311></span>(MMC/SD -&gt; SATA -&gt; USB mass storage -&gt; TFTP). <span class=anchor id=line-312></span>Manually executing the boot script is possible <span class=anchor id=line-313></span>by entering "run bootcmd_dhcp" at the u-boot prompt. <span class=anchor id=line-314></span><span class=anchor id=line-315></span><p class=line867>
+<h3 id=Manually_setting_up_TFTP_booting>Manually setting up TFTP booting</h3>
+<span class=anchor id=line-316></span><span class=anchor id=line-317></span><p class=line874>If you do not want to use the netboot tarball, <span class=anchor id=line-318></span>you can of course also manually set up TFTP booting: <span class=anchor id=line-319></span><span class=anchor id=line-320></span><p class=line874>Download the kernel <span class=anchor id=line-321></span><a class=http href=http://d-i.debian.org/daily-images/armhf/daily/netboot>vmlinuz</a>, <span class=anchor id=line-322></span>installer <span class=anchor id=line-323></span><a class=http href=http://d-i.debian.org/daily-images/armhf/daily/netboot>initrd.gz</a> <span class=anchor id=line-324></span>and the appropriate <span class=anchor id=line-325></span><a class=http href=http://d-i.debian.org/daily-images/armhf/daily/device-tree>Flattended Device Tree (FDT) Blob</a> <span class=anchor id=line-326></span>(or DTB) for the board <span class=anchor id=line-327></span>and copy them to a path on your TFTP server. e.g. <span class=anchor id=line-328></span><span class=anchor id=line-329></span><p class=line867><span class=anchor id=line-330></span><span class=anchor id=line-331></span><span class=anchor id=line-332></span><span class=anchor id=line-333></span><span class=anchor id=line-334></span><pre><span class=anchor id=line-1></span># mkdir -p /srv/tftp/didaily/armhf/daily/{netboot,device-tree}
+<span class=anchor id=line-2></span># cd /srv/tftp/didaily/armhf/daily/
+<span class=anchor id=line-3></span># wget -P netboot http://d-i.debian.org/daily-images/armhf/daily/netboot/vmlinuz http://d-i.debian.org/daily-images/armhf/daily/netboot/initrd.gz
+<span class=anchor id=line-4></span># wget -P device-tree http://d-i.debian.org/daily-images/armhf/daily/device-tree/sun7i-a20-cubietruck.dtb</pre><span class=anchor id=line-335></span><span class=anchor id=line-336></span><p class=line862>Create a script to boot the installer. e.g. <tt>/srv/tftp/didaily/cubietruck</tt>: <span class=anchor id=line-337></span><span class=anchor id=line-338></span><p class=line867><span class=anchor id=line-339></span><span class=anchor id=line-340></span><span class=anchor id=line-341></span><span class=anchor id=line-342></span><span class=anchor id=line-343></span><span class=anchor id=line-344></span><span class=anchor id=line-345></span><span class=anchor id=line-346></span><span class=anchor id=line-347></span><span class=anchor id=line-348></span><span class=anchor id=line-349></span><span class=anchor id=line-350></span><span class=anchor id=line-351></span><span class=anchor id=line-352></span><span class=anchor id=line-353></span><span class=anchor id=line-354></span><span class=anchor id=line-355></span><pre><span class=anchor id=line-1-1></span>#setenv diargs &lt;EXTRA ARGUMENTS&gt;
+<span class=anchor id=line-2-1></span>
+<span class=anchor id=line-3-1></span>setenv fdt_addr       0x43000000
+<span class=anchor id=line-4-1></span>setenv ramdisk_addr_r 0x48000000
+<span class=anchor id=line-5></span>setenv kernel_addr_r  0x47000000
+<span class=anchor id=line-6></span>
+<span class=anchor id=line-7></span>setenv dibase /didaily/armhf/daily
+<span class=anchor id=line-8></span>
+<span class=anchor id=line-9></span>tftp ${kernel_addr_r} ${dibase}/netboot/vmlinuz
+<span class=anchor id=line-10></span>setenv bootargs "console=ttyS0,115200 --- ${diargs}"
+<span class=anchor id=line-11></span>
+<span class=anchor id=line-12></span>tftp ${fdt_addr} ${dibase}/device-tree/sun7i-a20-cubietruck.dtb
+<span class=anchor id=line-13></span>fdt addr ${fdt_addr} 0x40000
+<span class=anchor id=line-14></span>
+<span class=anchor id=line-15></span>tftp ${ramdisk_addr_r} ${dibase}/netboot/initrd.gz
+<span class=anchor id=line-16></span>bootz ${kernel_addr_r} ${ramdisk_addr_r}:${filesize} ${fdt_addr}</pre><span class=anchor id=line-356></span><p class=line874>then to make a script which u-boot can run: <span class=anchor id=line-357></span><span class=anchor id=line-358></span><span class=anchor id=line-359></span><pre><span class=anchor id=line-1-2></span># mkimage -T script -A arm -d /srv/tftp/didaily/cubietruck /srv/tftp/didaily/cubietruck.scr</pre><span class=anchor id=line-360></span><span class=anchor id=line-361></span><span class=anchor id=line-362></span><p class=line874>At the u-boot prompt, <span class=anchor id=line-363></span>boot the images which were just downloaded via the script: <span class=anchor id=line-364></span><span class=anchor id=line-365></span><span class=anchor id=line-366></span><span class=anchor id=line-367></span><span class=anchor id=line-368></span><span class=anchor id=line-369></span><pre><span class=anchor id=line-1-3></span>uboot&gt; setenv autoload no
+<span class=anchor id=line-2-2></span>uboot&gt; dhcp
+<span class=anchor id=line-3-2></span>uboot&gt; tftp ${scriptaddr} /didaily/cubietruck.scr
+<span class=anchor id=line-4-2></span>uboot&gt; source ${scriptaddr}</pre><span class=anchor id=line-370></span><span class=anchor id=line-371></span><p class=line874>Install in the usual way. <span class=anchor id=line-372></span>Use <tt>setenv&nbsp;diargs&nbsp;foo=bar</tt> to pass arguments to the installer <span class=anchor id=line-373></span>(e.g. for preseeding) <span class=anchor id=line-374></span><span class=anchor id=line-375></span><p class=line867>
+<h2 id=Installing_from_a_USB_stick>Installing from a USB stick</h2>
+<span class=anchor id=line-376></span><span class=anchor id=line-377></span><p class=line874>The daily installer builds offer the option <span class=anchor id=line-378></span>to install the system from a USB stick, <span class=anchor id=line-379></span>provided you are running mainline u-boot <span class=anchor id=line-380></span>and have a device <span class=anchor id=line-381></span>for which u-boot provides <a href=#u-boot-ehci-support>EHCI</a> support. <span class=anchor id=line-382></span><span class=anchor id=line-383></span><p class=line874>Unpack the daily <span class=anchor id=line-384></span><a class=http href=http://d-i.debian.org/daily-images/armhf/daily/hd-media/hd-media.tar.gz>hd-media tarball</a> <span class=anchor id=line-385></span>or stable <span class=anchor id=line-386></span><a class=http href=http://ftp.debian.org/debian/dists/stable/main/installer-armhf/current/images/hd-media/hd-media.tar.gz>hd-media tarball</a> <span class=anchor id=line-387></span>onto a USB stick with a filesystem <span class=anchor id=line-388></span>that is supported by u-boot (FAT16 / FAT32 / ext2 / ext3 / ext4) <span class=anchor id=line-389></span>and copy the ISO image of either the weekly testing <span class=anchor id=line-390></span><a class=http href=http://cdimage.debian.org/cdimage/weekly-builds/armhf/iso-cd/debian-testing-armhf-xfce-CD-1.iso>Debian/testing CD #1</a> <span class=anchor id=line-391></span>or the weekly testing <span class=anchor id=line-392></span><a class=http href=http://cdimage.debian.org/cdimage/weekly-builds/armhf/iso-dvd/debian-testing-armhf-DVD-1.iso>Debian/testing DVD #1</a> <span class=anchor id=line-393></span>or for stable <span class=anchor id=line-394></span><a class=https href=https://cdimage.debian.org/debian-cd/current/armhf/iso-cd/>Debian/10.4 CD #1</a> <span class=anchor id=line-395></span>onto the stick. <span class=anchor id=line-396></span><span class=anchor id=line-397></span><p class=line874>Notes: Prepare USB stick: <span class=anchor id=line-398></span>Create an empty DOS parition table using fdisk <span class=anchor id=line-399></span>and create a new primary parition. <span class=anchor id=line-400></span>Use mkfs.ext2 to create file system on the new parition. <span class=anchor id=line-401></span>Choose HDMI for installer display: <span class=anchor id=line-402></span>On A20-Olinuxino-Lime2, <span class=anchor id=line-403></span>the serial console is selected by default, <span class=anchor id=line-404></span>so you need to run <tt class=backtick>bootargs=console=tty1</tt> and <tt class=backtick>saveenv</tt> commands to choose HDMI display. <span class=anchor id=line-405></span><span class=anchor id=line-406></span><p class=line874>Insert the USB stick into the target system and issue the command <span class=anchor id=line-407></span><span class=anchor id=line-408></span><p class=line867><span class=anchor id=line-409></span><span class=anchor id=line-410></span><pre><span class=anchor id=line-1-4></span>uboot&gt; run bootcmd_usb0</pre><span class=anchor id=line-411></span><span class=anchor id=line-412></span><p class=line874>at the u-boot command prompt to start the installer. <span class=anchor id=line-413></span><span class=anchor id=line-414></span><p class=line874>Notice: <span class=anchor id=line-415></span>The combination of the daily-built hd-media tarball <span class=anchor id=line-416></span>and the weekly-built CD/DVD image <span class=anchor id=line-417></span>might not work correctly in periods of kernel transitions in Debian. <span class=anchor id=line-418></span>The installer assumes <span class=anchor id=line-419></span>that the kernel in the hd-media tarball and the kernel modules in the ISO image <span class=anchor id=line-420></span>have the same version, <span class=anchor id=line-421></span>which of course might not be the case directly after a kernel version bump. <span class=anchor id=line-422></span><span class=anchor id=line-423></span><p class=line867>
+<h2 id=Installing_from_an_SD_card_image>Installing from an SD card image</h2>
+<span class=anchor id=line-424></span><span class=anchor id=line-425></span><p class=line874>Debian offers SD card images <span class=anchor id=line-426></span>with u-boot and the netinstall version of the Debian-Installer <span class=anchor id=line-427></span>for various sunxi-based systems <span class=anchor id=line-428></span>for <span class=anchor id=line-429></span><a class=https href=https://deb.debian.org/debian/dists/stable/main/installer-armhf/current/images/netboot/SD-card-images/>stable</a> <span class=anchor id=line-430></span>or <span class=anchor id=line-431></span><a class=https href=https://d-i.debian.org/daily-images/armhf/daily/u-boot/>daily builds of unstable</a>. <span class=anchor id=line-432></span>The images are provided in the form of a device-specific part <span class=anchor id=line-433></span>(containing the partition table and the device-specific u-boot) <span class=anchor id=line-434></span>and a device-independent part <span class=anchor id=line-435></span>(containing the actual installer), <span class=anchor id=line-436></span>which can be unpacked and concatenated together to build a complete installer image. <span class=anchor id=line-437></span><span class=anchor id=line-438></span><p class=line862>The device-specific part is named firmware.&lt;board_name&gt;.img.gz <span class=anchor id=line-439></span>and the device-independent part is named partition.img.gz. <span class=anchor id=line-440></span>To write a full image to an SD card, <span class=anchor id=line-441></span>simply unpack, concatenate and write the parts to an SD card in a single step with <span class=anchor id=line-442></span><span class=anchor id=line-443></span><span class=anchor id=line-444></span><pre><span class=anchor id=line-1-5></span>zcat firmware.&lt;board_name&gt;.img.gz partition.img.gz &gt; /dev/SDCARD_DEVICE</pre><span class=anchor id=line-445></span><span class=anchor id=line-446></span><p class=line874>These images are meant for the SD card slot on the device <span class=anchor id=line-447></span>and will not work when SD card is inserted into USB based SD card readers. <span class=anchor id=line-448></span>Once the installer is started, <span class=anchor id=line-449></span>it runs completely in the system's RAM <span class=anchor id=line-450></span>and does not need to load anything from the SD card anymore, <span class=anchor id=line-451></span>so you can delete all existing partitions <span class=anchor id=line-452></span>and use the full card for installing Debian. <span class=anchor id=line-453></span>It is recommended to use the "guided partitioning" option in the installer <span class=anchor id=line-454></span>to create a proper partition layout on the SD card. <span class=anchor id=line-455></span><span class=anchor id=line-456></span><p class=line874>The above installation methods may require a serial cable <span class=anchor id=line-457></span>to interact with the installer. <span class=anchor id=line-458></span>Debian installer by default uses the HDMI output with simplefb. <span class=anchor id=line-459></span>To change that, <span class=anchor id=line-460></span>at the u-boot prompt, <span class=anchor id=line-461></span>use tty1 as console and disable framebuffer in the installer: <span class=anchor id=line-462></span><span class=anchor id=line-463></span><span class=anchor id=line-464></span><span class=anchor id=line-465></span><span class=anchor id=line-466></span><span class=anchor id=line-467></span><pre><span class=anchor id=line-1-6></span>uboot&gt; setenv console tty1
+<span class=anchor id=line-2-3></span>uboot&gt; setenv bootargs console=tty1 fb=false
+<span class=anchor id=line-3-3></span>uboot&gt; saveenv
+<span class=anchor id=line-4-3></span>uboot&gt; boot</pre><span class=anchor id=line-468></span><span class=anchor id=line-469></span><p class=line874>You can install a non-default system <span class=anchor id=line-470></span>(e.g. an older system using a newer installer) <span class=anchor id=line-471></span>by changing the debconf priority to low when choosing the mirror. <span class=anchor id=line-472></span><span class=anchor id=line-473></span><p class=line874>If your USB-Keyboard does not work in u-boot, <span class=anchor id=line-474></span>you can mount the partition.img, <span class=anchor id=line-475></span>copy the configuration directives from boot.scr to boot.cmd <span class=anchor id=line-476></span>(i.e. strip initial "noise") <span class=anchor id=line-477></span>and insert the setenv commands above manually. <span class=anchor id=line-478></span>Then run the following command <span class=anchor id=line-479></span><span class=anchor id=line-480></span><span class=anchor id=line-481></span><pre><span class=anchor id=line-1-7></span>mkimage -C none -A arm -T script -d boot.cmd boot.scr</pre><span class=anchor id=line-482></span><p class=line862>taken from here <a class=https href=https://linux-sunxi.org/Mainline_U-boot>https://linux-sunxi.org/Mainline_U-boot</a> <span class=anchor id=line-483></span>and the installer will boot in non-framebuffer mode <span class=anchor id=line-484></span>without any further input needed. <span class=anchor id=line-485></span><span class=anchor id=line-486></span><p class=line867><span class=anchor id=booting-installed></span> <span class=anchor id=line-487></span>
+<h2 id=Booting_the_installed_system>Booting the installed system</h2>
+<span class=anchor id=line-488></span><p class=line867>
+<h3 id=Booting_the_Installed_System_from_MMC.2FSD_Card>Booting the Installed System from MMC/SD Card</h3>
+<span class=anchor id=line-489></span><span class=anchor id=line-490></span><p class=line874>If you are running a current mainline u-boot or a recent u-boot-sunxi <span class=anchor id=line-491></span>(cf. the <a href=#U-boot_versions_for_sunxi-based_systems>u-boot overview</a> below), <span class=anchor id=line-492></span>have installed the system to an MMC/SD card <span class=anchor id=line-493></span>and have used the guided partitioning option in the installer, <span class=anchor id=line-494></span>auto booting the installed system works without requiring any user interaction. <span class=anchor id=line-495></span>Note that guided partitioning must be selected <span class=anchor id=line-496></span>to use the *whole* card and not only available space. <span class=anchor id=line-497></span>Otherwise Debian installer will not be removed from the card. <span class=anchor id=line-498></span>To fix this then please use the instruction <span class=anchor id=line-499></span>for <a href=#Creating_a_bootable_SD_Card_with_u-boot>Creating a bootable SD Card with u-boot</a> <span class=anchor id=line-500></span>from above to install a recent U-Boot version. <span class=anchor id=line-501></span><span class=anchor id=line-502></span><p class=line874>Some background information: <span class=anchor id=line-503></span><span class=anchor id=line-504></span><p class=line874>By default, <span class=anchor id=line-505></span>u-boot-sunxi expects the first partition on the MMC/SD card <span class=anchor id=line-506></span>to be the boot partition <span class=anchor id=line-507></span>and to contain either a FAT or an ext2 filesystem. <span class=anchor id=line-508></span>The guided partitioning option in the installer takes care of this <span class=anchor id=line-509></span>and sets up an ext2-formatted /boot partition as the first partition. <span class=anchor id=line-510></span>If you have chosen a different layout, <span class=anchor id=line-511></span>you have to manually set the u-boot environment variable ${partition} <span class=anchor id=line-512></span>to the number of the partition containing /boot. <span class=anchor id=line-513></span><span class=anchor id=line-514></span><p class=line874>Mainline u-boot does not impose restrictions <span class=anchor id=line-515></span>on the filesystem type of the boot partition, <span class=anchor id=line-516></span>as long as u-boot generally supports the particular filesystem <span class=anchor id=line-517></span>(which by default includes ext2/ext3/ext4). <span class=anchor id=line-518></span>Mainline u-boot also does not use the ${device}/${partition} scheme <span class=anchor id=line-519></span>used by u-boot-sunxi, <span class=anchor id=line-520></span>but instead automatically checks all available devices for a boot script. <span class=anchor id=line-521></span><span class=anchor id=line-522></span><p class=line867>
+<h3 id=Booting_the_Installed_System_from_a_SATA_Disk_on_Mainline_U-Boot>Booting the Installed System from a SATA Disk on Mainline U-Boot</h3>
+<span class=anchor id=line-523></span><span class=anchor id=line-524></span><p class=line874>If booting from MMC fails and a SATA disk is available, <span class=anchor id=line-525></span>mainline u-boot automatically tries to boot from it. <span class=anchor id=line-526></span>If you want to manually boot from a SATA disk at the u-boot prompt, <span class=anchor id=line-527></span>just enter the command "run bootcmd_scsi0". <span class=anchor id=line-528></span><span class=anchor id=line-529></span><p class=line867>
+<h3 id=Booting_the_Installed_System_from_a_SATA_Disk_on_U-Boot-Sunxi>Booting the Installed System from a SATA Disk on U-Boot-Sunxi</h3>
+<span class=anchor id=line-530></span><span class=anchor id=line-531></span><p class=line874>Note: <span class=anchor id=line-532></span>u-boot-sunxi does by default not support booting from SATA. <span class=anchor id=line-533></span>This paragraph applies only if you use a u-boot-sunxi version <span class=anchor id=line-534></span>on which additional AHCI patches have been applied. <span class=anchor id=line-535></span><span class=anchor id=line-536></span><p class=line874>U-boot-sunxi does not have an autoboot mechanism for SATA disks. <span class=anchor id=line-537></span>To manually boot from a SATA disk on u-boot-sunxi, <span class=anchor id=line-538></span>run the following at the u-boot prompt: <span class=anchor id=line-539></span><span class=anchor id=line-540></span><span class=anchor id=line-541></span><span class=anchor id=line-542></span><span class=anchor id=line-543></span><span class=anchor id=line-544></span><span class=anchor id=line-545></span><span class=anchor id=line-546></span><pre><span class=anchor id=line-1-8></span>uboot&gt; scsi scan
+<span class=anchor id=line-2-4></span>uboot&gt; setenv device scsi
+<span class=anchor id=line-3-4></span>uboot&gt; setenv partition 0
+<span class=anchor id=line-4-4></span>uboot&gt; load ${device} ${partition} ${scriptaddr} boot.scr
+<span class=anchor id=line-5-1></span>uboot&gt; setenv bootargs console=ttyS0,115200n8 root=/dev/sda2 rootwait
+<span class=anchor id=line-6-1></span>uboot&gt; source ${scriptaddr}</pre><span class=anchor id=line-547></span><span class=anchor id=line-548></span><p class=line874>This can be made the default with: <span class=anchor id=line-549></span><span class=anchor id=line-550></span><span class=anchor id=line-551></span><span class=anchor id=line-552></span><span class=anchor id=line-553></span><span class=anchor id=line-554></span><span class=anchor id=line-555></span><span class=anchor id=line-556></span><span class=anchor id=line-557></span><pre><span class=anchor id=line-1-9></span>uboot&gt; setenv device scsi
+<span class=anchor id=line-2-5></span>uboot&gt; setenv partition 0
+<span class=anchor id=line-3-5></span>uboot&gt; setenv bootargs console=ttyS0,115200n8 root=/dev/sda2 rootwait
+<span class=anchor id=line-4-5></span>uboot&gt; setenv boot_debian scsi scan\;load \${device} \${partition} \${scriptaddr} boot.scr\;source \${scriptaddr}
+<span class=anchor id=line-5-2></span>uboot&gt; setenv bootcmd run boot_debian
+<span class=anchor id=line-6-2></span>uboot&gt; saveenv
+<span class=anchor id=line-7-1></span>uboot&gt; boot</pre><span class=anchor id=line-558></span><span class=anchor id=line-559></span><p class=line867>
+<h2 id=Installing_on_systems_that_are_not_supported_out_of_the_box>Installing on systems that are not supported out of the box</h2>
+<span class=anchor id=line-560></span><span class=anchor id=line-561></span><p class=line874>First find a suitable device tree blob (DTB) for your board. <span class=anchor id=line-562></span>You might find one in the <span class=anchor id=line-563></span><a class=http href=http://d-i.debian.org/daily-images/armhf/daily/device-tree>daily builds</a>, <span class=anchor id=line-564></span>or in the <span class=anchor id=line-565></span><a class=https href=https://git.kernel.org/pub/scm/linux/kernel/git/devicetree/devicetree-rebasing.git>device-tree git repo</a>. <span class=anchor id=line-566></span>The latter is a repository containing all of the device tree files <span class=anchor id=line-567></span>shipped with the upstream Linux kernel but in a separate git tree <span class=anchor id=line-568></span>(which is much quicker to clone and build than the full kernel) <span class=anchor id=line-569></span>which tracks mainline Linux development. <span class=anchor id=line-570></span>You can build all of the ARM <span class=anchor id=line-571></span>(and therefore Allwinner/sunxi) <span class=anchor id=line-572></span>device tree blobs in that tree <span class=anchor id=line-573></span>in only a few seconds devices with: <span class=anchor id=line-574></span><span class=anchor id=line-575></span><p class=line867><span class=anchor id=line-576></span><span class=anchor id=line-577></span><span class=anchor id=line-578></span><span class=anchor id=line-579></span><span class=anchor id=line-580></span><pre><span class=anchor id=line-1-10></span>$ sudo apt-get install device-tree-compiler git make cpp
+<span class=anchor id=line-2-6></span>$ git clone git://git.kernel.org/pub/scm/linux/kernel/git/devicetree/devicetree-rebasing.git
+<span class=anchor id=line-3-6></span>$ cd devicetree-rebasing
+<span class=anchor id=line-4-6></span>$ make -j all_arm</pre><span class=anchor id=line-581></span><span class=anchor id=line-582></span><p class=line862>The device tree blobs will be found in <tt>src/arm/*.dtb</tt>. <span class=anchor id=line-583></span>You can build a single device tree <span class=anchor id=line-584></span>by passing it to make instead of <tt>all_arm</tt>. e.g. <span class=anchor id=line-585></span><span class=anchor id=line-586></span><p class=line867><span class=anchor id=line-587></span><span class=anchor id=line-588></span><pre><span class=anchor id=line-1-11></span>$ make src/arm/sun7i-a20-cubietruck.dtb</pre><span class=anchor id=line-589></span><span class=anchor id=line-590></span><p class=line874>Otherwise you might need to write a device tree file yourself <span class=anchor id=line-591></span>(or find someone who is willing to do it for you). <span class=anchor id=line-592></span>If you only have the device tree source (DTS) <span class=anchor id=line-593></span>you can convert it to DTB using these commands: <span class=anchor id=line-594></span><span class=anchor id=line-595></span><p class=line867><span class=anchor id=line-596></span><span class=anchor id=line-597></span><span class=anchor id=line-598></span><pre><span class=anchor id=line-1-12></span>$ sudo apt-get install device-tree-compiler
+<span class=anchor id=line-2-7></span>$ dtc -I dts -O dtb infile.dts &gt; outfile.dtb</pre><span class=anchor id=line-599></span><span class=anchor id=line-600></span><p class=line874>Once you have a suitable DTB <span class=anchor id=line-601></span>you can populate the TFTP server with the vmlinuz, initrd.gz and the DTB <span class=anchor id=line-602></span>and create a suitable installer boot script <span class=anchor id=line-603></span>by modifying the one <a href=#Installing_over_the_network_by_TFTP>above</a>. <span class=anchor id=line-604></span><span class=anchor id=line-605></span><p class=line874>Boot the installer and proceed as usual. Towards the end you will encounter: <span class=anchor id=line-606></span><span class=anchor id=line-607></span><span class=anchor id=line-608></span><span class=anchor id=line-609></span><span class=anchor id=line-610></span><span class=anchor id=line-611></span><span class=anchor id=line-612></span><span class=anchor id=line-613></span><span class=anchor id=line-614></span><span class=anchor id=line-615></span><span class=anchor id=line-616></span><span class=anchor id=line-617></span><span class=anchor id=line-618></span><span class=anchor id=line-619></span><pre><span class=anchor id=line-1-13></span>   ┌─────────────────┤ [!] Continue without boot loader ├──────────────────┐
+<span class=anchor id=line-2-8></span>   │                                                                       │
+<span class=anchor id=line-3-7></span>   │                       No boot loader installed                        │
+<span class=anchor id=line-4-7></span>   │ No boot loader has been installed, either because you chose not to or │
+<span class=anchor id=line-5-3></span>   │ because your specific architecture doesn't support a boot loader yet. │
+<span class=anchor id=line-6-3></span>   │                                                                       │
+<span class=anchor id=line-7-2></span>   │ You will need to boot manually with the /vmlinuz kernel on partition  │
+<span class=anchor id=line-8-1></span>   │ /dev/sda1 and root=/dev/sda2 passed as a kernel argument.             │
+<span class=anchor id=line-9-1></span>   │                                                                       │
+<span class=anchor id=line-10-1></span>   │                              &lt;Continue&gt;                               │
+<span class=anchor id=line-11-1></span>   │                                                                       │
+<span class=anchor id=line-12-1></span>   └───────────────────────────────────────────────────────────────────────┘</pre><span class=anchor id=line-620></span><p class=line874>This is expected. <span class=anchor id=line-621></span>Make a note of the partitions and continue. <span class=anchor id=line-622></span>Once the installer has completed the installation <span class=anchor id=line-623></span>you need to boot the resulting system, <span class=anchor id=line-624></span>but using the DTB from TFTP in order to fix things up. <span class=anchor id=line-625></span>This can be done like in the following example <span class=anchor id=line-626></span>(which assumes an installation to a SATA disk): <span class=anchor id=line-627></span><span class=anchor id=fixup-manual-boot></span> <span class=anchor id=line-628></span><span class=anchor id=line-629></span><span class=anchor id=line-630></span><span class=anchor id=line-631></span><span class=anchor id=line-632></span><span class=anchor id=line-633></span><span class=anchor id=line-634></span><span class=anchor id=line-635></span><span class=anchor id=line-636></span><span class=anchor id=line-637></span><span class=anchor id=line-638></span><span class=anchor id=line-639></span><span class=anchor id=line-640></span><span class=anchor id=line-641></span><pre><span class=anchor id=line-1-14></span>uboot&gt; setenv fdt_addr       0x43000000
+<span class=anchor id=line-2-9></span>uboot&gt; setenv ramdisk_addr_r 0x48000000
+<span class=anchor id=line-3-8></span>uboot&gt; setenv kernel_addr_r  0x47000000
+<span class=anchor id=line-4-8></span>uboot&gt; setenv dibase /didaily/armhf/daily
+<span class=anchor id=line-5-4></span>uboot&gt; setenv autoload no;dhcp
+<span class=anchor id=line-6-4></span>uboot&gt; tftp ${fdt_addr} ${dibase}/device-tree/sun7i-a20-cubieboard2.dtb
+<span class=anchor id=line-7-3></span>uboot&gt; fdt addr ${fdt_addr} 0x40000
+<span class=anchor id=line-8-2></span>uboot&gt; scsi scan
+<span class=anchor id=line-9-2></span>uboot&gt; load scsi 0 ${kernel_addr_r} /vmlinuz
+<span class=anchor id=line-10-2></span>uboot&gt; load scsi 0 ${ramdisk_addr_r} /initrd.img
+<span class=anchor id=line-11-2></span>uboot&gt; setenv bootargs console=ttyS0,115200n8 root=/dev/sda2 rootwait
+<span class=anchor id=line-12-2></span>uboot&gt; bootz ${kernel_addr_r} ${ramdisk_addr_r}:${filesize} ${fdt_addr}</pre><span class=anchor id=line-642></span><p class=line874>This should now boot you to a login prompt. <span class=anchor id=line-643></span><span class=anchor id=line-644></span><p class=line862>Login and install <a class=interwiki href=https://packages.debian.org/flash-kernel title=DebianPkg>flash-kernel</a> and the <a class=interwiki href=https://packages.debian.org/u-boot-tools title=DebianPkg>u-boot-tools</a>: <span class=anchor id=line-645></span><span class=anchor id=line-646></span><span class=anchor id=line-647></span><pre><span class=anchor id=line-1-15></span># apt-get install flash-kernel u-boot-tools</pre><span class=anchor id=line-648></span><span class=anchor id=line-649></span><p class=line874>Now you need to create a flash-kernel database entry. <span class=anchor id=line-650></span>Start by copying the entries for <tt>Cubietech&nbsp;Cubietruck</tt> <span class=anchor id=line-651></span>from <tt>/usr/share/flash-kernel/db/all.db</tt> <span class=anchor id=line-652></span>to <tt>/etc/flash-kernel/db</tt>. <span class=anchor id=line-653></span>Now you need to modify the <tt>Machine</tt> and <tt>DTB-Id</tt> fields. <span class=anchor id=line-654></span><span class=anchor id=line-655></span><p class=line862>For the <tt>Machine</tt> use the output of: <span class=anchor id=line-656></span><span class=anchor id=line-657></span><span class=anchor id=line-658></span><pre><span class=anchor id=line-1-16></span># cat /proc/device-tree/model ; echo</pre><span class=anchor id=line-659></span><span class=anchor id=line-660></span><p class=line862>For <tt>DTB-Id</tt> if you used a DTB from the daily builds <span class=anchor id=line-661></span>then use that name for <tt>DTB-Id</tt>. <span class=anchor id=line-662></span>If you got the DTB from somewhere else <span class=anchor id=line-663></span>then install it as <tt>/boot/dtb-$(uname&nbsp;-r)</tt> <span class=anchor id=line-664></span>and omit the <tt>DTB-Id</tt> field. <span class=anchor id=line-665></span>In this case you will need to take care around kernel upgrades. <span class=anchor id=line-666></span><span class=anchor id=line-667></span><p class=line862>Now run <tt>flash-kernel</tt> and reboot. <span class=anchor id=line-668></span>At this point you should be able to boot <span class=anchor id=line-669></span>using the process from <a href=#booting-installed>Booting the Installed System</a> above. <span class=anchor id=line-670></span>If this fails <span class=anchor id=line-671></span>then boot again using the <a href=#fixup-manual-boot>manual method</a> described above <span class=anchor id=line-672></span>and try again e.g. fix your <tt>/etc/flash-kernel/db</tt>. <span class=anchor id=line-673></span><span class=anchor id=line-674></span><p class=line874>Once you have it working <span class=anchor id=line-675></span>run <tt>reportbug&nbsp;flash-kernel</tt> and report a wishlist bug <span class=anchor id=line-676></span>to support your platform. <span class=anchor id=line-677></span>Be sure to include the contents of <tt>/etc/flash-kernel/db</tt> <span class=anchor id=line-678></span>and say where the DTB came from. <span class=anchor id=line-679></span><span class=anchor id=line-680></span><span class=anchor id=line-681></span><p class=line867>
+<h1 id=Mainline_kernel_and_linux-sunxi.org_3.4_kernel>Mainline kernel and linux-sunxi.org 3.4 kernel</h1>
+<span class=anchor id=line-682></span><span class=anchor id=line-683></span><p class=line874>There are two different Linux kernel series for sunxi-based systems: <span class=anchor id=line-684></span><ul><li>mainline kernel <span class=anchor id=line-685></span><li>linux-sunxi.org kernel <span class=anchor id=line-686></span></ul><p class=line874>Development for sunxi-based systems had originally begun <span class=anchor id=line-687></span>based on an Allwinner android kernel. <span class=anchor id=line-688></span>The <a class=https href=https://linux-sunxi.org/Linux_Kernel>linux-sunxi.org 3.4 kernel series</a> <span class=anchor id=line-689></span>is based on this android kernel <span class=anchor id=line-690></span>and is maintained by a group of volunteers at linux-sunxi.org. <span class=anchor id=line-691></span><span class=anchor id=line-692></span><p class=line874>The mainline kernel is the "official" Linux kernel series <span class=anchor id=line-693></span>released by Linus Torvalds. <span class=anchor id=line-694></span>Beginning with kernel 3.8, <span class=anchor id=line-695></span>several developers have been working on integrating sunxi support <span class=anchor id=line-696></span>into the mainline kernel. <span class=anchor id=line-697></span>An overview of the progress can be found <span class=anchor id=line-698></span>in the <a class=https href=https://linux-sunxi.org/Linux_mainlining_effort>linux-sunxi.org</a> wiki. <span class=anchor id=line-699></span><span class=anchor id=line-700></span><p class=line874>Debian uses the same kernel on all supported architectures <span class=anchor id=line-701></span>and therefore supports only the mainline kernel. <span class=anchor id=line-702></span>The disadvantage of the mainline kernel <span class=anchor id=line-703></span>compared to the linux-sunxi.org kernel <span class=anchor id=line-704></span>is that not all sunxi-specific drivers have yet been ported. <span class=anchor id=line-705></span>The mainline kernel contains support <span class=anchor id=line-706></span>for serial console, USB, SATA, Ethernet and MMC/SD, <span class=anchor id=line-707></span>but the version in Bullseye may lack native display and audio drivers <span class=anchor id=line-708></span>for some sunxi hardware. <span class=anchor id=line-709></span>Mainline u-boot supports running Linux with graphics support <span class=anchor id=line-710></span>by using the simplefb driver (which can handle a single resolution), <span class=anchor id=line-711></span>and mainline linux can switch to use the display engine used in the A10/A10s/A13/A20/A64. <span class=anchor id=line-712></span>The headphone jacks on some sunxi-based systems is supported. <span class=anchor id=line-713></span><span class=anchor id=line-714></span><p class=line874>While the installer always uses the mainline kernel, <span class=anchor id=line-715></span>it is possible to manually install a linux-sunxi.org kernel on a Debian system later on, <span class=anchor id=line-716></span>but in that case you are on your own <span class=anchor id=line-717></span>with regard to kernel updates and bootloader setup. <span class=anchor id=line-718></span>Several of the automatic mechanisms in Debian <span class=anchor id=line-719></span>to smoothly handle kernel updates and bootloader configuration <span class=anchor id=line-720></span>will not work properly with the linux-sunxi.org 3.4 series. <span class=anchor id=line-721></span><span class=anchor id=line-722></span><p class=line867>
+<h1 id=U-boot_versions_for_sunxi-based_systems>U-boot versions for sunxi-based systems</h1>
+<span class=anchor id=line-723></span><span class=anchor id=line-724></span><p class=line867>
+<h2 id=Overview>Overview</h2>
+<span class=anchor id=line-725></span><p class=line874>There are several u-boot versions for sunxi-based systems: <span class=anchor id=line-726></span><span class=anchor id=line-727></span><ul><li>the original Allwinner u-boot <span class=anchor id=line-728></span><li>u-boot-sunxi <span class=anchor id=line-729></span><li>mainline u-boot <span class=anchor id=line-730></span><span class=anchor id=line-731></span></ul><p class=line867>
+<h3 id=Allwinner_u-boot>Allwinner u-boot</h3>
+<span class=anchor id=line-732></span><p class=line874>You can mostly ignore the original Allwinner u-boot for Debian purposes. <span class=anchor id=line-733></span>Compared to u-boot-sunxi <span class=anchor id=line-734></span>and in particular to mainline u-boot <span class=anchor id=line-735></span>its codebase is rather old, <span class=anchor id=line-736></span>and it relies on proprietary bootloader components ("boot0"/"boot1") <span class=anchor id=line-737></span>to perform basic hardware initialization. <span class=anchor id=line-738></span>About the only use case for it is booting from the NAND flash <span class=anchor id=line-739></span>available on some sunxi-based boards <span class=anchor id=line-740></span>in conjunction with using an android or android-derived kernel version <span class=anchor id=line-741></span>that contains the original Allwinner NAND flash driver for Android. <span class=anchor id=line-742></span><span class=anchor id=line-743></span><p class=line867>
+<h3 id=U-boot-sunxi>U-boot-sunxi</h3>
+<span class=anchor id=line-744></span><p class=line867><a class=https href=https://github.com/linux-sunxi/u-boot-sunxi>U-boot-sunxi</a> is derived <span class=anchor id=line-745></span>from the original Allwinner u-boot <span class=anchor id=line-746></span>and is maintained by a group of volunteers at linux-sunxi.org. <span class=anchor id=line-747></span>It contains an SPL component <span class=anchor id=line-748></span>that takes care of the basic hardware initialization <span class=anchor id=line-749></span>and therefore does not need the proprietary boot0/boot1 loaders from Allwinner. <span class=anchor id=line-750></span>It can boot locally from MMC/SD card and over the network by TFTP, <span class=anchor id=line-751></span>but it cannot access the NAND flash. <span class=anchor id=line-752></span>The current version (as of 08/2014) has been updated <span class=anchor id=line-753></span>to the featureset of mainline u-boot v2014.04; <span class=anchor id=line-754></span>it does not have <a href=#u-boot-psci-support>PSCI</a>-, <span class=anchor id=line-755></span><a href=#u-boot-ahci-support>AHCI</a>- <span class=anchor id=line-756></span>and <a href=#u-boot-ehci-support>EHCI</a>-support. <span class=anchor id=line-757></span>Development of u-boot-sunxi has mostly stopped; <span class=anchor id=line-758></span>active development happens in mainline u-boot nowadays. <span class=anchor id=line-759></span>Therefore u-boot-sunxi is only interesting for a few systems <span class=anchor id=line-760></span>which are not yet supported by mainline u-boot. <span class=anchor id=line-761></span><span class=anchor id=line-762></span><p class=line867>
+<h3 id=Mainline_u-boot>Mainline u-boot</h3>
+<span class=anchor id=line-763></span><p class=line867><a class=http href=http://www.denx.de/wiki/U-Boot/WebHome>Mainline u-boot</a> <span class=anchor id=line-764></span>is the official upstream u-boot version. <span class=anchor id=line-765></span>It contains <a href=#u-boot-psci-support>PSCI</a>-, <span class=anchor id=line-766></span><a href=#u-boot-ahci-support>AHCI</a>- <span class=anchor id=line-767></span>and <a href=#u-boot-ehci-support>EHCI</a>-support. <span class=anchor id=line-768></span>The first mainline u-boot version with sunxi support was v2014.10, <span class=anchor id=line-769></span>the current mainline u-boot (v2016.01) <span class=anchor id=line-770></span>has added support for many more sunxi-based systems. <span class=anchor id=line-771></span>If a system is supported by mainline u-boot, <span class=anchor id=line-772></span>you should use it instead of u-boot-sunxi. <span class=anchor id=line-773></span>Mainline u-boot has - <span class=anchor id=line-774></span>besides the master git tree <span class=anchor id=line-775></span>at <a class=http href=http://git.denx.de/u-boot.git/>http://git.denx.de/u-boot.git/</a> - <span class=anchor id=line-776></span>so-called "custodian trees" for each supported platform, <span class=anchor id=line-777></span>in which platform-specific changes get integrated first <span class=anchor id=line-778></span>before being merged into the central u-boot git repository <span class=anchor id=line-779></span>for the next release. <span class=anchor id=line-780></span>The sunxi custodian tree is available <span class=anchor id=line-781></span>at <a class=http href=http://git.denx.de/u-boot-sunxi.git/>http://git.denx.de/u-boot-sunxi.git/</a> <span class=anchor id=line-782></span>and provides "bleeding-edge" development versions. <span class=anchor id=line-783></span>Those are primarily interesting for developers, <span class=anchor id=line-784></span>normal users should use the master git tree instead. <span class=anchor id=line-785></span><span class=anchor id=line-786></span><p class=line874>During the v2014.10 development cycle for mainline u-boot, <span class=anchor id=line-787></span>some rather invasive changes have been introduced. <span class=anchor id=line-788></span>This includes restructuring the build system <span class=anchor id=line-789></span>and introducing a new default environment <span class=anchor id=line-790></span>and a new generic bootcmd handling. <span class=anchor id=line-791></span>The new default environment is not fully compatible <span class=anchor id=line-792></span>with some older bootscripts written for u-boot-sunxi, <span class=anchor id=line-793></span>but flash-kernel &gt;= 3.24 creates bootscripts <span class=anchor id=line-794></span>that work with both the old and the new default environment. <span class=anchor id=line-795></span>If you are using a flash-kernel version older than 3.24 <span class=anchor id=line-796></span>and intend to change from u-boot-sunxi to mainline u-boot, <span class=anchor id=line-797></span>you should update flash-kernel first. <span class=anchor id=line-798></span><span class=anchor id=line-799></span><p class=line867>
+<h2 id=Creating_a_bootable_SD_Card_with_u-boot>Creating a bootable SD Card with u-boot</h2>
+<span class=anchor id=line-800></span><p class=line874>Debian provides mainline u-boot images <span class=anchor id=line-801></span>for a variety of supported systems <span class=anchor id=line-802></span>in the daily installer builds <span class=anchor id=line-803></span>at <a class=http href=http://d-i.debian.org/daily-images/armhf/daily/u-boot/>http://d-i.debian.org/daily-images/armhf/daily/u-boot/</a>. <span class=anchor id=line-804></span>The daily builds contain both a ready-made gzipped SD card image <span class=anchor id=line-805></span>(&lt;boardname&gt;.sdcard.img.gz) <span class=anchor id=line-806></span>as well as a gzipped "bare" u-boot image <span class=anchor id=line-807></span>(u-boot-sunxi-with-spl.bin.gz). <span class=anchor id=line-808></span><span class=anchor id=line-809></span><p class=line874>The easiest way to create a bootable SD card with u-boot <span class=anchor id=line-810></span>is to copy the ready-made card image to the card, <span class=anchor id=line-811></span>e.g. with <span class=anchor id=line-812></span><span class=anchor id=line-813></span><span class=anchor id=line-814></span><pre><span class=anchor id=line-1-17></span>$ zcat Cubietruck.sdcard.img.gz &gt; /dev/SDCARD_DEVICE</pre><span class=anchor id=line-815></span><p class=line874>Please note that writing the SD card image <span class=anchor id=line-816></span>overwrites an already existing partition table on the card <span class=anchor id=line-817></span>and thereby causes loss of any data that was on the card previously! <span class=anchor id=line-818></span><span class=anchor id=line-819></span><p class=line874>U-Boot images can also be taken <span class=anchor id=line-820></span>from the <a class=https href=https://packages.debian.org/jessie/armhf/u-boot-sunxi/filelist>u-boot-sunxi:armhf</a> package. <span class=anchor id=line-821></span>To create a bootable SD card with help of the u-boot-sunxi package, <span class=anchor id=line-822></span>copy the appropriate u-boot image to offset 8kb on the SD card, <span class=anchor id=line-823></span>e.g. with <span class=anchor id=line-824></span><span class=anchor id=line-825></span><p class=line867><span class=anchor id=line-826></span><span class=anchor id=line-827></span><pre><span class=anchor id=line-1-18></span>$ dd if=/usr/lib/u-boot/Cubietruck/u-boot-sunxi-with-spl.bin of=/dev/SDCARD_DEVICE bs=1k seek=8</pre><span class=anchor id=line-828></span><span class=anchor id=line-829></span><p class=line874>for the Cubietruck. <span class=anchor id=line-830></span>This method keeps an existing partition table on the SD card untouched. <span class=anchor id=line-831></span><span class=anchor id=line-832></span><p class=line874>Please note that the u-boot-sunxi package contains both normal <span class=anchor id=line-833></span>as well as FEL images for various systems. <span class=anchor id=line-834></span>FEL mode is a special boot mode <span class=anchor id=line-835></span>that allows sunxi-based systems to be booted <span class=anchor id=line-836></span>via a USB cable from another system <span class=anchor id=line-837></span>instead of from a mass storage device. <span class=anchor id=line-838></span>FEL mode requires specifically adapted u-boot builds <span class=anchor id=line-839></span>which are unsuitable for booting from SD card, <span class=anchor id=line-840></span>so use the normal non-FEL images for building bootable SD cards. <span class=anchor id=line-841></span><span class=anchor id=line-842></span><p class=line874>To install the u-boot-sunxi:armhf package on a non-armhf system <span class=anchor id=line-843></span>(e.g. on an amd64-based PC), <span class=anchor id=line-844></span>you can use Debian's multiarch functionality: <span class=anchor id=line-845></span><span class=anchor id=line-846></span><p class=line867><span class=anchor id=line-847></span><span class=anchor id=line-848></span><span class=anchor id=line-849></span><span class=anchor id=line-850></span><pre><span class=anchor id=line-1-19></span>$ sudo dpkg --add-architecture armhf
+<span class=anchor id=line-2-10></span>$ sudo apt-get update
+<span class=anchor id=line-3-9></span>$ sudo apt-get install u-boot-sunxi:armhf</pre><span class=anchor id=line-851></span><span class=anchor id=line-852></span><p class=line867><span class=anchor id=u-boot-psci-support></span> <span class=anchor id=line-853></span>
+<h2 id=SMP.2FPSCI_support>SMP/PSCI support</h2>
+<span class=anchor id=line-854></span><span class=anchor id=line-855></span><p class=line874>For SMP support on Allwinner SOCs, <span class=anchor id=line-856></span>i.e. for using more than one CPU core, <span class=anchor id=line-857></span>the mainline Linux kernel requires support for PSCI <span class=anchor id=line-858></span>(Power State Coordination Interface) <span class=anchor id=line-859></span>in u-boot, <span class=anchor id=line-860></span>which is only available in mainline u-boot. <span class=anchor id=line-861></span><span class=anchor id=line-862></span><p class=line867><span class=anchor id=u-boot-ahci-support></span> <span class=anchor id=line-863></span>
+<h2 id=AHCI_support>AHCI support</h2>
+<span class=anchor id=line-864></span><span class=anchor id=line-865></span><p class=line874>AHCI support allows u-boot to boot the kernel, initrd and dtb <span class=anchor id=line-866></span>from a SATA harddisk. <span class=anchor id=line-867></span>U-boot itself has still to be installed on an SD card, <span class=anchor id=line-868></span>but the rest of the system can be put onto a (much faster) harddisk. <span class=anchor id=line-869></span>This feature is available in mainline u-boot <span class=anchor id=line-870></span>for most mainline-supported systems with a SATA socket. <span class=anchor id=line-871></span><span class=anchor id=line-872></span><p class=line867><span class=anchor id=u-boot-ehci-support></span> <span class=anchor id=line-873></span>
+<h2 id=EHCI_support>EHCI support</h2>
+<span class=anchor id=line-874></span><span class=anchor id=line-875></span><p class=line874>EHCI support allows u-boot to boot the kernel, initrd and dtb <span class=anchor id=line-876></span>from a USB mass storage device <span class=anchor id=line-877></span>such as a USB memory stick or a USB harddisk. <span class=anchor id=line-878></span>U-boot itself has still to be installed on an SD card, <span class=anchor id=line-879></span>but the rest of the system can be put onto a USB device. <span class=anchor id=line-880></span>This feature is available in mainline u-boot <span class=anchor id=line-881></span>for most mainline-supported systems <span class=anchor id=line-882></span>with a USB host (type "A") socket. <span class=anchor id=line-883></span><span class=anchor id=line-884></span><p class=line867>
+<h1 id=Board_Specific_Information>Board Specific Information</h1>
+<span class=anchor id=line-885></span><span class=anchor id=line-886></span><p class=line867>
+<h2 id=Cubietech_Cubietruck>Cubietech Cubietruck</h2>
+<span class=anchor id=line-887></span><span class=anchor id=line-888></span><p class=line862>Wifi requires non-free firmware <a class=interwiki href=https://packages.debian.org/firmware-brcm80211 title=DebianPkg>firmware-brcm80211</a> <span class=anchor id=line-889></span>at least version 0.42 <span class=anchor id=line-890></span>plus an additional firmware file <span class=anchor id=line-891></span>which is not yet packaged but can be installed with: <span class=anchor id=line-892></span><span class=anchor id=line-893></span><p class=line867><span class=anchor id=line-894></span><span class=anchor id=line-895></span><pre><span class=anchor id=line-1-20></span>wget -O /lib/firmware/brcm/brcmfmac43362-sdio.txt http://dl.cubieboard.org/public/Cubieboard/benn/firmware/ap6210/nvram_ap6210.txt</pre><span class=anchor id=line-896></span><span class=anchor id=line-897></span><p class=line862>Message such as <tt>brcmfmac:&nbsp;brcmf_fil_cmd_data:&nbsp;Failed&nbsp;err=-23</tt> <span class=anchor id=line-898></span>are expected and do not represent a actual problem. <span class=anchor id=line-899></span><span class=anchor id=line-900></span><p class=line867>
+<h2 id=Olimex_A20-OLinuXino-MICRO.2FA20-OLinuXino-LIME2_.2B-_7.22_or_10.22LCD>Olimex A20-OLinuXino-MICRO/A20-OLinuXino-LIME2 + 7" or 10"LCD</h2>
+<span class=anchor id=line-901></span><span class=anchor id=line-902></span><p class=line874>If you have one of those boards+lcd display <span class=anchor id=line-903></span>and want to use the mainline kernel with simplefb <span class=anchor id=line-904></span><a class=http href=http://karme.de/prisirah/>http://karme.de/prisirah/</a> might be interesting for you. <span class=anchor id=line-905></span><span class=anchor id=line-906></span><p class=line867>
+<h2 id=Olimex_A20-OLinuXino-LIME2__rev._F_and_newer_and_Debian11.2F_bullseye_kernel>Olimex A20-OLinuXino-LIME2 rev. F and newer and Debian11/ bullseye kernel</h2>
+<span class=anchor id=line-907></span><p class=line867><img alt=/!\ src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH1gcGCjcVb7UXVwAAAeJJREFUOI2Vzb9rE3EYx/H399dd7nKX3NHrpWl+NRSlaIqgUBBEnFx00EFUtNGpm4vasaAgiC46ZBAnXVz9C0RwU4JtB4cWwR+LRAh2EMUk5BzUQDApzWd7Hj7P6xGMSfMiC9rwIoFO0uPE4Wd8GtWT4wBjeBplyEc+Ja15PK43Eti4xEkpOBB4iMBHJXDsbZ2jewISECga0yGetCyU1sQBjhI09gSsL3PeKPK+A6owhyyU8dMICfvXL3NqV6C5glHwIA7xZMpFTefQ8SzSsolDPCSN5NbwzdCgfrJi23iuDao4R+3GFour26hCBc8BWxNtvufKSGBzmbQQ3IkDPOH5yDCiVnaolR1UlEM6LnGIlwjuv7xK6j+gn3AzbWPZBnSxCgIWyzaHKikQAlWs4ljg2DhBj2tDwOs6U0KwGgW4MhsiMwEAB4sOtZLzpxhOIbwMuYC0EKw1z5EdAFbCbd9FWf++/82ZpSynj2QGsylVsQz4LlqnWAMQby5QMoat+TyOiWPM/MLgQJ99BUDv+fHBrrv9jk67zYcv/Oh32adti3tZD60U6JlZkl5vUP76ZAlgaKdmCuidNoGH/vadu2Kjzk4lJmsZJsqvLnxu0dJ9ePSxxfUkYSJCQEdIHk72dkR+A5pSYTihrCDlAAAAAElFTkSuQmCC title=/!\ width=16 height=16> Revision F and newer LIME2 boards fails to work with gigagit ethernet with recent kernel. <span class=anchor id=line-908></span><span class=anchor id=line-909></span><span class=anchor id=line-910></span><p class=line862>The issue is covered in detail at <a class=https href=https://linux-sunxi.org/Olimex_A20-OLinuXino-Lime2#GMAC_quirks>the sunxi wiki</a>, <span class=anchor id=line-911></span>and to a lesser extend in <a class="interwiki closed-bug" href=https://bugs.debian.org/911560 title="Closed in 2022.04+dfsg-1: #911560: u-boot: Olimex Lime2 Rev.H-L: severe packet loss w/ gigabit ethernet">911560</a> and <a class="interwiki closed-bug" href=https://bugs.debian.org/927397 title="Closed in 2022.04+dfsg-1: #927397: u-boot: Olimex Lime2 Rev.F-G2: severe packet loss w/ gigabit ethernet">927397</a>. <span class=anchor id=line-912></span><span class=anchor id=line-913></span><span class=anchor id=line-914></span><p class=line874>Here's the recipe to build and install u-boot for this card. You can use an existing installation (e.g. after update to bullseye), but you will need physical access to the card due to the resulting lag fo SSH. <span class=anchor id=line-915></span><span class=anchor id=line-916></span><p class=line874>Note that the revision of the card is written on the PCB of the device. <span class=anchor id=line-917></span><span class=anchor id=line-918></span><p class=line874>Setup u-boot source: <span class=anchor id=line-919></span><span class=anchor id=line-920></span><ul><li><p class=line891><tt>git&nbsp;clone&nbsp;https://salsa.debian.org/debian/u-boot.git</tt> <span class=anchor id=line-921></span></p><li><p class=line891><tt>sudo&nbsp;apt&nbsp;build-dep&nbsp;u-boot</tt> <span class=anchor id=line-922></span><span class=anchor id=line-923></span></p></ul><p class=line874>In u-boot repository: <span class=anchor id=line-924></span><span class=anchor id=line-925></span><ul><li><p class=line862>apply all debian patches: <tt>quilt&nbsp;push&nbsp;-a</tt> <span class=anchor id=line-926></span></p><li><p class=line862>run: <tt>make&nbsp;CROSS_COMPILE=arm-linux-gnueabihf-&nbsp;A20-OLinuXino-Lime2_defconfig</tt> <span class=anchor id=line-927></span></p><li><p class=line862>edit .config to set CONFIG_GMAC_TX_DELAY=3 (or run <tt>make&nbsp;CROSS_COMPILE=arm-linux-gnueabihf-&nbsp;menuconfig</tt> <span class=anchor id=line-928></span><ul><li><p class=line862>Or for revision G2 with the upgrade to Debian11/ Bullseye use CONFIG_GMAC_TX_DELAY=4 <a class="interwiki closed-bug" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=927397#62" title="Closed in 2022.04+dfsg-1: #927397: u-boot: Olimex Lime2 Rev.F-G2: severe packet loss w/ gigabit ethernet">instead</a> <span class=anchor id=line-929></span></p></ul><li><p class=line862>build u-boot: <tt>make&nbsp;CROSS_COMPILE=arm-linux-gnueabihf-</tt> <span class=anchor id=line-930></span><span class=anchor id=line-931></span><span class=anchor id=line-932></span></p></ul><p class=line874>You should get a u-boot-sunxi-with-spl.bin file <span class=anchor id=line-933></span>which is the bootloader to install on your SD card <span class=anchor id=line-934></span>(see <a class=https href=https://linux-sunxi.org/Bootable_SD_card#Bootloader>Sunxi doc</a>) <span class=anchor id=line-935></span><span class=anchor id=line-936></span><p class=line874>First backup your SD card: <span class=anchor id=line-937></span><span class=anchor id=line-938></span><ul><li><p class=line891><tt>sudo&nbsp;cp&nbsp;/dev/$sdcard&nbsp;backup.img</tt> <span class=anchor id=line-939></span><span class=anchor id=line-940></span></p></ul><p class=line874>Then copy the bootloader: <span class=anchor id=line-941></span><span class=anchor id=line-942></span><ul><li><p class=line891><tt>sudo&nbsp;dd&nbsp;if=u-boot-sunxi-with-spl.bin&nbsp;of=/dev/$sdcard&nbsp;bs=1024&nbsp;seek=8</tt> <span class=anchor id=line-943></span><span class=anchor id=line-944></span></p></ul><p class=line874>In both case, <span class=anchor id=line-945></span><tt>$sdcard</tt> is to be replaced with the block device file of your SD card. <span class=anchor id=line-946></span><span class=anchor id=line-947></span><span class=anchor id=line-948></span><p class=line867>
+<h2 id=Banana_PI_M2_Berry>Banana PI M2 Berry</h2>
+<span class=anchor id=line-949></span><span class=anchor id=line-950></span><p class=line862>(Those are just notes at this point, added by <a href=https://wiki.debian.org/LucasNussbaum>LucasNussbaum</a>) <span class=anchor id=line-951></span><span class=anchor id=line-952></span><ul><li>You will need a UART (console) cable. <span class=anchor id=line-953></span><span class=anchor id=line-954></span></ul><p class=line867>
+<h3 id=Installing_Debian>Installing Debian</h3>
+<span class=anchor id=line-955></span><span class=anchor id=line-956></span><ul><li>U-Boot has no support for ethernet for this device. So no TFTP install. <span class=anchor id=line-957></span><li>What worked for me is: <span class=anchor id=line-958></span><ul><li>Use d-i daily build, and a daily ISO. (Support was added to Debian testing mid-march 2019) <span class=anchor id=line-959></span><ul><li><p class=line862>Get the firmware and partition image from <a class=https href=https://d-i.debian.org/daily-images/armhf/daily/hd-media/SD-card-images/>https://d-i.debian.org/daily-images/armhf/daily/hd-media/SD-card-images/</a> <span class=anchor id=line-960></span></p><li><p class=line862>Write a Debian installer iso image to a USB stick, in an ext4 partition. For example <a class=https href=https://cdimage.debian.org/cdimage/daily-builds/daily/20190404-5/armhf/iso-cd/debian-testing-armhf-netinst.iso>https://cdimage.debian.org/cdimage/daily-builds/daily/20190404-5/armhf/iso-cd/debian-testing-armhf-netinst.iso</a> or equivalent <span class=anchor id=line-961></span></p></ul><li>Start the device. It will start the installer, and then find the ISO image. You don't need ethernet during the installation. <span class=anchor id=line-962></span><span class=anchor id=line-963></span></ul></ul><p class=line867>
+<h3 id=Post-installation_stuff>Post-installation stuff</h3>
+<span class=anchor id=line-964></span><span class=anchor id=line-965></span><ul><li>It might be a bit difficult to get the system to boot, because the installer does not set everything up correctly. You will need to install flash-kernel. <span class=anchor id=line-966></span><li>Ethernet does not work, because the device tree file for the device is incomplete. Add the data related to ethernet in the M2 ultra dts and recompile the dtd. <span class=anchor id=line-967></span><li><p class=line862>Wifi needs an additional firmware that is not shipped in the firmware-brcm80211 package (see <a class="interwiki closed-bug" href=https://bugs.debian.org/797779 title="Closed: #797779: firmware-brcm80211: failed to load brcm/brcmfmac4330-sdio.txt">https://bugs.debian.org/797779</a>, that is not going to be fixed). <span class=anchor id=line-968></span><span class=anchor id=line-969></span></p></ul><p class=line867>
+<h1 id=Resources>Resources</h1>
+<span class=anchor id=line-970></span><span class=anchor id=line-971></span><p class=line867><a class=http href=http://linux-sunxi.org/>http://linux-sunxi.org/</a> <span class=anchor id=line-972></span><span class=anchor id=bottom></span></p></div><div id=pagebottom></div>
+</div>
+<div id=footer>
+<p id=pageinfo class=info dir=ltr lang=en>InstallingDebianOn/Allwinner (<a class=nbinfo href="https://wiki.debian.org/InstallingDebianOn/Allwinner?action=info" rel=nofollow>last modified 2021-09-26 09:40:03</a>)</p>
+<ul id=credits>
+<li>Debian <a href=https://www.debian.org/legal/privacy>privacy policy</a>, Wiki <a href=https://wiki.debian.org/Teams/DebianWiki>team</a>, <a href=https://bugs.debian.org/wiki.debian.org>bugs</a> and <a href=https://salsa.debian.org/debian/wiki.debian.org>config</a>.<li>Powered by <a href=https://moinmo.in/ title="This site uses the MoinMoin Wiki software.">MoinMoin</a> and <a href=https://moinmo.in/Python title="MoinMoin is written in Python.">Python</a>, with hosting provided by <a href=https://www.man-da.de/>Metropolitan Area Network Darmstadt</a>.</li>
+</ul>
+</div>
