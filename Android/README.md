@@ -64,6 +64,7 @@ Existing device tree is located [here](https://github.com/MB3hel/android_device_
         - recovery.img
         - extract_recovery.sh
         - pack-recovery.sh
+        - unpack_bootimg.py
     ```
 - Run `./extract-recovery.sh recovery.img recovery/`
 - In extracted recovery's extracted ramdisk, replace `default.prop` contents with the following
@@ -183,6 +184,7 @@ Existing device tree is located [here](https://github.com/MB3hel/android_device_
         - recovery-modified.img
         - extract_recovery.sh
         - pack-recovery.sh
+        - unpack_bootimg.py
     ```
 - Run `python3 -m twrpdtgen recovery-modified.img`
 - Resultant device tree is in `output/a746/along-6051`
