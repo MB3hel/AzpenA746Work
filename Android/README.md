@@ -41,12 +41,7 @@ Several files with information are stored in `stock/`
 
 ## Custom Recovery (TWRP)
 
-### UNTESTED NOT MINE
-
-In `tools/notmine` there is `A33 TWRP+install v1.2.rar`. This is a generic A33 based tablet TWRP. **I did not build this and have not tested yet.**. The installer scripts and instructions will certainly not work (wrong nand partition).
-
-
-### My TWRP
+### TWRP
 
 *Note: Not fully functional / built yet.*
 
