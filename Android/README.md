@@ -15,6 +15,13 @@
 
 - **Note that this tablet uses the legacy sunxi 3.4 kernel and legacy sunxi uboot. Not mainline versions.**
 
+From FEL mode
+
+`sunxi-fel ver`: `AWUSBFEX soc=00001667(A33) 00000001 ver=0001 44 08 scratchpad=00007e00 00000000 00000000`
+`sunxi-fel sid`: `0461872a:87185201:9c9747a7:00000000`
+`sunxi-fel read 0x01c23800`: `0x0461872a`
+
+
 
 ## Boot Modes
 
@@ -257,7 +264,9 @@ Fastboot can be accessed using `adb reboot bootloader`, but I have yet to find a
 
 If we could access the uBoot console, we could probably manually boot to fastboot using `fastboot usb 0`. There are UART pads on this tablet's board (requires opening tablet). This is untested, but persumably similar to A741 (info [here](https://linux-sunxi.org/Azpen_A741)). However, the console may not accept input due to sharing with the SD card (again, untested).
 
-Theoretically, FEL could also be used to flash a custom uboot build to work around this (differnet UART port), but we'd need to be able to build uboot for this device. Currently not sure what that would entail. I have yet to get any method 
+Theoretically, FEL could also be used to flash a custom uboot build to work around this (differnet UART port), but we'd need to be able to build uboot for this device. Currently not sure what that would entail. I have yet to get any method [here](https://linux-sunxi.org/Retrieving_device_information) to work for `boot1.header`, but I have obtained `script.bin` and `script.fex` from the stock rom. These are located in the `stock/` folder.
+
+It is also possible a generic A33 1024x600 build would work. But again, UNTESTED!
 
 
 ### SD Card Boot
