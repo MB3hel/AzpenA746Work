@@ -16,12 +16,22 @@
 
 - **Note that this tablet uses the legacy sunxi 3.4 kernel and legacy sunxi uboot. Not mainline versions.**
 
-From FEL mode
+From FEL mode:
 
 `sunxi-fel ver`: `AWUSBFEX soc=00001667(A33) 00000001 ver=0001 44 08 scratchpad=00007e00 00000000 00000000`
 `sunxi-fel sid`: `0461872a:87185201:9c9747a7:00000000`
 `sunxi-fel read 0x01c23800`: `0x0461872a`
 
+
+Extracted info from stock:
+
+From [this](https://linux-sunxi.org/Retrieving_device_information) the FEL extract fails, but I have obtained `script.bin` and `script.fex` from the stock rom using the script extract tool (from [this](https://github.com/linux-sunxi/sunxi-tools)). These are located in the `stock/` folder. The bootinfo was also extracted using the SUN8I method in a modified meminfo script (I made SUN9I use SUN8I code). This is included, but I am not certain it is valid.
+
+The `script.fex` was automatically converted to a `dts` file using [FEX2DTS](https://github.com/SdtElectronics/FEX2DTS). I have no idea if it's valid. But it is likely a good starting point.
+
+There is also a partition map file, various command outputs (dmesg, dumpsys), and build.prop from the stock ROM. 
+
+Other information (various command outputs) are in `info_from_stock.txt`.
 
 
 ## Boot Modes
@@ -85,11 +95,11 @@ Several files with information are stored in `stock/`
 
 ### TWRP
 
-*Note: Not fully functional / built yet.*
+*Note: Not functional / built yet.*
 
 #### Device Tree creation
 
-Existing device tree is located [here](https://github.com/MB3hel/android_device_azpen_along-6051). The following is documentation of the process I used to create it.
+My existing device tree is located [here](https://github.com/MB3hel/android_device_azpen_along-6051). The following is documentation of the process I used to create it.
 
 - Tested on Ubuntu 22.04 LTS (amd64)
 - From extracted stock rom I have recovery.img
@@ -265,9 +275,7 @@ Fastboot can be accessed using `adb reboot bootloader`, but I have yet to find a
 
 If we could access the uBoot console, we could probably manually boot to fastboot using `fastboot usb 0`. There are UART pads on this tablet's board (requires opening tablet). This is untested, but persumably similar to A741 (info [here](https://linux-sunxi.org/Azpen_A741)). However, the console may not accept input due to sharing with the SD card (again, untested).
 
-Theoretically, FEL could also be used to flash a custom uboot build to work around this (differnet UART port), but we'd need to be able to build uboot for this device. Currently not sure what that would entail. I have yet to get any method [here](https://linux-sunxi.org/Retrieving_device_information) to work for `boot1.header`, but I have obtained `script.bin` and `script.fex` from the stock rom. These are located in the `stock/` folder. The bootinfo was also extracted using the SUN8I method in a modified meminfo script (I made SUN9I use SUN8I code). This is included, but I am not certain it is valid.
-
-It is also possible a generic A33 1024x600 build would work. But again, UNTESTED!
+Theoretically, FEL could also be used to flash a custom uboot build to work around this (differnet UART port), but we'd need to be able to build uboot for this device. Currently not sure what that would entail. It is possible a generic A33 1024x600 build would work. But again, UNTESTED!
 
 
 ### SD Card Boot
