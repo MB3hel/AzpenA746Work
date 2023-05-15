@@ -1,0 +1,1079 @@
+_name:mc32x0,write_id:2
+<7>[    8.240848] number: 5 
+<7>[    8.240854] number:15 now_number:5,scan_number:0
+<7>[    8.240860] scan_number:0, now_number:5
+<7>[    8.240871] sw_device_response_test: name = mc32x0, addr = 0x4c
+<7>[    8.241124] I2C connection sucess!
+<7>[    8.241133] addr:0x18, response_addr:0x4c
+<7>[    8.241140] addr:0x19, response_addr:0x4c
+<7>[    8.241146] addr:0x8, response_addr:0x4c
+<7>[    8.241152] addr:0x38, response_addr:0x4c
+<7>[    8.241158] addr:0x1d, response_addr:0x4c
+<7>[    8.241164] addr:0x4c, response_addr:0x4c
+<7>[    8.241170] return number: 5 
+<7>[    8.241176] -----sw_chip_id_detect:chip_id_reg value:0x0
+<7>[    8.241183] from copy name:mc32x0, strlen(name):6
+<7>[    8.241191] sw_i2c_test: write_key_name:gsensor_module_name
+<7>[    8.241198] write_flag:0
+<7>[    8.241205] [sw_device]:sw_register_device_detect end!
+<7>[    8.241211] [sw_device]:sw_register_device_detect begin!
+<7>[    8.241226] ========sw_sysconfig_get_para===================
+<7>[    8.241237] sw_sysconfig_get_para: device_unused. 
+<4>[    8.241243] get sysconfig para erro!
+<7>[    8.241250] [sw_device]:sw_register_device_detect end!
+<7>[    8.241257] [sw_device]:sw_register_device_detect begin!
+<7>[    8.241272] ========sw_sysconfig_get_para===================
+<7>[    8.241281] sw_sysconfig_get_para: device_unused. 
+<4>[    8.241287] get sysconfig para erro!
+<7>[    8.241292] [sw_device]:sw_register_device_detect end!
+<4>[    8.241339] ctp_wakeup: !!!!gpio data 1
+<4>[    8.247601] sp0a19------------------------------------------james--16-47
+<5>[    8.247731] =========script_get_err============
+<4>[    8.247741] sunxi_vibrator_init: motor_fetch_sysconfig_para err.
+<6>[    8.290437] init: command 'insmod' r=-1
+<6>[    8.290558] init: command 'chmod' r=-2
+<6>[    8.306367] init: command 'insmod' r=0
+<6>[    8.320298] usbcore: registered new interface driver asix
+<6>[    8.320580] init: command 'insmod' r=0
+<6>[    8.332433] usbcore: registered new interface driver qf9700
+<6>[    8.332686] init: command 'insmod' r=0
+<6>[    8.343770] usbcore: registered new interface driver MOSCHIP usb-ethernet driver
+<6>[    8.344026] init: command 'insmod' r=0
+<7>[    8.350085] [sw_device]:sw_register_device_detect begin!
+<7>[    8.350154] ========sw_sysconfig_get_para===================
+<7>[    8.350178] sw_sysconfig_get_para: device_twi_id is 0. 
+<7>[    8.350315] ;Behind the equals sign said detected equipment corresponding to the name of the driver
+<7>[    8.350322] ;Note: don't change the file format!
+<7>[    8.350327] gsensor_module_name="mc32x0"
+<7>[    8.350330] ctp_module_name="gslX680"
+<7>[    8.350334] light sensor_module_name=""
+<7>[    8.350337] gyr sensor_module_name=""
+<7>[    8.350341] :strlen(src_string):234
+<7>[    8.350359] sw_analytic_write_info:total_raw:7
+<7>[    8.350368] config_info[6].str_info:
+<7>[    8.350377] config_info[5].str_info:gyr sensor_module_name=""
+<7>[    8.350382] 
+<7>[    8.350390] config_info[4].str_info:light sensor_module_name=""
+<7>[    8.350395] 
+<7>[    8.350403] config_info[3].str_info:ctp_module_name="gslX680"
+<7>[    8.350408] 
+<7>[    8.350415] info:ctp_module_name="gslX680"
+<7>[    8.350419] , key_name:ctp_module_name
+<7>[    8.350430] ----ret : 17,s1 : 24---
+<7>[    8.350434]  
+<7>[    8.350442] name:gslX680
+<7>[    8.350450] device_name:gslX680,write_id:3
+<7>[    8.350459] number: 2 
+<7>[    8.350467] number:11 now_number:2,scan_number:0
+<7>[    8.350476] scan_number:0, now_number:2
+<7>[    8.350491] sw_device_response_test: name = gslX680, addr = 0x40
+<7>[    8.350725] I2C connection sucess!
+<7>[    8.350741] addr:0x14, response_addr:0x40
+<7>[    8.350766] addr:0x5d, response_addr:0x40
+<7>[    8.350775] addr:0x5d, response_addr:0x40
+<7>[    8.350783] addr:0x76, response_addr:0x40
+<7>[    8.350791] addr:0x38, response_addr:0x40
+<7>[    8.350799] addr:0x38, response_addr:0x40
+<7>[    8.350808] addr:0x5d, response_addr:0x40
+<7>[    8.350816] addr:0x40, response_addr:0x40
+<7>[    8.350823] return number: 2 
+<7>[    8.350832] -----sw_chip_id_detect:chip_id_reg value:0x0
+<7>[    8.350841] from copy name:gslX680, strlen(name):7
+<7>[    8.350850] sw_i2c_test: write_key_name:ctp_module_name
+<7>[    8.350859] write_flag:0
+<7>[    8.350867] [sw_device]:sw_register_device_detect end!
+<7>[    8.350882] [sw_device]:sw_devices_events end!
+<6>[    8.354915] usbcore: registered new interface driver rtl8150
+<6>[    8.355180] init: command 'insmod' r=0
+<6>[    8.366715] usbcore: registered new interface driver cdc_ether
+<6>[    8.366958] init: command 'insmod' r=0
+<6>[    8.367117] init: command 'chown' r=0
+<6>[    8.367171] init: command 'chmod' r=0
+<6>[    8.367219] init: command 'chown' r=0
+<6>[    8.367264] init: command 'chmod' r=0
+<6>[    8.367310] init: command 'chown' r=0
+<6>[    8.367354] init: command 'chmod' r=0
+<6>[    8.367387] init: processing action 0x47ab8 (post-fs)
+<6>[    8.367668] init: command 'mkdir' r=0
+<6>[    8.369448] init: command 'mkdir' r=0
+<6>[    8.384145] init: command 'insmod' r=0
+<6>[    8.384259] init: command 'mount' r=0
+<6>[    8.384336] init: command 'mount' r=0
+<6>[    8.384379] init: command 'mount' r=0
+<6>[    8.384552] init: command 'chown' r=0
+<6>[    8.384609] init: command 'chmod' r=0
+<6>[    8.384860] init: command 'restorecon' r=0
+<6>[    8.387604] init: command 'chown' r=0
+<6>[    8.387672] init: command 'chmod' r=0
+<6>[    8.387907] init: command 'restorecon' r=0
+<6>[    8.388057] init: command 'chown' r=0
+<6>[    8.388155] init: command 'chmod' r=0
+<6>[    8.388228] init: command 'chown' r=0
+<6>[    8.388305] init: command 'chmod' r=0
+<6>[    8.388425] init: command 'chown' r=0
+<6>[    8.388497] init: command 'chmod' r=0
+<6>[    8.388565] init: command 'chown' r=0
+<6>[    8.388642] init: command 'chmod' r=0
+<6>[    8.388706] init: command 'chown' r=-2
+<6>[    8.388750] init: command 'chmod' r=-2
+<6>[    8.389081] init: command 'mkdir' r=0
+<6>[    8.389118] init: processing action 0x4dea8 (post-fs-data)
+<6>[    8.389179] init: command 'chown' r=0
+<6>[    8.389226] init: command 'chmod' r=0
+<6>[    8.389382] init: command 'restorecon' r=0
+<6>[    8.394321] init: command 'copy' r=0
+<6>[    8.395918] init: command 'mkdir' r=0
+<6>[    8.395976] init: command 'copy' r=-1
+<6>[    8.397206] init: command 'chown' r=-2
+<6>[    8.397245] init: command 'chmod' r=-2
+<6>[    8.397279] init: command 'copy' r=-1
+<6>[    8.397327] init: command 'chown' r=-2
+<6>[    8.397359] init: command 'chmod' r=-2
+<6>[    8.397392] init: command 'write' r=-2
+<6>[    8.397663] init: command 'mkdir' r=0
+<6>[    8.397997] init: command 'mkdir' r=0
+<6>[    8.398327] init: command 'mkdir' r=0
+<6>[    8.398615] init: command 'mkdir' r=0
+<6>[    8.398908] init: command 'mkdir' r=0
+<6>[    8.399188] init: command 'mkdir' r=0
+<6>[    8.399419] init: command 'mkdir' r=0
+<6>[    8.399673] init: command 'mkdir' r=0
+<6>[    8.399946] init: command 'mkdir' r=0
+<6>[    8.400308] init: command 'mkdir' r=0
+<6>[    8.400612] init: command 'mkdir' r=0
+<6>[    8.400899] init: command 'mkdir' r=0
+<6>[    8.402237] init: command 'chmod' r=-2
+<6>[    8.402283] init: command 'chown' r=-2
+<6>[    8.402602] init: command 'mkdir' r=0
+<6>[    8.402900] init: command 'mkdir' r=0
+<6>[    8.402950] init: command 'chown' r=0
+<6>[    8.404502] init: command 'mkdir' r=0
+<6>[    8.406029] init: command 'mkdir' r=0
+<6>[    8.406322] init: command 'mkdir' r=0
+<6>[    8.407873] init: command 'mkdir' r=0
+<6>[    8.409530] init: command 'mkdir' r=0
+<6>[    8.415552] init: command 'mkdir' r=0
+<6>[    8.417196] init: command 'mkdir' r=0
+<6>[    8.418797] init: command 'mkdir' r=0
+<6>[    8.420384] init: command 'mkdir' r=0
+<6>[    8.421993] init: command 'mkdir' r=0
+<6>[    8.423475] init: command 'mkdir' r=0
+<6>[    8.424977] init: command 'mkdir' r=0
+<6>[    8.426631] init: command 'mkdir' r=0
+<6>[    8.428899] init: command 'mkdir' r=0
+<6>[    8.428956] init: command 'chown' r=0
+<6>[    8.429006] init: command 'chmod' r=0
+<6>[    8.429295] init: command 'mkdir' r=0
+<6>[    8.430864] init: command 'mkdir' r=0
+<6>[    8.432420] init: command 'mkdir' r=0
+<6>[    8.432484] init: command 'symlink' r=-1
+<6>[    8.434051] init: command 'mkdir' r=0
+<6>[    8.434250] init: computing context for service '/system/bin/busybox'
+<5>[    8.436455] init: starting 'precopy'
+<6>[    8.436942] init: command 'start' r=0
+<6>[    8.436990] init: command 'setprop' r=0
+<6>[    8.437179] init: computing context for service '/system/bin/busybox'
+<5>[    8.437376] init: starting 'bootclone'
+<6>[    8.437866] init: command 'start' r=0
+<6>[    8.438025] init: command 'write' r=0
+<6>[    8.438100] init: processing action 0x533f8 (post-fs-data)
+<6>[    8.438279] init: command 'chown' r=0
+<6>[    8.438420] init: command 'chmod' r=0
+<6>[    8.438526] init: command 'chown' r=0
+<6>[    8.438604] init: command 'chmod' r=0
+<6>[    8.438646] init: processing action 0x560b0 (post-fs-data)
+<6>[    8.440626] init: command 'mkdir' r=0
+<6>[    8.440664] init: processing action 0x59750 (mix_hwrng_into_linux_rng)
+<3>[    8.440711] init: /dev/hw_random not found
+<6>[    8.445292] init: command 'mix_hwrng_into_linux_rng' r=0
+<6>[    8.445322] init: processing action 0x59798 (property_service_init)
+<6>[    8.491552] init: MemTotal: 524288KB
+<6>[    8.494260] init: Created socket '/dev/socket/property_service' with mode '666', user '0', group '0'
+<6>[    8.494560] init: command 'property_service_init' r=0
+<6>[    8.494604] init: processing action 0x597e0 (signal_init)
+<6>[    8.494833] init: waitpid returned pid 108, status = 00000000
+<5>[    8.494852] init: process 'precopy', pid 108 exited
+<6>[    8.494908] init: command 'signal_init' r=0
+<6>[    8.494939] init: processing action 0x59828 (check_startup)
+<6>[    8.495023] init: command 'check_startup' r=0
+<6>[    8.495042] init: processing action 0x4e810 (boot)
+<6>[    8.495853] init: command 'ifup' r=0
+<6>[    8.496015] init: command 'hostname' r=0
+<6>[    8.496102] init: command 'domainname' r=0
+<6>[    8.496201] init: command 'chmod' r=0
+<6>[    8.496260] init: command 'chown' r=0
+<6>[    8.496287] init: command 'setrlimit' r=0
+<6>[    8.496388] init: command 'write' r=0
+<6>[    8.496491] init: command 'write' r=0
+<6>[    8.496573] init: command 'chown' r=0
+<6>[    8.496629] init: command 'chmod' r=0
+<6>[    8.496682] init: command 'chown' r=0
+<6>[    8.496735] init: command 'chmod' r=0
+<6>[    8.496821] init: command 'write' r=0
+<6>[    8.496900] init: command 'write' r=0
+<6>[    8.496954] init: command 'chown' r=-2
+<6>[    8.496999] init: command 'chown' r=-2
+<6>[    8.497043] init: command 'chown' r=-2
+<6>[    8.497087] init: command 'chown' r=-2
+<6>[    8.497133] init: command 'chown' r=-2
+<6>[    8.497189] init: command 'chown' r=-2
+<6>[    8.497248] init: command 'chown' r=0
+<7>[    8.497268] SELinux: initialized (dev nanda, type vfat), uses genfs_contexts
+<6>[    8.497301] init: command 'chown' r=0
+<6>[    8.497351] init: command 'chown' r=0
+<6>[    8.497410] init: command 'chown' r=0
+<6>[    8.497467] init: command 'chmod' r=0
+<6>[    8.497523] init: command 'chmod' r=0
+<6>[    8.497573] init: command 'chmod' r=0
+<6>[    8.497644] init: command 'chown' r=-2
+<6>[    8.497747] init: command 'chmod' r=-2
+<6>[    8.497811] init: command 'chown' r=-2
+<6>[    8.497875] init: command 'chmod' r=-2
+<6>[    8.497948] init: command 'chown' r=-2
+<6>[    8.498011] init: command 'chmod' r=-2
+<6>[    8.498088] init: command 'chown' r=-2
+<6>[    8.498158] init: command 'chmod' r=-2
+<6>[    8.498220] init: command 'chown' r=-2
+<6>[    8.498278] init: command 'chmod' r=-2
+<6>[    8.498346] init: command 'chown' r=-2
+<6>[    8.498412] init: command 'chmod' r=-2
+<6>[    8.498476] init: command 'chown' r=-2
+<6>[    8.498536] init: command 'chmod' r=-2
+<6>[    8.498602] init: command 'chown' r=-2
+<6>[    8.498662] init: command 'chmod' r=-2
+<6>[    8.498738] init: command 'chown' r=-2
+<6>[    8.498862] init: command 'chown' r=-2
+<6>[    8.498976] init: waitpid returned pid 109, status = 00000000
+<5>[    8.498994] init: process 'bootclone', pid 109 exited
+<6>[    8.499103] init: command 'chmod' r=-2
+<6>[    8.499165] init: command 'chown' r=-2
+<6>[    8.499223] init: command 'chmod' r=-2
+<6>[    8.499283] init: command 'chown' r=-2
+<6>[    8.499344] init: command 'chmod' r=-2
+<6>[    8.499421] init: command 'chown' r=0
+<6>[    8.499476] init: command 'chmod' r=0
+<6>[    8.499531] init: command 'chown' r=0
+<6>[    8.499583] init: command 'chmod' r=0
+<6>[    8.499637] init: command 'chown' r=0
+<6>[    8.499691] init: command 'chmod' r=0
+<6>[    8.499744] init: command 'chown' r=0
+<6>[    8.499790] init: command 'chmod' r=0
+<6>[    8.499851] init: command 'chown' r=-2
+<6>[    8.499911] init: command 'chmod' r=-2
+<6>[    8.499969] init: command 'chown' r=-2
+<6>[    8.500095] init: command 'chmod' r=-2
+<6>[    8.500151] init: command 'chown' r=-2
+<6>[    8.500200] init: command 'chown' r=-2
+<6>[    8.500259] init: command 'chown' r=-2
+<6>[    8.500313] init: command 'chown' r=-2
+<6>[    8.500363] init: command 'chmod' r=-2
+<6>[    8.500416] init: command 'chown' r=-2
+<6>[    8.500467] init: command 'chmod' r=-2
+<6>[    8.500584] init: command 'chown' r=0
+<6>[    8.500669] init: command 'chmod' r=0
+<6>[    8.500727] init: command 'chown' r=-2
+<6>[    8.500784] init: command 'chown' r=-2
+<6>[    8.500837] init: command 'chown' r=-2
+<6>[    8.500892] init: command 'chown' r=-2
+<6>[    8.500945] init: command 'chown' r=-2
+<6>[    8.500998] init: command 'chown' r=-2
+<6>[    8.501054] init: command 'chown' r=-2
+<6>[    8.501106] init: command 'chown' r=-2
+<6>[    8.501158] init: command 'chown' r=-2
+<6>[    8.501208] init: command 'chown' r=-2
+<6>[    8.501259] init: command 'chown' r=-2
+<6>[    8.501310] init: command 'chown' r=-2
+<6>[    8.501360] init: command 'chown' r=-2
+<6>[    8.501413] init: command 'chown' r=-2
+<6>[    8.501465] init: command 'chown' r=-2
+<6>[    8.501516] init: command 'chown' r=-2
+<6>[    8.501572] init: command 'chown' r=-2
+<6>[    8.501625] init: command 'chown' r=-2
+<6>[    8.501675] init: command 'chown' r=-2
+<6>[    8.501730] init: command 'chown' r=0
+<6>[    8.501778] init: command 'chown' r=0
+<6>[    8.501826] init: command 'chown' r=0
+<6>[    8.501876] init: command 'chown' r=0
+<6>[    8.501938] init: command 'chown' r=0
+<6>[    8.501986] init: command 'chown' r=0
+<6>[    8.502096] init: command 'chown' r=0
+<6>[    8.502216] init: command 'chown' r=0
+<6>[    8.502276] init: command 'setprop' r=0
+<6>[    8.502325] init: command 'setprop' r=0
+<6>[    8.502373] init: command 'setprop' r=0
+<6>[    8.502420] init: command 'setprop' r=0
+<6>[    8.502467] init: command 'setprop' r=0
+<6>[    8.502515] init: command 'setprop' r=0
+<6>[    8.502563] init: command 'setprop' r=0
+<6>[    8.502611] init: command 'setprop' r=0
+<6>[    8.502659] init: command 'setprop' r=0
+<6>[    8.502706] init: command 'setprop' r=0
+<6>[    8.502754] init: command 'setprop' r=0
+<6>[    8.502784] init: command 'setprop' r=0
+<6>[    8.502814] init: command 'setprop' r=0
+<5>[    8.502973] init: starting 'healthd'
+<6>[    8.503739] init: computing context for service '/system/bin/lights_leds.sh'
+<5>[    8.503955] init: starting 'lights_leds'
+<6>[    8.504753] init: computing context for service '/system/bin/servicemanager'
+<5>[    8.505011] init: starting 'servicemanager'
+<6>[    8.505847] init: computing context for service '/system/bin/vold'
+<5>[    8.506088] init: starting 'vold'
+<6>[    8.506651] init: command 'class_start' r=0
+<6>[    8.507024] init: computing context for service '/system/bin/netd'
+<5>[    8.507261] init: starting 'netd'
+<6>[    8.507643] binder: 111:111 transaction failed 29189, size 0-0
+<6>[    8.508128] init: computing context for service '/system/bin/debuggerd'
+<5>[    8.508403] init: starting 'debuggerd'
+<6>[    8.508980] init: Created socket '/dev/socket/mdns' with mode '660', user '0', group '1000'
+<6>[    8.509191] init: computing context for service '/system/bin/surfaceflinger'
+<5>[    8.509473] init: starting 'surfaceflinger'
+<6>[    8.509508] init: Created socket '/dev/socket/dnsproxyd' with mode '660', user '0', group '3003'
+<6>[    8.510305] init: Created socket '/dev/socket/netd' with mode '660', user '0', group '1000'
+<6>[    8.510463] init: Created socket '/dev/socket/vold' with mode '660', user '0', group '1009'
+<6>[    8.510943] init: computing context for service '/system/bin/app_process'
+<5>[    8.511240] init: starting 'zygote'
+<6>[    8.512155] init: computing context for service '/system/bin/drmserver'
+<5>[    8.512441] init: starting 'drm'
+<6>[    8.512962] init: Created socket '/dev/socket/zygote' with mode '660', user '0', group '1000'
+<6>[    8.513314] init: computing context for service '/system/bin/mediaserver'
+<5>[    8.513608] init: starting 'media'
+<6>[    8.514683] init: computing context for service '/system/bin/installd'
+<5>[    8.515046] init: starting 'installd'
+<6>[    8.516553] init: Created socket '/dev/socket/installd' with mode '600', user '1000', group '1000'
+<6>[    8.621559] init: computing context for service '/system/etc/install-recovery.sh'
+<5>[    8.621796] init: starting 'flash_recovery'
+<6>[    8.622602] init: computing context for service '/system/bin/keystore'
+<5>[    8.622829] init: starting 'keystore'
+<3>[    8.623324] init: cannot find '/system/bin/fotabinder', disabling 'fotabinder'
+<6>[    8.631788] init: computing context for service '/system/bin/setmacaddr'
+<5>[    8.632045] init: starting 'engsetmacaddr'
+<6>[    8.632966] init: computing context for service '/system/bin/sh'
+<5>[    8.633211] init: starting 'setserialno'
+<6>[    8.633664] init: command 'class_start' r=0
+<6>[    8.633887] init: waitpid returned pid 112, status = 00000000
+<5>[    8.633908] init: process 'lights_leds', pid 112 exited
+<6>[    8.634168] init: processing action 0x59220 (boot)
+<6>[    8.634314] init: command 'chmod' r=0
+<6>[    8.634446] init: command 'chown' r=0
+<6>[    8.634521] init: command 'chown' r=0
+<6>[    8.634588] init: command 'chown' r=0
+<6>[    8.634673] init: command 'chown' r=0
+<6>[    8.634736] init: command 'chown' r=0
+<6>[    8.634800] init: command 'chown' r=0
+<6>[    8.634869] init: command 'chown' r=0
+<6>[    8.634943] init: command 'chown' r=0
+<6>[    8.635016] init: command 'chown' r=0
+<6>[    8.635079] init: command 'chown' r=0
+<6>[    8.635143] init: command 'chmod' r=0
+<6>[    8.635196] init: command 'chmod' r=0
+<6>[    8.635246] init: command 'chmod' r=0
+<6>[    8.635298] init: command 'chmod' r=0
+<6>[    8.635355] init: command 'chmod' r=0
+<6>[    8.635428] init: command 'chmod' r=0
+<6>[    8.635501] init: command 'chmod' r=0
+<6>[    8.635563] init: command 'chmod' r=0
+<6>[    8.635625] init: command 'chmod' r=0
+<6>[    8.635686] init: command 'chmod' r=0
+<6>[    8.670218] init: command 'chown' r=0
+<5>[    8.690084] [VFE]mclk off
+<5>[    8.690122] [VFE]Sub device register "sp0a19" is OK!
+<5>[    8.690511] [VFE]V4L2 device registered as video0
+<5>[    8.690542] [VFE]register_early_suspend @ probe handle!
+<5>[    8.690553] [VFE]probe_work_handle end!
+<6>[    8.710172] init: command 'chmod' r=0
+<6>[    8.710256] init: processing action 0x59870 (queue_property_triggers)
+<6>[    8.710365] init: command 'queue_property_triggers' r=0
+<6>[    8.710385] init: processing action 0x4f9c0 (nonencrypted)
+<6>[    8.710768] init: computing context for service '/system/bin/sdcard'
+<5>[    8.711013] init: starting 'sdcard'
+<6>[    8.711511] init: command 'class_start' r=0
+<6>[    8.711591] init: processing action 0x4fce8 (property:sys.powerctl=*)
+<3>[    8.711614] init: property 'sys.powerctl' doesn't exist while expanding '${sys.powerctl}'
+<3>[    8.720765] init: powerctl: cannot expand '${sys.powerctl}'
+<6>[    8.726956] init: command 'powerctl' r=-22
+<6>[    8.727015] init: processing action 0x4fd38 (property:sys.sysctl.extra_free_kbytes=*)
+<3>[    8.727038] init: property 'sys.sysctl.extra_free_kbytes' doesn't exist while expanding '${sys.sysctl.extra_free_kbytes}'
+<3>[    8.739232] init: cannot expand '${sys.sysctl.extra_free_kbytes}' while writing to '/proc/sys/vm/extra_free_kbytes'
+<7>[    8.747804] SELinux: initialized (dev fuse, type fuse), uses genfs_contexts
+<6>[    8.750959] init: command 'write' r=-22
+<6>[    8.751010] init: processing action 0x53df0 (property:persist.sys.usb.config=*)
+<6>[    8.751129] init: command 'setprop' r=0
+<6>[    8.751152] init: processing action 0x583a0 (property:sys.usb.config=mtp,adb)
+<3>[    8.751304] android_usb: already disabled
+<6>[    8.755841] init: command 'write' r=0
+<6>[    8.756053] init: command 'write' r=0
+<6>[    8.756185] init: command 'write' r=0
+<6>[    8.756332] init: command 'write' r=0
+<6>[    8.760337] init: command 'write' r=0
+<6>[    8.760722] init: waitpid returned pid 123, status = 00007f00
+<5>[    8.760759] init: process 'flash_recovery', pid 123 exited
+<5>[    8.761957] init: starting 'adbd'
+<6>[    8.762571] init: command 'start' r=0
+<6>[    8.762654] init: command 'setprop' r=0
+<6>[    8.764198] init: waitpid returned pid 125, status = 00000000
+<5>[    8.764228] init: process 'engsetmacaddr', pid 125 exited
+<6>[    8.764797] init: Created socket '/dev/socket/adbd' with mode '660', user '1000', group '1000'
+<6>[    8.767939] adb_open
+<6>[    8.767968] mtp_bind_config
+<4>[    8.767998] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[    8.768018] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[    8.768036] ep_matches, wrn: endpoint already claimed, ep(0xc097eba0, 0xdedc4800, ep1out-bulk)
+<4>[    8.768048] gadget_is_softwinner_otg is not -int
+<4>[    8.768056] gadget_is_softwinner_otg is not -int
+<4>[    8.768067] -iso
+<4>[    8.768078] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc133bc0)
+<4>[    8.768159] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xded07c40)
+<4>[    8.768237] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc3aaf40)
+<4>[    8.768309] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc3aaec0)
+<4>[    8.768366] [sw_udc]: alloc request: ep(0xc097eba0, ep1out-bulk, 512), req(0xdc3aae40)
+<4>[    8.768417] [sw_udc]: alloc request: ep(0xc097eba0, ep1out-bulk, 512), req(0xdc3aadc0)
+<4>[    8.768461] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 512), req(0xdc3aad40)
+<4>[    8.768478] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 512), req(0xdc3aacc0)
+<4>[    8.768497] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 512), req(0xdc3aac40)
+<4>[    8.768513] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 512), req(0xdc3aabc0)
+<4>[    8.768527] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 512), req(0xdc3aab40)
+<6>[    8.768546] adb_bind_config
+<4>[    8.768559] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[    8.768572] ep_matches, wrn: endpoint already claimed, ep(0xc097eba0, 0xdedc4800, ep1out-bulk)
+<4>[    8.768589] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[    8.768604] ep_matches, wrn: endpoint already claimed, ep(0xc097eba0, 0xdedc4800, ep1out-bulk)
+<4>[    8.768617] ep_matches, wrn: endpoint already claimed, ep(0xc097ebec, 0xdec70500, ep2in-bulk)
+<4>[    8.768630] [sw_udc]: alloc request: ep(0xc097ec38, ep2out-bulk, 512), req(0xdc3aaac0)
+<4>[    8.768658] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc3aaa40)
+<4>[    8.768685] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc3aa9c0)
+<4>[    8.768714] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc3aa940)
+<4>[    8.768740] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc3aa8c0)
+<4>[    8.768767] [sw_udc]: sunxi_udc_pullup, is_on = 1
+<4>[    8.768781] sunxi_udc_set_pullup_2317: usb device is not active
+<6>[    8.771989] warning: `daemonsu' uses 32-bit capabilities (legacy support in use)
+<7>[    8.772968] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+<6>[    8.939440] init: waitpid returned pid 126, status = 00000000
+<5>[    8.939469] init: process 'setserialno', pid 126 exited
+<6>[    9.525525] init: computing context for service '/system/bin/bootanimation'
+<5>[    9.525796] init: starting 'bootanim'
+<4>[    9.960443] 
+<4>[    9.960455] 
+<4>[    9.960458] insmod_device_driver
+<4>[    9.960462] 
+<4>[    9.960475] [sw_udc]: sunxi_usb_device_enable start
+<4>[    9.960487] [sw_udc]: usb_vbase  = 0xf1c19000
+<4>[    9.960499] [sw_udc]: sram_vbase = 0xf1c00000
+<4>[    9.960524] [sw_udc]: open_usb_clock
+<4>[    9.960580] [sw_udc]: usbd_stop_work
+<4>[    9.960624] [sw_udc]: CONFIG_USB_GADGET_DUALSPEED: USBC_TS_MODE_HS
+<4>[    9.960639] [sw_udc]: usbd_start_work
+<4>[    9.960648] [sw_udc]: usbd_start_work
+<4>[    9.960657] [sw_udc]: sunxi_usb_device_enable end
+<4>[   10.016347] [sw_udc]: IRQ: suspend
+<4>[   10.016369] [sw_udc]: ERR: usb speed is unkown
+<4>[   10.122665] ###########close all layers 0
+<4>[   10.156535] [sw_udc]: IRQ: reset
+<4>[   10.156572] (1:star,2:end): vfs_read:0, vfs_write:0,dma_working:0,amount:0,file_offset:0
+<4>[   10.156589] [sw_udc]: irq: reset happen, throw away all urb
+<6>[   10.162388] healthd: battery l=90 v=0 t=0.0 h=2 st=2 c=0 chg=u
+<6>[   10.163523] healthd: battery l=90 v=0 t=0.0 h=2 st=2 c=0 chg=u
+<4>[   10.282916] [sw_udc]: 
+<4>[   10.282936] +++++++++++++++++++++++++++++++++++++
+<4>[   10.282943] [sw_udc]:  usb enter high speed.
+<4>[   10.282953] [sw_udc]: 
+<4>[   10.282959] +++++++++++++++++++++++++++++++++++++
+<4>[   10.287633] [sw_udc]: IRQ: reset
+<4>[   10.287669] (1:star,2:end): vfs_read:0, vfs_write:0,dma_working:0,amount:0,file_offset:0
+<4>[   10.287684] [sw_udc]: irq: reset happen, throw away all urb
+<6>[   10.291558] healthd: battery l=90 v=0 t=0.0 h=2 st=2 c=0 chg=u
+<6>[   10.292663] healthd: battery l=90 v=0 t=0.0 h=2 st=2 c=0 chg=u
+<4>[   10.410807] [sw_udc]: Set address 8
+<6>[   10.433056] android_usb gadget: high-speed config #1: android
+<4>[   10.433074] [sw_udc]: ep enable: ep1(0xc097eb54, ep1in-bulk, 128, 512)
+<4>[   10.433091] [sw_udc]: ep enable: ep1(0xc097eb54, ep1in-bulk, 128, 512), fifo(512, 1024, 1)
+<4>[   10.433114] [sw_udc]: ep enable: ep1(0xc097eba0, ep1out-bulk, 0, 512)
+<4>[   10.433127] [sw_udc]: ep enable: ep1(0xc097eba0, ep1out-bulk, 0, 512), fifo(1536, 1024, 1)
+<4>[   10.433145] [sw_udc]: ep enable: ep4(0xc097ecd0, ep4-int, 128, 28)
+<4>[   10.433158] [sw_udc]: ep enable: ep4(0xc097ecd0, ep4-int, 128, 28), fifo(5632, 512, 0)
+<4>[   10.433177] [sw_udc]: ep enable: ep2(0xc097ebec, ep2in-bulk, 128, 512)
+<4>[   10.433190] [sw_udc]: ep enable: ep2(0xc097ebec, ep2in-bulk, 128, 512), fifo(2560, 1024, 1)
+<4>[   10.433208] [sw_udc]: ep enable: ep2(0xc097ec38, ep2out-bulk, 0, 512)
+<4>[   10.433221] [sw_udc]: ep enable: ep2(0xc097ec38, ep2out-bulk, 0, 512), fifo(3584, 1024, 1)
+<4>[   10.433433] nuke: ep num is 0
+<7>[   11.155032] SELinux: initialized (dev tmpfs, type tmpfs), uses transition SIDs
+<4>[   16.046667] [sw_udc]: IRQ: reset
+<4>[   16.046722] (1:star,2:end): vfs_read:0, vfs_write:0,dma_working:0,amount:0,file_offset:0
+<4>[   16.046746] [sw_udc]: irq: reset happen, throw away all urb
+<4>[   16.046761] nuke: ep num is 2
+<6>[   16.051634] healthd: battery l=90 v=4096 t=30.0 h=2 st=2 c=291 chg=u
+<6>[   16.052511] healthd: battery l=90 v=4096 t=30.0 h=2 st=2 c=291 chg=u
+<4>[   16.107249] i2c-core: driver [mc32x0] using legacy suspend method
+<4>[   16.107268] i2c-core: driver [mc32x0] using legacy resume method
+<6>[   16.107289] gsensor_detect: addr= 4c
+<6>[   16.107552] I2C connection sucess!
+<4>[   16.120774] sunxi_i2c_do_xfer()950 - [i2c1] incomplete xfer (status: 0x20, dev addr: 0x4c)
+<4>[   16.172257] [sw_udc]: IRQ: reset
+<4>[   16.172271] (1:star,2:end): vfs_read:0, vfs_write:0,dma_working:0,amount:0,file_offset:0
+<4>[   16.172283] [sw_udc]: irq: reset happen, throw away all urb
+<4>[   16.172294] nuke: ep num is 2
+<6>[   16.173543] healthd: battery l=90 v=4096 t=30.0 h=2 st=2 c=291 chg=u
+<6>[   16.174331] healthd: battery l=90 v=4096 t=30.0 h=2 st=2 c=291 chg=u
+<4>[   16.271114] offser gain = 586 657 523 -629 -199 1389======================
+<4>[   16.271122] 
+<4>[   16.271125]  
+<6>[   16.274163] input: mc32x0 as /devices/virtual/input/input4
+<4>[   16.295217] [sw_udc]: Set address 8
+<4>[   16.306078] gslX680: no versions for exported symbols: kernel tainted.
+<4>[   16.306104] Disabling lock debugging due to kernel taint
+<6>[   16.307802] =====ctp_fetch_sysconfig_para=====. 
+<4>[   16.307829] ctp_wakeup gpio number is 225
+<4>[   16.307841] ctp_irq gpio number is 37
+<4>[   16.307888] axp22_ldoio1: Failed to create debugfs directory
+<4>[   16.308047] ### ttc fwname = gsl1680_k70
+<4>[   16.316052] [sw_udc]: ep disable: ep1(0xc097eb54, ep1in-bulk, 128, 200)
+<4>[   16.316074] [sw_udc]: ep disable: ep1(0xc097eba0, ep1out-bulk, 0, 200)
+<4>[   16.316088] [sw_udc]: ep disable: ep4(0xc097ecd0, ep4-int, 128, 1c)
+<4>[   16.316103] [sw_udc]: ep disable: ep2(0xc097ebec, ep2in-bulk, 128, 200)
+<4>[   16.316117] [sw_udc]: ep disable: ep2(0xc097ec38, ep2out-bulk, 0, 200)
+<4>[   16.316130] nuke: ep num is 2
+<6>[   16.316157] android_usb gadget: high-speed config #1: android
+<4>[   16.316169] [sw_udc]: ep enable: ep1(0xc097eb54, ep1in-bulk, 128, 512)
+<4>[   16.316185] [sw_udc]: ep enable: ep1(0xc097eb54, ep1in-bulk, 128, 512), fifo(512, 1024, 1)
+<4>[   16.316207] [sw_udc]: ep enable: ep1(0xc097eba0, ep1out-bulk, 0, 512)
+<4>[   16.316221] [sw_udc]: ep enable: ep1(0xc097eba0, ep1out-bulk, 0, 512), fifo(1536, 1024, 1)
+<4>[   16.316239] [sw_udc]: ep enable: ep4(0xc097ecd0, ep4-int, 128, 28)
+<4>[   16.316252] [sw_udc]: ep enable: ep4(0xc097ecd0, ep4-int, 128, 28), fifo(5632, 512, 0)
+<4>[   16.316270] [sw_udc]: ep enable: ep2(0xc097ebec, ep2in-bulk, 128, 512)
+<4>[   16.316284] [sw_udc]: ep enable: ep2(0xc097ebec, ep2in-bulk, 128, 512), fifo(2560, 1024, 1)
+<4>[   16.316302] [sw_udc]: ep enable: ep2(0xc097ec38, ep2out-bulk, 0, 512)
+<4>[   16.316315] [sw_udc]: ep enable: ep2(0xc097ec38, ep2out-bulk, 0, 512), fifo(3584, 1024, 1)
+<6>[   16.316469] adb_release
+<4>[   16.316479] [sw_udc]: sunxi_udc_pullup, is_on = 0
+<4>[   16.316493] [sw_udc]: ep disable: ep1(0xc097eb54, ep1in-bulk, 128, 200)
+<4>[   16.316508] [sw_udc]: ep disable: ep1(0xc097eba0, ep1out-bulk, 0, 200)
+<4>[   16.316522] [sw_udc]: ep disable: ep4(0xc097ecd0, ep4-int, 128, 1c)
+<4>[   16.316535] [sw_udc]: ep disable: ep2(0xc097ebec, ep2in-bulk, 128, 200)
+<4>[   16.316549] [sw_udc]: ep disable: ep2(0xc097ec38, ep2out-bulk, 0, 200)
+<4>[   16.316571] [sw_udc]: usbd_stop_work
+<4>[   16.316582] [sw_udc]: dequeue: ep(0xc097eaf0, 0), _req(0xdedc1848, 0, 0)
+<4>[   16.316606] [sw_udc]: free request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc133bc0)
+<4>[   16.316627] [sw_udc]: free request: ep(0xc097eb54, ep1in-bulk, 512), req(0xded07c40)
+<4>[   16.316643] [sw_udc]: free request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc3aaf40)
+<4>[   16.316658] [sw_udc]: free request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc3aaec0)
+<4>[   16.316674] [sw_udc]: free request: ep(0xc097eba0, ep1out-bulk, 512), req(0xdc3aae40)
+<4>[   16.316689] [sw_udc]: free request: ep(0xc097eba0, ep1out-bulk, 512), req(0xdc3aadc0)
+<4>[   16.316705] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc3aad40)
+<4>[   16.316720] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc3aacc0)
+<4>[   16.316737] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc3aac40)
+<4>[   16.316752] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc3aabc0)
+<4>[   16.316767] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc3aab40)
+<4>[   16.316783] [sw_udc]: free request: ep(0xc097ec38, ep2out-bulk, 512), req(0xdc3aaac0)
+<4>[   16.316800] [sw_udc]: free request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc3aa940)
+<4>[   16.316815] [sw_udc]: free request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc3aa8c0)
+<4>[   16.316831] [sw_udc]: free request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc3aaa40)
+<4>[   16.316846] [sw_udc]: free request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc3aa9c0)
+<6>[   16.316990] adb_open
+<6>[   16.317009] mtp_bind_config
+<4>[   16.317036] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[   16.317051] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[   16.317063] ep_matches, wrn: endpoint already claimed, ep(0xc097eba0, 0xdedc4800, ep1out-bulk)
+<4>[   16.317074] gadget_is_softwinner_otg is not -int
+<4>[   16.317081] gadget_is_softwinner_otg is not -int
+<4>[   16.317089] -iso
+<4>[   16.317098] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc1330c0)
+<4>[   16.317163] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc447a40)
+<4>[   16.317214] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc4479c0)
+<4>[   16.317274] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc447940)
+<4>[   16.317324] [sw_udc]: alloc request: ep(0xc097eba0, ep1out-bulk, 512), req(0xdc4478c0)
+<4>[   16.317364] [sw_udc]: alloc request: ep(0xc097eba0, ep1out-bulk, 512), req(0xdc447840)
+<4>[   16.317406] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc4477c0)
+<4>[   16.317421] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc447740)
+<4>[   16.317436] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc4476c0)
+<4>[   16.317451] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc447640)
+<4>[   16.317465] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc4475c0)
+<6>[   16.317482] adb_bind_config
+<4>[   16.317494] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[   16.317507] ep_matches, wrn: endpoint already claimed, ep(0xc097eba0, 0xdedc4800, ep1out-bulk)
+<4>[   16.317522] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[   16.317534] ep_matches, wrn: endpoint already claimed, ep(0xc097eba0, 0xdedc4800, ep1out-bulk)
+<4>[   16.317546] ep_matches, wrn: endpoint already claimed, ep(0xc097ebec, 0xdec70500, ep2in-bulk)
+<4>[   16.317557] [sw_udc]: alloc request: ep(0xc097ec38, ep2out-bulk, 512), req(0xdc447540)
+<4>[   16.317573] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc4474c0)
+<4>[   16.317598] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc447440)
+<4>[   16.317622] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc4473c0)
+<4>[   16.317646] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc447340)
+<4>[   16.317671] [sw_udc]: sunxi_udc_pullup, is_on = 1
+<4>[   16.317682] [sw_udc]: CONFIG_USB_GADGET_DUALSPEED: USBC_TS_MODE_HS
+<4>[   16.317695] [sw_udc]: usbd_start_work
+<4>[   16.320280] i2c-core: driver [gslX680] using legacy suspend method
+<4>[   16.320296] i2c-core: driver [gslX680] using legacy resume method
+<4>[   16.373144] [sw_udc]: IRQ: suspend
+<4>[   16.373158] [sw_udc]: ERR: usb speed is unkown
+<4>[   16.380596] chip_type = 130
+<4>[   16.380620] chip_type = 2
+<6>[   16.381626] input: gslX680 as /devices/platform/twi.0/i2c-0/0-0040/input/input5
+<6>[   16.384067] init: processing action 0x50398 (property:sys.sensors=1)
+<6>[   16.384200] init: computing context for service '/system/bin/busybox'
+<5>[   16.384652] init: starting 'sensors'
+<6>[   16.385226] init: command 'start' r=0
+<6>[   16.400458] init: waitpid returned pid 474, status = 00000000
+<5>[   16.400484] init: process 'sensors', pid 474 exited
+<4>[   16.536429] [sw_udc]: IRQ: reset
+<4>[   16.536447] (1:star,2:end): vfs_read:0, vfs_write:0,dma_working:0,amount:0,file_offset:0
+<4>[   16.536461] [sw_udc]: irq: reset happen, throw away all urb
+<6>[   16.541252] healthd: battery l=90 v=4096 t=30.0 h=2 st=2 c=291 chg=u
+<6>[   16.542040] healthd: battery l=90 v=4096 t=30.0 h=2 st=2 c=291 chg=u
+<4>[   16.630471] chip_type = 130
+<4>[   16.630486] chip_type = 2
+<4>[   16.662866] [sw_udc]: 
+<4>[   16.662874] +++++++++++++++++++++++++++++++++++++
+<4>[   16.662882] [sw_udc]:  usb enter high speed.
+<4>[   16.662891] [sw_udc]: 
+<4>[   16.662896] +++++++++++++++++++++++++++++++++++++
+<4>[   16.667630] [sw_udc]: IRQ: reset
+<4>[   16.667643] (1:star,2:end): vfs_read:0, vfs_write:0,dma_working:0,amount:0,file_offset:0
+<4>[   16.667656] [sw_udc]: irq: reset happen, throw away all urb
+<6>[   16.671110] healthd: battery l=90 v=4096 t=30.0 h=2 st=2 c=291 chg=u
+<6>[   16.671874] healthd: battery l=90 v=4096 t=30.0 h=2 st=2 c=291 chg=u
+<4>[   16.790047] 333####2681chip_typei=2#########3333333333333333333
+<4>[   16.790910] [sw_udc]: Set address 9
+<6>[   16.814252] android_usb gadget: high-speed config #1: android
+<4>[   16.814266] [sw_udc]: ep enable: ep1(0xc097eb54, ep1in-bulk, 128, 512)
+<4>[   16.814282] [sw_udc]: ep enable: ep1(0xc097eb54, ep1in-bulk, 128, 512), fifo(512, 1024, 1)
+<4>[   16.814305] [sw_udc]: ep enable: ep1(0xc097eba0, ep1out-bulk, 0, 512)
+<4>[   16.814318] [sw_udc]: ep enable: ep1(0xc097eba0, ep1out-bulk, 0, 512), fifo(1536, 1024, 1)
+<4>[   16.814336] [sw_udc]: ep enable: ep4(0xc097ecd0, ep4-int, 128, 28)
+<4>[   16.814349] [sw_udc]: ep enable: ep4(0xc097ecd0, ep4-int, 128, 28), fifo(5632, 512, 0)
+<4>[   16.814368] [sw_udc]: ep enable: ep2(0xc097ebec, ep2in-bulk, 128, 512)
+<4>[   16.814381] [sw_udc]: ep enable: ep2(0xc097ebec, ep2in-bulk, 128, 512), fifo(2560, 1024, 1)
+<4>[   16.814398] [sw_udc]: ep enable: ep2(0xc097ec38, ep2out-bulk, 0, 512)
+<4>[   16.814411] [sw_udc]: ep enable: ep2(0xc097ec38, ep2out-bulk, 0, 512), fifo(3584, 1024, 1)
+<4>[   16.814917] nuke: ep num is 0
+<6>[   17.276086] initKernelEnv
+<6>[   17.296102] initKernelEnv
+<6>[   17.316137] initKernelEnv
+<6>[   17.336135] initKernelEnv
+<6>[   17.356145] initKernelEnv
+<6>[   17.376157] initKernelEnv
+<4>[   17.387599] 222222222####2681#####2222222222
+<6>[   17.396171] initKernelEnv
+<6>[   17.416190] initKernelEnv
+<6>[   17.436205] initKernelEnv
+<6>[   17.456264] initKernelEnv
+<4>[   17.460114] 222222222####2681#####2222222222
+<6>[   17.476288] initKernelEnv
+<6>[   17.496305] initKernelEnv
+<6>[   17.516324] initKernelEnv
+<6>[   17.536362] initKernelEnv
+<6>[   17.556378] initKernelEnv
+<6>[   17.576416] initKernelEnv
+<6>[   17.596429] initKernelEnv
+<6>[   17.616469] initKernelEnv
+<6>[   17.636491] initKernelEnv
+<6>[   17.656532] initKernelEnv
+<6>[   17.676544] initKernelEnv
+<6>[   17.696567] initKernelEnv
+<6>[   17.716788] initKernelEnv
+<6>[   17.736729] initKernelEnv
+<6>[   17.756749] initKernelEnv
+<6>[   17.776786] initKernelEnv
+<6>[   17.796803] initKernelEnv
+<6>[   17.816828] initKernelEnv
+<6>[   17.836845] initKernelEnv
+<6>[   17.856878] initKernelEnv
+<6>[   20.542140] healthd: battery l=90 v=4042 t=30.0 h=2 st=2 c=113 chg=u
+<4>[   22.441727] [sw_udc]: IRQ: reset
+<4>[   22.441754] (1:star,2:end): vfs_read:0, vfs_write:0,dma_working:0,amount:0,file_offset:0
+<4>[   22.441767] [sw_udc]: irq: reset happen, throw away all urb
+<4>[   22.441779] nuke: ep num is 2
+<6>[   22.451235] healthd: battery l=90 v=4042 t=30.0 h=2 st=2 c=113 chg=u
+<6>[   22.452037] healthd: battery l=90 v=4042 t=30.0 h=2 st=2 c=113 chg=u
+<4>[   22.568237] [sw_udc]: IRQ: reset
+<4>[   22.568265] (1:star,2:end): vfs_read:0, vfs_write:0,dma_working:0,amount:0,file_offset:0
+<4>[   22.568279] [sw_udc]: irq: reset happen, throw away all urb
+<4>[   22.568291] nuke: ep num is 2
+<6>[   22.569589] healthd: battery l=90 v=4042 t=30.0 h=2 st=2 c=113 chg=u
+<6>[   22.570517] healthd: battery l=90 v=4042 t=30.0 h=2 st=2 c=113 chg=u
+<4>[   22.695162] [sw_udc]: Set address 9
+<4>[   22.716209] [sw_udc]: ep disable: ep1(0xc097eb54, ep1in-bulk, 128, 200)
+<4>[   22.716248] [sw_udc]: ep disable: ep1(0xc097eba0, ep1out-bulk, 0, 200)
+<4>[   22.716264] [sw_udc]: ep disable: ep4(0xc097ecd0, ep4-int, 128, 1c)
+<4>[   22.716279] [sw_udc]: ep disable: ep2(0xc097ebec, ep2in-bulk, 128, 200)
+<4>[   22.716293] [sw_udc]: ep disable: ep2(0xc097ec38, ep2out-bulk, 0, 200)
+<4>[   22.716307] nuke: ep num is 2
+<6>[   22.716343] android_usb gadget: high-speed config #1: android
+<4>[   22.716356] [sw_udc]: ep enable: ep1(0xc097eb54, ep1in-bulk, 128, 512)
+<4>[   22.716372] [sw_udc]: ep enable: ep1(0xc097eb54, ep1in-bulk, 128, 512), fifo(512, 1024, 1)
+<4>[   22.716398] [sw_udc]: ep enable: ep1(0xc097eba0, ep1out-bulk, 0, 512)
+<4>[   22.716412] [sw_udc]: ep enable: ep1(0xc097eba0, ep1out-bulk, 0, 512), fifo(1536, 1024, 1)
+<4>[   22.716430] [sw_udc]: ep enable: ep4(0xc097ecd0, ep4-int, 128, 28)
+<4>[   22.716444] [sw_udc]: ep enable: ep4(0xc097ecd0, ep4-int, 128, 28), fifo(5632, 512, 0)
+<6>[   22.716462] adb_release
+<4>[   22.716470] [sw_udc]: ep enable: ep2(0xc097ebec, ep2in-bulk, 128, 512)
+<4>[   22.716481] [sw_udc]: ep enable: ep2(0xc097ebec, ep2in-bulk, 128, 512), fifo(2560, 1024, 1)
+<4>[   22.716496] [sw_udc]: ep enable: ep2(0xc097ec38, ep2out-bulk, 0, 512)
+<4>[   22.716510] [sw_udc]: ep enable: ep2(0xc097ec38, ep2out-bulk, 0, 512), fifo(3584, 1024, 1)
+<4>[   22.716525] [sw_udc]: sunxi_udc_pullup, is_on = 0
+<4>[   22.716540] [sw_udc]: ep disable: ep1(0xc097eb54, ep1in-bulk, 128, 200)
+<4>[   22.716556] [sw_udc]: ep disable: ep1(0xc097eba0, ep1out-bulk, 0, 200)
+<4>[   22.716570] [sw_udc]: ep disable: ep4(0xc097ecd0, ep4-int, 128, 1c)
+<4>[   22.716585] [sw_udc]: ep disable: ep2(0xc097ebec, ep2in-bulk, 128, 200)
+<4>[   22.716599] [sw_udc]: ep disable: ep2(0xc097ec38, ep2out-bulk, 0, 200)
+<4>[   22.716633] [sw_udc]: usbd_stop_work
+<4>[   22.716647] [sw_udc]: dequeue: ep(0xc097eaf0, 0), _req(0xdedc1848, 0, 0)
+<4>[   22.716673] [sw_udc]: free request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc1330c0)
+<4>[   22.716692] [sw_udc]: free request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc447a40)
+<4>[   22.716707] [sw_udc]: free request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc4479c0)
+<4>[   22.716724] [sw_udc]: free request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc447940)
+<4>[   22.716739] [sw_udc]: free request: ep(0xc097eba0, ep1out-bulk, 512), req(0xdc4478c0)
+<4>[   22.716755] [sw_udc]: free request: ep(0xc097eba0, ep1out-bulk, 512), req(0xdc447840)
+<4>[   22.716771] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc4477c0)
+<4>[   22.716786] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc447740)
+<4>[   22.716802] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc4476c0)
+<4>[   22.716818] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc447640)
+<4>[   22.716833] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc4475c0)
+<4>[   22.716852] [sw_udc]: free request: ep(0xc097ec38, ep2out-bulk, 512), req(0xdc447540)
+<4>[   22.716869] [sw_udc]: free request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc4473c0)
+<4>[   22.716887] [sw_udc]: free request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc447340)
+<4>[   22.716903] [sw_udc]: free request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc4474c0)
+<4>[   22.716918] [sw_udc]: free request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc447440)
+<6>[   22.717198] adb_open
+<6>[   22.717221] mtp_bind_config
+<4>[   22.717254] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[   22.717269] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[   22.717283] ep_matches, wrn: endpoint already claimed, ep(0xc097eba0, 0xdedc4800, ep1out-bulk)
+<4>[   22.717293] gadget_is_softwinner_otg is not -int
+<4>[   22.717301] gadget_is_softwinner_otg is not -int
+<4>[   22.717309] -iso
+<4>[   22.717320] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc40c940)
+<4>[   22.717385] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc40c840)
+<4>[   22.717433] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc40c7c0)
+<4>[   22.717478] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc40c740)
+<4>[   22.717525] [sw_udc]: alloc request: ep(0xc097eba0, ep1out-bulk, 512), req(0xdc40c6c0)
+<4>[   22.717572] [sw_udc]: alloc request: ep(0xc097eba0, ep1out-bulk, 512), req(0xdc40c640)
+<4>[   22.717634] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c5c0)
+<4>[   22.717660] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c540)
+<4>[   22.717676] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c4c0)
+<4>[   22.717692] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c440)
+<4>[   22.717707] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c3c0)
+<6>[   22.717726] adb_bind_config
+<4>[   22.717740] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[   22.717753] ep_matches, wrn: endpoint already claimed, ep(0xc097eba0, 0xdedc4800, ep1out-bulk)
+<4>[   22.717768] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[   22.717781] ep_matches, wrn: endpoint already claimed, ep(0xc097eba0, 0xdedc4800, ep1out-bulk)
+<4>[   22.717793] ep_matches, wrn: endpoint already claimed, ep(0xc097ebec, 0xdec70500, ep2in-bulk)
+<4>[   22.717805] [sw_udc]: alloc request: ep(0xc097ec38, ep2out-bulk, 512), req(0xdc40c340)
+<4>[   22.717822] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc40c2c0)
+<4>[   22.717838] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc40c240)
+<4>[   22.717853] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc40c1c0)
+<4>[   22.717868] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc40c140)
+<4>[   22.717887] [sw_udc]: sunxi_udc_pullup, is_on = 1
+<4>[   22.717898] [sw_udc]: CONFIG_USB_GADGET_DUALSPEED: USBC_TS_MODE_HS
+<4>[   22.717912] [sw_udc]: usbd_start_work
+<4>[   22.773368] [sw_udc]: IRQ: suspend
+<4>[   22.773392] [sw_udc]: ERR: usb speed is unkown
+<4>[   22.940481] [sw_udc]: IRQ: reset
+<4>[   22.940507] (1:star,2:end): vfs_read:0, vfs_write:0,dma_working:0,amount:0,file_offset:0
+<4>[   22.940521] [sw_udc]: irq: reset happen, throw away all urb
+<6>[   22.951330] healthd: battery l=90 v=4042 t=30.0 h=2 st=2 c=113 chg=u
+<6>[   22.952271] healthd: battery l=90 v=4042 t=30.0 h=2 st=2 c=113 chg=u
+<4>[   23.067091] [sw_udc]: 
+<4>[   23.067114] +++++++++++++++++++++++++++++++++++++
+<4>[   23.067121] [sw_udc]:  usb enter high speed.
+<4>[   23.067130] [sw_udc]: 
+<4>[   23.067136] +++++++++++++++++++++++++++++++++++++
+<4>[   23.071978] [sw_udc]: IRQ: reset
+<4>[   23.072004] (1:star,2:end): vfs_read:0, vfs_write:0,dma_working:0,amount:0,file_offset:0
+<4>[   23.072018] [sw_udc]: irq: reset happen, throw away all urb
+<6>[   23.081369] healthd: battery l=90 v=4042 t=30.0 h=2 st=2 c=113 chg=u
+<6>[   23.082239] healthd: battery l=90 v=4042 t=30.0 h=2 st=2 c=113 chg=u
+<4>[   23.195081] [sw_udc]: Set address 10
+<6>[   23.218075] android_usb gadget: high-speed config #1: android
+<4>[   23.218101] [sw_udc]: ep enable: ep1(0xc097eb54, ep1in-bulk, 128, 512)
+<4>[   23.218119] [sw_udc]: ep enable: ep1(0xc097eb54, ep1in-bulk, 128, 512), fifo(512, 1024, 1)
+<4>[   23.218145] [sw_udc]: ep enable: ep1(0xc097eba0, ep1out-bulk, 0, 512)
+<4>[   23.218159] [sw_udc]: ep enable: ep1(0xc097eba0, ep1out-bulk, 0, 512), fifo(1536, 1024, 1)
+<4>[   23.218179] [sw_udc]: ep enable: ep4(0xc097ecd0, ep4-int, 128, 28)
+<4>[   23.218192] [sw_udc]: ep enable: ep4(0xc097ecd0, ep4-int, 128, 28), fifo(5632, 512, 0)
+<4>[   23.218213] [sw_udc]: ep enable: ep2(0xc097ebec, ep2in-bulk, 128, 512)
+<4>[   23.218227] [sw_udc]: ep enable: ep2(0xc097ebec, ep2in-bulk, 128, 512), fifo(2560, 1024, 1)
+<4>[   23.218245] [sw_udc]: ep enable: ep2(0xc097ec38, ep2out-bulk, 0, 512)
+<4>[   23.218258] [sw_udc]: ep enable: ep2(0xc097ec38, ep2out-bulk, 0, 512), fifo(3584, 1024, 1)
+<4>[   23.218791] nuke: ep num is 0
+<6>[   23.897609] init: processing action 0x504a8 (property:sys.lights_leds=1)
+<6>[   23.897742] init: computing context for service '/system/bin/lights_leds.sh'
+<5>[   23.898007] init: starting 'lights_leds'
+<6>[   23.898565] init: command 'start' r=0
+<6>[   23.901580] healthd: battery l=90 v=4042 t=30.0 h=2 st=2 c=113 chg=u
+<6>[   23.902438] init: waitpid returned pid 496, status = 00000000
+<5>[   23.902463] init: process 'lights_leds', pid 496 exited
+<6>[   23.906107] request_suspend_state: wakeup (3->0) at 23906086597 (2014-01-01 13:28:49.625160345 UTC)
+<6>[   24.006658] lowmemorykiller: lowmem_shrink: convert oom_adj to oom_score_adj:
+<6>[   24.006685] lowmemorykiller: oom_adj 0 => oom_score_adj 0
+<6>[   24.006695] lowmemorykiller: oom_adj 1 => oom_score_adj 58
+<6>[   24.006704] lowmemorykiller: oom_adj 2 => oom_score_adj 117
+<6>[   24.006713] lowmemorykiller: oom_adj 3 => oom_score_adj 176
+<6>[   24.006722] lowmemorykiller: oom_adj 9 => oom_score_adj 529
+<6>[   24.006731] lowmemorykiller: oom_adj 15 => oom_score_adj 1000
+<6>[   24.007585] init: processing action 0x4fd38 (property:sys.sysctl.extra_free_kbytes=*)
+<6>[   24.007668] init: command 'write' r=-2
+<6>[   24.514225] acc_open
+<6>[   24.514258] acc_release
+<6>[   25.385060] mtp_open
+<6>[   27.083156] init: processing action 0x51e30 (property:sys.boot_completed=1)
+<6>[   27.083392] init: computing context for service '/system/bin/busybox'
+<5>[   27.083800] init: starting 'preinstall'
+<6>[   27.084917] init: command 'start' r=0
+<6>[   27.086157] init: processing action 0x57150 (property:sys.boot_completed=1)
+<6>[   27.087184] init: computing context for service '/system/bin/rild'
+<5>[   27.087570] init: starting 'ril-daemon'
+<6>[   27.088324] init: command 'start' r=0
+<6>[   27.088413] init: command 'start' r=0
+<6>[   27.089824] init: Created socket '/dev/socket/rild-debug' with mode '660', user '1001', group '1000'
+<6>[   27.090872] init: Created socket '/dev/socket/rild' with mode '660', user '0', group '1001'
+<6>[   27.216145] init: waitpid returned pid 799, status = 0000ff00
+<5>[   27.216206] init: process 'preinstall', pid 799 exited
+<6>[   27.920908] init: waitpid returned pid 229, status = 00000000
+<5>[   27.920947] init: process 'bootanim', pid 229 exited
+<6>[   58.846009] CPU Budget:update CPU 0 cpufreq max to 1200000 min to 120000
+<4>[   58.846064] [dsm] store_scene: 0
+<4>[   59.371503] tp-gsl  before: x[0] = 659, y[0] = 16695, id[0] = 0 
+<4>[   59.383870] tp-gsl  before: x[0] = 664, y[0] = 311, id[0] = 0 
+<4>[   59.399090] tp-gsl  before: x[0] = 666, y[0] = 310, id[0] = 0 
+<4>[   59.414234] tp-gsl  before: x[0] = 669, y[0] = 309, id[0] = 0 
+<4>[   59.429346] tp-gsl  before: x[0] = 673, y[0] = 309, id[0] = 0 
+<4>[   59.444656] tp-gsl  before: x[0] = 683, y[0] = 314, id[0] = 0 
+<4>[   59.459471] tp-gsl  before: x[0] = 695, y[0] = 331, id[0] = 0 
+<4>[   59.475049] tp-gsl  before: x[0] = 709, y[0] = 340, id[0] = 0 
+<4>[   59.490166] tp-gsl  before: x[0] = 724, y[0] = 347, id[0] = 0 
+<4>[   59.505249] tp-gsl  before: x[0] = 741, y[0] = 354, id[0] = 0 
+<4>[   59.519919] tp-gsl  before: x[0] = 757, y[0] = 362, id[0] = 0 
+<4>[   59.535363] tp-gsl  before: x[0] = 774, y[0] = 369, id[0] = 0 
+<4>[   59.550172] tp-gsl  before: x[0] = 791, y[0] = 378, id[0] = 0 
+<4>[   59.565182] tp-gsl  before: x[0] = 815, y[0] = 395, id[0] = 0 
+<4>[   59.580596] tp-gsl  before: x[0] = 840, y[0] = 404, id[0] = 0 
+<4>[   59.595375] tp-gsl  before: x[0] = 866, y[0] = 411, id[0] = 0 
+<4>[   59.610457] tp-gsl  before: x[0] = 906, y[0] = 415, id[0] = 0 
+<4>[   59.625509] tp-gsl  before: x[0] = 943, y[0] = 421, id[0] = 0 
+<4>[   59.672253] tmp1=00008e00,buf[0]=00,buf[1]=8e,buf[2]=00,buf[3]=00
+<5>[   61.882113] CPU3: shutdown
+<6>[   61.882133] [hotplug]: cpu(0) try to kill cpu(3)
+<6>[   61.882197] [hotplug]: cpu3 is killed! .
+<5>[   63.381655] CPU1: shutdown
+<6>[   63.381690] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[   63.382776] [hotplug]: cpu1 is killed! .
+<4>[   63.390973] CPU1: Booted secondary processor
+<5>[   66.402030] CPU2: shutdown
+<6>[   66.402079] [hotplug]: cpu(1) try to kill cpu(2)
+<6>[   66.403171] [hotplug]: cpu2 is killed! .
+<5>[   66.896953] CPU1: shutdown
+<6>[   66.897066] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[   66.898612] [hotplug]: cpu1 is killed! .
+<4>[   66.904067] CPU1: Booted secondary processor
+<6>[   68.514834] healthd: battery l=90 v=4037 t=30.0 h=2 st=2 c=118 chg=u
+<5>[   69.907344] CPU1: shutdown
+<6>[   69.907456] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[   69.908672] [hotplug]: cpu1 is killed! .
+<4>[   69.914425] CPU1: Booted secondary processor
+<4>[   66.411262] CPU2: Booted secondary processor
+<5>[   83.391575] CPU2: shutdown
+<6>[   83.391691] [hotplug]: cpu(0) try to kill cpu(2)
+<6>[   83.391777] [hotplug]: cpu2 is killed! .
+<5>[   83.907452] CPU1: shutdown
+<6>[   83.907561] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[   83.908762] [hotplug]: cpu1 is killed! .
+<4>[   83.914509] CPU1: Booted secondary processor
+<5>[   86.897146] CPU1: shutdown
+<6>[   86.897260] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[   86.899153] [hotplug]: cpu1 is killed! .
+<4>[   86.904410] CPU1: Booted secondary processor
+<5>[  102.902083] CPU1: shutdown
+<6>[  102.902105] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  102.902171] [hotplug]: cpu1 is killed! .
+<4>[  102.910542] CPU1: Booted secondary processor
+<4>[   83.400905] CPU2: Booted secondary processor
+<6>[  109.467168] init: waitpid returned pid 1201, status = 00000000
+<3>[  109.467211] init: untracked pid 1201 exited
+<5>[  111.392914] CPU2: shutdown
+<6>[  111.392951] [hotplug]: cpu(0) try to kill cpu(2)
+<6>[  111.394041] [hotplug]: cpu2 is killed! .
+<5>[  111.909469] CPU1: shutdown
+<6>[  111.909623] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  111.910788] [hotplug]: cpu1 is killed! .
+<6>[  127.415331] init: waitpid returned pid 1197, status = 00008f00
+<3>[  127.415526] init: untracked pid 1197 exited
+<6>[  128.519912] healthd: battery l=90 v=4039 t=30.0 h=2 st=2 c=53 chg=u
+<4>[  111.916209] CPU1: Booted secondary processor
+<5>[  156.908824] CPU1: shutdown
+<6>[  156.908940] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  156.910517] [hotplug]: cpu1 is killed! .
+<6>[  188.514536] healthd: battery l=90 v=4037 t=30.0 h=2 st=2 c=51 chg=u
+<6>[  230.963677] healthd: battery l=90 v=4055 t=30.0 h=2 st=2 c=124 chg=u
+<6>[  231.961725] request_suspend_state: sleep (0->3) at 231961698697 (2014-01-01 13:32:17.680771695 UTC)
+<5>[  231.961990] [VFE]vfe early suspend
+<5>[  231.962009] [VFE]vfe power off in early suspend
+<5>[  231.962024] [VFE]vfe_suspend_helper
+<5>[  231.962038] [VFE]Set camera to standy off and power off !
+<5>[  231.962069] [VFE]mclk on
+<4>[  231.968455] ###########close all layers 0
+<6>[  231.991295] CPU Budget:update CPU 0 cpufreq max to 1200000 min to 120000
+<4>[  231.991358] [dsm] store_scene: 0
+<5>[  232.015010] [VFE]mclk off
+<4>[  232.035944] [VFE_WARN]vfe vpu clock is null
+<5>[  232.035972] [VFE]vfe_suspend done!
+<4>[  232.090510] twi_stop()440 - [i2c0] i2c state isn't idle(0xf8)
+<4>[  232.090540] sunxi_i2c_core_process()801 - [i2c0] STOP failed!
+<4>[  232.110188] gsl_ts_early_suspend->is_suspended:1610809619
+<6>[  232.110213] Mali early suspend begin
+<6>[  232.110543] Mali early suspend end
+<6>[  232.110559] backlight_early_suspend
+<6>[  232.110751] [LCD]close, step 0 finish
+<6>[  232.150263] [LCD]close, step 1 finish
+<6>[  232.160191] [LCD]close, step 2 finish
+<6>[  232.168543] CPU Budget:update CPU 0 cpufreq max to 1200000 min to 120000
+<4>[  232.168595] [dsm] store_scene: 0
+<4>[  232.370799] axp pconf set pin [GPIO2] data to [0]
+<6>[  232.370825] [LCD]close, step 3 finish
+<6>[  232.890713] backlight_early_suspend finish
+<6>[  248.514332] healthd: battery l=90 v=4085 t=30.0 h=2 st=2 c=331 chg=u
+<6>[  308.514403] healthd: battery l=90 v=4094 t=30.0 h=2 st=2 c=334 chg=u
+<6>[  368.515449] healthd: battery l=90 v=4097 t=30.0 h=2 st=2 c=330 chg=u
+<4>[  156.915936] CPU1: Booted secondary processor
+<6>[  384.100683] init: waitpid returned pid 1603, status = 00000000
+<3>[  384.100728] init: untracked pid 1603 exited
+<5>[  385.409350] CPU1: shutdown
+<6>[  385.409464] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  385.410628] [hotplug]: cpu1 is killed! .
+<6>[  428.514266] healthd: battery l=90 v=4101 t=30.0 h=2 st=2 c=334 chg=u
+<6>[  478.848515] init: waitpid returned pid 1599, status = 0000b500
+<3>[  478.848705] init: untracked pid 1599 exited
+<6>[  488.514357] healthd: battery l=90 v=4103 t=30.0 h=2 st=2 c=328 chg=u
+<4>[  489.426940] [sw_udc]: dequeue: ep(0xc097ec20, 2), _req(0xdc40c348, 24, 0)
+<6>[  489.430759] adb_release
+<4>[  489.430847] [sw_udc]: sunxi_udc_pullup, is_on = 0
+<4>[  489.430973] [sw_udc]: ep disable: ep1(0xc097eb54, ep1in-bulk, 128, 200)
+<4>[  489.431123] [sw_udc]: ep disable: ep1(0xc097eba0, ep1out-bulk, 0, 200)
+<4>[  489.431258] nuke: ep num is 1
+<4>[  489.431456] [sw_udc]: ep disable: ep4(0xc097ecd0, ep4-int, 128, 1c)
+<4>[  489.431598] [sw_udc]: ep disable: ep2(0xc097ebec, ep2in-bulk, 128, 200)
+<4>[  489.431732] [sw_udc]: ep disable: ep2(0xc097ec38, ep2out-bulk, 0, 200)
+<6>[  489.432281] mtp_release
+<4>[  489.436362] [sw_udc]: usbd_stop_work
+<4>[  489.436477] [sw_udc]: dequeue: ep(0xc097eaf0, 0), _req(0xdedc1848, 8, 8)
+<4>[  489.436654] [sw_udc]: free request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc40c940)
+<4>[  489.436807] [sw_udc]: free request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc40c840)
+<4>[  489.436955] [sw_udc]: free request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc40c7c0)
+<4>[  489.437100] [sw_udc]: free request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc40c740)
+<4>[  489.437247] [sw_udc]: free request: ep(0xc097eba0, ep1out-bulk, 512), req(0xdc40c6c0)
+<4>[  489.437390] [sw_udc]: free request: ep(0xc097eba0, ep1out-bulk, 512), req(0xdc40c640)
+<4>[  489.437538] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c540)
+<4>[  489.437682] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c4c0)
+<4>[  489.437826] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c440)
+<4>[  489.437969] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c3c0)
+<4>[  489.438112] [sw_udc]: free request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c5c0)
+<4>[  489.438262] [sw_udc]: free request: ep(0xc097ec38, ep2out-bulk, 512), req(0xdc40c340)
+<4>[  489.438410] [sw_udc]: free request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc40c240)
+<4>[  489.438556] [sw_udc]: free request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc40c1c0)
+<4>[  489.438701] [sw_udc]: free request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc40c140)
+<4>[  489.438846] [sw_udc]: free request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc40c2c0)
+<6>[  489.442258] init: waitpid returned pid 133, status = 00000100
+<5>[  489.442438] init: process 'adbd', pid 133 exited
+<5>[  489.442760] init: process 'adbd' killing any children in process group
+<5>[  489.444950] init: starting 'adbd'
+<6>[  489.457092] init: Created socket '/dev/socket/adbd' with mode '660', user '1000', group '1000'
+<6>[  489.481524] adb_open
+<6>[  489.481643] mtp_bind_config
+<4>[  489.481784] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[  489.481918] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[  489.482042] ep_matches, wrn: endpoint already claimed, ep(0xc097eba0, 0xdedc4800, ep1out-bulk)
+<4>[  489.482145] gadget_is_softwinner_otg is not -int
+<4>[  489.482221] gadget_is_softwinner_otg is not -int
+<4>[  489.482293] -iso
+<4>[  489.482363] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc40c140)
+<4>[  489.482521] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc40c2c0)
+<4>[  489.482671] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc40c1c0)
+<4>[  489.482819] [sw_udc]: alloc request: ep(0xc097eb54, ep1in-bulk, 512), req(0xdc40c240)
+<4>[  489.482967] [sw_udc]: alloc request: ep(0xc097eba0, ep1out-bulk, 512), req(0xdc40c340)
+<4>[  489.483114] [sw_udc]: alloc request: ep(0xc097eba0, ep1out-bulk, 512), req(0xdc40c5c0)
+<4>[  489.483259] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c3c0)
+<4>[  489.483405] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c440)
+<4>[  489.483550] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c4c0)
+<4>[  489.483694] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c540)
+<4>[  489.483839] [sw_udc]: alloc request: ep(0xc097ecd0, ep4-int, 28), req(0xdc40c640)
+<6>[  489.483989] adb_bind_config
+<4>[  489.484083] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[  489.484205] ep_matches, wrn: endpoint already claimed, ep(0xc097eba0, 0xdedc4800, ep1out-bulk)
+<4>[  489.484335] ep_matches, wrn: endpoint already claimed, ep(0xc097eb54, 0xdedc4800, ep1in-bulk)
+<4>[  489.484458] ep_matches, wrn: endpoint already claimed, ep(0xc097eba0, 0xdedc4800, ep1out-bulk)
+<4>[  489.484581] ep_matches, wrn: endpoint already claimed, ep(0xc097ebec, 0xdec70500, ep2in-bulk)
+<4>[  489.484685] [sw_udc]: alloc request: ep(0xc097ec38, ep2out-bulk, 512), req(0xdc40c6c0)
+<4>[  489.484834] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc40c740)
+<4>[  489.484983] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc40c7c0)
+<4>[  489.485132] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc40c840)
+<4>[  489.485279] [sw_udc]: alloc request: ep(0xc097ebec, ep2in-bulk, 512), req(0xdc40c940)
+<4>[  489.485436] [sw_udc]: sunxi_udc_pullup, is_on = 1
+<4>[  489.485542] [sw_udc]: CONFIG_USB_GADGET_DUALSPEED: USBC_TS_MODE_HS
+<4>[  489.485659] [sw_udc]: usbd_start_work
+<4>[  489.541192] [sw_udc]: IRQ: suspend
+<4>[  489.541215] [sw_udc]: ERR: usb speed is unkown
+<4>[  489.692187] [sw_udc]: IRQ: reset
+<4>[  489.692212] (1:star,2:end): vfs_read:0, vfs_write:0,dma_working:0,amount:0,file_offset:0
+<4>[  489.692233] [sw_udc]: irq: reset happen, throw away all urb
+<6>[  489.702637] healthd: battery l=90 v=4103 t=30.0 h=2 st=2 c=328 chg=u
+<6>[  489.705264] healthd: battery l=90 v=4103 t=30.0 h=2 st=2 c=328 chg=u
+<4>[  489.818853] [sw_udc]: 
+<4>[  489.818898] +++++++++++++++++++++++++++++++++++++
+<4>[  489.818933] [sw_udc]:  usb enter high speed.
+<4>[  489.818976] [sw_udc]: 
+<4>[  489.819004] +++++++++++++++++++++++++++++++++++++
+<4>[  489.823903] [sw_udc]: IRQ: reset
+<4>[  489.823978] (1:star,2:end): vfs_read:0, vfs_write:0,dma_working:0,amount:0,file_offset:0
+<4>[  489.824032] [sw_udc]: irq: reset happen, throw away all urb
+<6>[  489.840991] healthd: battery l=90 v=4103 t=30.0 h=2 st=2 c=328 chg=u
+<6>[  489.848662] healthd: battery l=90 v=4103 t=30.0 h=2 st=2 c=328 chg=u
+<4>[  489.946809] [sw_udc]: Set address 11
+<6>[  489.969715] android_usb gadget: high-speed config #1: android
+<4>[  489.969737] [sw_udc]: ep enable: ep1(0xc097eb54, ep1in-bulk, 128, 512)
+<4>[  489.969765] [sw_udc]: ep enable: ep1(0xc097eb54, ep1in-bulk, 128, 512), fifo(512, 1024, 1)
+<4>[  489.969803] [sw_udc]: ep enable: ep1(0xc097eba0, ep1out-bulk, 0, 512)
+<4>[  489.969828] [sw_udc]: ep enable: ep1(0xc097eba0, ep1out-bulk, 0, 512), fifo(1536, 1024, 1)
+<4>[  489.969860] [sw_udc]: ep enable: ep4(0xc097ecd0, ep4-int, 128, 28)
+<4>[  489.969885] [sw_udc]: ep enable: ep4(0xc097ecd0, ep4-int, 128, 28), fifo(5632, 512, 0)
+<4>[  489.969917] [sw_udc]: ep enable: ep2(0xc097ebec, ep2in-bulk, 128, 512)
+<4>[  489.969941] [sw_udc]: ep enable: ep2(0xc097ebec, ep2in-bulk, 128, 512), fifo(2560, 1024, 1)
+<4>[  489.969973] [sw_udc]: ep enable: ep2(0xc097ec38, ep2out-bulk, 0, 512)
+<4>[  489.969997] [sw_udc]: ep enable: ep2(0xc097ec38, ep2out-bulk, 0, 512), fifo(3584, 1024, 1)
+<4>[  489.970668] nuke: ep num is 0
+<6>[  490.008631] mtp_open
+<4>[  385.416111] CPU1: Booted secondary processor
+<6>[  497.899094] init: waitpid returned pid 1696, status = 00000000
+<3>[  497.899122] init: untracked pid 1696 exited
+<5>[  499.408497] CPU1: shutdown
+<6>[  499.408610] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  499.409814] [hotplug]: cpu1 is killed! .
+<6>[  511.343230] init: waitpid returned pid 1692, status = 00004900
+<3>[  511.343424] init: untracked pid 1692 exited
+<6>[  548.515735] healthd: battery l=90 v=4105 t=30.0 h=2 st=2 c=328 chg=u
+<6>[  608.514402] healthd: battery l=90 v=4109 t=30.0 h=2 st=2 c=334 chg=u
+<4>[  499.415648] CPU1: Booted secondary processor
+<6>[  650.376667] init: waitpid returned pid 1776, status = 00000000
+<3>[  650.376714] init: untracked pid 1776 exited
+<5>[  651.908629] CPU1: shutdown
+<6>[  651.908739] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  651.909944] [hotplug]: cpu1 is killed! .
+<6>[  661.836155] healthd: battery l=91 v=4111 t=30.0 h=2 st=2 c=331 chg=u
+<6>[  668.516274] healthd: battery l=91 v=4111 t=30.0 h=2 st=2 c=331 chg=u
+<6>[  728.514423] healthd: battery l=91 v=4114 t=30.0 h=2 st=2 c=333 chg=u
+<6>[  788.514428] healthd: battery l=91 v=4116 t=30.0 h=2 st=2 c=330 chg=u
+<6>[  848.514262] healthd: battery l=91 v=4118 t=30.0 h=2 st=2 c=331 chg=u
+<6>[  908.519379] healthd: battery l=91 v=4121 t=30.0 h=2 st=2 c=333 chg=u
+<6>[  968.514400] healthd: battery l=91 v=4123 t=30.0 h=2 st=2 c=333 chg=u
+<6>[ 1028.514510] healthd: battery l=91 v=4127 t=30.0 h=2 st=2 c=332 chg=u
+<6>[ 1052.617687] healthd: battery l=92 v=4129 t=30.0 h=2 st=2 c=330 chg=u
+<6>[ 1088.514271] healthd: battery l=92 v=4130 t=30.0 h=2 st=2 c=332 chg=u
+<6>[ 1121.374118] init: waitpid returned pid 1772, status = 0000e700
+<3>[ 1121.374313] init: untracked pid 1772 exited
+<6>[ 1148.514446] healthd: battery l=92 v=4132 t=30.0 h=2 st=2 c=328 chg=u
+<6>[ 1208.515489] healthd: battery l=92 v=4136 t=30.0 h=2 st=2 c=331 chg=u
+<6>[ 1268.514406] healthd: battery l=92 v=4140 t=30.0 h=2 st=2 c=334 chg=u
+<4>[  651.915747] CPU1: Booted secondary processor
+<6>[ 1271.092918] init: waitpid returned pid 1960, status = 00000000
+<3>[ 1271.092948] init: untracked pid 1960 exited
+<5>[ 1272.915163] CPU1: shutdown
+<6>[ 1272.915272] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[ 1272.916659] [hotplug]: cpu1 is killed! .
