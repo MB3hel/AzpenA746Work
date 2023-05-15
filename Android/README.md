@@ -260,4 +260,6 @@ If we could access the uBoot console, we could probably manually boot to fastboo
 Theoretically, FEL could also be used to flash a custom uboot build to work around this (differnet UART port), but we'd need to be able to build uboot for this device. Currently not sure what that would entail. I have yet to get any method 
 
 
-### 
+### SD Card Boot
+
+It is likely (untested) that this device would boot from SD card before booting NAND. Thus, a properly constructed SD card may allow booting of a linux or android environment. `dd` could then be used to manually flash the stock rom dumped from my device.
