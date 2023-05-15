@@ -7,6 +7,7 @@
 - [Vendor Folder](https://1drv.ms/u/s!AhjgTI1qxX9xhpNBvHlxAAMYwv4KZw?e=F8SGcF): `/system/vendor` folder from my tablet
 - [Azpen's Upgrade Tool for Allwinner](https://1drv.ms/u/s!AhjgTI1qxX9xhpNDvn_skCDfFlcx6g?e=K8zr6S)
 - [Firmware Folder](https://1drv.ms/u/s!AhjgTI1qxX9xhpNEt8ftGKgPJkmDjg?e=avc3le): `/etc/firmware` folder from my tablet
+- TODO: Full nand dump (`/dev/nand`). Not present in android. Probably need custom kernel. Gated behind linux work, but potentially very important for unbricking & recovery.
 
 <br />
 
