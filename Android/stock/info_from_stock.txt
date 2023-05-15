@@ -164,3 +164,73 @@ root@along-6051:/ # for i in /dev/block/by-name/*; do
 
 
 
+shell@along-6051:/ $ cat /proc/cpuinfo                                         
+Processor	: ARMv7 Processor rev 5 (v7l)
+processor	: 0
+BogoMIPS	: 571.42
+
+Features	: swp half thumb fastmult vfp edsp thumbee neon vfpv3 tls vfpv4 idiva idivt 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xc07
+CPU revision	: 5
+
+Hardware	: sun8i
+Revision	: 0000
+Serial		: 2627159975
+shell@along-6051:/ $ 
+
+
+
+
+shell@along-6051:/ $ cat /proc/meminfo                                         
+MemTotal:         524288 kB
+MemFree:           50392 kB
+Buffers:            1456 kB
+Cached:           129684 kB
+SwapCached:            0 kB
+Active:           162980 kB
+Inactive:         107336 kB
+Active(anon):     139184 kB
+Inactive(anon):      288 kB
+Active(file):      23796 kB
+Inactive(file):   107048 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+HighTotal:             0 kB
+HighFree:              0 kB
+LowTotal:         425524 kB
+LowFree:           50392 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:        139132 kB
+Mapped:            86836 kB
+Shmem:               316 kB
+Slab:              56176 kB
+SReclaimable:       9060 kB
+SUnreclaim:        47116 kB
+KernelStack:        5136 kB
+PageTables:         7304 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      212760 kB
+Committed_AS:    9598188 kB
+VmallocTotal:     499712 kB
+VmallocUsed:       45344 kB
+VmallocChunk:     212864 kB
+
+
+
+shell@along-6051:/ $ wm size
+Physical size: 1024x600
+
+
+
+
+shell@along-6051:/ $ wm density
+Physical density: 160
+

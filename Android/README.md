@@ -5,10 +5,16 @@
 - [Dumped Stock ROM](https://1drv.ms/u/s!AhjgTI1qxX9xhpNCqEHOxzOVnvZi5w?e=kCeBIt): Stock ROM I dumped from my tablet. *I have not determined if the stock rom on these tablets contains malware. Use at your own risk.*
 - [Allwinner A33 SDK](https://linux-sunxi.org/A33#Android_SDK): External source
 - [Vendor Folder](https://1drv.ms/u/s!AhjgTI1qxX9xhpNBvHlxAAMYwv4KZw?e=F8SGcF): `/system/vendor` folder from my tablet
+- [Azpen's Upgrade Tool for Allwinner](https://1drv.ms/u/s!AhjgTI1qxX9xhpNDvn_skCDfFlcx6g?e=K8zr6S)
 
 <br />
 
 - [Device Tree](https://github.com/MB3hel/android_device_azpen_along-6051)
+
+## General Info
+
+- **Note that this tablet uses the legacy sunxi 3.4 kernel and legacy sunxi uboot. Not mainline versions.**
+
 
 ## Boot Modes
 
@@ -32,6 +38,10 @@
 - Press power button 10 times
 - Wait 30 seconds (or less sometimes)
 - Device will show up to computer
+
+### Android Safe MOde
+
+- Hold volume down after boot logo shows up
 
 
 ## Stock ROM Stuff
@@ -219,19 +229,35 @@ Existing device tree is located [here](https://github.com/MB3hel/android_device_
 
 ## Unbricking / fixing bootloops
 
-- If your tablet bootloops for "no reason" try the reset button on the back of the tablet first.
+*Note: If the tablet bootloops (ie due to bad recovery flashed) it will likely be unrecoverable until the battery dies.*
 
-<br />
+### FEL Mode
 
-- Fastboot is a thing through `adb reboot bootloader`
-- There are UART pads on the device (see linux folder for picture) that could give low level uboot access
-- Should be able to boot from SD card?
+Allwinner devices have a low level "FEL" mode used to write the NAND. This can be triggered various ways. 
 
-<br />
+On this device (even if bootlooping) hold volume down (either key should work, but volume down seems important to break the bootloop). Then hold power (still holding volume down). Wait until the screen turns off for 5 seconds. Then release power (still holding vol down) and press the power button 10 times. Release the vol down button after a few seconds. The device should be in FEL mode.
 
-- The device (if it fails to boot) will loop on the same option. This can be a challenge if you flash a bad recovery then `adb reboot recovery`. The device will just repeatedly attempt to boot recovery. I speculate letting the battery fully die will end this loop. Then it should boot to normal OS (and you can reflash stock recovery using dd). If your are not rooted perhaps try a `adb reboot bootloader` and use fastboot.
+FEL mode can also be triggered with a special SD card image. See [here](https://linux-sunxi.org/FEL) for details.
 
-- You may be able to enter FEL mode and use [LiveSuit](https://linux-sunxi.org/LiveSuit) to unbrick
+In FEL mode, the [Linux Sunxi Tools](https://github.com/linux-sunxi/sunxi-tools) may be helpful.
 
-- FEL mode might be acessible with a specially formatted SD card. See [here](https://linux-sunxi.org/FEL). This might work if stuck in a bootloop to a broken recovery.
+To unbrick, you would need a stock from from the manufacturer in Allwinner format. This could be flashed with [LiveSuit](https://linux-sunxi.org/LiveSuit) (maybe) or PhoenixSuit. Azpen's "Upgrade Tool for Allwinner" is Phoenix.
 
+*I do not currently have a ROM from Azpen, but it may be possible to pack my dumped ROM correctly. [This](https://linux-sunxi.org/LiveSuit_images) page is a good place to start. There are pack tools in the lichee archive in the Allwinner Android SDK.*
+
+
+
+### Fastboot
+
+Fastboot can be accessed using `adb reboot bootloader`, but I have yet to find a key combo to access it (probably not possible). Theoretically, one could flash a partition in fastboot. But this seems useless in practice if we can't get to fastboot.
+
+
+
+### uBoot Console
+
+If we could access the uBoot console, we could probably manually boot to fastboot using `fastboot usb 0`. There are UART pads on this tablet's board (requires opening tablet). This is untested, but persumably similar to A741 (info [here](https://linux-sunxi.org/Azpen_A741)). However, the console may not accept input due to sharing with the SD card (again, untested).
+
+Theoretically, FEL could also be used to flash a custom uboot build to work around this (differnet UART port), but we'd need to be able to build uboot for this device. Currently not sure what that would entail. I have yet to get any method 
+
+
+### 
