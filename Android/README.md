@@ -264,7 +264,7 @@ Fastboot can be accessed using `adb reboot bootloader`, but I have yet to find a
 
 If we could access the uBoot console, we could probably manually boot to fastboot using `fastboot usb 0`. There are UART pads on this tablet's board (requires opening tablet). This is untested, but persumably similar to A741 (info [here](https://linux-sunxi.org/Azpen_A741)). However, the console may not accept input due to sharing with the SD card (again, untested).
 
-Theoretically, FEL could also be used to flash a custom uboot build to work around this (differnet UART port), but we'd need to be able to build uboot for this device. Currently not sure what that would entail. I have yet to get any method [here](https://linux-sunxi.org/Retrieving_device_information) to work for `boot1.header`, but I have obtained `script.bin` and `script.fex` from the stock rom. These are located in the `stock/` folder.
+Theoretically, FEL could also be used to flash a custom uboot build to work around this (differnet UART port), but we'd need to be able to build uboot for this device. Currently not sure what that would entail. I have yet to get any method [here](https://linux-sunxi.org/Retrieving_device_information) to work for `boot1.header`, but I have obtained `script.bin` and `script.fex` from the stock rom. These are located in the `stock/` folder. The bootinfo was also extracted using the SUN8I method in a modified meminfo script (I made SUN9I use SUN8I code). This is included, but I am not certain it is valid.
 
 It is also possible a generic A33 1024x600 build would work. But again, UNTESTED!
 
