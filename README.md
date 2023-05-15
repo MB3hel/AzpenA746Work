@@ -4,6 +4,8 @@ All the work I've done towards custom Android roms and booting Linux OSes.
 
 This repo is mostly a collection of information and some tools.
 
+Many references pages are saved as html (in case of changes or pages going down). A lot come from [https://linux-sunxi.org/](https://linux-sunxi.org/). **This is probably the single best location for information on Allwinner A33 and similar devices!**
+
 
 [Android](Android/README.md)
 
