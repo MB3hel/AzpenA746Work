@@ -38,11 +38,8 @@ CPU Details:
 - Uses `AXP223` Power Management IC (PMIC). Chip markings: `HA146BC       6B31`
 
 Memory Details:
-- SK hynix chips
-- Marking on second row (first row is sk hynix label): `45TQ2G83CFR`
-- Marking on third row: `H9C         311V`
-- Marking on fourth row: `DWLDAB07H2`
-- Two of the above chips present on PCB (assumed to be 2x 256MB)
+- 2x SK Hynix chips: `H5TQ2G83CFR-H9C`
+- From [here](https://linux-sunxi.org/DDR3): `DDR3-1333H (supports down binning to DDR3-1066F), x8, density: 2G, page size: 1K `
 
 Storage Details:
 - 8GB NAND chip (details unknown)
@@ -67,6 +64,9 @@ Bluetooth Details:
 - TODO
 
 Vibrator Details:
+- TODO
+
+Camera Details:
 - TODO
 
 

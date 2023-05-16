@@ -14,6 +14,7 @@
 - Mainline u-boot: `git://git.denx.de/u-boot.git`
 - Legacy sunxi kernel (use `sunxi-3.4` branch): [linux-sunxi](https://github.com/linux-sunxi/linux-sunxi.git)
 - Mainline kernel: `git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git`
+- awutils (extract and maybe repack LiveSuit images): [awutils](https://github.com/Ithamar/awutils)
 
 ## File Downloads
 
