@@ -1,21 +1,11 @@
 # Azpen A746 Linux
 
-There are several references in the `references` folder.
-
-
-## Hardware Notes:
-
-- The Allwinner A33 SoC is referred to by "sun8i", however it is a "later" sun8i chip. "Early" sun8i is A23. There are some significant differences. Ex: [dram controller](https://linux-sunxi.org/DRAM_Controller). This means that the meminfo tool from sunxi-tools won't actually work here.
-
-## Downloads & Links
-
-- TODO: SD card image (if I ever get that far...)
-- Android SDK (only need lichee.tar.gz): [external link](https://linux-sunxi.org/A33#Android_SDK)
-
 
 ## Legacy Kernel & u-boot
 
 ### Build System & Prerequisites
+
+TODO: Determine and document these (including chroot requirements if any along with debootstrap commands)
 
 ### Build Legacy sunxi u-boot
 
