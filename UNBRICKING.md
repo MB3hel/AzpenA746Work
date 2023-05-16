@@ -36,3 +36,5 @@ It is likely (untested) that this device would boot from SD card before booting 
 [This process](https://linux-sunxi.org/Boot_Android_from_SdCard) may be usable with my dumped stock rom to make a bootable android SD card to unbrick. But would need to build uboot.
 
 It may also be possible to make a bootable Linux SD card. However, either of these methods would require a u-boot build (WIP currently). One extracted from NAND could maybe work, but I can't get a full nand backup either...
+
+A properly packed ROM could also probably be written to an SD card using PhoenixCard. But again if we had such a packaged ROM we could just flash directly via FEL mode.
