@@ -26,7 +26,9 @@ From FEL mode:
 
 Extracted info from stock:
 
-From [this](https://linux-sunxi.org/Retrieving_device_information) the FEL extract fails, but I have obtained `script.bin` and `script.fex` from the stock rom using the script extract tool (from [this](https://github.com/linux-sunxi/sunxi-tools)). These are located in the `stock/` folder. The bootinfo was also extracted using the SUN8I method in a modified meminfo script (I made SUN9I use SUN8I code). This is included, but I am not certain it is valid.
+From [this](https://linux-sunxi.org/Retrieving_device_information) the FEL extract fails, but I have obtained `script.bin` and `script.fex` from the stock rom using the script extract tool (from [this](https://github.com/linux-sunxi/sunxi-tools)). These are located in the `stock/` folder. 
+
+The bootinfo was also extracted using the SUN8I method in a modified meminfo script (I made SUN9I use SUN8I code). This is included, but I am pretty sure this is not valid (see [dram controller](https://linux-sunxi.org/DRAM_Controller)).
 
 The `script.fex` was automatically converted to a `dts` file using [FEX2DTS](https://github.com/SdtElectronics/FEX2DTS). I have no idea if it's valid. But it is likely a good starting point.
 
