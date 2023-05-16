@@ -33,6 +33,10 @@ Memory Details:
 - Marking on fourth row: `DWLDAB07H2`
 - Two of the above chips present on PCB (assumed to be 2x 256MB)
 
+Storage Details:
+- 8GB NAND chip (details unknown)
+- TODO: Details
+
 Battery Details:
 - TODO
 
@@ -49,6 +53,9 @@ WiFi Details:
 - TODO
 
 Bluetooth Details:
+- TODO
+
+Vibrator Details:
 - TODO
 
 
