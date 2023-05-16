@@ -10,9 +10,7 @@ There are several references in the `references` folder.
 
 
 
-## Allwinner Kernel & U-Boot
-
-### Lichee Build (Kernel & U-Boot)
+## Lichee Build (Legacy 3.4 Kernel)
 
 This requires `lichee.tar.gz` from the Allwinner A33 Android SDK.
 
@@ -66,34 +64,62 @@ sed -i 's/\$(CC) -Wall -Werror/\$(CC) -Wall/g' buildroot/package/makedevs/makede
 ```
 
 
-Run `./build.sh` to actually build. When prompted about kernel options, use default values.
+Run `./build.sh` to actually build. When prompted about kernel options, use default values (**note: this is probably wrong; may need to change some options**).
 
 
 
 
-### Rootfs
 
-TODO
+## Building u-boot
+
+Mainline u-boot builds for the q8_a33 tablet (which I suspect is a very similar device internally). Tested on Ubuntu 22.04
+
+```sh
+sudo apt install build-essential arm-linux-gnueabihf-gcc swig
+git clone git://git.denx.de/u-boot.git
+cd u-boot
+git checkout v2023.04       # Or whatever newest version is
+make CROSS_COMPILE=arm-linux-gnueabihf- q8_a33_tablet_1024x600_defconfig
+
+# Optional (I didn't change anything here)
+make CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
 
 
-### Kernel modules
+make CROSS_COMPILE=arm-linux-gnueabihf- -j4
+```
 
-TODO: Any modules need to be added to rootfs? From android? Built from sources?
+This will yield the following files in the root of the `u-boot` repo / folder
+
+```
+u-boot
+u-boot.bin
+.u-boot.bin.cmd
+u-boot.cfg
+.u-boot.cmd
+u-boot.dtb
+u-boot-dtb.bin
+.u-boot-dtb.bin.cmd
+u-boot-dtb.img
+.u-boot-dtb.img.cmd
+u-boot.dtb.out
+u-boot.img
+.u-boot.img.cmd
+u-boot.lds
+.u-boot.lds.cmd
+u-boot.map
+u-boot-nodtb.bin
+.u-boot-nodtb.bin.cmd
+u-boot.srec
+.u-boot.srec.cmd
+u-boot-sunxi-with-spl.bin
+u-boot-sunxi-with-spl.map
+u-boot.sym
+.u-boot.sym.cmd
+```
+
+I have not yet determined what these files all are.
 
 
-### Making Bootable SD Card
+## Making Bootable SD Card
 
 TODO: Mostly follow [this](https://linux-sunxi.org/Bootable_SD_card)
-
-
-
-
-## Legacy Sunxi Kernel & U-Boot
-
-TODO: Is this significantly different from Allwinner stuff? Kernel same, uboot different? Not entirely sure.
-
-
-
-## Mainline Kernel & U-Boot
-
-TODO: I'd have to make / validate device tree overlays...
