@@ -9,117 +9,76 @@ There are several references in the `references` folder.
 - Android SDK (only need lichee.tar.gz): [external link](https://linux-sunxi.org/A33#Android_SDK)
 
 
+## Build System & Prerequisites
 
-## Lichee Build (Legacy 3.4 Kernel)
-
-This requires `lichee.tar.gz` from the Allwinner A33 Android SDK.
-
-Build tested on Ubuntu 12.04 LTS (amd64). Built in chroot environment. You will probably have to run debootstrap with `--keyring=/usr/share/keyrings/ubuntu-archive-removed-keys.gpg`
-
-I have not had success building with newer Ubuntu's due to use of `gets` in something. I haven't bothered tracking it down yet.
-
-```sh
-# NOTE: Make sure to extract lichee to a path that does not contain spaces!
-tar zxvf lichee.tar.gz
-cd lichee
-./build.sh config
-```
-
-Select the following
-
-- Chip: `0. sun8iw5p1`
-- Platform: `2. linux`
-- Kernel: `0. linux-3.4`
-- Boards: `0. evb`
-
-*Note: the `evb` board is used because the `script.fex` extracted from the tablet seems to indicate this device. However, the partition table indicates a slightly different configuration. It may instead be necessary to create a tablet-specific config based on `evb` in `tools/pack/chips/sun8iw5p1/configs/` using the extracted `script.fex` as `sys_config.fex`.
-
-After configuring the script will exit.  Various dependencies may have to be installed for the build to work. 
-
-Install known dependencies (may be incomplete):
-
-```sh
-sudo apt-get install build-essential texinfo python2.7 bison flex gettext wget zip unzip zlib1g zlib1g-dev uboot-mkimage
-```
-
-Enable 32-bit support (some binaries in lichee are 32-bit)
-
-```sh
-sudo apt-get install multiarch-support
-echo "foreign-architecture i386" | sudo tee /etc/dpkg/dpkg.cfg.d/multiarch
-sudo apt-get update
-sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 zlib1g:i386
-```
+- Ubuntu 22.04 LTS (amd64)
+- `sudo apt install bison flex swig python3-dev device-tree-compiler`
 
 
-Fix some things so the build works
+## Build u-boot
 
-```sh
-# Fix error building this kernel module (use config from old version of module)
-cp -r linux-3.4/modules/mali/DX910-SW-99002-r3p2-01rel2/driver/src/devicedrv/ump/arch-ca8-virtex820-m400-1 linux-3.4/modules/mali/DX910-SW-99002-r4p0-00rel0/driver/src/devicedrv/ump/
+*Building mainline u-boot as I didn't feel like figuring out all the stuff required to build legacy u-boot. Use of mainline u-boot is also recommended in general if the device is supported.*
 
+- Get sources
+    ```sh
+    git clone git://git.denx.de/u-boot.git
+    cd u-boot
+    git checkout v2023.04   # Change this to newer version if desired
+    ```
+- Add to `boards.cfg` in sunxi grouping of lines
+    ```
+    Active  arm         armv7          sunxi       -               sunxi               ALONG-6051                           sun8i:A33_ALONG_6051,SPL
+    ```
+- Create `configs/along_6051_tablet_defconfig`
+    ```
+    CONFIG_ARM=y
+    CONFIG_ARCH_SUNXI=y
+    CONFIG_DEFAULT_DEVICE_TREE="sun8i-a33-along-6051-tablet"
+    CONFIG_SPL=y
+    CONFIG_MACH_SUN8I_A33=y
+    CONFIG_DRAM_CLK=504
+    CONFIG_DRAM_ZQ=15291
+    CONFIG_USB0_VBUS_PIN="power4"
+    CONFIG_USB0_VBUS_DET="axp_ctrl"
+    CONFIG_USB0_ID_DET="PH8"
+    CONFIG_AXP_GPIO=y
 
-# Fix errors building makedevs (don't treat errors as warnings)
-sed -i 's/\$(CC) -Wall -Werror/\$(CC) -Wall/g' buildroot/package/makedevs/makedevs.mk
-```
+    CONFIG_VIDEO_LCD_MODE="x:1024,y:600,depth:18,pclk_khz:52000,le:138,ri:162,up:22,lo:10,hs:20,vs:3,sync:3,vmode:0"
+    CONFIG_VIDEO_LCD_DCLK_PHASE=0
+    CONFIG_VIDEO_LCD_POWER="power2"
+    CONFIG_VIDEO_LCD_BL_EN="PH6"
 
+    # Not certain about this one... This is lcd_gpio_0 in fex
+    # CONFIG_VIDEO_LCD_BL_PWM="PH7"
 
-Run `./build.sh` to actually build. When prompted about kernel options, use default values (**note: this is probably wrong; may need to change some options**).
-
-
-
-
-
-## Building u-boot
-
-Mainline u-boot builds for the q8_a33 tablet (which I suspect is a very similar device internally). Tested on Ubuntu 22.04
-
-```sh
-sudo apt install build-essential arm-linux-gnueabihf-gcc swig
-git clone git://git.denx.de/u-boot.git
-cd u-boot
-git checkout v2023.04       # Or whatever newest version is
-make CROSS_COMPILE=arm-linux-gnueabihf- q8_a33_tablet_1024x600_defconfig
-
-# Optional (I didn't change anything here)
-make CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
-
-
-make CROSS_COMPILE=arm-linux-gnueabihf- -j4
-```
-
-This will yield the following files in the root of the `u-boot` repo / folder
-
-```
-u-boot
-u-boot.bin
-.u-boot.bin.cmd
-u-boot.cfg
-.u-boot.cmd
-u-boot.dtb
-u-boot-dtb.bin
-.u-boot-dtb.bin.cmd
-u-boot-dtb.img
-.u-boot-dtb.img.cmd
-u-boot.dtb.out
-u-boot.img
-.u-boot.img.cmd
-u-boot.lds
-.u-boot.lds.cmd
-u-boot.map
-u-boot-nodtb.bin
-.u-boot-nodtb.bin.cmd
-u-boot.srec
-.u-boot.srec.cmd
-u-boot-sunxi-with-spl.bin
-u-boot-sunxi-with-spl.map
-u-boot.sym
-.u-boot.sym.cmd
-```
-
-I have not yet determined what these files all are.
+    # CONFIG_SYS_MALLOC_CLEAR_ON_INIT is not set
+    CONFIG_AXP_DLDO1_VOLT=3300
+    CONFIG_CONS_INDEX=5
+    CONFIG_USB_MUSB_HOST=y
+    ```
+- Create `arch/arm/dts/sun8i-a33-along-6051-tablet.dts`
+    ```
+    # Content of converted fex file
+    ```
+- Configure and build
+    ```
+    make CROSS_COMPILE=arm-linux-gnueabihf- along_6051_tablet_defconfig
+    # OPTIONAL: make CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
+    make CROSS_COMPILE=arm-linux-gnueabihf-
+    ```
 
 
-## Making Bootable SD Card
 
-TODO: Mostly follow [this](https://linux-sunxi.org/Bootable_SD_card)
+## Build Legacy 3.4 sunxi Kerenel
+
+TODO
+
+
+### Setup SD Card
+
+TODO
+
+
+### Create rootfs
+
+TODO
