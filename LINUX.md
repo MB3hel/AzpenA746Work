@@ -458,10 +458,12 @@ Make boot script (`/mnt/boot/boot.cmd`)
 fatload mmc 0 0x46000000 zImage
 fatload mmc 0 0x49000000 sun8i-a33-q8-tablet.dtb
 
-setenv bootargs console=ttyS0,115200 earlyprintk root=/dev/mmcblk0p2 rootwait panic=10 ${extra}
+setenv bootargs console=ttyS0,115200 earlyprintk root=/dev/mmcblk1p2 rootwait panic=10 ${extra}
 
 bootz 0x46000000 - 0x49000000
 ```
+
+*Note: the sd card seems to be detected as `/dev/mmcblk1` on this board. Not sure why as kerenel boot log shows no mmcblk0. Perhaps something in the device tree. Perhaps it sees the NAND? Regardless, as long as root is set correctly in the above file, it should be fine.*
 
 Compile boot script
 
@@ -493,3 +495,6 @@ Finally, unmount the root partition and hope the card actually boots on the devi
 ```sh
 sudo umount /mnt/root
 ```
+
+
+This boots successfully on the device! *That does not mean all hardware works! This is still untested.*
