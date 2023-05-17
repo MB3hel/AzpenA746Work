@@ -1,0 +1,1013 @@
+
+<4>[   67.616987] ssv6xxx_sdio_power_on
+<3>[   67.631129] SSV6XXX_SDIO mmc1:0001:1: dataIOPort 0x10000 regIOPort 0x10020
+<4>[   67.654299] ssv6xxx_dev_probe(): ssv6200 device found !
+<4>[   67.655999] ssv6xxx_sdio_irq_disable
+<4>[   67.660924] Open File fail!!!! 
+<4>[   67.663588] [MT-ENCRYPT]: create kthread c9c27780 for CPU 0, ret = 0
+<3>[   67.674113] SSV WLAN driver ssv6200: Crypto task 1262 running with priority 120.
+<4>[   67.683039] [MT-ENCRYPT]: create kthread de891800 for CPU 1, ret = 0
+<3>[   67.683370] SSV WLAN driver ssv6200: Crypto task 1263 running with priority 120.
+<4>[   67.686336] [MT-ENCRYPT]: create kthread c9c27b00 for CPU 2, ret = 0
+<4>[   67.696800] [MT-ENCRYPT]: create kthread c9c2c540 for CPU 3, ret = 0
+<4>[   67.707067] SSV6XXX TX Task started.
+<4>[   67.707165] SSV6XXX_IQK_CFG_XTAL_24M
+<4>[   67.707185] Define SSV_IPD(SSV6051Z)
+<4>[   67.707205] TX power setting 0x72796c72
+<4>[   67.707218] Volt regulator LDO
+<4>[   67.707231] Internal LDO 3.3V setting
+<4>[   67.707331] SSV6XXX RX Task started.
+<6>[   67.721167] SSV WLAN driver ssv6200: Lock to channel 6 ([0xce010098]=690)!!
+<7>[   67.726141] ieee80211 phy0: Selected rate control algorithm 'ssv6xxx_rate_control'
+<6>[   67.734236] ieee80211 phy0: SSV6200 of South Silicon Valley
+<6>[   67.734502] *******************sdio init ok*******************
+<6>[   68.021382] SVN version 9787
+<6>[   68.021413] SVN ROOT URL http://192.168.15.30/svn/software/project/release/android/tablet/a33/along/4.4/6051.Q0.1008.03.210303.708/ssv6xxx 
+<6>[   68.021440] COMPILER HOST alex-Latitude-E5440 
+<6>[   68.021456] COMPILER DATE 12-18-2015-13:05:15 
+<6>[   68.021471] COMPILER OS linux 
+<6>[   68.021484] COMPILER OS ARCH x86_64-linux-gnu-thread-multi 
+<6>[   68.021943] CHIP TAG: 2014012420010960 
+<6>[   68.022373] CHIP ID: SSV6200A0-201311 
+<6>[   68.025266] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 904 (4) at address 80000000.
+<4>[   68.025296] ssv6xxx_init_mac(): ssv6200 reserved space=0x80000000
+<6>[   68.025460] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 560 (3) at address 80010000.
+<4>[   68.025484] ssv6xxx_init_mac(): ssv6200 reserved space=0x80010000
+<6>[   68.025653] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 560 (3) at address 80020000.
+<4>[   68.025678] ssv6xxx_init_mac(): ssv6200 reserved space=0x80020000
+<6>[   68.025993] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 560 (3) at address 80030000.
+<4>[   68.026024] ssv6xxx_init_mac(): ssv6200 reserved space=0x80030000
+<6>[   68.026201] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 560 (3) at address 80040000.
+<4>[   68.026225] ssv6xxx_init_mac(): ssv6200 reserved space=0x80040000
+<6>[   68.026428] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 560 (3) at address 80050000.
+<4>[   68.026452] ssv6xxx_init_mac(): ssv6200 reserved space=0x80050000
+<6>[   68.026632] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 560 (3) at address 80060000.
+<4>[   68.026656] ssv6xxx_init_mac(): ssv6200 reserved space=0x80060000
+<6>[   68.026841] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 560 (3) at address 80070000.
+<4>[   68.026865] ssv6xxx_init_mac(): ssv6200 reserved space=0x80070000
+<6>[   68.027048] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 256 (1) at address 80080000.
+<6>[   68.027230] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 256 (1) at address 80090000.
+<6>[   68.027407] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 256 (1) at address 800a0000.
+<6>[   68.027591] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 256 (1) at address 800b0000.
+<6>[   68.027791] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 256 (1) at address 800c0000.
+<6>[   68.027969] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 256 (1) at address 800d0000.
+<6>[   68.028139] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 256 (1) at address 800e0000.
+<6>[   68.028317] SSV WLAN driver ssv6200: Allocated 0 type packet buffer of size 256 (1) at address 800f0000.
+<4>[   68.028443] [A] ssv6xxx_pbuf_free addr[80080000][8788]
+<4>[   68.028603] [A] ssv6xxx_pbuf_free addr[80090000][8789]
+<4>[   68.028771] [A] ssv6xxx_pbuf_free addr[800a0000][878a]
+<4>[   68.028940] [A] ssv6xxx_pbuf_free addr[800b0000][878b]
+<4>[   68.029109] [A] ssv6xxx_pbuf_free addr[800c0000][878c]
+<4>[   68.029275] [A] ssv6xxx_pbuf_free addr[800d0000][878d]
+<4>[   68.029344] 0x800e0000
+<4>[   68.029457] [A] ssv6xxx_pbuf_free addr[800f0000][878f]
+<4>[   68.101094] ADR_INFO_IDX_ADDR[80000230] ADR_INFO_LEN_ADDR[800002cc]
+<4>[   68.113885] Writing firmware to SSV6XXX...
+<4>[   68.131045] (block_count << 16) = 4d0000,reg =4d0000
+<4>[   68.131158] Firmware "/etc/firmware/ssv6051-sw.bin" loaded
+<4>[   68.190307] Firmware check OK.330000 = 330000
+<4>[   68.250138] [mmc]: sdc1 set ios: clk 50000000Hz bm PP pm ON vdd 3.3V width 4 timing SD-HS(SDR25) dt B
+<4>[   68.252873] [mmc]: mclk 0xf1c2008c 0x8150000b
+<4>[   68.290263] p = de891800
+<5>[   68.301546] CPU1: shutdown
+<6>[   68.301579] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[   68.302671] [hotplug]: cpu1 is killed! .
+<6>[   68.328133] Firmware version 9179
+<4>[   68.328148] # Do init_cali (iq)
+<4>[   68.378675] ssv6200_start(): current channel: 1,sc->ps_status=0
+<6>[   68.380944] SSV WLAN driver ssv6200: Lock to channel 1 ([0xce010098]=590)!!
+<4>[   68.381645] [I] ssv6200_add_interface(): 
+<4>[   68.381662] ssv6xxx_config_vif_res id[0].
+<3>[   68.381687] SSV WLAN driver ssv6200: VIF 3c:cf:5b:58:a1:82 of type 2 is added.
+<4>[   68.392213] BSS Changed use_short_preamble[0]
+<4>[   68.392228] BSS_CHANGED_ERP_SLOT: use_short_slot[0]
+<4>[   68.392358] NL80211_IFTYPE_STATION!!
+<4>[   68.392374] [I] ssv6200_bss_info_changed(): leave
+<4>[   68.392431] [I] sv6200_conf_tx vif[0] qos[0] queue[0] aifsn[2] cwmin[7] cwmax[15] txop[102] 
+<4>[   68.392592] [I] sv6200_conf_tx vif[0] qos[0] queue[1] aifsn[2] cwmin[15] cwmax[31] txop[188] 
+<4>[   68.392749] [I] sv6200_conf_tx vif[0] qos[0] queue[2] aifsn[3] cwmin[31] cwmax[1023] txop[0] 
+<4>[   68.392906] [I] sv6200_conf_tx vif[0] qos[0] queue[3] aifsn[7] cwmin[31] cwmax[1023] txop[0] 
+<4>[   68.393062] NL80211_IFTYPE_STATION!!
+<4>[   68.393075] [I] ssv6200_bss_info_changed(): leave
+<4>[   68.393090] NL80211_IFTYPE_STATION!!
+<4>[   68.393101] [I] ssv6200_bss_info_changed(): leave
+<4>[   68.393119] Disable IEEE80211_CONF_PS ps_aid=0
+<6>[   68.398978] ADDRCONF(NETDEV_UP): wlan0: link is not ready
+<4>[   68.406459] [I] ssv6200_add_interface(): 
+<4>[   68.406484] ssv6xxx_config_vif_res id[1].
+<3>[   68.406512] SSV WLAN driver ssv6200: VIF 3c:cf:5b:58:a1:83 of type 2 is added.
+<4>[   68.416826] BSS Changed use_short_preamble[0]
+<4>[   68.416843] NL80211_IFTYPE_STATION!!
+<4>[   68.416858] [I] ssv6200_bss_info_changed(): leave
+<4>[   68.416890] [I] sv6200_conf_tx vif[1] qos[0] queue[0] aifsn[2] cwmin[7] cwmax[15] txop[102] 
+<4>[   68.416912] SSV WLAN driver ssv6200: WMM setting applicable to primary interface only.
+<4>[   68.416931] [I] sv6200_conf_tx vif[1] qos[0] queue[1] aifsn[2] cwmin[15] cwmax[31] txop[188] 
+<4>[   68.416948] SSV WLAN driver ssv6200: WMM setting applicable to primary interface only.
+<4>[   68.416967] [I] sv6200_conf_tx vif[1] qos[0] queue[2] aifsn[3] cwmin[31] cwmax[1023] txop[0] 
+<4>[   68.416984] SSV WLAN driver ssv6200: WMM setting applicable to primary interface only.
+<4>[   68.417003] [I] sv6200_conf_tx vif[1] qos[0] queue[3] aifsn[7] cwmin[31] cwmax[1023] txop[0] 
+<4>[   68.417020] SSV WLAN driver ssv6200: WMM setting applicable to primary interface only.
+<4>[   68.417035] NL80211_IFTYPE_STATION!!
+<4>[   68.417046] [I] ssv6200_bss_info_changed(): leave
+<6>[   68.425287] ADDRCONF(NETDEV_UP): p2p0: link is not ready
+<6>[   68.468355] init: computing context for service '/system/bin/wpa_supplicant'
+<5>[   68.468698] init: starting 'p2p_supplicant'
+<6>[   68.476574] init: Created socket '/dev/socket/wpa_wlan0' with mode '660', user '1010', group '1010'
+<6>[   68.724352] healthd: battery l=91 v=4042 t=30.0 h=2 st=2 c=102 chg=u
+<4>[   68.828776] encrypt_task de891800 state is 2
+<4>[   68.310906] CPU1: Booted secondary processor
+<4>[   68.832780] encrypt_task de891800 state is 2
+<4>[   68.856063] NL80211_IFTYPE_STATION!!
+<4>[   68.856085] [I] ssv6200_bss_info_changed(): leave
+<4>[   68.856100] --------------ssv6200_sw_scan_start(): 
+<6>[   68.911953] SSV WLAN driver ssv6200: Lock to channel 2 ([0xce010098]=5d0)!!
+<6>[   68.971895] SSV WLAN driver ssv6200: Lock to channel 3 ([0xce010098]=5f0)!!
+<6>[   69.031900] SSV WLAN driver ssv6200: Lock to channel 4 ([0xce010098]=630)!!
+<6>[   69.095930] SSV WLAN driver ssv6200: Lock to channel 5 ([0xce010098]=670)!!
+<6>[   69.152569] SSV WLAN driver ssv6200: Lock to channel 6 ([0xce010098]=690)!!
+<6>[   69.212562] SSV WLAN driver ssv6200: Lock to channel 7 ([0xce010098]=6d0)!!
+<6>[   69.272644] SSV WLAN driver ssv6200: Lock to channel 8 ([0xce010098]=710)!!
+<6>[   69.332565] SSV WLAN driver ssv6200: Lock to channel 9 ([0xce010098]=730)!!
+<6>[   69.401230] SSV WLAN driver ssv6200: Lock to channel 10 ([0xce010098]=770)!!
+<6>[   69.462577] SSV WLAN driver ssv6200: Lock to channel 11 ([0xce010098]=7b0)!!
+<6>[   69.522746] SSV WLAN driver ssv6200: Lock to channel 12 ([0xce010098]=830)!!
+<6>[   69.642735] SSV WLAN driver ssv6200: Lock to channel 13 ([0xce010098]=870)!!
+<4>[   69.764047] tp-gsl  before: x[0] = 943, y[0] = 624, id[0] = 0 
+<6>[   69.769431] SSV WLAN driver ssv6200: Lock to channel 14 ([0xce010098]=8f0)!!
+<4>[   69.777089] tp-gsl  before: x[0] = 943, y[0] = 626, id[0] = 0 
+<4>[   69.792240] tp-gsl  before: x[0] = 943, y[0] = 626, id[0] = 0 
+<4>[   69.807248] tp-gsl  before: x[0] = 944, y[0] = 626, id[0] = 0 
+<4>[   69.822251] tp-gsl  before: x[0] = 943, y[0] = 626, id[0] = 0 
+<4>[   69.837423] tp-gsl  before: x[0] = 939, y[0] = 627, id[0] = 0 
+<4>[   69.852364] tp-gsl  before: x[0] = 936, y[0] = 627, id[0] = 0 
+<4>[   69.867398] tp-gsl  before: x[0] = 931, y[0] = 628, id[0] = 0 
+<4>[   69.883362] tp-gsl  before: x[0] = 919, y[0] = 625, id[0] = 0 
+<6>[   69.883573] SSV WLAN driver ssv6200: Lock to channel 1 ([0xce010098]=590)!!
+<4>[   69.883886] ==============ssv6200_sw_scan_complete(): 
+<4>[   69.883923] NL80211_IFTYPE_STATION!!
+<4>[   69.883937] [I] ssv6200_bss_info_changed(): leave
+<4>[   69.897859] tp-gsl  before: x[0] = 901, y[0] = 614, id[0] = 0 
+<4>[   69.912473] tp-gsl  before: x[0] = 887, y[0] = 569, id[0] = 0 
+<4>[   69.927553] tp-gsl  before: x[0] = 879, y[0] = 545, id[0] = 0 
+<4>[   69.942655] tp-gsl  before: x[0] = 870, y[0] = 525, id[0] = 0 
+<4>[   69.958477] tp-gsl  before: x[0] = 862, y[0] = 489, id[0] = 0 
+<4>[   69.973216] tp-gsl  before: x[0] = 856, y[0] = 468, id[0] = 0 
+<4>[   69.987772] tp-gsl  before: x[0] = 849, y[0] = 431, id[0] = 0 
+<4>[   70.002829] tp-gsl  before: x[0] = 845, y[0] = 410, id[0] = 0 
+<4>[   70.017921] tp-gsl  before: x[0] = 842, y[0] = 392, id[0] = 0 
+<4>[   70.032806] tp-gsl  before: x[0] = 840, y[0] = 361, id[0] = 0 
+<4>[   70.047989] tp-gsl  before: x[0] = 840, y[0] = 347, id[0] = 0 
+<4>[   70.063185] tp-gsl  before: x[0] = 840, y[0] = 335, id[0] = 0 
+<4>[   70.078019] tp-gsl  before: x[0] = 841, y[0] = 305, id[0] = 0 
+<4>[   70.546436] tp-gsl  before: x[0] = 840, y[0] = 534, id[0] = 0 
+<4>[   70.559533] tp-gsl  before: x[0] = 839, y[0] = 535, id[0] = 0 
+<4>[   70.574608] tp-gsl  before: x[0] = 839, y[0] = 535, id[0] = 0 
+<4>[   70.589589] tp-gsl  before: x[0] = 840, y[0] = 535, id[0] = 0 
+<4>[   70.604670] tp-gsl  before: x[0] = 841, y[0] = 531, id[0] = 0 
+<4>[   70.619714] tp-gsl  before: x[0] = 843, y[0] = 525, id[0] = 0 
+<4>[   72.291183] p = de891800
+<5>[   72.307419] CPU1: shutdown
+<6>[   72.307573] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[   72.308024] [hotplug]: cpu1 is killed! .
+<4>[   73.000058] tp-gsl  before: x[0] = 379, y[0] = 397, id[0] = 0 
+<4>[   73.012210] tp-gsl  before: x[0] = 378, y[0] = 395, id[0] = 0 
+<4>[   73.027260] tp-gsl  before: x[0] = 378, y[0] = 396, id[0] = 0 
+<4>[   73.042338] tp-gsl  before: x[0] = 378, y[0] = 395, id[0] = 0 
+<4>[   73.057369] tp-gsl  before: x[0] = 378, y[0] = 395, id[0] = 0 
+<4>[   73.072424] tp-gsl  before: x[0] = 378, y[0] = 394, id[0] = 0 
+<4>[   73.087409] tp-gsl  before: x[0] = 378, y[0] = 395, id[0] = 0 
+<4>[   73.102545] tp-gsl  before: x[0] = 378, y[0] = 395, id[0] = 0 
+<4>[   73.117614] tp-gsl  before: x[0] = 380, y[0] = 391, id[0] = 0 
+<4>[   73.820679] encrypt_task de891800 state is 2
+<4>[   72.314245] CPU1: Booted secondary processor
+<4>[   73.826576] encrypt_task de891800 state is 2
+<4>[   75.791053] p = de891800
+<5>[   75.807106] CPU1: shutdown
+<6>[   75.807204] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[   75.808407] [hotplug]: cpu1 is killed! .
+<4>[   76.369669] tp-gsl  before: x[0] = 241, y[0] = 157, id[0] = 0 
+<4>[   76.383603] tp-gsl  before: x[0] = 244, y[0] = 158, id[0] = 0 
+<4>[   76.398463] tp-gsl  before: x[0] = 243, y[0] = 159, id[0] = 0 
+<4>[   76.413175] tp-gsl  before: x[0] = 244, y[0] = 159, id[0] = 0 
+<4>[   76.428349] tp-gsl  before: x[0] = 244, y[0] = 159, id[0] = 0 
+<4>[   76.443479] tp-gsl  before: x[0] = 244, y[0] = 159, id[0] = 0 
+<4>[   76.458482] tp-gsl  before: x[0] = 243, y[0] = 157, id[0] = 0 
+<4>[   76.473494] tp-gsl  before: x[0] = 241, y[0] = 152, id[0] = 0 
+<4>[   77.325246] encrypt_task de891800 state is 2
+<4>[   75.814254] CPU1: Booted secondary processor
+<4>[   77.330650] encrypt_task de891800 state is 2
+<4>[   79.290836] p = de891800
+<5>[   79.297368] CPU1: shutdown
+<6>[   79.297470] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[   79.298675] [hotplug]: cpu1 is killed! .
+<4>[   80.816060] encrypt_task de891800 state is 2
+<4>[   79.304521] CPU1: Booted secondary processor
+<4>[   80.820158] encrypt_task de891800 state is 2
+<4>[   81.305732] tp-gsl  before: x[0] = 489, y[0] = 160, id[0] = 0 
+<4>[   81.320816] tp-gsl  before: x[0] = 490, y[0] = 161, id[0] = 0 
+<4>[   81.335943] tp-gsl  before: x[0] = 492, y[0] = 165, id[0] = 0 
+<4>[   81.350871] tp-gsl  before: x[0] = 497, y[0] = 175, id[0] = 0 
+<4>[   81.365898] tp-gsl  before: x[0] = 505, y[0] = 206, id[0] = 0 
+<4>[   81.380962] tp-gsl  before: x[0] = 518, y[0] = 224, id[0] = 0 
+<4>[   81.396133] tp-gsl  before: x[0] = 532, y[0] = 248, id[0] = 0 
+<4>[   81.411124] tp-gsl  before: x[0] = 551, y[0] = 289, id[0] = 0 
+<4>[   81.426281] tp-gsl  before: x[0] = 576, y[0] = 338, id[0] = 0 
+<4>[   81.442181] tp-gsl  before: x[0] = 599, y[0] = 375, id[0] = 0 
+<4>[   81.456199] tp-gsl  before: x[0] = 625, y[0] = 425, id[0] = 0 
+<4>[   81.471793] tp-gsl  before: x[0] = 650, y[0] = 480, id[0] = 0 
+<4>[   81.791840] encrypt_task c9c27b00 state is 2
+<4>[   66.300898] CPU2: Booted secondary processor
+<4>[   81.796018] wake up encrypt_task c9c27b00 state is 0, cpu = 2
+<3>[   81.796037] SSV WLAN driver ssv6200: Crypto task 1264 running with priority 120.
+<4>[   81.804334] encrypt_task c9c27b00 state is 2
+<4>[   81.817612] tp-gsl  before: x[0] = 493, y[0] = 213, id[0] = 0 
+<4>[   81.832682] tp-gsl  before: x[0] = 497, y[0] = 214, id[0] = 0 
+<4>[   81.847700] tp-gsl  before: x[0] = 499, y[0] = 218, id[0] = 0 
+<4>[   81.862845] tp-gsl  before: x[0] = 503, y[0] = 224, id[0] = 0 
+<4>[   81.877843] tp-gsl  before: x[0] = 508, y[0] = 227, id[0] = 0 
+<4>[   81.893458] tp-gsl  before: x[0] = 517, y[0] = 234, id[0] = 0 
+<4>[   81.907979] tp-gsl  before: x[0] = 521, y[0] = 245, id[0] = 0 
+<4>[   81.923032] tp-gsl  before: x[0] = 526, y[0] = 265, id[0] = 0 
+<4>[   81.938136] tp-gsl  before: x[0] = 531, y[0] = 276, id[0] = 0 
+<4>[   81.953275] tp-gsl  before: x[0] = 535, y[0] = 283, id[0] = 0 
+<4>[   81.968325] tp-gsl  before: x[0] = 538, y[0] = 286, id[0] = 0 
+<4>[   81.983286] tp-gsl  before: x[0] = 541, y[0] = 289, id[0] = 0 
+<4>[   81.998293] tp-gsl  before: x[0] = 544, y[0] = 291, id[0] = 0 
+<4>[   82.013489] tp-gsl  before: x[0] = 547, y[0] = 295, id[0] = 0 
+<4>[   82.028625] tp-gsl  before: x[0] = 549, y[0] = 299, id[0] = 0 
+<4>[   82.043442] tp-gsl  before: x[0] = 552, y[0] = 304, id[0] = 0 
+<4>[   82.058639] tp-gsl  before: x[0] = 555, y[0] = 309, id[0] = 0 
+<4>[   82.073566] tp-gsl  before: x[0] = 559, y[0] = 326, id[0] = 0 
+<4>[   82.088603] tp-gsl  before: x[0] = 563, y[0] = 339, id[0] = 0 
+<4>[   82.103798] tp-gsl  before: x[0] = 567, y[0] = 352, id[0] = 0 
+<4>[   82.118856] tp-gsl  before: x[0] = 573, y[0] = 364, id[0] = 0 
+<4>[   82.344743] tp-gsl  before: x[0] = 583, y[0] = 16777, id[0] = 0 
+<4>[   82.359956] tp-gsl  before: x[0] = 582, y[0] = 389, id[0] = 0 
+<4>[   82.374710] tp-gsl  before: x[0] = 581, y[0] = 388, id[0] = 0 
+<4>[   82.389718] tp-gsl  before: x[0] = 581, y[0] = 386, id[0] = 0 
+<4>[   82.404925] tp-gsl  before: x[0] = 582, y[0] = 374, id[0] = 0 
+<4>[   82.420195] tp-gsl  before: x[0] = 582, y[0] = 369, id[0] = 0 
+<4>[   82.434912] tp-gsl  before: x[0] = 581, y[0] = 363, id[0] = 0 
+<4>[   82.449925] tp-gsl  before: x[0] = 580, y[0] = 357, id[0] = 0 
+<4>[   82.465039] tp-gsl  before: x[0] = 580, y[0] = 351, id[0] = 0 
+<4>[   82.480187] tp-gsl  before: x[0] = 580, y[0] = 347, id[0] = 0 
+<4>[   82.495297] tp-gsl  before: x[0] = 580, y[0] = 342, id[0] = 0 
+<4>[   82.510670] tp-gsl  before: x[0] = 580, y[0] = 336, id[0] = 0 
+<4>[   82.525304] tp-gsl  before: x[0] = 579, y[0] = 329, id[0] = 0 
+<4>[   82.540550] tp-gsl  before: x[0] = 579, y[0] = 323, id[0] = 0 
+<4>[   82.555443] tp-gsl  before: x[0] = 581, y[0] = 308, id[0] = 0 
+<4>[   82.570454] tp-gsl  before: x[0] = 581, y[0] = 303, id[0] = 0 
+<4>[   82.585487] tp-gsl  before: x[0] = 582, y[0] = 299, id[0] = 0 
+<4>[   82.600598] tp-gsl  before: x[0] = 582, y[0] = 296, id[0] = 0 
+<4>[   82.615747] tp-gsl  before: x[0] = 582, y[0] = 294, id[0] = 0 
+<4>[   82.630664] tp-gsl  before: x[0] = 582, y[0] = 293, id[0] = 0 
+<4>[   82.646070] tp-gsl  before: x[0] = 582, y[0] = 293, id[0] = 0 
+<4>[   82.661301] tp-gsl  before: x[0] = 582, y[0] = 292, id[0] = 0 
+<4>[   82.676110] tp-gsl  before: x[0] = 582, y[0] = 292, id[0] = 0 
+<4>[   82.690996] tp-gsl  before: x[0] = 582, y[0] = 293, id[0] = 0 
+<4>[   82.705931] tp-gsl  before: x[0] = 582, y[0] = 293, id[0] = 0 
+<4>[   82.721110] tp-gsl  before: x[0] = 583, y[0] = 293, id[0] = 0 
+<4>[   82.736358] tp-gsl  before: x[0] = 583, y[0] = 293, id[0] = 0 
+<4>[   82.751324] tp-gsl  before: x[0] = 583, y[0] = 294, id[0] = 0 
+<4>[   82.766138] tp-gsl  before: x[0] = 584, y[0] = 295, id[0] = 0 
+<4>[   82.781255] tp-gsl  before: x[0] = 584, y[0] = 296, id[0] = 0 
+<4>[   82.791375] encrypt_task c9c2c540 state is 2
+<4>[   67.300976] CPU3: Booted secondary processor
+<4>[   82.796645] tp-gsl  before: x[0] = 585, y[0] = 297, id[0] = 0 
+<4>[   82.797028] wake up encrypt_task c9c2c540 state is 0, cpu = 3
+<4>[   82.797039] encrypt_task c9c2c540 state is 0
+<3>[   82.797224] SSV WLAN driver ssv6200: Crypto task 1265 running with priority 120.
+<4>[   82.811567] tp-gsl  before: x[0] = 586, y[0] = 299, id[0] = 0 
+<4>[   82.826717] tp-gsl  before: x[0] = 588, y[0] = 301, id[0] = 0 
+<4>[   82.841892] tp-gsl  before: x[0] = 590, y[0] = 305, id[0] = 0 
+<4>[   82.856549] tp-gsl  before: x[0] = 593, y[0] = 310, id[0] = 0 
+<4>[   82.871566] tp-gsl  before: x[0] = 597, y[0] = 322, id[0] = 0 
+<4>[   82.886831] tp-gsl  before: x[0] = 603, y[0] = 329, id[0] = 0 
+<4>[   82.902002] tp-gsl  before: x[0] = 610, y[0] = 335, id[0] = 0 
+<4>[   82.916691] tp-gsl  before: x[0] = 616, y[0] = 341, id[0] = 0 
+<4>[   82.931854] tp-gsl  before: x[0] = 621, y[0] = 346, id[0] = 0 
+<4>[   82.947105] tp-gsl  before: x[0] = 626, y[0] = 348, id[0] = 0 
+<4>[   82.962176] tp-gsl  before: x[0] = 630, y[0] = 351, id[0] = 0 
+<4>[   82.977059] tp-gsl  before: x[0] = 633, y[0] = 353, id[0] = 0 
+<4>[   82.993588] tp-gsl  before: x[0] = 636, y[0] = 354, id[0] = 0 
+<4>[   83.007125] tp-gsl  before: x[0] = 638, y[0] = 356, id[0] = 0 
+<4>[   83.022244] tp-gsl  before: x[0] = 642, y[0] = 357, id[0] = 0 
+<4>[   83.037293] tp-gsl  before: x[0] = 643, y[0] = 359, id[0] = 0 
+<4>[   83.052381] tp-gsl  before: x[0] = 644, y[0] = 359, id[0] = 0 
+<4>[   83.067214] tp-gsl  before: x[0] = 645, y[0] = 360, id[0] = 0 
+<4>[   83.082334] tp-gsl  before: x[0] = 645, y[0] = 360, id[0] = 0 
+<4>[   83.097410] tp-gsl  before: x[0] = 645, y[0] = 360, id[0] = 0 
+<4>[   83.112735] tp-gsl  before: x[0] = 645, y[0] = 360, id[0] = 0 
+<4>[   83.127461] tp-gsl  before: x[0] = 645, y[0] = 361, id[0] = 0 
+<4>[   83.142895] tp-gsl  before: x[0] = 645, y[0] = 361, id[0] = 0 
+<4>[   83.157599] tp-gsl  before: x[0] = 644, y[0] = 361, id[0] = 0 
+<4>[   83.172920] tp-gsl  before: x[0] = 645, y[0] = 361, id[0] = 0 
+<4>[   83.187743] tp-gsl  before: x[0] = 645, y[0] = 361, id[0] = 0 
+<4>[   83.202758] tp-gsl  before: x[0] = 645, y[0] = 361, id[0] = 0 
+<4>[   83.217841] tp-gsl  before: x[0] = 644, y[0] = 361, id[0] = 0 
+<4>[   83.232863] tp-gsl  before: x[0] = 645, y[0] = 362, id[0] = 0 
+<4>[   83.248092] tp-gsl  before: x[0] = 645, y[0] = 362, id[0] = 0 
+<4>[   83.263187] tp-gsl  before: x[0] = 645, y[0] = 363, id[0] = 0 
+<4>[   83.278083] tp-gsl  before: x[0] = 646, y[0] = 363, id[0] = 0 
+<4>[   83.293112] tp-gsl  before: x[0] = 646, y[0] = 365, id[0] = 0 
+<4>[   83.308171] tp-gsl  before: x[0] = 647, y[0] = 366, id[0] = 0 
+<4>[   83.323222] tp-gsl  before: x[0] = 648, y[0] = 368, id[0] = 0 
+<4>[   83.338274] tp-gsl  before: x[0] = 648, y[0] = 370, id[0] = 0 
+<4>[   83.353372] tp-gsl  before: x[0] = 649, y[0] = 372, id[0] = 0 
+<4>[   83.368411] tp-gsl  before: x[0] = 650, y[0] = 374, id[0] = 0 
+<4>[   83.383480] tp-gsl  before: x[0] = 650, y[0] = 376, id[0] = 0 
+<4>[   83.398582] tp-gsl  before: x[0] = 651, y[0] = 377, id[0] = 0 
+<4>[   83.413671] tp-gsl  before: x[0] = 651, y[0] = 378, id[0] = 0 
+<4>[   83.428625] tp-gsl  before: x[0] = 651, y[0] = 386, id[0] = 0 
+<4>[   83.443739] tp-gsl  before: x[0] = 651, y[0] = 388, id[0] = 0 
+<4>[   83.459016] tp-gsl  before: x[0] = 652, y[0] = 389, id[0] = 0 
+<4>[   83.473857] tp-gsl  before: x[0] = 653, y[0] = 392, id[0] = 0 
+<4>[   83.489007] tp-gsl  before: x[0] = 655, y[0] = 394, id[0] = 0 
+<4>[   83.504149] tp-gsl  before: x[0] = 657, y[0] = 397, id[0] = 0 
+<4>[   83.519073] tp-gsl  before: x[0] = 659, y[0] = 400, id[0] = 0 
+<4>[   83.534149] tp-gsl  before: x[0] = 661, y[0] = 403, id[0] = 0 
+<4>[   83.549191] tp-gsl  before: x[0] = 663, y[0] = 405, id[0] = 0 
+<4>[   83.564263] tp-gsl  before: x[0] = 665, y[0] = 407, id[0] = 0 
+<4>[   83.579467] tp-gsl  before: x[0] = 668, y[0] = 410, id[0] = 0 
+<4>[   83.594455] tp-gsl  before: x[0] = 671, y[0] = 412, id[0] = 0 
+<4>[   83.609731] tp-gsl  before: x[0] = 674, y[0] = 413, id[0] = 0 
+<4>[   83.624691] tp-gsl  before: x[0] = 678, y[0] = 416, id[0] = 0 
+<4>[   83.639582] tp-gsl  before: x[0] = 683, y[0] = 420, id[0] = 0 
+<4>[   83.654567] tp-gsl  before: x[0] = 686, y[0] = 424, id[0] = 0 
+<4>[   83.669944] tp-gsl  before: x[0] = 685, y[0] = 16810, id[0] = 0 
+<4>[   83.864162] NL80211_IFTYPE_STATION!!
+<4>[   83.864206] [I] ssv6200_bss_info_changed(): leave
+<4>[   83.864228] --------------ssv6200_sw_scan_start(): 
+<6>[   83.922309] SSV WLAN driver ssv6200: Lock to channel 2 ([0xce010098]=5d0)!!
+<6>[   83.982354] SSV WLAN driver ssv6200: Lock to channel 3 ([0xce010098]=5f0)!!
+<6>[   84.042693] SSV WLAN driver ssv6200: Lock to channel 4 ([0xce010098]=630)!!
+<6>[   84.103359] SSV WLAN driver ssv6200: Lock to channel 5 ([0xce010098]=670)!!
+<6>[   84.163052] SSV WLAN driver ssv6200: Lock to channel 6 ([0xce010098]=690)!!
+<6>[   84.222832] SSV WLAN driver ssv6200: Lock to channel 7 ([0xce010098]=6d0)!!
+<6>[   84.282681] SSV WLAN driver ssv6200: Lock to channel 8 ([0xce010098]=710)!!
+<4>[   84.290349] p = c9c27b00
+<5>[   84.291854] CPU2: shutdown
+<6>[   84.291880] [hotplug]: cpu(3) try to kill cpu(2)
+<6>[   84.292971] [hotplug]: cpu2 is killed! .
+<6>[   84.343000] SSV WLAN driver ssv6200: Lock to channel 9 ([0xce010098]=730)!!
+<6>[   84.402855] SSV WLAN driver ssv6200: Lock to channel 10 ([0xce010098]=770)!!
+<6>[   84.463274] SSV WLAN driver ssv6200: Lock to channel 11 ([0xce010098]=7b0)!!
+<6>[   84.522845] SSV WLAN driver ssv6200: Lock to channel 12 ([0xce010098]=830)!!
+<6>[   84.642812] SSV WLAN driver ssv6200: Lock to channel 13 ([0xce010098]=870)!!
+<6>[   84.769100] SSV WLAN driver ssv6200: Lock to channel 14 ([0xce010098]=8f0)!!
+<4>[   84.770716] tp-gsl  before: x[0] = 716, y[0] = 408, id[0] = 0 
+<4>[   84.783866] tp-gsl  before: x[0] = 715, y[0] = 409, id[0] = 0 
+<4>[   84.790301] p = c9c2c540
+<5>[   84.791483] CPU3: shutdown
+<6>[   84.791515] [hotplug]: cpu(0) try to kill cpu(3)
+<6>[   84.792630] [hotplug]: cpu3 is killed! .
+<4>[   84.798881] tp-gsl  before: x[0] = 715, y[0] = 409, id[0] = 0 
+<4>[   84.813901] tp-gsl  before: x[0] = 715, y[0] = 409, id[0] = 0 
+<4>[   84.829009] tp-gsl  before: x[0] = 715, y[0] = 408, id[0] = 0 
+<4>[   84.844036] tp-gsl  before: x[0] = 715, y[0] = 408, id[0] = 0 
+<4>[   84.859078] tp-gsl  before: x[0] = 715, y[0] = 408, id[0] = 0 
+<4>[   84.874138] tp-gsl  before: x[0] = 715, y[0] = 408, id[0] = 0 
+<6>[   84.889096] SSV WLAN driver ssv6200: Lock to channel 1 ([0xce010098]=590)!!
+<4>[   84.889210] tp-gsl  before: x[0] = 715, y[0] = 407, id[0] = 0 
+<4>[   84.889282] ==============ssv6200_sw_scan_complete(): 
+<4>[   84.889322] NL80211_IFTYPE_STATION!!
+<4>[   84.889336] [I] ssv6200_bss_info_changed(): leave
+<4>[   84.904348] tp-gsl  before: x[0] = 714, y[0] = 407, id[0] = 0 
+<4>[   84.919761] tp-gsl  before: x[0] = 714, y[0] = 406, id[0] = 0 
+<4>[   84.934636] tp-gsl  before: x[0] = 714, y[0] = 405, id[0] = 0 
+<4>[   84.949521] tp-gsl  before: x[0] = 713, y[0] = 403, id[0] = 0 
+<4>[   84.964578] tp-gsl  before: x[0] = 713, y[0] = 402, id[0] = 0 
+<4>[   84.979675] tp-gsl  before: x[0] = 712, y[0] = 399, id[0] = 0 
+<4>[   84.994694] tp-gsl  before: x[0] = 711, y[0] = 396, id[0] = 0 
+<4>[   85.009706] tp-gsl  before: x[0] = 710, y[0] = 392, id[0] = 0 
+<4>[   85.024817] tp-gsl  before: x[0] = 709, y[0] = 386, id[0] = 0 
+<4>[   85.039837] tp-gsl  before: x[0] = 709, y[0] = 374, id[0] = 0 
+<4>[   85.054861] tp-gsl  before: x[0] = 709, y[0] = 369, id[0] = 0 
+<4>[   85.069939] tp-gsl  before: x[0] = 708, y[0] = 365, id[0] = 0 
+<4>[   85.084990] tp-gsl  before: x[0] = 707, y[0] = 362, id[0] = 0 
+<4>[   85.100121] tp-gsl  before: x[0] = 707, y[0] = 358, id[0] = 0 
+<4>[   85.115383] tp-gsl  before: x[0] = 707, y[0] = 355, id[0] = 0 
+<4>[   85.130674] tp-gsl  before: x[0] = 707, y[0] = 354, id[0] = 0 
+<4>[   85.145285] tp-gsl  before: x[0] = 706, y[0] = 352, id[0] = 0 
+<4>[   85.160432] tp-gsl  before: x[0] = 706, y[0] = 351, id[0] = 0 
+<4>[   85.175488] tp-gsl  before: x[0] = 706, y[0] = 351, id[0] = 0 
+<4>[   85.190488] tp-gsl  before: x[0] = 706, y[0] = 351, id[0] = 0 
+<4>[   85.205451] tp-gsl  before: x[0] = 706, y[0] = 352, id[0] = 0 
+<4>[   85.220586] tp-gsl  before: x[0] = 707, y[0] = 352, id[0] = 0 
+<4>[   85.235547] tp-gsl  before: x[0] = 707, y[0] = 353, id[0] = 0 
+<4>[   85.250771] tp-gsl  before: x[0] = 708, y[0] = 353, id[0] = 0 
+<4>[   85.265708] tp-gsl  before: x[0] = 708, y[0] = 356, id[0] = 0 
+<4>[   85.280775] tp-gsl  before: x[0] = 714, y[0] = 364, id[0] = 0 
+<4>[   85.294790] encrypt_task c9c27b00 state is 2
+<4>[   84.301129] CPU2: Booted secondary processor
+<4>[   85.299015] encrypt_task c9c27b00 state is 2
+<4>[   85.310908] tp-gsl  before: x[0] = 726, y[0] = 16789, id[0] = 0 
+<4>[   85.325836] tp-gsl  before: x[0] = 729, y[0] = 413, id[0] = 0 
+<4>[   85.341084] tp-gsl  before: x[0] = 732, y[0] = 418, id[0] = 0 
+<4>[   85.356428] tp-gsl  before: x[0] = 733, y[0] = 425, id[0] = 0 
+<4>[   85.371281] tp-gsl  before: x[0] = 733, y[0] = 431, id[0] = 0 
+<4>[   85.386393] tp-gsl  before: x[0] = 732, y[0] = 436, id[0] = 0 
+<4>[   85.401279] tp-gsl  before: x[0] = 732, y[0] = 439, id[0] = 0 
+<4>[   85.416321] tp-gsl  before: x[0] = 732, y[0] = 443, id[0] = 0 
+<4>[   85.431669] tp-gsl  before: x[0] = 732, y[0] = 452, id[0] = 0 
+<4>[   85.446496] tp-gsl  before: x[0] = 732, y[0] = 456, id[0] = 0 
+<4>[   85.461728] tp-gsl  before: x[0] = 733, y[0] = 461, id[0] = 0 
+<4>[   85.476627] tp-gsl  before: x[0] = 735, y[0] = 471, id[0] = 0 
+<4>[   85.491720] tp-gsl  before: x[0] = 738, y[0] = 476, id[0] = 0 
+<4>[   85.506655] tp-gsl  before: x[0] = 738, y[0] = 477, id[0] = 0 
+<4>[   85.521706] tp-gsl  before: x[0] = 737, y[0] = 478, id[0] = 0 
+<4>[   85.536903] tp-gsl  before: x[0] = 736, y[0] = 478, id[0] = 0 
+<4>[   85.551946] tp-gsl  before: x[0] = 736, y[0] = 478, id[0] = 0 
+<4>[   85.567076] tp-gsl  before: x[0] = 736, y[0] = 479, id[0] = 0 
+<4>[   85.582246] tp-gsl  before: x[0] = 736, y[0] = 478, id[0] = 0 
+<4>[   85.597382] tp-gsl  before: x[0] = 736, y[0] = 478, id[0] = 0 
+<4>[   85.612215] tp-gsl  before: x[0] = 736, y[0] = 478, id[0] = 0 
+<4>[   85.627353] tp-gsl  before: x[0] = 736, y[0] = 477, id[0] = 0 
+<4>[   85.642291] tp-gsl  before: x[0] = 736, y[0] = 478, id[0] = 0 
+<4>[   85.657322] tp-gsl  before: x[0] = 736, y[0] = 475, id[0] = 0 
+<4>[   86.139076] tp-gsl  before: x[0] = 659, y[0] = 13, id[0] = 0 
+<4>[   86.154324] tp-gsl  before: x[0] = 658, y[0] = 12, id[0] = 0 
+<4>[   86.169300] tp-gsl  before: x[0] = 658, y[0] = 12, id[0] = 0 
+<4>[   86.185000] tp-gsl  before: x[0] = 659, y[0] = 12, id[0] = 0 
+<4>[   86.199373] tp-gsl  before: x[0] = 659, y[0] = 12, id[0] = 0 
+<4>[   86.214297] tp-gsl  before: x[0] = 659, y[0] = 13, id[0] = 0 
+<4>[   86.229362] tp-gsl  before: x[0] = 660, y[0] = 18, id[0] = 0 
+<4>[   87.291208] p = c9c27b00
+<5>[   87.299213] CPU2: shutdown
+<6>[   87.299313] [hotplug]: cpu(0) try to kill cpu(2)
+<6>[   87.300563] [hotplug]: cpu2 is killed! .
+<4>[   87.790366] p = de891800
+<5>[   87.804706] CPU1: shutdown
+<6>[   87.804752] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[   87.805847] [hotplug]: cpu1 is killed! .
+<4>[   89.333790] tp-gsl  before: x[0] = 344, y[0] = 221, id[0] = 0 
+<4>[   89.346386] tp-gsl  before: x[0] = 343, y[0] = 221, id[0] = 0 
+<4>[   89.361479] tp-gsl  before: x[0] = 343, y[0] = 221, id[0] = 0 
+<4>[   89.376574] tp-gsl  before: x[0] = 345, y[0] = 220, id[0] = 0 
+<4>[   89.391610] tp-gsl  before: x[0] = 349, y[0] = 217, id[0] = 0 
+<4>[   89.406633] tp-gsl  before: x[0] = 353, y[0] = 217, id[0] = 0 
+<4>[   89.829252] encrypt_task de891800 state is 2
+<4>[   87.810129] CPU1: Booted secondary processor
+<4>[   89.833243] encrypt_task de891800 state is 2
+<4>[   91.791082] p = de891800
+<5>[   91.807564] CPU1: shutdown
+<6>[   91.807663] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[   91.808866] [hotplug]: cpu1 is killed! .
+<4>[   92.238931] tp-gsl  before: x[0] = 610, y[0] = 198, id[0] = 0 
+<4>[   92.252762] tp-gsl  before: x[0] = 610, y[0] = 200, id[0] = 0 
+<4>[   92.267809] tp-gsl  before: x[0] = 610, y[0] = 202, id[0] = 0 
+<4>[   92.282905] tp-gsl  before: x[0] = 610, y[0] = 204, id[0] = 0 
+<4>[   92.297987] tp-gsl  before: x[0] = 610, y[0] = 206, id[0] = 0 
+<4>[   92.313039] tp-gsl  before: x[0] = 610, y[0] = 208, id[0] = 0 
+<4>[   92.328062] tp-gsl  before: x[0] = 610, y[0] = 211, id[0] = 0 
+<4>[   92.343201] tp-gsl  before: x[0] = 612, y[0] = 217, id[0] = 0 
+<4>[   92.358257] tp-gsl  before: x[0] = 614, y[0] = 220, id[0] = 0 
+<4>[   92.373248] tp-gsl  before: x[0] = 616, y[0] = 224, id[0] = 0 
+<4>[   92.388323] tp-gsl  before: x[0] = 617, y[0] = 227, id[0] = 0 
+<4>[   92.403429] tp-gsl  before: x[0] = 619, y[0] = 231, id[0] = 0 
+<4>[   92.418453] tp-gsl  before: x[0] = 621, y[0] = 236, id[0] = 0 
+<4>[   92.433652] tp-gsl  before: x[0] = 623, y[0] = 243, id[0] = 0 
+<4>[   92.448604] tp-gsl  before: x[0] = 625, y[0] = 249, id[0] = 0 
+<4>[   92.463640] tp-gsl  before: x[0] = 626, y[0] = 263, id[0] = 0 
+<4>[   92.478691] tp-gsl  before: x[0] = 627, y[0] = 269, id[0] = 0 
+<4>[   92.493772] tp-gsl  before: x[0] = 628, y[0] = 274, id[0] = 0 
+<4>[   92.508858] tp-gsl  before: x[0] = 628, y[0] = 278, id[0] = 0 
+<4>[   92.523877] tp-gsl  before: x[0] = 629, y[0] = 282, id[0] = 0 
+<4>[   92.538980] tp-gsl  before: x[0] = 630, y[0] = 285, id[0] = 0 
+<4>[   92.553980] tp-gsl  before: x[0] = 630, y[0] = 286, id[0] = 0 
+<4>[   92.569052] tp-gsl  before: x[0] = 631, y[0] = 289, id[0] = 0 
+<4>[   92.584110] tp-gsl  before: x[0] = 631, y[0] = 291, id[0] = 0 
+<4>[   92.599217] tp-gsl  before: x[0] = 632, y[0] = 294, id[0] = 0 
+<4>[   92.614377] tp-gsl  before: x[0] = 633, y[0] = 299, id[0] = 0 
+<4>[   92.629334] tp-gsl  before: x[0] = 634, y[0] = 304, id[0] = 0 
+<4>[   92.644434] tp-gsl  before: x[0] = 635, y[0] = 309, id[0] = 0 
+<4>[   92.659494] tp-gsl  before: x[0] = 636, y[0] = 315, id[0] = 0 
+<4>[   92.674950] tp-gsl  before: x[0] = 638, y[0] = 327, id[0] = 0 
+<4>[   92.674969] tp-gsl  before: x[1] = 639, y[1] = 327, id[1] = 0 
+<4>[   92.689564] tp-gsl  before: x[0] = 640, y[0] = 332, id[0] = 0 
+<4>[   92.704650] tp-gsl  before: x[0] = 641, y[0] = 337, id[0] = 0 
+<4>[   92.719702] tp-gsl  before: x[0] = 642, y[0] = 340, id[0] = 0 
+<4>[   92.734829] tp-gsl  before: x[0] = 643, y[0] = 343, id[0] = 0 
+<4>[   92.749836] tp-gsl  before: x[0] = 643, y[0] = 344, id[0] = 0 
+<4>[   92.764938] tp-gsl  before: x[0] = 643, y[0] = 345, id[0] = 0 
+<4>[   92.779924] tp-gsl  before: x[0] = 644, y[0] = 345, id[0] = 0 
+<4>[   92.795101] tp-gsl  before: x[0] = 643, y[0] = 345, id[0] = 0 
+<4>[   92.810163] tp-gsl  before: x[0] = 643, y[0] = 344, id[0] = 0 
+<4>[   92.825125] tp-gsl  before: x[0] = 643, y[0] = 343, id[0] = 0 
+<4>[   92.840224] tp-gsl  before: x[0] = 643, y[0] = 344, id[0] = 0 
+<4>[   92.855250] tp-gsl  before: x[0] = 644, y[0] = 348, id[0] = 0 
+<4>[   93.156445] tp-gsl  before: x[0] = 602, y[0] = 292, id[0] = 0 
+<4>[   93.171522] tp-gsl  before: x[0] = 601, y[0] = 292, id[0] = 0 
+<4>[   93.186555] tp-gsl  before: x[0] = 601, y[0] = 291, id[0] = 0 
+<4>[   93.201649] tp-gsl  before: x[0] = 601, y[0] = 290, id[0] = 0 
+<4>[   93.216886] tp-gsl  before: x[0] = 601, y[0] = 288, id[0] = 0 
+<4>[   93.231825] tp-gsl  before: x[0] = 600, y[0] = 286, id[0] = 0 
+<4>[   93.246824] tp-gsl  before: x[0] = 600, y[0] = 282, id[0] = 0 
+<4>[   93.261868] tp-gsl  before: x[0] = 600, y[0] = 278, id[0] = 0 
+<4>[   93.277030] tp-gsl  before: x[0] = 599, y[0] = 271, id[0] = 0 
+<4>[   93.292071] tp-gsl  before: x[0] = 599, y[0] = 262, id[0] = 0 
+<4>[   93.307055] tp-gsl  before: x[0] = 598, y[0] = 243, id[0] = 0 
+<4>[   93.322095] tp-gsl  before: x[0] = 598, y[0] = 234, id[0] = 0 
+<4>[   93.337251] tp-gsl  before: x[0] = 598, y[0] = 228, id[0] = 0 
+<4>[   93.352161] tp-gsl  before: x[0] = 599, y[0] = 224, id[0] = 0 
+<4>[   93.367382] tp-gsl  before: x[0] = 599, y[0] = 222, id[0] = 0 
+<4>[   93.382649] tp-gsl  before: x[0] = 600, y[0] = 219, id[0] = 0 
+<4>[   93.397419] tp-gsl  before: x[0] = 601, y[0] = 216, id[0] = 0 
+<4>[   93.412449] tp-gsl  before: x[0] = 602, y[0] = 211, id[0] = 0 
+<4>[   93.427480] tp-gsl  before: x[0] = 603, y[0] = 208, id[0] = 0 
+<4>[   93.864400] tp-gsl  before: x[0] = 606, y[0] = 225, id[0] = 0 
+<4>[   93.879370] tp-gsl  before: x[0] = 605, y[0] = 228, id[0] = 0 
+<4>[   93.894404] tp-gsl  before: x[0] = 604, y[0] = 230, id[0] = 0 
+<4>[   93.909477] tp-gsl  before: x[0] = 604, y[0] = 231, id[0] = 0 
+<4>[   93.924573] tp-gsl  before: x[0] = 604, y[0] = 231, id[0] = 0 
+<4>[   93.939598] tp-gsl  before: x[0] = 605, y[0] = 228, id[0] = 0 
+<4>[   93.954640] tp-gsl  before: x[0] = 610, y[0] = 225, id[0] = 0 
+<4>[   94.321249] encrypt_task de891800 state is 2
+<4>[   91.814729] CPU1: Booted secondary processor
+<4>[   94.328043] encrypt_task de891800 state is 2
+<4>[   96.291154] p = de891800
+<5>[   96.309447] CPU1: shutdown
+<6>[   96.309552] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[   96.309695] [hotplug]: cpu1 is killed! .
+<4>[   98.898015] NL80211_IFTYPE_STATION!!
+<4>[   98.898149] [I] ssv6200_bss_info_changed(): leave
+<4>[   98.898251] --------------ssv6200_sw_scan_start(): 
+<6>[   98.962703] SSV WLAN driver ssv6200: Lock to channel 2 ([0xce010098]=5d0)!!
+<6>[   99.022694] SSV WLAN driver ssv6200: Lock to channel 3 ([0xce010098]=5f0)!!
+<6>[   99.082453] SSV WLAN driver ssv6200: Lock to channel 4 ([0xce010098]=630)!!
+<6>[   99.142537] SSV WLAN driver ssv6200: Lock to channel 5 ([0xce010098]=670)!!
+<6>[   99.202234] SSV WLAN driver ssv6200: Lock to channel 6 ([0xce010098]=6b0)!!
+<6>[   99.262262] SSV WLAN driver ssv6200: Lock to channel 7 ([0xce010098]=6d0)!!
+<6>[   99.325623] SSV WLAN driver ssv6200: Lock to channel 8 ([0xce010098]=710)!!
+<6>[   99.385658] SSV WLAN driver ssv6200: Lock to channel 9 ([0xce010098]=730)!!
+<6>[   99.445244] SSV WLAN driver ssv6200: Lock to channel 10 ([0xce010098]=770)!!
+<6>[   99.508716] SSV WLAN driver ssv6200: Lock to channel 11 ([0xce010098]=7b0)!!
+<6>[   99.562544] SSV WLAN driver ssv6200: Lock to channel 12 ([0xce010098]=830)!!
+<6>[   99.682645] SSV WLAN driver ssv6200: Lock to channel 13 ([0xce010098]=870)!!
+<6>[   99.805212] SSV WLAN driver ssv6200: Lock to channel 14 ([0xce010098]=8f0)!!
+<6>[   99.935003] SSV WLAN driver ssv6200: Lock to channel 1 ([0xce010098]=590)!!
+<4>[   99.938010] ==============ssv6200_sw_scan_complete(): 
+<4>[   99.949368] NL80211_IFTYPE_STATION!!
+<4>[   99.949476] [I] ssv6200_bss_info_changed(): leave
+<4>[  100.812060] encrypt_task de891800 state is 2
+<4>[   96.313011] CPU1: Booted secondary processor
+<4>[  100.815957] encrypt_task de891800 state is 2
+<6>[  103.741223] init: waitpid returned pid 924, status = 00000000
+<3>[  103.741254] init: untracked pid 924 exited
+<4>[  104.291044] p = de891800
+<5>[  104.309753] CPU1: shutdown
+<6>[  104.309908] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  104.311070] [hotplug]: cpu1 is killed! .
+<4>[  109.315315] encrypt_task de891800 state is 2
+<4>[  104.316472] CPU1: Booted secondary processor
+<4>[  109.319725] encrypt_task de891800 state is 2
+<4>[  111.290895] p = de891800
+<5>[  111.309300] CPU1: shutdown
+<6>[  111.309405] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  111.310591] [hotplug]: cpu1 is killed! .
+<4>[  113.902670] NL80211_IFTYPE_STATION!!
+<4>[  113.902707] [I] ssv6200_bss_info_changed(): leave
+<4>[  113.902730] --------------ssv6200_sw_scan_start(): 
+<6>[  113.962583] SSV WLAN driver ssv6200: Lock to channel 2 ([0xce010098]=5d0)!!
+<6>[  114.022613] SSV WLAN driver ssv6200: Lock to channel 3 ([0xce010098]=5f0)!!
+<6>[  114.082504] SSV WLAN driver ssv6200: Lock to channel 4 ([0xce010098]=630)!!
+<6>[  114.142581] SSV WLAN driver ssv6200: Lock to channel 5 ([0xce010098]=670)!!
+<6>[  114.202348] SSV WLAN driver ssv6200: Lock to channel 6 ([0xce010098]=6b0)!!
+<6>[  114.265429] SSV WLAN driver ssv6200: Lock to channel 7 ([0xce010098]=6d0)!!
+<6>[  114.322580] SSV WLAN driver ssv6200: Lock to channel 8 ([0xce010098]=710)!!
+<6>[  114.382621] SSV WLAN driver ssv6200: Lock to channel 9 ([0xce010098]=730)!!
+<6>[  114.442576] SSV WLAN driver ssv6200: Lock to channel 10 ([0xce010098]=770)!!
+<6>[  114.502504] SSV WLAN driver ssv6200: Lock to channel 11 ([0xce010098]=7b0)!!
+<6>[  114.565511] SSV WLAN driver ssv6200: Lock to channel 12 ([0xce010098]=830)!!
+<6>[  114.685632] SSV WLAN driver ssv6200: Lock to channel 13 ([0xce010098]=870)!!
+<6>[  114.805375] SSV WLAN driver ssv6200: Lock to channel 14 ([0xce010098]=8f0)!!
+<6>[  114.937625] SSV WLAN driver ssv6200: Lock to channel 1 ([0xce010098]=590)!!
+<4>[  114.940652] ==============ssv6200_sw_scan_complete(): 
+<4>[  114.940866] NL80211_IFTYPE_STATION!!
+<4>[  114.940953] [I] ssv6200_bss_info_changed(): leave
+<6>[  115.414224] init: waitpid returned pid 920, status = 00000100
+<3>[  115.414266] init: untracked pid 920 exited
+<6>[  128.733337] healthd: battery l=91 v=4044 t=30.0 h=2 st=2 c=69 chg=u
+<4>[  128.912963] NL80211_IFTYPE_STATION!!
+<4>[  128.913000] [I] ssv6200_bss_info_changed(): leave
+<4>[  128.913022] --------------ssv6200_sw_scan_start(): 
+<6>[  128.972623] SSV WLAN driver ssv6200: Lock to channel 2 ([0xce010098]=5d0)!!
+<6>[  129.032544] SSV WLAN driver ssv6200: Lock to channel 3 ([0xce010098]=5f0)!!
+<6>[  129.095858] SSV WLAN driver ssv6200: Lock to channel 4 ([0xce010098]=630)!!
+<6>[  129.155600] SSV WLAN driver ssv6200: Lock to channel 5 ([0xce010098]=670)!!
+<6>[  129.212850] SSV WLAN driver ssv6200: Lock to channel 6 ([0xce010098]=6b0)!!
+<6>[  129.272697] SSV WLAN driver ssv6200: Lock to channel 7 ([0xce010098]=6d0)!!
+<6>[  129.332714] SSV WLAN driver ssv6200: Lock to channel 8 ([0xce010098]=710)!!
+<6>[  129.392759] SSV WLAN driver ssv6200: Lock to channel 9 ([0xce010098]=730)!!
+<6>[  129.457148] SSV WLAN driver ssv6200: Lock to channel 10 ([0xce010098]=770)!!
+<6>[  129.516464] SSV WLAN driver ssv6200: Lock to channel 11 ([0xce010098]=7b0)!!
+<6>[  129.578132] SSV WLAN driver ssv6200: Lock to channel 12 ([0xce010098]=830)!!
+<6>[  129.697123] SSV WLAN driver ssv6200: Lock to channel 13 ([0xce010098]=870)!!
+<6>[  129.816183] SSV WLAN driver ssv6200: Lock to channel 14 ([0xce010098]=8f0)!!
+<6>[  129.947218] SSV WLAN driver ssv6200: Lock to channel 1 ([0xce010098]=590)!!
+<4>[  129.950679] ==============ssv6200_sw_scan_complete(): 
+<4>[  129.950911] NL80211_IFTYPE_STATION!!
+<4>[  129.950996] [I] ssv6200_bss_info_changed(): leave
+<4>[  143.830757] encrypt_task de891800 state is 2
+<4>[  111.316420] CPU1: Booted secondary processor
+<4>[  143.835008] encrypt_task de891800 state is 2
+<4>[  143.923277] NL80211_IFTYPE_STATION!!
+<4>[  143.923305] [I] ssv6200_bss_info_changed(): leave
+<4>[  143.923320] --------------ssv6200_sw_scan_start(): 
+<6>[  143.982078] SSV WLAN driver ssv6200: Lock to channel 2 ([0xce010098]=5d0)!!
+<6>[  144.042043] SSV WLAN driver ssv6200: Lock to channel 3 ([0xce010098]=5f0)!!
+<6>[  144.102197] SSV WLAN driver ssv6200: Lock to channel 4 ([0xce010098]=630)!!
+<6>[  144.162098] SSV WLAN driver ssv6200: Lock to channel 5 ([0xce010098]=670)!!
+<6>[  144.222037] SSV WLAN driver ssv6200: Lock to channel 6 ([0xce010098]=6b0)!!
+<6>[  144.282416] SSV WLAN driver ssv6200: Lock to channel 7 ([0xce010098]=6d0)!!
+<6>[  144.341993] SSV WLAN driver ssv6200: Lock to channel 8 ([0xce010098]=710)!!
+<6>[  144.402151] SSV WLAN driver ssv6200: Lock to channel 9 ([0xce010098]=730)!!
+<6>[  144.461985] SSV WLAN driver ssv6200: Lock to channel 10 ([0xce010098]=770)!!
+<6>[  144.522137] SSV WLAN driver ssv6200: Lock to channel 11 ([0xce010098]=7b0)!!
+<6>[  144.549297] init: waitpid returned pid 1683, status = 00000000
+<3>[  144.549329] init: untracked pid 1683 exited
+<6>[  144.592647] SSV WLAN driver ssv6200: Lock to channel 12 ([0xce010098]=830)!!
+<6>[  144.711992] SSV WLAN driver ssv6200: Lock to channel 13 ([0xce010098]=870)!!
+<6>[  144.835857] SSV WLAN driver ssv6200: Lock to channel 14 ([0xce010098]=8f0)!!
+<6>[  144.956658] SSV WLAN driver ssv6200: Lock to channel 1 ([0xce010098]=590)!!
+<4>[  144.957168] ==============ssv6200_sw_scan_complete(): 
+<4>[  144.957370] NL80211_IFTYPE_STATION!!
+<4>[  144.957456] [I] ssv6200_bss_info_changed(): leave
+<4>[  145.791023] p = de891800
+<5>[  145.809157] CPU1: shutdown
+<6>[  145.809255] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  145.810510] [hotplug]: cpu1 is killed! .
+<4>[  152.166505] tp-gsl  before: x[0] = 657, y[0] = 14, id[0] = 0 
+<4>[  152.178999] tp-gsl  before: x[0] = 656, y[0] = 12, id[0] = 0 
+<4>[  152.194063] tp-gsl  before: x[0] = 656, y[0] = 12, id[0] = 0 
+<4>[  152.209105] tp-gsl  before: x[0] = 656, y[0] = 12, id[0] = 0 
+<4>[  152.224253] tp-gsl  before: x[0] = 657, y[0] = 12, id[0] = 0 
+<4>[  152.239415] tp-gsl  before: x[0] = 657, y[0] = 12, id[0] = 0 
+<4>[  152.254463] tp-gsl  before: x[0] = 657, y[0] = 12, id[0] = 0 
+<4>[  152.269451] tp-gsl  before: x[0] = 655, y[0] = 14, id[0] = 0 
+<4>[  152.824061] encrypt_task de891800 state is 2
+<4>[  145.816279] CPU1: Booted secondary processor
+<4>[  152.829562] encrypt_task de891800 state is 2
+<4>[  154.397961] tp-gsl  before: x[0] = 661, y[0] = 15, id[0] = 0 
+<4>[  154.411155] tp-gsl  before: x[0] = 660, y[0] = 11, id[0] = 0 
+<4>[  154.426080] tp-gsl  before: x[0] = 659, y[0] = 11, id[0] = 0 
+<4>[  154.441378] tp-gsl  before: x[0] = 659, y[0] = 11, id[0] = 0 
+<4>[  154.456562] tp-gsl  before: x[0] = 659, y[0] = 12, id[0] = 0 
+<4>[  154.471700] tp-gsl  before: x[0] = 659, y[0] = 11, id[0] = 0 
+<4>[  154.486581] tp-gsl  before: x[0] = 659, y[0] = 12, id[0] = 0 
+<4>[  154.501594] tp-gsl  before: x[0] = 658, y[0] = 13, id[0] = 0 
+<4>[  154.516593] tp-gsl  before: x[0] = 659, y[0] = 16404, id[0] = 0 
+<4>[  155.290879] p = de891800
+<5>[  155.309976] CPU1: shutdown
+<6>[  155.310488] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  155.311687] [hotplug]: cpu1 is killed! .
+<4>[  156.543232] tp-gsl  before: x[0] = 818, y[0] = 431, id[0] = 0 
+<4>[  156.552810] tp-gsl  before: x[0] = 817, y[0] = 433, id[0] = 0 
+<4>[  156.567797] tp-gsl  before: x[0] = 817, y[0] = 433, id[0] = 0 
+<4>[  156.582886] tp-gsl  before: x[0] = 818, y[0] = 432, id[0] = 0 
+<4>[  156.597974] tp-gsl  before: x[0] = 818, y[0] = 428, id[0] = 0 
+<4>[  156.613066] tp-gsl  before: x[0] = 817, y[0] = 420, id[0] = 0 
+<4>[  158.945503] NL80211_IFTYPE_STATION!!
+<4>[  158.945638] [I] ssv6200_bss_info_changed(): leave
+<4>[  158.945744] --------------ssv6200_sw_scan_start(): 
+<6>[  159.002561] SSV WLAN driver ssv6200: Lock to channel 2 ([0xce010098]=5d0)!!
+<6>[  159.062561] SSV WLAN driver ssv6200: Lock to channel 3 ([0xce010098]=5f0)!!
+<6>[  159.122650] SSV WLAN driver ssv6200: Lock to channel 4 ([0xce010098]=630)!!
+<6>[  159.185281] SSV WLAN driver ssv6200: Lock to channel 5 ([0xce010098]=670)!!
+<6>[  159.245226] SSV WLAN driver ssv6200: Lock to channel 6 ([0xce010098]=6b0)!!
+<6>[  159.305453] SSV WLAN driver ssv6200: Lock to channel 7 ([0xce010098]=6d0)!!
+<6>[  159.365273] SSV WLAN driver ssv6200: Lock to channel 8 ([0xce010098]=710)!!
+<6>[  159.422553] SSV WLAN driver ssv6200: Lock to channel 9 ([0xce010098]=750)!!
+<6>[  159.482555] SSV WLAN driver ssv6200: Lock to channel 10 ([0xce010098]=770)!!
+<6>[  159.542612] SSV WLAN driver ssv6200: Lock to channel 11 ([0xce010098]=7b0)!!
+<6>[  159.602836] SSV WLAN driver ssv6200: Lock to channel 12 ([0xce010098]=830)!!
+<6>[  159.722720] SSV WLAN driver ssv6200: Lock to channel 13 ([0xce010098]=870)!!
+<6>[  159.842263] SSV WLAN driver ssv6200: Lock to channel 14 ([0xce010098]=8f0)!!
+<4>[  159.951412] tp-gsl  before: x[0] = 664, y[0] = 15, id[0] = 0 
+<4>[  159.967257] tp-gsl  before: x[0] = 664, y[0] = 12, id[0] = 0 
+<6>[  159.969504] SSV WLAN driver ssv6200: Lock to channel 1 ([0xce010098]=590)!!
+<4>[  159.969631] ==============ssv6200_sw_scan_complete(): 
+<4>[  159.969669] NL80211_IFTYPE_STATION!!
+<4>[  159.969682] [I] ssv6200_bss_info_changed(): leave
+<4>[  159.976723] tp-gsl  before: x[0] = 663, y[0] = 12, id[0] = 0 
+<4>[  159.991816] tp-gsl  before: x[0] = 664, y[0] = 12, id[0] = 0 
+<4>[  160.006796] tp-gsl  before: x[0] = 664, y[0] = 12, id[0] = 0 
+<4>[  160.022017] tp-gsl  before: x[0] = 664, y[0] = 12, id[0] = 0 
+<4>[  160.037289] tp-gsl  before: x[0] = 665, y[0] = 13, id[0] = 0 
+<4>[  160.052136] tp-gsl  before: x[0] = 667, y[0] = 21, id[0] = 0 
+<4>[  160.459460] tp-gsl  before: x[0] = 668, y[0] = 16403, id[0] = 0 
+<4>[  160.474830] tp-gsl  before: x[0] = 666, y[0] = 11, id[0] = 0 
+<4>[  160.489409] tp-gsl  before: x[0] = 666, y[0] = 11, id[0] = 0 
+<4>[  160.504573] tp-gsl  before: x[0] = 667, y[0] = 11, id[0] = 0 
+<4>[  160.519571] tp-gsl  before: x[0] = 668, y[0] = 12, id[0] = 0 
+<4>[  160.534680] tp-gsl  before: x[0] = 673, y[0] = 16403, id[0] = 0 
+<4>[  160.824365] encrypt_task de891800 state is 2
+<4>[  155.317133] CPU1: Booted secondary processor
+<4>[  160.829426] encrypt_task de891800 state is 2
+<4>[  161.729088] tp-gsl  before: x[0] = 732, y[0] = 16672, id[0] = 0 
+<4>[  161.741492] tp-gsl  before: x[0] = 733, y[0] = 283, id[0] = 0 
+<4>[  161.756609] tp-gsl  before: x[0] = 733, y[0] = 282, id[0] = 0 
+<4>[  161.771755] tp-gsl  before: x[0] = 734, y[0] = 281, id[0] = 0 
+<4>[  161.786734] tp-gsl  before: x[0] = 734, y[0] = 281, id[0] = 0 
+<4>[  161.802010] tp-gsl  before: x[0] = 735, y[0] = 280, id[0] = 0 
+<4>[  161.816939] tp-gsl  before: x[0] = 735, y[0] = 278, id[0] = 0 
+<4>[  161.832423] tp-gsl  before: x[0] = 735, y[0] = 274, id[0] = 0 
+<4>[  161.847385] tp-gsl  before: x[0] = 735, y[0] = 267, id[0] = 0 
+<4>[  161.862608] tp-gsl  before: x[0] = 734, y[0] = 250, id[0] = 0 
+<4>[  161.877371] tp-gsl  before: x[0] = 733, y[0] = 239, id[0] = 0 
+<4>[  161.892343] tp-gsl  before: x[0] = 731, y[0] = 230, id[0] = 0 
+<4>[  161.907461] tp-gsl  before: x[0] = 730, y[0] = 223, id[0] = 0 
+<4>[  161.922656] tp-gsl  before: x[0] = 729, y[0] = 218, id[0] = 0 
+<4>[  161.937694] tp-gsl  before: x[0] = 729, y[0] = 213, id[0] = 0 
+<4>[  161.952810] tp-gsl  before: x[0] = 728, y[0] = 207, id[0] = 0 
+<4>[  161.967828] tp-gsl  before: x[0] = 727, y[0] = 201, id[0] = 0 
+<4>[  161.982968] tp-gsl  before: x[0] = 725, y[0] = 194, id[0] = 0 
+<4>[  161.997944] tp-gsl  before: x[0] = 725, y[0] = 181, id[0] = 0 
+<4>[  162.013004] tp-gsl  before: x[0] = 724, y[0] = 176, id[0] = 0 
+<4>[  162.028327] tp-gsl  before: x[0] = 723, y[0] = 173, id[0] = 0 
+<4>[  162.043638] tp-gsl  before: x[0] = 723, y[0] = 170, id[0] = 0 
+<4>[  162.058427] tp-gsl  before: x[0] = 723, y[0] = 167, id[0] = 0 
+<4>[  162.073331] tp-gsl  before: x[0] = 722, y[0] = 164, id[0] = 0 
+<4>[  162.088404] tp-gsl  before: x[0] = 722, y[0] = 162, id[0] = 0 
+<4>[  162.103738] tp-gsl  before: x[0] = 722, y[0] = 158, id[0] = 0 
+<4>[  162.118652] tp-gsl  before: x[0] = 722, y[0] = 154, id[0] = 0 
+<4>[  162.133633] tp-gsl  before: x[0] = 725, y[0] = 151, id[0] = 0 
+<4>[  162.148766] tp-gsl  before: x[0] = 728, y[0] = 16540, id[0] = 0 
+<4>[  162.601719] tp-gsl  before: x[0] = 864, y[0] = 478, id[0] = 0 
+<4>[  162.616482] tp-gsl  before: x[0] = 862, y[0] = 479, id[0] = 0 
+<4>[  162.631596] tp-gsl  before: x[0] = 861, y[0] = 480, id[0] = 0 
+<4>[  162.646599] tp-gsl  before: x[0] = 860, y[0] = 481, id[0] = 0 
+<4>[  162.661693] tp-gsl  before: x[0] = 859, y[0] = 481, id[0] = 0 
+<4>[  162.677219] tp-gsl  before: x[0] = 860, y[0] = 481, id[0] = 0 
+<4>[  162.692054] tp-gsl  before: x[0] = 860, y[0] = 480, id[0] = 0 
+<4>[  162.706959] tp-gsl  before: x[0] = 859, y[0] = 478, id[0] = 0 
+<4>[  162.721954] tp-gsl  before: x[0] = 858, y[0] = 16861, id[0] = 0 
+<3>[  163.030122] SSV WLAN driver ssv6200: Removing interface 3c:cf:5b:58:a1:82. PS=0
+<5>[  163.043196] init: service 'p2p_supplicant' is being killed
+<6>[  163.203602] init: waitpid returned pid 1276, status = 00000009
+<5>[  163.203808] init: process 'p2p_supplicant', pid 1276 exited
+<3>[  163.323413] SSV WLAN driver ssv6200: Removing interface 3c:cf:5b:58:a1:83. PS=0
+<6>[  163.331899] ssv6200_stop(): sc->ps_status=0
+<4>[  163.332224] ssv6xxx_sdio_irq_disable
+<4>[  163.332426] ssv6200_stop(): leave
+<4>[  163.536752] ssv6xxx_dev_remove(): pdev=df8b2a00, hw=c90ae360
+<4>[  163.536779] ssv6xxx_deinit_device(): 
+<4>[  163.752813] ssv6xxx_deinit_hw(): 
+<4>[  163.753658] [A] ssv6xxx_pbuf_free addr[80000000][8780]
+<4>[  163.754373] [A] ssv6xxx_pbuf_free addr[80010000][8781]
+<4>[  163.754832] [A] ssv6xxx_pbuf_free addr[80020000][8782]
+<4>[  163.756614] [A] ssv6xxx_pbuf_free addr[80030000][8783]
+<4>[  163.757154] [A] ssv6xxx_pbuf_free addr[80040000][8784]
+<4>[  163.757672] [A] ssv6xxx_pbuf_free addr[80050000][8785]
+<4>[  163.758128] [A] ssv6xxx_pbuf_free addr[80060000][8786]
+<4>[  163.758569] [A] ssv6xxx_pbuf_free addr[80070000][8787]
+<4>[  163.758814] ssv6xxx_deinit_softc():
+<4>[  163.758999] Stopping encrypt task 1: ...
+<4>[  163.759211] [MT-ENCRYPT]: Quit Encryption task loop ...
+<4>[  163.759883] Stopped encrypt task 1: ...
+<4>[  163.759974] Stopping encrypt task 2: ...
+<4>[  163.760560] [MT-ENCRYPT]: Quit Encryption task loop ...
+<4>[  163.760844] Stopped encrypt task 2: ...
+<4>[  163.760936] Stopping encrypt task 3: ...
+<4>[  163.761122] [MT-ENCRYPT]: Quit Encryption task loop ...
+<4>[  163.761675] Stopped encrypt task 3: ...
+<4>[  163.761763] Stopping encrypt task 4: ...
+<4>[  163.761933] [MT-ENCRYPT]: Quit Encryption task loop ...
+<4>[  163.762502] Stopped encrypt task 4: ...
+<4>[  163.762583] Stopping TX task...
+<4>[  163.762818] Quit TX task loop...
+<4>[  163.763300] Stopped TX task.
+<4>[  163.763380] Stopping RX task...
+<4>[  163.763586] Quit RX task loop...
+<4>[  163.763789] Stopped RX task.
+<4>[  163.763875] [MT-ENCRYPT]: end of de-init
+<4>[  163.764575] ssv6xxx_hci_deregister(): 
+<4>[  163.764801] ssv6xxx_sdio_irq_disable
+<4>[  163.765446] ieee80211_free_hw(): 
+<6>[  163.765701] ssv6200: Driver unloaded
+<6>[  163.768886] ssv6xxx_sdio_exit
+<4>[  163.769135] ssv6xxx_sdio_remove..........
+<4>[  163.769216] ssv6xxx_sdio_remove - ssv6xxx_sdio_irq_disable
+<4>[  163.769298] ssv6xxx_sdio_irq_disable
+<4>[  163.769632] [mmc]: sdc1 set ios: clk 25000000Hz bm PP pm ON vdd 3.3V width 4 timing SD-HS(SDR25) dt B
+<4>[  163.770817] [mmc]: mclk 0xf1c2008c 0x8141030b
+<5>[  163.803960] CPU1: shutdown
+<6>[  163.804019] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  163.805114] [hotplug]: cpu1 is killed! .
+<4>[  163.835978] ssv6xxx_sdio_remove - disable mask
+<4>[  163.836001] ssv6xxx_sdio_power_off
+<4>[  163.836145] platform_device_del 
+<4>[  163.837055] platform_device_put 
+<4>[  163.837082] ssv6xxx_sdio_remove leave..........
+<4>[  163.837782] ssv pwr on=0
+<4>[  163.837811] gpio ssv6051_wl_chip_en set val 0, act val 0
+<4>[  163.837827] ssv pwr on=0
+<4>[  163.837842] gpio ssv6051_wl_chip_en set val 0, act val 0
+<4>[  163.837858] ssv pwr on=0
+<4>[  163.837873] gpio ssv6051_wl_chip_en set val 0, act val 0
+<4>[  163.837888] ssv pwr on=0
+<4>[  163.837904] gpio ssv6051_wl_chip_en set val 0, act val 0
+<6>[  163.838271] mmc1: card 0001 removed
+<4>[  163.838432] [mmc]: mmc not poweroff notifiy
+<4>[  163.838458] [mmc]: sdc1 set ios: clk 0Hz bm OD pm OFF vdd 3.3V width 1 timing LEGACY(SDR12) dt B
+<4>[  163.838749] [mmc]: sdc1 card_power_off start...
+<4>[  163.838765] [mmc]: sdc1 power_supply is null
+<4>[  163.838781] [mmc]: sdc1 card_power_off ok
+<6>[  163.841938] ssv_wifi_device_release
+<4>[  163.813221] CPU1: Booted secondary processor
+<6>[  167.007505] init: waitpid returned pid 1679, status = 00006800
+<3>[  167.007905] init: untracked pid 1679 exited
+<5>[  168.309339] CPU1: shutdown
+<6>[  168.309453] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  168.310642] [hotplug]: cpu1 is killed! .
+<6>[  170.876548] healthd: battery l=91 v=4052 t=30.0 h=2 st=2 c=8 chg=u
+<6>[  188.734112] healthd: battery l=91 v=4053 t=30.0 h=2 st=2 c=8 chg=u
+<6>[  194.789661] CPU Budget:update CPU 0 cpufreq max to 1200000 min to 120000
+<4>[  194.789725] [dsm] store_scene: 0
+<6>[  194.816826] request_suspend_state: sleep (0->3) at 194816795013 (2014-01-03 13:07:10.529964386 UTC)
+<5>[  194.817124] [VFE]vfe early suspend
+<5>[  194.817143] [VFE]vfe power off in early suspend
+<5>[  194.817158] [VFE]vfe_suspend_helper
+<5>[  194.817171] [VFE]Set camera to standy off and power off !
+<5>[  194.817202] [VFE]mclk on
+<4>[  194.835052] ###########close all layers 0
+<5>[  194.872364] [VFE]mclk off
+<4>[  194.892482] [VFE_WARN]vfe vpu clock is null
+<5>[  194.892509] [VFE]vfe_suspend done!
+<4>[  194.950453] twi_stop()440 - [i2c0] i2c state isn't idle(0xf8)
+<4>[  194.950482] sunxi_i2c_core_process()801 - [i2c0] STOP failed!
+<4>[  194.971483] gsl_ts_early_suspend->is_suspended:1611333907
+<6>[  194.971506] Mali early suspend begin
+<6>[  194.971831] Mali early suspend end
+<6>[  194.971845] backlight_early_suspend
+<6>[  194.972026] [LCD]close, step 0 finish
+<6>[  194.993167] CPU Budget:update CPU 0 cpufreq max to 1200000 min to 120000
+<4>[  194.993220] [dsm] store_scene: 0
+<6>[  195.010175] [LCD]close, step 1 finish
+<6>[  195.020419] [LCD]close, step 2 finish
+<4>[  195.230704] axp pconf set pin [GPIO2] data to [0]
+<6>[  195.230724] [LCD]close, step 3 finish
+<4>[  168.316141] CPU1: Booted secondary processor
+<6>[  195.750111] backlight_early_suspend finish
+<5>[  197.299523] CPU1: shutdown
+<6>[  197.299644] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  197.300833] [hotplug]: cpu1 is killed! .
+<6>[  248.731064] healthd: battery l=91 v=4101 t=30.0 h=2 st=2 c=301 chg=u
+<6>[  308.731015] healthd: battery l=91 v=4107 t=30.0 h=2 st=2 c=301 chg=u
+<6>[  368.731478] healthd: battery l=91 v=4111 t=30.0 h=2 st=2 c=299 chg=u
+<6>[  428.730991] healthd: battery l=91 v=4115 t=30.0 h=2 st=2 c=302 chg=u
+<6>[  488.731008] healthd: battery l=91 v=4118 t=30.0 h=2 st=2 c=298 chg=u
+<6>[  548.731135] healthd: battery l=91 v=4121 t=30.0 h=2 st=2 c=299 chg=u
+<6>[  581.694986] healthd: battery l=92 v=4122 t=30.0 h=2 st=2 c=297 chg=u
+<6>[  608.731117] healthd: battery l=92 v=4125 t=30.0 h=2 st=2 c=301 chg=u
+<6>[  668.731104] healthd: battery l=92 v=4129 t=30.0 h=2 st=2 c=301 chg=u
+<6>[  701.419260] CPU Budget:update CPU 0 cpufreq max to 1200000 min to 120000
+<4>[  701.419313] [dsm] store_scene: 0
+<6>[  701.439241] request_suspend_state: wakeup (3->0) at 701439213087 (2014-01-03 13:15:37.152382501 UTC)
+<6>[  701.439338] backlight_late_resume
+<4>[  701.440380] axp pconf set pin [GPIO2] data to [1]
+<6>[  701.440985] [LCD]open, step 0 finish
+<6>[  701.480200] [LCD]open, step 1 finish
+<6>[  701.540199] [LCD]open, step 2 finish
+<6>[  701.650243] [LCD]open, step 3 finish
+<6>[  701.660094] backlight_late_resume finish
+<6>[  701.660109] Mali late resume begin
+<6>[  701.660423] Mali late resume end222222222####2681#####2222222222
+<4>[  701.780171] ts->is_suspended:0
+<5>[  701.780189] [VFE]vfe late resume
+<5>[  701.780196] [VFE]vfe power on in late resume
+<5>[  701.780278] [VFE]resume_work_handle, vip_sel = 0!
+<4>[  701.786342] [VFE_WARN]vfe vpu clock is null
+<5>[  701.809911] [VFE]mclk on
+<4>[  197.306468] CPU1: Booted secondary processor
+<5>[  701.866794] [VFE]mclk off
+<5>[  701.866829] [VFE]vfe resume work end!
+<4>[  702.049736] tp-gsl  before: x[0] = 709, y[0] = 302, id[0] = 0 
+<4>[  702.064812] tp-gsl  before: x[0] = 711, y[0] = 306, id[0] = 0 
+<4>[  702.079886] tp-gsl  before: x[0] = 713, y[0] = 308, id[0] = 0 
+<4>[  702.095070] tp-gsl  before: x[0] = 725, y[0] = 311, id[0] = 0 
+<4>[  702.110090] tp-gsl  before: x[0] = 748, y[0] = 311, id[0] = 0 
+<4>[  702.125102] tp-gsl  before: x[0] = 775, y[0] = 308, id[0] = 0 
+<4>[  702.140350] tp-gsl  before: x[0] = 809, y[0] = 305, id[0] = 0 
+<4>[  702.156529] tp-gsl  before: x[0] = 842, y[0] = 301, id[0] = 0 
+<4>[  702.170417] tp-gsl  before: x[0] = 881, y[0] = 300, id[0] = 0 
+<4>[  702.185504] tp-gsl  before: x[0] = 930, y[0] = 301, id[0] = 0 
+<4>[  702.200623] tp-gsl  before: x[0] = 946, y[0] = 303, id[0] = 0 
+<4>[  702.246207] tmp1=00008e00,buf[0]=00,buf[1]=8e,buf[2]=00,buf[3]=00
+<5>[  703.809258] CPU1: shutdown
+<6>[  703.809369] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  703.810556] [hotplug]: cpu1 is killed! .
+<4>[  703.967244] tp-gsl  before: x[0] = 554, y[0] = 13, id[0] = 0 
+<4>[  703.981107] tp-gsl  before: x[0] = 553, y[0] = 12, id[0] = 0 
+<4>[  703.996090] tp-gsl  before: x[0] = 554, y[0] = 12, id[0] = 0 
+<4>[  704.011168] tp-gsl  before: x[0] = 555, y[0] = 13, id[0] = 0 
+<4>[  704.026198] tp-gsl  before: x[0] = 555, y[0] = 13, id[0] = 0 
+<4>[  704.041473] tp-gsl  before: x[0] = 560, y[0] = 14, id[0] = 0 
+<4>[  703.816372] CPU1: Booted secondary processor
+<4>[  705.100561] tp-gsl  before: x[0] = 912, y[0] = 322, id[0] = 0 
+<4>[  705.113047] tp-gsl  before: x[0] = 913, y[0] = 323, id[0] = 0 
+<4>[  705.128194] tp-gsl  before: x[0] = 911, y[0] = 323, id[0] = 0 
+<4>[  705.143253] tp-gsl  before: x[0] = 908, y[0] = 313, id[0] = 0 
+<5>[  706.303774] CPU1: shutdown
+<6>[  706.303828] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  706.304935] [hotplug]: cpu1 is killed! .
+<4>[  708.165408] tp-gsl  before: x[0] = 777, y[0] = 475, id[0] = 0 
+<4>[  708.177894] tp-gsl  before: x[0] = 773, y[0] = 473, id[0] = 0 
+<4>[  708.193029] tp-gsl  before: x[0] = 773, y[0] = 476, id[0] = 0 
+<4>[  708.208129] tp-gsl  before: x[0] = 773, y[0] = 476, id[0] = 0 
+<4>[  708.223197] tp-gsl  before: x[0] = 774, y[0] = 475, id[0] = 0 
+<4>[  706.313067] CPU1: Booted secondary processor
+<5>[  709.084013] [VFE]vfe_open
+<5>[  709.084038] [VFE]..........................vfe clk open!.......................
+<5>[  709.084066] [VFE]vfe_open ok
+<4>[  709.084167] [VFE_WARN]NOT found this item:  sp0a19, you can add this sensor in the sensor_list_t!
+<4>[  709.084194] [VFE_WARN]Not find this sensor info, Set vfe core clk = 500000000, after Set vfe core clk = 297000000 
+<4>[  709.084210] NOT_SUPPORT_THIS_FUNCTION:sun8iw3p1_isp_set_table_addr, line: 368
+<5>[  709.084232] [VFE]mclk on
+<4>[  709.100154] sp0a19------------------------------------------james--16-47
+<5>[  710.011038] [VFE]buffer_setup, buffer count=7, size=460800
+<5>[  710.209595] [VFE]capture video mode!
+<5>[  710.334206] [VFE]capture video first frame done!
+<5>[  710.802091] CPU1: shutdown
+<6>[  710.802142] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  710.803235] [hotplug]: cpu1 is killed! .
+<6>[  711.943525] healthd: battery l=92 v=4086 t=30.0 h=2 st=2 c=54 chg=u
+<4>[  710.811372] CPU1: Booted secondary processor
+<6>[  723.179499] init: waitpid returned pid 1974, status = 00000000
+<3>[  723.179534] init: untracked pid 1974 exited
+<5>[  724.294827] CPU1: shutdown
+<6>[  724.294853] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  724.294922] [hotplug]: cpu1 is killed! .
+<6>[  728.735275] healthd: battery l=92 v=4083 t=30.0 h=2 st=2 c=70 chg=u
+<4>[  746.762113] tp-gsl  before: x[0] = 728, y[0] = 16408, id[0] = 0 
+<4>[  746.777119] tp-gsl  before: x[0] = 731, y[0] = 15, id[0] = 0 
+<4>[  746.792272] tp-gsl  before: x[0] = 731, y[0] = 12, id[0] = 0 
+<4>[  746.807360] tp-gsl  before: x[0] = 731, y[0] = 12, id[0] = 0 
+<4>[  746.822443] tp-gsl  before: x[0] = 732, y[0] = 12, id[0] = 0 
+<4>[  746.837761] tp-gsl  before: x[0] = 733, y[0] = 12, id[0] = 0 
+<4>[  746.852719] tp-gsl  before: x[0] = 733, y[0] = 12, id[0] = 0 
+<4>[  746.867864] tp-gsl  before: x[0] = 735, y[0] = 12, id[0] = 0 
+<4>[  746.882896] tp-gsl  before: x[0] = 735, y[0] = 12, id[0] = 0 
+<4>[  746.898254] tp-gsl  before: x[0] = 736, y[0] = 12, id[0] = 0 
+<4>[  746.913182] tp-gsl  before: x[0] = 736, y[0] = 12, id[0] = 0 
+<4>[  746.928374] tp-gsl  before: x[0] = 737, y[0] = 21, id[0] = 0 
+<4>[  747.438454] sndpcm_unmute,line:1099
+<4>[  748.107155] tp-gsl  before: x[0] = 427, y[0] = 15, id[0] = 0 
+<4>[  748.122167] tp-gsl  before: x[0] = 425, y[0] = 12, id[0] = 0 
+<4>[  748.137288] tp-gsl  before: x[0] = 425, y[0] = 12, id[0] = 0 
+<4>[  748.152398] tp-gsl  before: x[0] = 425, y[0] = 12, id[0] = 0 
+<4>[  748.167556] tp-gsl  before: x[0] = 426, y[0] = 13, id[0] = 0 
+<4>[  748.182602] tp-gsl  before: x[0] = 427, y[0] = 13, id[0] = 0 
+<4>[  748.197729] tp-gsl  before: x[0] = 428, y[0] = 19, id[0] = 0 
+<5>[  748.423678] [VFE]vfe_close
+<5>[  748.433576] [VFE]mclk off
+<5>[  748.433617] [VFE]..........................vfe clk close!.......................
+<5>[  748.433650] [VFE]vfe_close end
+<4>[  724.300039] CPU1: Booted secondary processor
+<4>[  749.391653] tp-gsl  before: x[0] = 837, y[0] = 290, id[0] = 0 
+<4>[  749.406635] tp-gsl  before: x[0] = 837, y[0] = 292, id[0] = 0 
+<4>[  749.421801] tp-gsl  before: x[0] = 837, y[0] = 296, id[0] = 0 
+<4>[  749.436903] tp-gsl  before: x[0] = 835, y[0] = 312, id[0] = 0 
+<4>[  749.452056] tp-gsl  before: x[0] = 836, y[0] = 347, id[0] = 0 
+<4>[  749.467331] tp-gsl  before: x[0] = 834, y[0] = 366, id[0] = 0 
+<4>[  749.482226] tp-gsl  before: x[0] = 835, y[0] = 413, id[0] = 0 
+<4>[  749.497352] tp-gsl  before: x[0] = 837, y[0] = 464, id[0] = 0 
+<4>[  749.512642] tp-gsl  before: x[0] = 841, y[0] = 502, id[0] = 0 
+<4>[  749.875528] tp-gsl  before: x[0] = 698, y[0] = 249, id[0] = 0 
+<4>[  749.890309] tp-gsl  before: x[0] = 697, y[0] = 264, id[0] = 0 
+<4>[  749.905417] tp-gsl  before: x[0] = 695, y[0] = 279, id[0] = 0 
+<4>[  749.920426] tp-gsl  before: x[0] = 694, y[0] = 291, id[0] = 0 
+<4>[  749.935618] tp-gsl  before: x[0] = 695, y[0] = 317, id[0] = 0 
+<4>[  749.950678] tp-gsl  before: x[0] = 696, y[0] = 360, id[0] = 0 
+<4>[  749.965726] tp-gsl  before: x[0] = 702, y[0] = 419, id[0] = 0 
+<4>[  749.980899] tp-gsl  before: x[0] = 713, y[0] = 479, id[0] = 0 
+<4>[  750.403950] tp-gsl  before: x[0] = 849, y[0] = 237, id[0] = 0 
+<4>[  750.419137] tp-gsl  before: x[0] = 848, y[0] = 243, id[0] = 0 
+<4>[  750.434231] tp-gsl  before: x[0] = 849, y[0] = 273, id[0] = 0 
+<4>[  750.449326] tp-gsl  before: x[0] = 846, y[0] = 294, id[0] = 0 
+<4>[  750.464500] tp-gsl  before: x[0] = 842, y[0] = 341, id[0] = 0 
+<4>[  750.479584] tp-gsl  before: x[0] = 840, y[0] = 393, id[0] = 0 
+<5>[  751.302043] CPU1: shutdown
+<6>[  751.302097] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  751.303202] [hotplug]: cpu1 is killed! .
+<4>[  754.895293] tp-gsl  before: x[0] = 764, y[0] = 467, id[0] = 0 
+<4>[  754.907936] tp-gsl  before: x[0] = 765, y[0] = 468, id[0] = 0 
+<4>[  754.923163] tp-gsl  before: x[0] = 766, y[0] = 469, id[0] = 0 
+<4>[  754.938286] tp-gsl  before: x[0] = 766, y[0] = 468, id[0] = 0 
+<4>[  754.953316] tp-gsl  before: x[0] = 766, y[0] = 468, id[0] = 0 
+<4>[  751.311330] CPU1: Booted secondary processor
+<5>[  755.646264] [VFE]vfe_open
+<5>[  755.646287] [VFE]..........................vfe clk open!.......................
+<5>[  755.646312] [VFE]vfe_open ok
+<4>[  755.646352] [VFE_WARN]NOT found this item:  sp0a19, you can add this sensor in the sensor_list_t!
+<4>[  755.646376] [VFE_WARN]Not find this sensor info, Set vfe core clk = 500000000, after Set vfe core clk = 297000000 
+<4>[  755.646391] NOT_SUPPORT_THIS_FUNCTION:sun8iw3p1_isp_set_table_addr, line: 368
+<5>[  755.646411] [VFE]mclk on
+<4>[  755.670069] sp0a19------------------------------------------james--16-47
+<5>[  756.510214] [VFE]buffer_setup, buffer count=7, size=460800
+<5>[  756.649200] [VFE]capture video mode!
+<5>[  756.773825] [VFE]capture video first frame done!
+<5>[  757.306157] CPU1: shutdown
+<6>[  757.306220] [hotplug]: cpu(0) try to kill cpu(1)
+<6>[  757.307354] [hotplug]: cpu1 is killed! .
+<6>[  788.724399] healthd: battery l=92 v=4072 t=30.0 h=2 st=2 c=70 chg=u

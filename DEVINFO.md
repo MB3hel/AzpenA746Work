@@ -42,36 +42,151 @@ Memory Details:
 - From [here](https://linux-sunxi.org/DDR3): `DDR3-1333H (supports down binning to DDR3-1066F), x8, density: 2G, page size: 1K `
 
 Storage Details:
-- 8GB NAND chip (details unknown)
-- TODO: Details
+- 8GB NAND chip
+- Markings
+    ```
+    PF144
+    -IOAL
+    1732
+    ```
+- Also has a "S" logo on it. Not sure what manufacturer / vendor this is.
+- I suspect this is a counterfeit / rebinned SK Hynix `H27UCG8T2ETR-BC` (128 G-bit = 8 G-byte). This assumption is based on pictures of Aoson_M751S tablet using this chip on a very similar board. The chip has the same form factor and capacity.
 
 Battery Details:
-- TODO
+- Model: `TRB357095`
+- Capacity: 10.36 Wh / 2800mAh
+- Voltage: 3.7V
+- Other text on my model: `2018/01/03`
 
 LCD Panel Details:
-- TODO
+- Back of panel is marked `WJSW070117B    C.L070.0929-17A0    20171221`
+- The cable that connects to the `LCD` port on the PCB is labeled `FPC.070080AV1`, `17.06.21`, `H 1712`
+
+Touchscreen Details:
+- Silead `GSL1680` chip
 
 GPS Details:
-- TODO
+- No GPS in this tablet
 
 Accelerometer Details:
-- TODO
+- Uses the `mc32x0` driver / kernel module
+- Chip markings:
+    ```
+    DY7H
+    D5D
+    ```
+- These markings do not match a mCube mc3210, mc3230, or mc3250. Thus, this is probably a "compatible" chip from who knows what manufacturer. 
 
 WiFi Details:
-- TODO
+- Android indicates it is using `ssv6200`
+- Driver / kernel component seems to be `SSV6XXX_SDIO` and named `SSV WLAN driver`
+- Chip markings (note: 'e' on second line is very small):
+    ```
+    SV6051Z
+    TAB6e
+    CMT23
+    ```
 
 Bluetooth Details:
-- TODO
+- None in this tablet
 
 Vibrator Details:
-- TODO
+- None in this tablet
 
 Camera Details:
-- TODO
+- Camera sensor box has no markings
+- Ribbon cable is marked as follows (there is also a KYT logo)
+    ```
+    KYT-1081-V1.0
+    20150908
+    SPOA19
+    .WD
+    ```
+- Android dmesg logs reference `sp0a19`, so this is assumed to be the camera module. This is also a loaded kernel module.
 
+Mainboard (PCB) Details:
+- Back silkscreen reads:
+    ```
+    A33-751S-V3.0
+    -09-2016.05.07
+    ```
+- Front sikscreen reads:
+    ```
+    ALONG
+    AL-A33-751S-V3.0
+    -09-2016.05.07
+    ```
+- Large Sticker reads:
+    ```
+    A33-751S-V3.0    512+8
+    SN: 18010050-01AL1043
+    ```
+- Large sticker also contains the number 6794, the large characters 'S' and 'D' plus some non-latin alphabet symbols.
+- Smaller sticker reads
+    ```
+    751S
+    512+8G
+    P1K
+    ```
+- There seems to be a microphone on the back of this board, but it wouldn't be useful in the tablet
 
 
 ## PCB Pictures and Tablet Teardown
 
-TODO
+*The tablet is disassembled by removing two screws on the side of the tablet with the volume and power keys.*
 
+
+TODO: Open image
+
+
+TODO: After tape
+
+
+
+Closeup images of PCB
+
+TODO: Front of PCB
+
+TODO: Back of PCB
+
+TODO: Battery images
+
+TODO: LCD Panel images
+
+TODO: Digitizer images
+
+
+
+Development configuration:
+
+TODO: Pictures (front and back)
+
+
+
+PCB Annotated Images
+
+TODO: Both sides
+
+## Notes
+
+This board is seemingly referred to as `al-a33-751s-v3.0`. There seem to be a few different tablets using it. No stock firmware for it has really been found online from my searching. There are some possible firmwares for older versions (`al-a33-751s-v1.2` or `v1.1`, etc). However, it seems like at least the wifi module was changed for v3 so these firmware files won't work properly at least (if they work at all).
+
+Fun fact: The name for this device (`along-6051`) seems to be due to a company going by along producing (only) these a33-751s boards. The v3 board uses a wifi chip marked `sv6051z`. Thus I think the name comes from `company-wifimodule` format.
+
+Similar devices:
+
+This [Aoson_M751s](https://linux-sunxi.org/Aoson_M751s) uses an almost identical `al-ax3-751b-v1.0` board.
+
+The [Finepower_N1](https://linux-sunxi.org/Finepower_N1) is similar in a lot of ways and may be using an earlier revision of this board.
+
+Several [Q8 Format](https://linux-sunxi.org/Format_Q8#A33_based) A33 tablets may also be similar. This could be a starting point for a device tree. It may just work as is too.
+
+Also seems similar to [Inet_D70_A33](https://linux-sunxi.org/Inet_D70_A33)
+
+
+List of [A33 Tablets](https://linux-sunxi.org/Category:A33_Tablets)
+
+
+
+
+[FCC ID](https://fccid.io/2ABKRA727) uses name "Dongguan Mingtel Digital Technology". Photos in the exhibits seem to be of an older A23 based tablet, but the name "Azpen" is used.

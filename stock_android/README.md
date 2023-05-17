@@ -7,6 +7,7 @@ Lots of info extracted from stock Android OS
 - `converted.dts`: Dts auto generated from `script.fex` using [FEX2DTS](https://github.com/SdtElectronics/FEX2DTS). No idea if this is valid or not.
 - `default.prop`: `/default.prop`
 - `dmesg.txt`: Output from `dmesg` after tablet has fully booted and waited for at least 5 minutes.
+- `dmesg.txt`: Output from `dmesg` with wifi turned on
 - `dumsys.txt` Output from `dumpsys`
 - `info_from_stock.txt`: Output of various potentially useful commands
 - `part_map.txt`: Partition map information extracted from `/dev/block/by-name`
