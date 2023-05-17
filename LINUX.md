@@ -370,8 +370,6 @@ The resultant file of interest is `u-boot-sunxi-with-spl.bin`
 
 ### Building kernel
 
-TODO: Building using `sun8i-a33-q8-tablet.dts`
-
 ```sh
 wget https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/linux-6.3.tar.gz
 tar --extract --gzip -f linux-6.3.tar.gz
@@ -401,7 +399,108 @@ ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=../linux-6.3-out/ m
 make INSTALL_HDR_PATH=../linux-6.3-out/ ARCH=arm headers_install
 ```
 
+The resulting files will be in the `linux-6.3-out` directory.
+
 
 ### Building SD Card
 
-TODO
+*Note: the SD card is assumed to be `/dev/mmcblk0` in the following instructions. Change as needed.*
+
+Clean the sd card (this will also destroy partition table).
+
+```sh
+# Make sure all partitions of the card are unmounted before running this command
+sudo dd if=/dev/zero of=/dev/mmcblk0 bs=1M count=1
+```
+
+Make a partition table on the card
+
+```sh
+sudo parted /dev/mmcblk0 mktable msdos
+```
+
+Create and format partitions:
+
+- One "boot" partition (16MB, FAT16)
+- One "root" partition (rest of card, ext4)
+
+```sh
+sudo parted /dev/mmcblk0 mkpart primary fat16 1MiB 17MiB
+sudo parted /dev/mmcblk0 mkpart primary ext4 17MiB 100%
+
+sudo mkfs.vfat /dev/mmcblk0p1
+sudo mkfs.ext4 /dev/mmcblk0p2
+```
+
+Install bootloader to card
+
+```sh
+sudo dd if=u-boot/u-boot-sunxi-with-spl.bin of=/dev/mmcblk0 bs=1024 seek=8
+```
+
+Setup boot partition
+
+```sh
+# Mount boot partition
+sudo mkdir /mnt/boot
+sudo mount /dev/mmcblk0p1 /mnt/boot
+
+# Copy required files
+# Note: dts file is optional, just for end users to reference sources for the dtb file)
+sudo cp linux-6.3-out/sun8i-a33-q8-tablet.dtb /mnt/boot/
+sudo cp linux-6.3-out/sun8i-a33-q8-tablet.dts /mnt/boot/
+sudo cp linux-6.3-out/zImage /mnt/boot/
+```
+
+Make boot script (`/mnt/boot/boot.cmd`)
+
+```
+fatload mmc 0 0x46000000 zImage
+fatload mmc 0 0x49000000 sun8i-a33-q8-tablet.dtb
+
+setenv bootargs console=ttyS0,115200 earlyprintk root=/dev/mmcblk0p2 rootwait panic=10 ${extra}
+
+bootz 0x46000000 - 0x49000000
+```
+
+Compile boot script
+
+```sh
+sudo mkimage -C none -A arm -T script -d /mnt/boot/boot.cmd /mnt/boot/boot.scr
+```
+
+Umount the boot partition
+
+```sh
+sudo umount /mnt/boot
+```
+
+Finally, setup a rootfs (debian 11 via debootstrap used here). First, mount the root partition
+
+```sh
+sudo mkdir /mnt/root
+sudo mount /dev/mmcblk0p2 /mnt/root
+```
+
+Then, run debootstrap to create the rootfs
+
+```sh
+sudo debootstrap --arch=armhf bullseye /mnt/root
+```
+
+Finally, unmount the root partition and hope the card actually boots on the device.
+
+```sh
+sudo umount /mnt/root
+```
+
+
+### Current Status
+
+Card boots. U-boot is shown. Probably boots the kernel (says starting kernel then screen goes black). But, I have no UART console. So I don't know what actaullly happens.
+
+Next steps:
+
+- GET UART!!!
+- Or maybe just some startup script that writes a file to the card to prove to me that it is working
+
