@@ -493,14 +493,3 @@ Finally, unmount the root partition and hope the card actually boots on the devi
 ```sh
 sudo umount /mnt/root
 ```
-
-
-### Current Status
-
-Card boots. U-boot is shown. Probably boots the kernel (says starting kernel then screen goes black). But, I have no UART console. So I don't know what actaullly happens.
-
-Next steps:
-
-- GET UART!!!
-- Or maybe just some startup script that writes a file to the card to prove to me that it is working
-
