@@ -192,3 +192,7 @@ List of [A33 Tablets](https://linux-sunxi.org/Category:A33_Tablets)
 
 
 [FCC ID](https://fccid.io/2ABKRA727) uses name "Dongguan Mingtel Digital Technology". Photos in the exhibits seem to be of an older A23 based tablet, but the name "Azpen" is used.
+
+
+
+This device attempts SD card boot before it attempts NAND boot. This is useful for unbricking.
