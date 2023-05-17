@@ -190,12 +190,14 @@ This boots successfully on the device!
 **Working:**
 
 - Device boots from SD card
+- Poweroff and reboot commands
 
 
 **Not Working:**
 
 - WiFi
 - NAND
+- Power button
 
 
 **Unknown:**
@@ -207,3 +209,5 @@ This boots successfully on the device!
 - Speaker
 - 3.5mm audio jack
 - USB OTG host
+- Volume keys
+- LCD backlight
