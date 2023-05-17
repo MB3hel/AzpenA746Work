@@ -199,7 +199,6 @@ This boots successfully on the device!
 - NAND
 - Power button
 
-
 **Unknown:**
 
 - Power management
@@ -211,3 +210,8 @@ This boots successfully on the device!
 - USB OTG host
 - Volume keys
 - LCD backlight
+
+
+**Other issues**
+
+- SD card is sometimes `mmcblk0` and sometimes `mmcblk1` so boot sometimes fails
