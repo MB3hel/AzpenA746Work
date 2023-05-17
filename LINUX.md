@@ -344,17 +344,62 @@ And then it doesn't boot from the SD card. It boots normal android. Not sure if 
 
 ### Device Tree Creation
 
-TODO
+Will skip for now and try using the generic a33 q8 tablet device tree. This seems to work well enough for a wide range of a33 tablets. Hopefully it will provide basic functionality for this tablet.
 
 
 ### Building u-boot
 
-TODO
+*Tested on Ubuntu 22.04 LTS (amd64)*
+
+```sh
+# Install required tools
+sudo apt install swig python3-dev device-tree-compiler gcc-arm-linux-gnueabihf
+
+# Get u-boot source
+git clone git://git.denx.de/u-boot.git
+cd u-boot
+git checkout v2023.04
+
+# Built u-boot (armhf)
+make CROSS_COMPILE=arm-linux-gnueabihf- q8_a33_tablet_1024x600_defconfig
+make CROSS_COMPILE=arm-linux-gnueabihf-
+```
+
+The resultant file of interest is `u-boot-sunxi-with-spl.bin`
 
 
 ### Building kernel
 
-TODO
+TODO: Building using `sun8i-a33-q8-tablet.dts`
+
+```sh
+wget https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/linux-6.3.tar.gz
+tar --extract --gzip -f linux-6.3.tar.gz
+cd linux-6.3
+
+# Make directory for resultant files
+mkdir ../linux-6.3-out/
+
+# Configure
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- sunxi_defconfig
+# make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
+
+# Kernel
+ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make -j4 zImage
+cp arch/arm/boot/zImage ../linux-6.3-out/
+
+# Device tree files
+ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make -j4 dtbs
+cp arch/arm/boot/dts/sun8i-a33-q8-tablet.dtb ../linux-6.3-out
+cp arch/arm/boot/dts/sun8i-a33-q8-tablet.dts ../linux-6.3-out
+
+# Modules
+ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- make -j4 modules
+ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=../linux-6.3-out/ make modules modules_install
+
+# Headers
+make INSTALL_HDR_PATH=../linux-6.3-out/ ARCH=arm headers_install
+```
 
 
 ### Building SD Card
