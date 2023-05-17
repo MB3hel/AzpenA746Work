@@ -135,37 +135,38 @@ Mainboard (PCB) Details:
 
 *The tablet is disassembled by removing two screws on the side of the tablet with the volume and power keys.*
 
-
-TODO: Open image
-
-
-TODO: After tape
+***WARNING:*** *The battery in this tablet is held to the LCD with two adhesive strips. If attempting to remove the battery you must not bend or puncture the battery. This is difficult due to the nature of the adhesive. It is possible isopropyl alcohol could weaken the adhesive or that heat would weaken it. This is not tested. My recommendation is to safely dispose of any battery removed from this tablet and not attempt to use it again.*
 
 
 
-Closeup images of PCB
-
-TODO: Front of PCB
-
-TODO: Back of PCB
-
-TODO: Battery images
-
-TODO: LCD Panel images
-
-TODO: Digitizer images
+![](./image/tablet_open.jpg)
 
 
+![](./image/tablet_open_notape.jpg)
 
-Development configuration:
 
-TODO: Pictures (front and back)
+![](./image/pcb_front.jpg)
 
+![](./image/pcb_back.jpg)
+
+
+![](./image/lcd_front.jpg)
+
+![](./image/lcd_back.jpg)
+
+![](./image/digitizer.jpg)
+
+
+
+Development configuration (power via 5V barrel jack or USB port):
+
+TODO: Pictures when done (uart???)
 
 
 PCB Annotated Images
 
 TODO: Both sides
+
 
 ## Notes
 
