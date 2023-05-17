@@ -61,6 +61,7 @@ Battery Details:
 LCD Panel Details:
 - Back of panel is marked `WJSW070117B    C.L070.0929-17A0    20171221`
 - The cable that connects to the `LCD` port on the PCB is labeled `FPC.070080AV1`, `17.06.21`, `H 1712`
+- This display seems to have been listed as `Display universal 7.0 wjws070080a-fpc v1.0 50 pin` on AliExpress. While I can find online listings for these, specs, datasheets, info are lacking.
 
 Touchscreen Details:
 - Silead `GSL1680` chip

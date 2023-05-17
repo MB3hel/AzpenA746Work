@@ -338,6 +338,8 @@ sudo resize2fs /dev/mmcblk0p2
 And then it doesn't boot from the SD card. It boots normal android. Not sure if it attempts the card or not. TBD
 
 
+
+
 ## Mainline Kernel & u-boot
 
 ### Device Tree Creation
