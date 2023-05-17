@@ -18,7 +18,7 @@
 
 ## File Downloads
 
-- Stock ROM dumped from my tablet: [file](https://1drv.ms/u/s!AhjgTI1qxX9xhpNCqEHOxzOVnvZi5w?e=kCeBIt)
+- Stock ROM dumped from my tablet (may contain stock malware, not sure): [file](https://1drv.ms/u/s!AhjgTI1qxX9xhpNCqEHOxzOVnvZi5w?e=kCeBIt)
 - Allwinner A33 SDK: [linux-sunxi page](https://linux-sunxi.org/A33#Android_SDK)
 - Vendor folder (`/system/vendor`) from my tablet: [file](https://1drv.ms/u/s!AhjgTI1qxX9xhpNBvHlxAAMYwv4KZw?e=F8SGcF)
 - Firmware folder (`/etc/firmware`) from my tablet: [file](https://1drv.ms/u/s!AhjgTI1qxX9xhpNEt8ftGKgPJkmDjg?e=avc3le)
