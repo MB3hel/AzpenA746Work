@@ -24,9 +24,7 @@ Fastboot can be accessed using `adb reboot bootloader`, but I have yet to find a
 
 ### uBoot Console
 
-If we could access the uBoot console, we could probably manually boot to fastboot using `fastboot usb 0`. There are UART pads on this tablet's board (requires opening tablet). This is untested, but presumably similar to A741 (info [here](https://linux-sunxi.org/Azpen_A741)). However, the console may not accept input due to sharing with the SD card (again, untested).
-
-Theoretically, FEL could also be used to flash a custom uboot build to work around this (different UART port), but we'd need to be able to build uboot for this device. Currently not sure what that would entail. It is possible a generic A33 1024x600 build would work. But again, UNTESTED!
+Maybe a way to access android fastboot via u-boot???
 
 
 ### SD Card Boot

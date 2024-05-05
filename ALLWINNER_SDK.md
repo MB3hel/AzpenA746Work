@@ -68,7 +68,7 @@ sed -i 's/\$(CC) -Wall -Werror/\$(CC) -Wall/g' buildroot/package/makedevs/makede
 ./build.sh
 ```
 
-You will be prompted at some point for which kernel modules to build / configuration for kernel modules. Some prompts will be auto answered by the build script. Answer the ones that are not as shown below
+You will be prompted at some point for which kernel modules to build / configuration for kernel modules. Some prompts will be auto answered by the build script. Answer the ones that are not as shown below (should all be default values)
 
 ```
 *
@@ -214,117 +214,30 @@ Ion Memory Manager (ION) [Y/n/m/?] y
 #
 ```
 
-After the build finishes, it will have generated the following in `out/sun8iw5p1/linux/common/`
+After the build finishes, the kernel will be at `linux-3.4/output/zImage`.
 
-- `arisc`: No idea what this is
-- `boot.img`: This is an android `boot.img` for some reason.
-- `rootfs.ext4`: Linux root filesystem (not actually ext4, but ext2)
-- `vmlinux.tar.bz2`: Linux kernel (tar bz2 compressed)
-- `buildroot/target/lib/modules/3.4.39/*.ko`: Kernel modules. These are already copied to the generated `rootfs.ext4` file
 
-Then, you can hypothetically pack a LiveSuite image using
+This can be used with an SD card created with a mainline kernel by adding this `zImage` to the boot partition as `zImage.aw` and using a `boot.scr` compiled from `boot.aw.cmd` with the following contents
 
-```sh
-sudo apt-get install busybox-static
-./build.sh pack
 ```
-
-Image will be at `sun8iw5p1_linux_along6051.img`. But, this image is not right (missing partition file in my config probably).
-
-
-However in `tools/pack/out` there are several useful files. Lots of various `.fex` files (these seem to be some form of binary, not what fex means in other contexts)
-
-- `boot0_sdcard.fex` is boot0 image patched with compiled `sys_config.fex`. This can be written to SD card.
-- `boot0_nand.fex` is same thing, but for nand. Can write to tablet using FEL.
-- `u-boot.fex` Patched u-boot
-- Various other files I will ignore for now
-
-This can be written to an SD card
-
-```sh
-# Erase SD card first
-sudo dd if=/dev/zero of=/dev/mmcblk0 bs=1M count=1
-
-# Write boot0 and u-boot
-sudo dd if=boot0_sdcard.fex of=/dev/mmcblk0 bs=1k seek=8
-sudo dd if=u-boot.fex of=/dev/mmcblk0 bs=1k seek=19096
-```
-
-Then, create a boot partition (FAT16 or 32) and root partition (ext4) on the SD card. **THE FIRST PARTITION MUST BE THE BOOT PARTITION!** This partition holds the kernel and other boot files (on stock android this is the "bootloader" partition / nanda).
-
-
-Setup the following partitioning using cfdisk, gparted, etc. You will need to make a partition table first (msdos table).
-
-```sh
-Disk /dev/mmcblk0: 59.63 GiB, 64021856256 bytes, 125042688 sectors
-Units: sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 512 bytes
-I/O size (minimum/optimal): 512 bytes / 512 bytes
-Disklabel type: dos
-Disk identifier: 0xa01bf589
-
-Device         Boot Start       End   Sectors  Size Id Type
-/dev/mmcblk0p1       2048     67583     65536   32M  b W95 FAT32
-/dev/mmcblk0p2      67584 125042687 124975104 59.6G 83 Linux
-```
-
-Then make the filesystems
-
-```sh
-sudo mkfs.vfat /dev/mmcblk0p1
-sudo mkfs.ext4 /dev/mmcblk0p2   # Can skip if using rootfs.ext4
-```
-
-Add required boot partition files
-
-```sh
-# Prepare kernel
-cd /path/to/lichee/out/sun8iw5p1/linux/common/
-sudo tar -vxjf vmlinux.tar.bz2
-arm-linux-gnueabihf-objcopy -O binary vmlinux vmlinux.bin
-mkimage -C none -A arm -T kernel -n "Linux Kernel" -d vmlinux.bin uImage
-
-# Mount boot
-sudo mkdir /mnt/boot
-sudo mount /dev/mmcblk0p1 /mnt/boot/
-
-# Copy kernel
-sudo cp uImage /mnt/boot
-
-# Make boot.cmd
-cat << 'EOF' | tee boot.cmd
 setenv bootm_boot_mode sec
-setenv bootargs console=ttyS0,115200 root=/dev/mmcblk0p2 rootwait panic=10
-load mmc 0:1 0x43000000 script.bin || load mmc 0:1 0x43000000 boot/script.bin
-load mmc 0:1 0x42000000 uImage || load mmc 0:1 0x42000000 boot/uImage
-bootm 0x42000000
-EOF
 
-# Convert to boot.scr
-mkimage -C none -A arm -T script -d boot.cmd boot.scr
+fatload mmc 0 0x46000000 zImage.aw
+fatload mmc 0 0x43000000 script.bin
+fatload mmc 0 0x49000000 sun8i-a33-q8-tablet.dtb
 
-# Copy to boot partition
-sudo cp boot.scr /mnt/boot/
+setenv bootargs console=ttyS0,115200 earlyprintk root=/dev/mmcblk1p2 rootwait panic=10 ${extra}
 
-# Unmount boot partition
-sudo umount /mnt/boot
+bootz 0x46000000 - 0x49000000
 ```
 
+Use the following to compile it
 
-Write rootfs
-
-```sh
-cd /path/to/lichee/out/sun8iw5p1/linux/common/
-myloop=$(sudo losetup -f -P --show ./rootfs.ext4)
-echo $myloop    # Should be /dev/loop followed by a number
-sudo dd if=${myloop} of=/dev/mmcblk0p2
-sudo losetup -d $myloop
-unset myloop
-sudo e2fsck -f /dev/mmcblk0p2
-sudo resize2fs /dev/mmcblk0p2
+```
+sudo mkimage -C none -A arm -T script -d /mnt/boot/boot.aw.cmd /mnt/boot/boot.scr
 ```
 
-And then it doesn't boot from the SD card. It boots normal android. Not sure if it attempts the card or not. TBD
+You also need to copy the `script.bin` extracted from stock android to the boot partition of the SD card.
 
 
-
+**Result:** This does something, but doesn't boot properly or output anything on uart.
